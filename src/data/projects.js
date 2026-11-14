@@ -31,7 +31,7 @@ export const projects = [
     agodaUrl: "https://www.agoda.com/cityhouse-city-oasis/hotel/ho-chi-minh-city-vn.html",
     model: "Ủy thác Quản lý & Vận hành toàn diện",
     role: "Tư vấn kiến trúc, Giám sát thi công hoàn thiện, Quản lý khai thác",
-    result: "Tỷ lệ lấp đầy bình quân đạt 94%, doanh thu phòng đạt 1.8 tỷ/tháng, đạt giải Gold Circle Award Agoda.",
+    result: "Tỷ lệ kín phòng bình quân đạt 94%, doanh thu phòng đạt 1.8 tỷ/tháng, đạt giải Gold Circle Award Agoda.",
     caseStudy: {
       context: "Khu đất 480m² trong hẻm lớn trung tâm Quận 3, chủ sở hữu là gia tộc muốn tạo dựng tài sản dòng tiền truyền đời.",
       problem: "Thiết kế ban đầu của kiến trúc sư dân dụng bị lãng phí diện tích hành lang, thiếu không gian tiện ích mở và khó bán phòng giá cao.",
@@ -77,14 +77,14 @@ export const projects = [
     agodaUrl: "https://www.agoda.com/cityhouse-kim-nguyen/hotel/ho-chi-minh-city-vn.html",
     model: "Hợp đồng Thuê khoán Cố định & Chia sẻ doanh thu",
     role: "Tiếp quản vận hành, Chuẩn hóa chất lượng dịch vụ, Quản trị doanh thu",
-    result: "Duy trì tỷ lệ lấp đầy 96%+ suốt 8 năm liên tiếp, tỷ lệ khách thuê gia hạn hợp đồng đạt 78%.",
+    result: "Duy trì tỷ lệ kín phòng 96%+ suốt 8 năm liên tiếp, tỷ lệ khách thuê gia hạn hợp đồng đạt 78%.",
     caseStudy: {
       context: "Tòa nhà 7 tầng nằm tại trục giao lộ cửa ngõ Bình Thạnh - Phú Nhuận, sở hữu của nhà đầu tư cá nhân.",
       problem: "Trước khi CityHouse tiếp quản, chủ nhà tự cho thuê phòng lẻ nhưng liên tục gặp tình trạng trống phòng tới 35%, thất thoát tiền điện nước và mệt mỏi với sự cố kỹ thuật.",
       solution: "Gắn thương hiệu TERA by CityHouse, ký hợp đồng thuê khoán dài hạn cam kết lợi nhuận cho chủ nhà, định vị phục vụ chuyên gia Nhật Bản và các công ty công nghệ lân cận.",
       scope: "Bảo dưỡng đại tu hệ thống MEP, bố trí lễ tân thông thạo ngoại ngữ, áp dụng quy trình kiểm soát chi phí vận hành tự động hóa.",
       resultMetrics: [
-        { label: "Tỷ lệ lấp đầy", val: "96% liên tục 8 năm" },
+        { label: "Tỷ lệ kín phòng", val: "96% liên tục 8 năm" },
         { label: "Doanh thu cam kết", val: "100% đúng hạn ngày 5" },
         { label: "Tỷ lệ khách gia hạn", val: "78% hàng năm" }
       ],
@@ -160,7 +160,7 @@ export const projects = [
     ],
     tag: "KHÁCH CÔNG TÁC & LƯU TRÚ DÀI HẠN",
     accompanied: "ĐỒNG HÀNH TỪ 2020",
-    description: "Không gian sống hiện đại, tiện ích chuẩn mực tối ưu cho các chuyên gia công tác và gia đình trẻ với tỷ lệ lấp đầy ổn định quanh năm.",
+    description: "Không gian sống hiện đại, tiện ích chuẩn mực tối ưu cho các chuyên gia công tác và gia đình trẻ với tỷ lệ kín phòng ổn định quanh năm.",
     rooms: "32 căn hộ dịch vụ",
     scale: "1.260 m² sàn",
     occupancy: "95%",
@@ -177,7 +177,7 @@ export const projects = [
       scope: "Cung cấp nhân sự, bảo trì kỹ thuật định kỳ, báo cáo tài chính hàng tháng, quản lý hồ sơ đăng ký tạm trú ngoại kiều.",
       resultMetrics: [
         { label: "Tỷ trọng khách doanh nghiệp", val: "82% hợp đồng năm" },
-        { label: "Tỷ lệ lấp đầy bình quân", val: "95% quanh năm" },
+        { label: "Tỷ lệ kín phòng bình quân", val: "95% quanh năm" },
         { label: "Đánh giá dịch vụ khách sạn", val: "9.0/10 Agoda" }
       ],
       ownerFeedback: "Sự chuyên nghiệp và chỉn chu trong báo cáo tài chính của CityHouse More giúp tôi hoàn toàn an tâm tập trung vào công việc kinh doanh chính."
@@ -226,7 +226,7 @@ export const projects = [
         { label: "Tiết kiệm chi phí nhân sự", val: "-40% nhờ số hóa" },
         { label: "Doanh thu trên m² sàn", val: "Cao hơn 32% thị trường" }
       ],
-      ownerFeedback: "Dù diện tích phòng nhỏ nhưng chưa bao giờ thiếu khách. Tỷ lệ lấp đầy 93% qua 10 năm là minh chứng rõ nhất cho tầm nhìn của CityHouse."
+      ownerFeedback: "Dù diện tích phòng nhỏ nhưng chưa bao giờ thiếu khách. Tỷ lệ kín phòng 93% qua 10 năm là minh chứng rõ nhất cho tầm nhìn của CityHouse."
     }
   },
   {
@@ -268,7 +268,7 @@ export const projects = [
       solution: "Định vị thương hiệu NEST: Đề cao sự an ninh, sạch sẽ tuyệt đối, nệm khách sạn 5 sao và dịch vụ lễ tân thân thiện.",
       scope: "Quản lý kinh doanh trọn gói trên Booking.com, Agoda, Airbnb, quản lý buồng phòng và xử lý sự cố 24/7.",
       resultMetrics: [
-        { label: "Tỷ lệ lấp đầy kỷ lục", val: "97% quanh năm" },
+        { label: "Tỷ lệ kín phòng kỷ lục", val: "97% quanh năm" },
         { label: "Lượt đánh giá 9+ sao", val: "Hơn 920 lượt review" },
         { label: "Doanh thu phòng ròng", val: "Đạt đỉnh 650 triệu/tháng" }
       ],
@@ -307,14 +307,14 @@ export const projects = [
     agodaUrl: "https://www.agoda.com/cityhouse-metro-thao-dien/hotel/ho-chi-minh-city-vn.html",
     model: "Hợp tác Chiến lược & Quản lý Vận hành",
     role: "Tư vấn mô hình Co-living, Thiết lập tiêu chuẩn vận hành",
-    result: "Đạt 100% tỷ lệ lấp đầy chỉ sau 45 ngày khai trương đón đầu tuyến Metro số 1 Bến Thành - Suối Tiên.",
+    result: "Đạt 100% tỷ lệ kín phòng chỉ sau 45 ngày khai trương đón đầu tuyến Metro số 1 Bến Thành - Suối Tiên.",
     caseStudy: {
       context: "Dự án mới bàn giao ngay trục đường ẩm thực - giải trí cao cấp Xuân Thủy, trung tâm Thảo Điền.",
       problem: "Thị trường Thảo Điền có nhiều nguồn cung căn hộ cho thuê, cần tạo ra sự khác biệt để thu hút tệp chuyên gia quốc tế trẻ.",
       solution: "Thiết kế mô hình Hybrid Living: Kết hợp căn hộ độc lập với tiện ích chia sẻ (co-working space, rooftop lounge, phòng gym) kết nối cộng đồng expat.",
       scope: "Setup toàn bộ quy trình vận hành trước ngày khai trương (pre-opening), marketing mở bán phòng sớm.",
       resultMetrics: [
-        { label: "Tốc độ lấp đầy", val: "100% trong 45 ngày" },
+        { label: "Tốc độ kín phòng", val: "100% trong 45 ngày" },
         { label: "Giá thuê bình quân", val: "16 - 28 triệu/tháng" },
         { label: "Tỷ trọng khách expat", val: "91% chuyên gia quốc tế" }
       ],
@@ -353,18 +353,62 @@ export const projects = [
     agodaUrl: "https://www.agoda.com/cityhouse-soul-kabana/hotel/ho-chi-minh-city-vn.html",
     model: "Ủy thác Quản lý & Vận hành Toàn diện",
     role: "Tư vấn cải tạo di sản, Định vị thương hiệu SOUL, Vận hành lưu trú boutique chuẩn 5 sao",
-    result: "Đạt tỷ lệ lấp đầy bình quân 95%, tối ưu hóa giá phòng trung bình lên mức 1.5 - 2.2 triệu/đêm, lọt vào danh sách khách sạn boutique được yêu thích nhất Quận 1.",
+    result: "Đạt tỷ lệ kín phòng bình quân 95%, tối ưu hóa giá phòng trung bình lên mức 1.5 - 2.2 triệu/đêm, lọt vào danh sách khách sạn boutique được yêu thích nhất Quận 1.",
     caseStudy: {
       context: "Bất động sản nhà phố cổ tại khu vực Cao Bá Nhạ - Quận 1 với kiến trúc đặc trưng nhưng công năng cũ kỹ và chưa khai thác đúng tiềm năng.",
       problem: "Chủ sở hữu tự khai thác phòng cho thuê truyền thống gặp vấn đề công suất thất thường, giá thuê thấp và xuống cấp vật tư nhanh chóng.",
       solution: "Cải tạo theo phong cách Boutique Hotel mang bản sắc thương hiệu SOUL: Đưa chất liệu mộc tự nhiên, mảng xanh sân vườn và chuẩn buồng phòng cao cấp vào từng không gian.",
       scope: "Quy hoạch lại 17 phòng boutique khép kín, thiết lập quy trình quản lý chất lượng 5 sao, phân phối đa kênh OTA quốc tế và dịch vụ lễ tân tận tâm.",
       resultMetrics: [
-        { label: "Tỷ lệ lấp đầy", val: "95% quanh năm" },
+        { label: "Tỷ lệ kín phòng", val: "95% quanh năm" },
         { label: "Giá phòng bình quân", val: "1.5 - 2.2 triệu/đêm" },
         { label: "Đánh giá Agoda", val: "9.1/10 Tuyệt vời" }
       ],
       ownerFeedback: "CityHouse More đã hồi sinh tòa nhà trở thành một điểm đến lưu trú có hồn, mang lại dòng tiền ổn định cao hơn 2.5 lần so với trước đây."
+    }
+  },
+  {
+    id: 9,
+    slug: "cityhouse-mark-atelier-thao-dien",
+    name: "CityHouse MARK Atelier Thảo Điền",
+    brand: "MARK",
+    district: "Thảo Điền",
+    fullAddress: "Nguyễn Văn Hưởng, Phường Thảo Điền, TP. Thủ Đức, TP.HCM",
+    propertyType: "Biệt thự & Căn hộ dịch vụ cao cấp",
+    propertyTypeCategory: "apartment",
+    scaleCategory: "under30",
+    solutionType: "invest",
+    solutionLabel: "Quản lý & Vận hành Thượng lưu",
+    image: "https://cityhousemore.com/uploads/gallery/gallery-1786613499840-680885.png",
+    interiorImage: "https://cityhousemore.com/uploads/gallery/gallery-1782197864517-764256.webp",
+    gallery: [
+      "https://cityhousemore.com/uploads/gallery/gallery-1786613499840-680885.png",
+      "https://cityhousemore.com/uploads/gallery/gallery-1782197864517-764256.webp",
+      "https://cityhousemore.com/uploads/gallery/gallery-1782197864346-660114.webp"
+    ],
+    tag: "THƯỢNG LƯU · CONCIERGE",
+    accompanied: "ĐỒNG HÀNH TỪ 2022",
+    description: "Đỉnh cao của nghệ thuật lưu trú đương đại, nơi kiến trúc tối giản tinh tế kết hợp cùng dịch vụ quản gia cá nhân hóa cho giới tinh hoa.",
+    rooms: "18 căn hộ thượng lưu & penthouse",
+    scale: "2.100 m² sàn",
+    occupancy: "96%",
+    agodaScore: "9.3/10",
+    reviewCount: "260+ đánh giá xác thực",
+    agodaUrl: "https://www.agoda.com/cityhouse-mark-atelier/hotel/ho-chi-minh-city-vn.html",
+    model: "Ủy thác Quản lý & Vận hành Thượng lưu",
+    role: "Tư vấn thiết kế nội thất xa xỉ, Quản trị dịch vụ Concierge 24/7",
+    result: "Đạt tỷ lệ kín phòng bình quân 96%, giá thuê phòng đạt kỷ lục phân khúc dài hạn và ngắn hạn tại khu Thảo Điền.",
+    caseStudy: {
+      context: "Biệt thự phố tại khu nhà giàu Thảo Điền, định hướng phục vụ các CEO tập đoàn đa quốc gia và chuyên gia cấp cao.",
+      problem: "Yêu cầu khắt khe về an ninh, bảo mật thông tin và tiêu chuẩn dịch vụ chuẩn khách sạn 5 sao quốc tế.",
+      solution: "Thiết kế kiến trúc riêng tư biệt lập, hệ thống lọc không khí & âm học riêng biệt, quản gia riêng đào tạo theo chuẩn châu Âu.",
+      scope: "Tư vấn công năng thượng lưu, tuyển dụng và đào tạo đội ngũ quản gia cá nhân, phân phối độc quyền cho đối tác ngoại giao và tập đoàn.",
+      resultMetrics: [
+        { label: "Công suất phòng", val: "96% ổn định" },
+        { label: "Đánh giá Agoda", val: "9.3/10 Thượng lưu" },
+        { label: "Thời hạn hợp đồng TB", val: "14 tháng/khách" }
+      ],
+      ownerFeedback: "CityHouse More đã nâng tầm tài sản gia đình thành biểu tượng lưu trú thượng lưu đúng nghĩa, mang lại giá trị uy tín và dòng tiền xuất sắc."
     }
   }
 ];

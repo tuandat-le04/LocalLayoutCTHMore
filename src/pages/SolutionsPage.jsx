@@ -98,7 +98,7 @@ const DETAILED_SOLUTIONS = [
     subtitle: "Vận hành chuẩn mực quốc tế, tối đa hóa công suất và bảo toàn tài sản",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782195854527-583048.webp",
     metricValue: "95%+",
-    metricLabel: "Công Suất Lấp Đầy Quanh Năm",
+    metricLabel: "Tỷ Lệ Kín Phòng Quanh Năm",
     metricHighlight: "Tiết kiệm 40% chi phí lễ tân qua Smart IoT & PMS Cloud",
     desc: "Thiết lập bộ máy quản trị chuyên nghiệp giúp tài sản luôn vận hành trơn tru 24/7. Ứng dụng công nghệ quản trị số và thuật toán định giá buồng phòng động giúp dòng tiền của Chủ đầu tư luôn duy trì đỉnh cao qua mọi mùa vụ.",
     deliverable: "Quy chuẩn SOP Vận hành 5 Sao · Hệ thống Quản trị Cloud PMS · Báo cáo Kiểm toán Ngày 5 Hàng Tháng",
@@ -192,7 +192,7 @@ const WORKFLOW_STEPS = [
     step: "04",
     title: "Khai thác & Đối soát Báo cáo",
     time: "Liên tục 24/7",
-    desc: "Đưa tài sản vào hệ thống phân phối đa kênh toàn cầu, tối đa hóa tỷ lệ lấp đầy trên 95% và gửi báo cáo doanh thu chi tiết vào ngày 5 hàng tháng."
+    desc: "Đưa tài sản vào hệ thống phân phối đa kênh toàn cầu, tối đa hóa tỷ lệ kín phòng trên 95% và gửi báo cáo doanh thu chi tiết vào ngày 5 hàng tháng."
   }
 ];
 

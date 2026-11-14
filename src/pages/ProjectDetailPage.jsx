@@ -20,7 +20,10 @@ import {
   Layers,
   Calendar,
   Share2,
-  Check
+  Check,
+  Briefcase,
+  Handshake,
+  Maximize2
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm.jsx';
 
@@ -155,7 +158,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                 {project.brand} COLLECTION
               </span>
               <span className="bg-emerald-700 text-white text-[10px] font-mono font-semibold px-2.5 py-1 rounded shadow-xs">
-                Lấp đầy {project.occupancy}
+                Kín phòng {project.occupancy}
               </span>
             </div>
 
@@ -352,47 +355,178 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
       {/* 5. Section: Key Specifications & Operational Dossier (#specs) */}
       <section id="specs" className="max-w-7xl mx-auto px-4 md:px-8 py-8">
         <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#0F1A41]/10 shadow-xs mb-8">
-          <div className="flex items-center gap-2 mb-6">
-            <Building2 size={18} className="text-[#B9887B]" />
-            <h2 className="font-serif text-2xl font-bold text-[#0F1A41]">
-              Hồ sơ kỹ thuật & Mô hình vận hành
-            </h2>
+          {/* Section Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-6 border-b border-[#0F1A41]/10">
+            <div>
+              <div className="flex items-center gap-2 text-[#B9887B] font-mono text-xs font-bold uppercase tracking-wider mb-1">
+                <Building2 size={15} />
+                <span>THÔNG SỐ TIÊU CHUẨN — DỰ ÁN #{project.id}</span>
+              </div>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0F1A41]">
+                Hồ sơ kỹ thuật & Mô hình vận hành
+              </h2>
+            </div>
+            <span className="font-mono text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3.5 py-1.5 rounded-full border border-[#0F1A41]/15 self-start sm:self-auto">
+              Chuẩn hóa 4 trụ cột vận hành
+            </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-4 bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10">
-              <span className="font-mono text-[11px] text-[#0F1A41]/60 uppercase block mb-1.5">
-                1. Quy mô & Diện tích sàn
-              </span>
-              <strong className="text-base text-[#0F1A41] block mb-1">{project.rooms}</strong>
-              <span className="text-xs text-[#0F1A41]/75 font-mono">Diện tích: {project.scale}</span>
+          {/* 4 Standardized Operational Pillars (2x2 Balanced Grid) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Pillar 1: Quy mô & Kiến trúc */}
+            <div className="p-5 md:p-6 bg-[#FAF6EF]/60 hover:bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-5 h-5 rounded-full bg-[#0F1A41] text-white text-[10px] font-mono font-bold flex items-center justify-center">
+                      01
+                    </span>
+                    <span className="font-mono text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
+                      Quy mô & Kiến trúc
+                    </span>
+                  </div>
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#0F1A41]/10 flex items-center justify-center text-[#0F1A41]">
+                    <Layers size={16} />
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] block">
+                    {project.rooms}
+                  </span>
+                  <p className="text-xs text-[#0F1A41]/70 mt-1">
+                    Cấu trúc không gian được quy hoạch công năng tối ưu cho lưu trú chuyên sâu
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                <span className="bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] flex items-center gap-1.5 font-semibold shadow-2xs">
+                  <Maximize2 size={12} className="text-[#B9887B]" />
+                  Tổng diện tích: <strong>{project.scale}</strong>
+                </span>
+                <span className="text-[11px] text-[#0F1A41]/60">
+                  Phân loại: {project.propertyTypeCategory === 'apartment' ? 'Căn hộ dịch vụ' : 'Lưu trú chuyên gia'}
+                </span>
+              </div>
             </div>
 
-            <div className="p-4 bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10">
-              <span className="font-mono text-[11px] text-[#0F1A41]/60 uppercase block mb-1.5">
-                2. Gói giải pháp CityHouse
-              </span>
-              <strong className="text-base text-[#B9887B] block mb-1">
-                {project.solutionLabel || 'Quản lý Vận hành'}
-              </strong>
-              <span className="text-xs text-[#0F1A41]/75 font-mono">Phân khúc: {project.propertyType}</span>
+            {/* Pillar 2: Gói giải pháp CityHouse */}
+            <div className="p-5 md:p-6 bg-[#FAF6EF]/60 hover:bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-5 h-5 rounded-full bg-[#B9887B] text-white text-[10px] font-mono font-bold flex items-center justify-center">
+                      02
+                    </span>
+                    <span className="font-mono text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
+                      Gói giải pháp CityHouse
+                    </span>
+                  </div>
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#0F1A41]/10 flex items-center justify-center text-[#B9887B]">
+                    <Briefcase size={16} />
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#B9887B] block">
+                    {project.solutionLabel || 'Quản lý Vận hành'}
+                  </span>
+                  <p className="text-xs text-[#0F1A41]/70 mt-1">
+                    Định vị tài sản chuẩn hóa theo tiêu chuẩn thương hiệu CityHouse {project.brand}
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                <span className="bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] flex items-center gap-1.5 font-semibold shadow-2xs">
+                  <Building2 size={12} className="text-[#B9887B]" />
+                  Phân khúc: <strong>{project.propertyType}</strong>
+                </span>
+                <span className="text-[11px] text-[#0F1A41]/60">
+                  {project.brand} Collection
+                </span>
+              </div>
             </div>
 
-            <div className="p-4 bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10">
-              <span className="font-mono text-[11px] text-[#0F1A41]/60 uppercase block mb-1.5">
-                3. Mô hình hợp tác
-              </span>
-              <strong className="text-base text-[#0F1A41] block mb-1">{project.model}</strong>
-              <span className="text-xs text-[#0F1A41]/75 font-mono">{project.accompanied}</span>
+            {/* Pillar 3: Mô hình hợp tác */}
+            <div className="p-5 md:p-6 bg-[#FAF6EF]/60 hover:bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-5 h-5 rounded-full bg-[#0F1A41] text-white text-[10px] font-mono font-bold flex items-center justify-center">
+                      03
+                    </span>
+                    <span className="font-mono text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
+                      Mô hình hợp tác
+                    </span>
+                  </div>
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#0F1A41]/10 flex items-center justify-center text-[#0F1A41]">
+                    <Handshake size={16} />
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] block">
+                    {project.model}
+                  </span>
+                  <p className="text-xs text-[#0F1A41]/70 mt-1">
+                    Kiểm toán định kỳ, quản trị dòng tiền minh bạch và đối soát ngày 5 hàng tháng
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                <span className="bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] flex items-center gap-1.5 font-semibold shadow-2xs">
+                  <Calendar size={12} className="text-[#B9887B]" />
+                  Thời gian: <strong>{project.accompanied}</strong>
+                </span>
+                <span className="text-[11px] text-green-700 bg-green-50 px-2 py-0.5 rounded border border-green-200 font-semibold">
+                  Vận hành ổn định
+                </span>
+              </div>
             </div>
 
-            <div className="p-4 bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10">
-              <span className="font-mono text-[11px] text-[#0F1A41]/60 uppercase block mb-1.5">
-                4. Vai trò triển khai
-              </span>
-              <p className="text-xs text-[#0F1A41]/85 leading-relaxed font-sans">
-                {project.role}
-              </p>
+            {/* Pillar 4: Vai trò triển khai */}
+            <div className="p-5 md:p-6 bg-[#FAF6EF]/60 hover:bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-5 h-5 rounded-full bg-emerald-700 text-white text-[10px] font-mono font-bold flex items-center justify-center">
+                      04
+                    </span>
+                    <span className="font-mono text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
+                      Vai trò triển khai
+                    </span>
+                  </div>
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#0F1A41]/10 flex items-center justify-center text-emerald-700">
+                    <CheckCircle2 size={16} />
+                  </div>
+                </div>
+
+                <div className="mb-3">
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] block">
+                    Trách nhiệm thực thi toàn diện
+                  </span>
+                  <p className="text-xs text-[#0F1A41]/70 mt-1">
+                    Các hạng mục chuyên môn do CityHouse More trực tiếp đảm trách:
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-[#0F1A41]/10">
+                <div className="flex flex-wrap gap-1.5">
+                  {(project.role || '').split(',').map((r, i) => (
+                    <span
+                      key={i}
+                      className="inline-flex items-center gap-1.5 text-xs font-mono bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] shadow-2xs font-semibold"
+                    >
+                      <Check size={11} className="text-emerald-600 stroke-[3]" />
+                      <span>{r.trim()}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -689,7 +823,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               <div className="p-5 flex flex-col flex-grow">
                 <div className="flex items-center justify-between text-xs font-mono mb-1.5">
                   <span className="text-[#0F1A41]/60">{rel.district}</span>
-                  <span className="text-emerald-700 font-bold">Lấp đầy {rel.occupancy}</span>
+                  <span className="text-emerald-700 font-bold">Kín phòng {rel.occupancy}</span>
                 </div>
 
                 <h3 className="font-serif text-lg font-bold text-[#0F1A41] group-hover:text-[#B9887B] transition-colors mb-2">

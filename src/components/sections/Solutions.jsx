@@ -38,7 +38,7 @@ export default function Solutions({ onOpenModal }) {
       image: "https://cityhousemore.com/uploads/gallery/gallery-1782195854527-583048.webp",
       situationTitle: "Cần đơn vị vận hành chuyên nghiệp",
       situationSubtitle: "Bận rộn công việc chính, muốn nhận dòng tiền an nhàn",
-      desc: "Thiết lập bộ máy quản trị chuẩn khách sạn 24/7, phân phối đa kênh OTA và kiểm soát chi phí minh bạch với tỷ lệ lấp đầy cam kết 95%+.",
+      desc: "Thiết lập bộ máy quản trị chuẩn khách sạn 24/7, phân phối đa kênh OTA và kiểm soát chi phí minh bạch với tỷ lệ kín phòng cam kết 95%+.",
       ctaLabel: "ĐẶT LỊCH TRAO ĐỔI"
     }
   ];

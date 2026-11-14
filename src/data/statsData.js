@@ -14,7 +14,7 @@ export const statsData = {
       id: "occupancy",
       value: "95%+",
       unit: "CÔNG SUẤT",
-      label: "TỶ LỆ LẤP ĐẦY TRUNG BÌNH",
+      label: "TỶ LỆ KÍN PHÒNG TRUNG BÌNH",
       desc: "Duy trì ổn định quanh năm nhờ kết hợp khách chuyên gia công tác dài hạn (65%) và khách du lịch quốc tế ngắn hạn (35%).",
       highlight: "Ổn định dòng tiền"
     },

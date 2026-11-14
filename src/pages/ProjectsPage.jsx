@@ -1,15 +1,40 @@
 import React, { useState } from 'react';
 import { projects } from '../data/projects.js';
-import { ArrowUpRight, Building2, MapPin, Star, SlidersHorizontal, Check, Eye } from 'lucide-react';
+import { ArrowUpRight, Building2, MapPin, Star, SlidersHorizontal, Check, Eye, RotateCcw, Sparkles } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import ProjectDetailModal from '../components/ProjectDetailModal.jsx';
+
+const DISTRICT_FILTERS = [
+  { id: 'all', label: 'TẤT CẢ KHU VỰC' },
+  { id: 'Quận 1', label: 'QUẬN 1' },
+  { id: 'Quận 3', label: 'QUẬN 3' },
+  { id: 'Bình Thạnh', label: 'BÌNH THẠNH' },
+  { id: 'Phú Nhuận', label: 'PHÚ NHUẬN' },
+  { id: 'Thảo Điền', label: 'THẢO ĐIỀN' },
+];
+
+const BRAND_FILTERS = [
+  { id: 'all', label: 'TẤT CẢ BRAND' },
+  { id: 'MARK', label: 'MARK', sub: 'THƯỢNG LƯU' },
+  { id: 'VIBE', label: 'VIBE', sub: 'NGHỆ THUẬT' },
+  { id: 'TERA', label: 'TERA', sub: 'DÀI HẠN' },
+  { id: 'NEST', label: 'NEST', sub: 'STUDIO' },
+  { id: 'SOUL', label: 'SOUL', sub: 'BOUTIQUE' },
+];
 
 export default function ProjectsPage({ onOpenModal }) {
   const [selectedDistrict, setSelectedDistrict] = useState('all');
   const [selectedBrand, setSelectedBrand] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
   const { navigate } = useNavigation();
+
+  const isFiltered = selectedDistrict !== 'all' || selectedBrand !== 'all';
+
+  const handleReset = () => {
+    setSelectedDistrict('all');
+    setSelectedBrand('all');
+  };
 
   const filteredProjects = projects.filter(p => {
     const matchDistrict = selectedDistrict === 'all' || p.district.includes(selectedDistrict);
@@ -49,77 +74,125 @@ export default function ProjectsPage({ onOpenModal }) {
 
       {/* Multi-Filter Section */}
       <section className="section-pad bg-[#F4EFEA] text-[#0F1A41]">
-        <div className="bg-white p-6 md:p-8 border border-[#0F1A41]/10 mb-12">
-          <div className="flex items-center gap-2 mb-6 text-[#0F1A41] font-mono text-xs font-bold uppercase tracking-wider">
-            <SlidersHorizontal size={16} className="text-[#B9887B]" />
-            <span>Bộ lọc danh mục tài sản thông minh</span>
+        <div className="bg-white p-6 md:p-8 border border-[#0F1A41]/10 mb-12 shadow-xs">
+          {/* Filter Header with Stats and Reset */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-5 mb-6 border-b border-[#0F1A41]/10 gap-3">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-sm bg-[#B9887B]/10 flex items-center justify-center text-[#B9887B] shrink-0">
+                <SlidersHorizontal size={15} />
+              </div>
+              <div>
+                <span className="text-[#0F1A41] font-mono text-xs font-bold uppercase tracking-wider block">
+                  Bộ lọc danh mục tài sản thông minh
+                </span>
+                <span className="text-[11px] text-[#0F1A41]/60 font-mono">
+                  Phân loại theo khu vực chiến lược và phân khúc thương hiệu CityHouse
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 self-start sm:self-auto">
+              <span className="font-mono text-xs text-[#0F1A41]/75 bg-[#F4EFEA] px-3.5 py-1.5 border border-[#0F1A41]/10">
+                Hiển thị: <strong className="text-[#0F1A41] font-bold">{filteredProjects.length}</strong> / {projects.length} tài sản
+              </span>
+
+              {isFiltered && (
+                <button
+                  onClick={handleReset}
+                  className="font-mono text-xs text-[#B9887B] hover:text-[#0F1A41] font-bold flex items-center gap-1.5 px-2.5 py-1.5 transition-colors cursor-pointer"
+                  title="Đặt lại toàn bộ bộ lọc"
+                >
+                  <RotateCcw size={12} />
+                  <span>Đặt lại</span>
+                </button>
+              )}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Filter Rows - Full Width Stacked */}
+          <div className="space-y-4">
             {/* Filter by District */}
-            <div>
-              <label className="font-mono text-[11px] text-[#0F1A41]/70 uppercase block mb-2.5 font-semibold">
-                Khu vực / Quận:
-              </label>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { id: 'all', label: 'TẤT CẢ KHU VỰC' },
-                  { id: 'Quận 1', label: 'QUẬN 1' },
-                  { id: 'Quận 3', label: 'QUẬN 3' },
-                  { id: 'Bình Thạnh', label: 'BÌNH THẠNH' },
-                  { id: 'Phú Nhuận', label: 'PHÚ NHUẬN' },
-                  { id: 'Thảo Điền', label: 'THẢO ĐIỀN' },
-                ].map((d) => (
-                  <button
-                    key={d.id}
-                    onClick={() => setSelectedDistrict(d.id)}
-                    className={`font-mono text-xs px-3.5 py-2 border transition-all ${
-                      selectedDistrict === d.id
-                        ? 'bg-[#0F1A41] text-white border-[#0F1A41]'
-                        : 'bg-[#F4EFEA] text-[#0F1A41]/70 border-[#0F1A41]/15 hover:border-[#0F1A41]'
-                    }`}
-                  >
-                    {d.label}
-                  </button>
-                ))}
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5">
+              <div className="font-mono text-[11px] text-[#0F1A41]/75 uppercase font-bold tracking-wider md:w-36 shrink-0 flex items-center gap-1.5">
+                <MapPin size={13} className="text-[#B9887B]" />
+                <span>Khu vực / Quận:</span>
+              </div>
+              <div className="flex flex-wrap gap-2 flex-grow items-center">
+                {DISTRICT_FILTERS.map((d) => {
+                  const isSelected = selectedDistrict === d.id;
+                  return (
+                    <button
+                      key={d.id}
+                      onClick={() => setSelectedDistrict(d.id)}
+                      className={`font-mono text-xs px-3.5 py-2 border transition-all cursor-pointer ${
+                        isSelected
+                          ? 'bg-[#0F1A41] text-white border-[#0F1A41] shadow-xs font-bold'
+                          : 'bg-[#F4EFEA]/80 text-[#0F1A41]/75 border-[#0F1A41]/15 hover:border-[#0F1A41] hover:bg-white'
+                      }`}
+                    >
+                      {d.label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
             {/* Filter by Brand */}
-            <div>
-              <label className="font-mono text-[11px] text-[#0F1A41]/70 uppercase block mb-2.5 font-semibold">
-                Dòng thương hiệu:
-              </label>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { id: 'all', label: 'TẤT CẢ BRAND' },
-                  { id: 'MARK', label: 'MARK (THƯỢNG LƯU)' },
-                  { id: 'VIBE', label: 'VIBE (NGHỆ THUẬT)' },
-                  { id: 'TERA', label: 'TERA (DÀI HẠN)' },
-                  { id: 'NEST', label: 'NEST (STUDIO)' },
-                  { id: 'SOUL', label: 'SOUL (BOUTIQUE)' },
-                ].map((b) => (
-                  <button
-                    key={b.id}
-                    onClick={() => setSelectedBrand(b.id)}
-                    className={`font-mono text-xs px-3.5 py-2 border transition-all ${
-                      selectedBrand === b.id
-                        ? 'bg-[#B9887B] text-white border-[#B9887B]'
-                        : 'bg-[#F4EFEA] text-[#0F1A41]/70 border-[#0F1A41]/15 hover:border-[#B9887B]'
-                    }`}
-                  >
-                    {b.label}
-                  </button>
-                ))}
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5 pt-4 border-t border-[#0F1A41]/8">
+              <div className="font-mono text-[11px] text-[#0F1A41]/75 uppercase font-bold tracking-wider md:w-36 shrink-0 flex items-center gap-1.5">
+                <Sparkles size={13} className="text-[#B9887B]" />
+                <span>Dòng thương hiệu:</span>
+              </div>
+              <div className="flex flex-wrap gap-2 flex-grow items-center">
+                {BRAND_FILTERS.map((b) => {
+                  const isSelected = selectedBrand === b.id;
+                  return (
+                    <button
+                      key={b.id}
+                      onClick={() => setSelectedBrand(b.id)}
+                      className={`font-mono text-xs px-3.5 py-2 border transition-all cursor-pointer ${
+                        isSelected
+                          ? 'bg-[#B9887B] text-white border-[#B9887B] shadow-xs font-bold'
+                          : 'bg-[#F4EFEA]/80 text-[#0F1A41]/75 border-[#0F1A41]/15 hover:border-[#B9887B] hover:bg-white'
+                      }`}
+                    >
+                      <span className="font-semibold">{b.label}</span>
+                      {b.sub && (
+                        <span className={`ml-1 text-[10px] tracking-normal ${isSelected ? 'text-white/85' : 'text-[#0F1A41]/60 font-normal'}`}>
+                          ({b.sub})
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Consistent Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((p) => (
-            <article key={p.id} className="bg-white border border-[#0F1A41]/10 overflow-hidden flex flex-col hover:shadow-xl transition-all group">
+        {/* Empty State when no project matches */}
+        {filteredProjects.length === 0 ? (
+          <div className="bg-white border border-[#0F1A41]/10 p-12 text-center my-6 shadow-xs">
+            <Building2 size={40} className="mx-auto text-[#B9887B]/60 mb-3" />
+            <h3 className="font-serif text-xl font-bold text-[#0F1A41] mb-2">
+              Không tìm thấy dự án phù hợp
+            </h3>
+            <p className="text-xs text-[#0F1A41]/70 max-w-md mx-auto mb-6 font-mono leading-relaxed">
+              Không có bất động sản nào đáp ứng đồng thời cả khu vực và dòng thương hiệu đã chọn. Quý khách vui lòng điều chỉnh tiêu chí tìm kiếm.
+            </p>
+            <button
+              onClick={handleReset}
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0F1A41] hover:bg-[#B9887B] text-white text-xs font-mono font-bold uppercase tracking-wider transition-colors cursor-pointer"
+            >
+              <RotateCcw size={13} />
+              <span>Xem tất cả {projects.length} tài sản</span>
+            </button>
+          </div>
+        ) : (
+          /* Consistent Projects Grid */
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((p) => (
+              <article key={p.id} className="bg-white border border-[#0F1A41]/10 overflow-hidden flex flex-col hover:shadow-xl transition-all group">
               {/* Card Image with Click to Open Detail Page */}
               <div
                 onClick={() => navigate(`/dang-hoat-dong/${p.slug}`)}
@@ -155,7 +228,7 @@ export default function ProjectsPage({ onOpenModal }) {
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-mono text-xs text-[#B9887B] font-bold">{p.brand} COLLECTION</span>
                   <span className="font-mono text-[10px] text-green-700 bg-green-50 px-2 py-0.5 border border-green-200">
-                    Lấp đầy {p.occupancy}
+                    Kín phòng {p.occupancy}
                   </span>
                 </div>
 
@@ -223,6 +296,7 @@ export default function ProjectsPage({ onOpenModal }) {
             </article>
           ))}
         </div>
+      )}
       </section>
 
       {/* Property Owner Consultation CTA */}

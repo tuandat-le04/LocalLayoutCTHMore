@@ -12,7 +12,11 @@ import {
   Layers,
   Calendar,
   Sparkles,
-  Eye
+  Eye,
+  Briefcase,
+  Handshake,
+  Maximize2,
+  Check
 } from 'lucide-react';
 
 export default function ProjectDetailModal({ project, onClose, onConsult }) {
@@ -150,7 +154,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                   {project.tag}
                 </span>
                 <span className="bg-emerald-700/90 backdrop-blur-md text-white text-[10px] font-mono px-2.5 py-1 rounded border border-emerald-400/30">
-                  Lấp đầy {project.occupancy}
+                  Kín phòng {project.occupancy}
                 </span>
               </div>
 
@@ -219,52 +223,109 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
 
           {/* Key Specifications & Operational Dossier */}
           <div>
-            <h3 className="font-mono text-xs font-bold text-[#0F1A41] uppercase tracking-wider mb-3 flex items-center gap-2">
-              <Building2 size={14} className="text-[#B9887B]" />
-              Hồ sơ kỹ thuật & Vận hành tài sản
-            </h3>
+            <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#0F1A41]/10">
+              <h3 className="font-mono text-xs font-bold text-[#0F1A41] uppercase tracking-wider flex items-center gap-2">
+                <Building2 size={14} className="text-[#B9887B]" />
+                Hồ sơ kỹ thuật & Vận hành tài sản
+              </h3>
+              <span className="font-mono text-[10px] text-[#0F1A41]/60 bg-[#FAF6EF] px-2 py-0.5 rounded border border-[#0F1A41]/10">
+                4 Trụ cột chuẩn hóa
+              </span>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10">
-                <span className="font-mono text-[10px] text-[#0F1A41]/60 uppercase block mb-1">
-                  Quy mô khai thác
-                </span>
-                <p className="text-sm font-semibold text-[#0F1A41]">
-                  {project.rooms}
-                </p>
-                <p className="font-mono text-xs text-[#0F1A41]/70 mt-0.5">
-                  Tổng diện tích sàn: <strong>{project.scale}</strong>
-                </p>
+              {/* Pillar 1 */}
+              <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="font-mono text-[10px] text-[#0F1A41]/60 uppercase font-bold flex items-center gap-1.5">
+                      <span className="w-4 h-4 rounded-full bg-[#0F1A41] text-white text-[9px] flex items-center justify-center">01</span>
+                      Quy mô & Kiến trúc
+                    </span>
+                    <Layers size={13} className="text-[#0F1A41]/50" />
+                  </div>
+                  <p className="text-sm font-bold text-[#0F1A41] mb-1">
+                    {project.rooms}
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-[#0F1A41]/8 flex items-center justify-between text-xs font-mono">
+                  <span className="text-[#0F1A41]/80 font-semibold flex items-center gap-1">
+                    <Maximize2 size={11} className="text-[#B9887B]" />
+                    {project.scale}
+                  </span>
+                  <span className="text-[10px] text-[#0F1A41]/55">{project.propertyTypeCategory === 'apartment' ? 'Căn hộ' : 'Lưu trú'}</span>
+                </div>
               </div>
 
-              <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10">
-                <span className="font-mono text-[10px] text-[#0F1A41]/60 uppercase block mb-1">
-                  Gói giải pháp CityHouse More
-                </span>
-                <p className="text-sm font-semibold text-[#B9887B]">
-                  {project.solutionLabel || project.service || 'Quản lý Vận hành Toàn diện'}
-                </p>
-                <p className="font-mono text-xs text-[#0F1A41]/70 mt-0.5">
-                  Phân khúc: <strong>{project.propertyType}</strong>
-                </p>
+              {/* Pillar 2 */}
+              <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="font-mono text-[10px] text-[#B9887B] uppercase font-bold flex items-center gap-1.5">
+                      <span className="w-4 h-4 rounded-full bg-[#B9887B] text-white text-[9px] flex items-center justify-center">02</span>
+                      Gói giải pháp
+                    </span>
+                    <Briefcase size={13} className="text-[#B9887B]/60" />
+                  </div>
+                  <p className="text-sm font-bold text-[#B9887B] mb-1">
+                    {project.solutionLabel || project.service || 'Quản lý Vận hành Toàn diện'}
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-[#0F1A41]/8 flex items-center justify-between text-xs font-mono">
+                  <span className="text-[#0F1A41]/80 font-semibold truncate">
+                    {project.propertyType}
+                  </span>
+                  <span className="text-[10px] text-[#0F1A41]/55">{project.brand}</span>
+                </div>
               </div>
 
-              <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10">
-                <span className="font-mono text-[10px] text-[#0F1A41]/60 uppercase block mb-1">
-                  Mô hình hợp tác
-                </span>
-                <p className="text-sm font-semibold text-[#0F1A41]">
-                  {project.model}
-                </p>
+              {/* Pillar 3 */}
+              <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="font-mono text-[10px] text-[#0F1A41]/60 uppercase font-bold flex items-center gap-1.5">
+                      <span className="w-4 h-4 rounded-full bg-[#0F1A41] text-white text-[9px] flex items-center justify-center">03</span>
+                      Mô hình hợp tác
+                    </span>
+                    <Handshake size={13} className="text-[#0F1A41]/50" />
+                  </div>
+                  <p className="text-sm font-bold text-[#0F1A41] mb-1">
+                    {project.model}
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-[#0F1A41]/8 flex items-center justify-between text-xs font-mono">
+                  <span className="text-[#0F1A41]/80 font-semibold flex items-center gap-1">
+                    <Calendar size={11} className="text-[#B9887B]" />
+                    {project.accompanied}
+                  </span>
+                  <span className="text-[10px] text-green-700 bg-green-50 px-1.5 py-0.5 rounded border border-green-200">Ổn định</span>
+                </div>
               </div>
 
-              <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10">
-                <span className="font-mono text-[10px] text-[#0F1A41]/60 uppercase block mb-1">
-                  Vai trò của CityHouse More
-                </span>
-                <p className="text-xs text-[#0F1A41]/85 leading-relaxed">
-                  {project.role}
-                </p>
+              {/* Pillar 4 */}
+              <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="font-mono text-[10px] text-emerald-700 uppercase font-bold flex items-center gap-1.5">
+                      <span className="w-4 h-4 rounded-full bg-emerald-700 text-white text-[9px] flex items-center justify-center">04</span>
+                      Vai trò triển khai
+                    </span>
+                    <CheckCircle2 size={13} className="text-emerald-600/70" />
+                  </div>
+                  <p className="text-sm font-bold text-[#0F1A41] mb-1">
+                    Trách nhiệm trọn gói
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-[#0F1A41]/8">
+                  <div className="flex flex-wrap gap-1">
+                    {(project.role || '').split(',').map((r, i) => (
+                      <span key={i} className="inline-flex items-center gap-1 text-[11px] font-mono bg-[#FAF6EF] px-1.5 py-0.5 rounded border border-[#0F1A41]/10 text-[#0F1A41]">
+                        <Check size={9} className="text-emerald-600 stroke-[3]" />
+                        <span>{r.trim()}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 

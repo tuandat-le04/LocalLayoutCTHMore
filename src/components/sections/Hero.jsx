@@ -90,7 +90,7 @@ export default function Hero({ onContactClick, onSolutionsClick }) {
             {/* Bottom Tagline on Photo */}
             <div className="absolute bottom-4 left-4 right-4 text-white">
               <p className="text-xs text-white/90 font-medium leading-relaxed">
-                Mô hình căn hộ lưu trú ốc đảo xanh — Công suất lấp đầy 95%+ quanh năm giữa trung tâm TP.HCM.
+                Mô hình căn hộ lưu trú ốc đảo xanh — Tỷ lệ kín phòng 95%+ quanh năm giữa trung tâm TP.HCM.
               </p>
             </div>
           </div>

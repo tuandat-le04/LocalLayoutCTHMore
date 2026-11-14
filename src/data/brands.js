@@ -12,7 +12,7 @@ export const brands = [
     differentiator: "Chi phí hoàn thiện hợp lý, thời gian thu hồi vốn nhanh nhất, tích hợp check-in tự động và quản trị số giảm 40% chi phí nhân sự",
     desc: "Không gian sống thân thuộc như tại nhà với thiết kế studio thông minh, tiện ích trọn gói linh hoạt từ ngắn hạn đến dài hạn, tối ưu hóa dòng tiền trên từng mét vuông.",
     featuredProperty: "CityHouse NEST LightHouse & NEST Metro Thảo Điền",
-    stats: "Lấp đầy 97% · 350+ Đơn vị",
+    stats: "Kín phòng 97% · 350+ Đơn vị",
     idealForOwner: "Chủ sở hữu nhà phố hoặc đất hẻm lớn muốn tối đa số phòng và dòng tiền cho thuê ổn định."
   },
   {
@@ -28,7 +28,7 @@ export const brands = [
     differentiator: "Tỷ lệ khách gia hạn hợp đồng thuê hàng năm trên 78%, tỷ lệ trống dưới 4%, dòng tiền cực kỳ ổn định không phụ thuộc mùa vụ du lịch",
     desc: "Mô hình căn hộ dịch vụ chuẩn mực với công năng hoàn hảo, tiêu chuẩn vận hành khắt khe, chi phí khai thác tối ưu và tỷ lệ khách thuê trung thành vượt trội.",
     featuredProperty: "CityHouse TERA Kim Nguyen & TERA Villea",
-    stats: "Lấp đầy 96%+ quanh năm · Hợp đồng dài hạn",
+    stats: "Kín phòng 96%+ quanh năm · Hợp đồng dài hạn",
     idealForOwner: "Chủ đầu tư ưu tiên an toàn, dòng tiền cố định đều đặn hàng tháng và bảo toàn chất lượng công trình."
   },
   {

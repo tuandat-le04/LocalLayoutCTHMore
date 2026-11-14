@@ -86,7 +86,7 @@ export default function Projects({ onContactClick }) {
                 <div className="flex items-center gap-3 text-xs font-mono text-[#0F1A41]/80 mb-3 pb-3 border-b border-[#0F1A41]/10">
                   <span>Quy mô: <strong>{project.rooms}</strong></span>
                   <span>·</span>
-                  <span className="text-[#B9887B] font-bold">Lấp đầy {project.occupancy}</span>
+                  <span className="text-[#B9887B] font-bold">Kín phòng {project.occupancy}</span>
                 </div>
 
                 <p className="text-xs text-[#0F1A41]/80 leading-relaxed mb-4">

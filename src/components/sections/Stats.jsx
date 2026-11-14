@@ -14,7 +14,7 @@ export default function Stats() {
     },
     {
       value: "95%+",
-      label: "TỶ LỆ LẤP ĐẦY ỔN ĐỊNH",
+      label: "TỶ LỆ KÍN PHÒNG ỔN ĐỊNH",
       desc: "Duy trì quanh năm 365 ngày"
     },
     {
