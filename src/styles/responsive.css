@@ -1,0 +1,178 @@
+/* ── Responsive Queries for CityHouse More ── */
+
+@media (max-width: 1200px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-slider {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    height: 80px;
+  }
+
+  .header-actions .header-phone,
+  .header-actions .lang-switch,
+  .nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-open {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--ink);
+    padding: 30px 24px;
+    flex-direction: column;
+    margin: 0;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero {
+    min-height: 780px;
+    padding-top: 110px;
+  }
+
+  .hero-art {
+    display: none;
+  }
+
+  .section-pad {
+    padding: 75px 24px;
+  }
+
+  .solution-grid,
+  .stats-grid,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-card {
+    border-right: 0;
+    border-bottom: 1px solid var(--line-dark);
+    min-height: auto;
+  }
+
+  .solution-card:last-child {
+    border-bottom: 0;
+  }
+
+  .stats-grid > div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line-dark);
+    padding-right: 0;
+    padding-bottom: 25px;
+  }
+
+  .stats-grid > div:last-child {
+    border-bottom: 0;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insights-grid-three {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-stats-strip {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .timeline {
+    margin-left: 0;
+  }
+
+  .timeline-line {
+    left: 17px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 36px 1fr;
+    gap: 16px;
+    min-height: auto;
+    margin-bottom: 30px;
+  }
+
+  .timeline-year {
+    display: none;
+  }
+
+  .timeline-tag-mobile {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 4px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row-two,
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-col {
+    padding: 30px 20px;
+  }
+
+  .contact-detail-list {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}

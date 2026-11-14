@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  /* Unified Luxury Typography Stack */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: var(--font-serif);
+  --font-body: var(--font-sans);
+  --font-label: var(--font-sans);
+
+  /* CityHouse More Official Brand Palette */
+  --ink: #0F1A41;             /* Deep Midnight Navy */
+  --ink-deep: #080E24;        /* Darker Navy for shadows/contrast */
+  --ink-soft: #162456;        /* Soft Navy for cards/panels */
+  --ink-elevated: #1C2D6B;    /* Highlight Navy */
+  
+  --accent: #B9887B;          /* Warm Terracotta / Luxury Copper */
+  --accent-hover: #A37367;    /* Deep Terracotta */
+  --accent-light: #DFC4BC;    /* Soft Terracotta */
+  --accent-tint: rgba(185, 136, 123, 0.15);
+  
+  --gold: #C79A3B;            /* Agoda & Awards Luxury Gold */
+  --gold-light: #E7C96E;
+  --gold-tint: rgba(199, 154, 59, 0.15);
+  
+  --paper: #F4EFEA;           /* Warm Luxury Linen */
+  --paper-light: #FAF6EF;     /* Soft Linen Cream */
+  --paper-card: #FFFEFB;      /* Clean Warm White */
+  
+  --muted: #8E95A5;           /* Light Muted Text on Dark */
+  --muted-dark: #6C7280;      /* Dark Muted Text on Light */
+  
+  --line: rgba(244, 239, 234, 0.15);
+  --line-strong: rgba(185, 136, 123, 0.35);
+  --line-dark: rgba(15, 26, 65, 0.12);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--paper);
+    background: var(--ink);
+    line-height: 1.7;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button {
+    font: inherit;
+    cursor: pointer;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 5.5vw, 5.5rem);
+    max-width: 900px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 3.8vw, 3.6rem);
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+  }
+
+  h3 {
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  em {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  /* Transformed into Luxury Label Sans with generous letter-spacing */
+  .font-mono {
+    font-family: var(--font-label);
+    letter-spacing: 0.08em;
+  }
+}

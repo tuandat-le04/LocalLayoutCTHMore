@@ -1,0 +1,272 @@
+import React, { useState } from 'react';
+import { projects } from '../data/projects.js';
+import { ArrowUpRight, Building2, MapPin, Star, SlidersHorizontal, Check, Eye } from 'lucide-react';
+import { useNavigation } from '../context/NavigationContext.jsx';
+import ContactForm from '../components/ContactForm.jsx';
+import ProjectDetailModal from '../components/ProjectDetailModal.jsx';
+
+export default function ProjectsPage({ onOpenModal }) {
+  const [selectedDistrict, setSelectedDistrict] = useState('all');
+  const [selectedBrand, setSelectedBrand] = useState('all');
+  const [selectedProject, setSelectedProject] = useState(null);
+  const { navigate } = useNavigation();
+
+  const filteredProjects = projects.filter(p => {
+    const matchDistrict = selectedDistrict === 'all' || p.district.includes(selectedDistrict);
+    const matchBrand = selectedBrand === 'all' || p.brand === selectedBrand;
+    return matchDistrict && matchBrand;
+  });
+
+  return (
+    <div className="projects-page">
+      {/* Page Hero */}
+      <section className="inner-hero section-pad">
+        <p className="eyebrow eyebrow-accent">DANH MỤC TÀI SẢN — CITYHOUSE MORE</p>
+        <h1>
+          Hệ thống tài sản<br />
+          <em>đang vận hành hiệu quả</em>
+        </h1>
+        <p className="lead">
+          Thông tin chi tiết, chuẩn hóa và minh bạch về hơn 35 bất động sản lưu trú đang được CityHouse bảo trợ và quản lý dòng tiền tại các vị trí đắc địa nhất TP.HCM.
+        </p>
+
+        {/* Quick Stats Strip */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 max-w-2xl border-t border-white/10 pt-6">
+          <div>
+            <div className="font-serif text-3xl font-bold text-[#B9887B]">35+</div>
+            <div className="font-mono text-xs text-white/70 mt-1 uppercase">Tòa nhà đang vận hành</div>
+          </div>
+          <div>
+            <div className="font-serif text-3xl font-bold text-[#B9887B]">1.000+</div>
+            <div className="font-mono text-xs text-white/70 mt-1 uppercase">Đơn vị lưu trú cao cấp</div>
+          </div>
+          <div>
+            <div className="font-serif text-3xl font-bold text-[#B9887B]">95%+</div>
+            <div className="font-mono text-xs text-white/70 mt-1 uppercase">Công suất phòng ổn định</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Multi-Filter Section */}
+      <section className="section-pad bg-[#F4EFEA] text-[#0F1A41]">
+        <div className="bg-white p-6 md:p-8 border border-[#0F1A41]/10 mb-12">
+          <div className="flex items-center gap-2 mb-6 text-[#0F1A41] font-mono text-xs font-bold uppercase tracking-wider">
+            <SlidersHorizontal size={16} className="text-[#B9887B]" />
+            <span>Bộ lọc danh mục tài sản thông minh</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Filter by District */}
+            <div>
+              <label className="font-mono text-[11px] text-[#0F1A41]/70 uppercase block mb-2.5 font-semibold">
+                Khu vực / Quận:
+              </label>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { id: 'all', label: 'TẤT CẢ KHU VỰC' },
+                  { id: 'Quận 1', label: 'QUẬN 1' },
+                  { id: 'Quận 3', label: 'QUẬN 3' },
+                  { id: 'Bình Thạnh', label: 'BÌNH THẠNH' },
+                  { id: 'Phú Nhuận', label: 'PHÚ NHUẬN' },
+                  { id: 'Thảo Điền', label: 'THẢO ĐIỀN' },
+                ].map((d) => (
+                  <button
+                    key={d.id}
+                    onClick={() => setSelectedDistrict(d.id)}
+                    className={`font-mono text-xs px-3.5 py-2 border transition-all ${
+                      selectedDistrict === d.id
+                        ? 'bg-[#0F1A41] text-white border-[#0F1A41]'
+                        : 'bg-[#F4EFEA] text-[#0F1A41]/70 border-[#0F1A41]/15 hover:border-[#0F1A41]'
+                    }`}
+                  >
+                    {d.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Filter by Brand */}
+            <div>
+              <label className="font-mono text-[11px] text-[#0F1A41]/70 uppercase block mb-2.5 font-semibold">
+                Dòng thương hiệu:
+              </label>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { id: 'all', label: 'TẤT CẢ BRAND' },
+                  { id: 'MARK', label: 'MARK (THƯỢNG LƯU)' },
+                  { id: 'VIBE', label: 'VIBE (NGHỆ THUẬT)' },
+                  { id: 'TERA', label: 'TERA (DÀI HẠN)' },
+                  { id: 'NEST', label: 'NEST (STUDIO)' },
+                  { id: 'SOUL', label: 'SOUL (BOUTIQUE)' },
+                ].map((b) => (
+                  <button
+                    key={b.id}
+                    onClick={() => setSelectedBrand(b.id)}
+                    className={`font-mono text-xs px-3.5 py-2 border transition-all ${
+                      selectedBrand === b.id
+                        ? 'bg-[#B9887B] text-white border-[#B9887B]'
+                        : 'bg-[#F4EFEA] text-[#0F1A41]/70 border-[#0F1A41]/15 hover:border-[#B9887B]'
+                    }`}
+                  >
+                    {b.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Consistent Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((p) => (
+            <article key={p.id} className="bg-white border border-[#0F1A41]/10 overflow-hidden flex flex-col hover:shadow-xl transition-all group">
+              {/* Card Image with Click to Open Detail Page */}
+              <div
+                onClick={() => navigate(`/dang-hoat-dong/${p.slug}`)}
+                className="relative aspect-[16/10] overflow-hidden bg-[#0F1A41] cursor-pointer"
+              >
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-[#B9887B] text-white text-[9px] font-mono font-bold uppercase tracking-wider px-2.5 py-1">
+                  {p.tag}
+                </div>
+
+                {p.agodaScore && (
+                  <div className="absolute bottom-3 right-3 bg-[#0F1A41]/90 backdrop-blur-md text-white text-[11px] font-mono px-2.5 py-1 flex items-center gap-1 border border-white/20">
+                    <Star size={12} className="fill-[#C79A3B] text-[#C79A3B]" />
+                    <span>{p.agodaScore}</span>
+                  </div>
+                )}
+
+                {/* Subtle overlay hint on hover */}
+                <div className="absolute inset-0 bg-[#0F1A41]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="bg-white/95 text-[#0F1A41] text-xs font-mono font-bold px-3 py-1.5 rounded shadow-lg flex items-center gap-1.5">
+                    <Eye size={13} className="text-[#B9887B]" />
+                    Xem trang chi tiết
+                  </span>
+                </div>
+              </div>
+
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-mono text-xs text-[#B9887B] font-bold">{p.brand} COLLECTION</span>
+                  <span className="font-mono text-[10px] text-green-700 bg-green-50 px-2 py-0.5 border border-green-200">
+                    Lấp đầy {p.occupancy}
+                  </span>
+                </div>
+
+                <h3
+                  onClick={() => navigate(`/dang-hoat-dong/${p.slug}`)}
+                  className="font-serif text-xl font-semibold mb-3 group-hover:text-[#B9887B] transition-colors cursor-pointer"
+                >
+                  {p.name}
+                </h3>
+
+                {/* Standardized Information Table */}
+                <div className="space-y-1.5 text-xs text-[#0F1A41]/80 font-mono mb-4 bg-[#F4EFEA] p-3 border-l-2 border-[#B9887B]">
+                  <div className="flex items-start gap-1.5">
+                    <MapPin size={12} className="text-[#B9887B] shrink-0 mt-0.5" />
+                    <span className="truncate">{p.fullAddress}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Building2 size={12} className="text-[#B9887B] shrink-0" />
+                    <span>Quy mô: <strong>{p.rooms}</strong> ({p.scale})</span>
+                  </div>
+                  <div className="text-[11px] text-[#0F1A41]/60">
+                    Gói giải pháp: <span className="text-[#0F1A41] font-semibold">{p.solutionLabel || p.service || 'Quản lý Toàn diện'}</span>
+                  </div>
+                </div>
+
+                <p className="text-xs text-[#0F1A41]/70 leading-relaxed mb-6 flex-grow">{p.description}</p>
+
+                {/* Card Actions Footer */}
+                <div className="border-t border-[#0F1A41]/10 pt-4 mt-auto space-y-3">
+                  <div className="flex justify-between items-center text-xs font-mono">
+                    <span className="text-[#0F1A41]/60 font-semibold">{p.accompanied}</span>
+
+                    {p.agodaUrl ? (
+                      <a
+                        href={p.agodaUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-bold flex items-center gap-1 text-[#0F1A41] hover:text-[#B9887B] transition-colors"
+                        title="Xem đánh giá trên Agoda"
+                      >
+                        <span>ĐÁNH GIÁ AGODA</span>
+                        <ArrowUpRight size={13} />
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => navigate('/contact')}
+                        className="font-bold flex items-center gap-1 text-[#0F1A41] hover:text-[#B9887B]"
+                      >
+                        TƯ VẤN DỰ ÁN <ArrowUpRight size={13} />
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Prominent View Detail Button */}
+                  <button
+                    type="button"
+                    onClick={() => navigate(`/dang-hoat-dong/${p.slug}`)}
+                    className="w-full py-2.5 px-4 bg-[#0F1A41] hover:bg-[#B9887B] text-white text-xs font-mono font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 rounded cursor-pointer group/btn shadow-xs"
+                  >
+                    <span>XEM CHI TIẾT DỰ ÁN</span>
+                    <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                  </button>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Property Owner Consultation CTA */}
+      <section className="section-pad bg-[#0F1A41] text-white">
+        <div className="contact-layout">
+          <div className="contact-info-col">
+            <p className="eyebrow eyebrow-accent">BẠN ĐANG SỞ HỮU BẤT ĐỘNG SẢN?</p>
+            <h2>
+              ĐƯA TÀI SẢN CỦA BẠN<br />
+              <span>VÀO HỆ THỐNG CITYHOUSE</span>
+            </h2>
+            <p>
+              Gia nhập mạng lưới hơn 35 tòa nhà vận hành chuyên nghiệp để tận hưởng nguồn khách quốc tế ổn định, hệ thống quản trị dòng tiền minh bạch và gia tăng giá trị tài sản bền vững.
+            </p>
+            <div className="contact-detail-list">
+              <div>
+                <span>HOTLINE TIẾP NHẬN DỰ ÁN</span>
+                <strong>0878 253 545</strong>
+              </div>
+              <div>
+                <span>EMAIL BỘ PHẬN PHÁT TRIỂN</span>
+                <strong>info@cityhousemore.com</strong>
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-form-col">
+            <ContactForm submitLabel="GỬI THÔNG TIN BẤT ĐỘNG SẢN" />
+          </div>
+        </div>
+      </section>
+
+      {/* Project Detail Modal */}
+      <ProjectDetailModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+        onConsult={() => {
+          if (onOpenModal) {
+            onOpenModal();
+          } else {
+            navigate('/contact');
+          }
+        }}
+      />
+    </div>
+  );
+}

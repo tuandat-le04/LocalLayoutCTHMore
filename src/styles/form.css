@@ -1,0 +1,180 @@
+/* ── Form Inputs (Đồng bộ font var(--font-sans) chuẩn mực, loại bỏ font rối mắt) ── */
+.b2b-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: var(--font-sans);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #1c274c;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.form-field label span.required {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 11px 14px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: #0f1a41;
+  outline: none;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #9ca3af;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #b9887b;
+  box-shadow: 0 0 0 3px rgba(185, 136, 123, 0.18);
+  background: #ffffff;
+}
+
+.form-row-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.checkbox-label:hover {
+  border-color: #b9887b;
+  background: #faf8f6;
+  color: #0f1a41;
+}
+
+.checkbox-label.checked {
+  border-color: #b9887b;
+  background: #fbf7f5;
+  color: #0f1a41;
+  font-weight: 600;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #b9887b;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 3px;
+}
+
+.form-privacy-note {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.form-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 20px;
+  background-color: #B9887B !important;
+  color: #FFFFFF !important;
+  border: 1px solid #B9887B !important;
+  border-radius: 4px;
+  font-family: var(--font-sans) !important;
+  font-size: 13.5px;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(185, 136, 123, 0.45) !important;
+  margin-top: 6px;
+  opacity: 1 !important;
+}
+
+.form-submit-btn:hover {
+  background-color: #A37367 !important;
+  border-color: #A37367 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(185, 136, 123, 0.55) !important;
+}
+
+.form-success-box {
+  padding: 40px 24px;
+  text-align: center;
+  font-family: var(--font-sans);
+}
+
+.form-success-box svg {
+  color: #b9887b;
+  margin-bottom: 16px;
+}
+
+.form-success-box h3 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f1a41;
+  margin-bottom: 10px;
+}
+
+.form-success-box p {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
