@@ -29,7 +29,7 @@ export default function Projects({ onContactClick }) {
 
         <button
           onClick={() => navigate('/danh-muc-tai-san')}
-          className="outline-btn-dark inline-flex items-center gap-2 px-5 py-2.5 rounded text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+          className="outline-btn-dark inline-flex items-center gap-2 px-5 py-2.5 rounded text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md self-start md:self-auto shrink-0"
           style={{
             color: '#0F1A41',
             backgroundColor: '#FFFFFF',

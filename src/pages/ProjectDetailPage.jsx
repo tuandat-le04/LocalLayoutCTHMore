@@ -286,9 +286,9 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
       </header>
 
       {/* 3. Sticky Sub-Navigation Bar (Project Nav) */}
-      <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-y border-[#0F1A41]/10 shadow-xs">
+      <nav className="sticky top-[72px] sm:top-[80px] z-30 bg-white/95 backdrop-blur-md border-y border-[#0F1A41]/10 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-1 sm:gap-6 overflow-x-auto whitespace-nowrap text-xs font-mono font-bold uppercase tracking-wider">
+          <div className="flex items-center gap-1 sm:gap-6 overflow-x-auto whitespace-nowrap text-xs font-mono font-bold uppercase tracking-wider no-scrollbar touch-pan-x">
             {[
               { id: 'overview', label: 'Tổng quan' },
               { id: 'specs', label: 'Thông số kỹ thuật' },

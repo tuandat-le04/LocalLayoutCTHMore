@@ -447,7 +447,7 @@ export default function CareersPage({ onOpenModal }) {
   };
 
   return (
-    <div className="careers-page font-sans text-[#0F1A41] bg-[#FAF6EF]">
+    <div className="careers-page text-[#0F1A41] bg-[#FAF6EF]">
       {/* ── 1. Page Hero Banner ── */}
       <section className="inner-hero section-pad relative overflow-hidden bg-[#0F1A41] text-white">
         <div className="max-w-7xl mx-auto relative z-10">
@@ -455,18 +455,18 @@ export default function CareersPage({ onOpenModal }) {
             <Briefcase size={14} className="text-[#B9887B]" />
             CƠ HỘI NGHỀ NGHIỆP — CITYHOUSE MORE
           </p>
-          <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-[1.22] max-w-4xl tracking-tight mb-6">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.22] max-w-4xl tracking-tight mb-6">
             Bắt đầu ở đây.<br />
-            <em className="text-[#B9887B] font-serif italic inline-block mt-1">Phát triển xa hơn.</em>
+            <em className="text-[#B9887B] italic inline-block mt-1">Phát triển xa hơn.</em>
           </h1>
-          <p className="lead text-base md:text-lg text-[#F4EFEA]/85 max-w-2xl leading-relaxed mt-6 font-sans">
+          <p className="lead text-base md:text-lg text-[#F4EFEA]/85 max-w-2xl leading-relaxed mt-6">
             Cơ hội dành cho những ai muốn học nghề thực chiến, phát triển chuyên môn sâu rộng và đồng hành dài hạn cùng hệ sinh thái quản lý gia sản lưu trú CityHouse More.
           </p>
 
           {/* 3 Candidate Audience Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 max-w-3xl">
             <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
-              <span className="text-[11px] font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
+              <span className="text-[11px] font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 01 · Thực Tập Sinh
               </span>
               <p className="text-xs text-white/80 leading-relaxed">
@@ -475,7 +475,7 @@ export default function CareersPage({ onOpenModal }) {
             </div>
 
             <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
-              <span className="text-[11px] font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
+              <span className="text-[11px] font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 02 · Mới Tốt Nghiệp
               </span>
               <p className="text-xs text-white/80 leading-relaxed">
@@ -484,7 +484,7 @@ export default function CareersPage({ onOpenModal }) {
             </div>
 
             <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
-              <span className="text-[11px] font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
+              <span className="text-[11px] font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 03 · Có Kinh Nghiệm
               </span>
               <p className="text-xs text-white/80 leading-relaxed">
@@ -493,10 +493,10 @@ export default function CareersPage({ onOpenModal }) {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 mt-8">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-8">
             <a
               href="#openings"
-              className="solid-btn inline-flex items-center gap-2 px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded transition-all duration-300 shadow-xl cursor-pointer"
+              className="solid-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded transition-all duration-300 shadow-xl cursor-pointer"
               style={{
                 backgroundColor: '#B9887B',
                 color: '#FFFFFF',
@@ -510,7 +510,7 @@ export default function CareersPage({ onOpenModal }) {
 
             <a
               href="#university-partnership"
-              className="outline-btn inline-flex items-center gap-2 px-5 py-3.5 text-xs font-semibold uppercase tracking-wider border border-white/30 text-white hover:border-[#B9887B] hover:text-[#B9887B] transition-all rounded"
+              className="outline-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs font-semibold uppercase tracking-wider border border-white/30 text-white hover:border-[#B9887B] hover:text-[#B9887B] transition-all rounded"
             >
               <School size={15} />
               <span>HỢP TÁC CÙNG NHÀ TRƯỜNG</span>
@@ -527,7 +527,7 @@ export default function CareersPage({ onOpenModal }) {
               <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
               HỆ SINH THÁI KHÉP KÍN
             </p>
-            <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#0F1A41] leading-snug tracking-tight mb-3">
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-[#0F1A41] leading-snug tracking-tight mb-3">
               Làm việc trong một hệ sinh thái
             </h2>
             <p className="text-sm sm:text-base text-[#0F1A41]/75 leading-relaxed">
@@ -541,10 +541,10 @@ export default function CareersPage({ onOpenModal }) {
                 key={role.step}
                 className="p-6 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 hover:border-[#B9887B]/50 hover:bg-white hover:shadow-md transition-all duration-300"
               >
-                <span className="text-xs font-bold text-[#B9887B] tracking-wider block mb-2">
+                <span className="text-xs font-mono font-bold text-[#B9887B] tracking-wider block mb-2">
                   {role.step} // VAI TRÒ
                 </span>
-                <h3 className="font-sans text-lg font-bold text-[#0F1A41] mb-2">
+                <h3 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
                   {role.title}
                 </h3>
                 <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
@@ -565,7 +565,7 @@ export default function CareersPage({ onOpenModal }) {
                 <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
                 LỘ TRÌNH PHÁT TRIỂN NGHỀ NGHIỆP
               </p>
-              <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#0F1A41] leading-snug tracking-tight mb-2">
+              <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-[#0F1A41] leading-snug tracking-tight mb-2">
                 Phát triển từng bước qua thực chiến
               </h2>
             </div>
@@ -581,10 +581,10 @@ export default function CareersPage({ onOpenModal }) {
                 className="p-5 rounded-lg bg-white border border-[#0F1A41]/10 shadow-xs hover:border-[#B9887B]/40 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="text-sm font-bold text-[#B9887B] mb-3">
+                  <div className="text-sm font-mono font-bold text-[#B9887B] tracking-wider mb-3">
                     BƯỚC {step.step}
                   </div>
-                  <h3 className="font-sans text-base font-bold text-[#0F1A41] mb-2">
+                  <h3 className="font-serif text-base font-bold text-[#0F1A41] mb-2">
                     {step.title}
                   </h3>
                 </div>
@@ -605,7 +605,7 @@ export default function CareersPage({ onOpenModal }) {
               <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
               VĂN HÓA LÀM VIỆC TẠI CITYHOUSE
             </p>
-            <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#0F1A41] leading-snug tracking-tight mb-3">
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-[#0F1A41] leading-snug tracking-tight mb-3">
               Cách chúng tôi làm việc
             </h2>
             <p className="text-sm sm:text-base text-[#0F1A41]/75 leading-relaxed">
@@ -619,10 +619,10 @@ export default function CareersPage({ onOpenModal }) {
                 key={val.step}
                 className="p-6 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 hover:bg-white hover:border-[#B9887B]/50 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-xs font-bold text-[#B9887B] mb-3">
+                <div className="text-xs font-mono font-bold text-[#B9887B] tracking-wider mb-3">
                   0{val.step} // NGUYÊN TẮC
                 </div>
-                <h3 className="font-sans text-lg font-bold text-[#0F1A41] mb-2">
+                <h3 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
                   {val.title}
                 </h3>
                 <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
@@ -643,7 +643,7 @@ export default function CareersPage({ onOpenModal }) {
                 <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
                 CÁC VAI TRÒ ĐANG MỞ TẠI CITYHOUSE
               </p>
-              <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F1A41] leading-snug tracking-tight mb-2.5">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0F1A41] leading-snug tracking-tight mb-2.5">
                 Vị trí đang tuyển dụng
               </h2>
               <p className="text-xs sm:text-sm text-[#0F1A41]/75 max-w-xl leading-relaxed">
@@ -651,14 +651,14 @@ export default function CareersPage({ onOpenModal }) {
               </p>
             </div>
 
-            <div className="text-xs font-semibold text-[#0F1A41]/75 bg-white border border-[#0F1A41]/10 px-4 py-2.5 rounded shadow-xs flex items-center gap-2 self-start md:self-auto">
+            <div className="text-xs font-mono font-semibold text-[#0F1A41]/75 bg-white border border-[#0F1A41]/10 px-4 py-2.5 rounded shadow-xs flex items-center gap-2 self-start md:self-auto">
               <CheckCircle2 size={15} className="text-[#B9887B]" />
               <span>Đang mở <strong>10</strong> vị trí tại TP. Hồ Chí Minh</span>
             </div>
           </div>
 
           {/* Filter Tabs */}
-          <div className="flex gap-2 overflow-x-auto pb-2 mb-10 border-b border-[#0F1A41]/10">
+          <div className="flex gap-2 overflow-x-auto pb-2 mb-10 border-b border-[#0F1A41]/10 no-scrollbar touch-pan-x">
             {[
               { id: 'all', label: 'TẤT CẢ VỊ TRÍ (10)' },
               { id: 'operations', label: 'VẬN HÀNH & KHÁCH SẠN (4)' },
@@ -670,7 +670,7 @@ export default function CareersPage({ onOpenModal }) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`text-xs px-4 py-2.5 whitespace-nowrap rounded font-semibold transition-all cursor-pointer ${
+                className={`text-xs font-mono px-4 py-2.5 whitespace-nowrap rounded font-semibold transition-all cursor-pointer ${
                   activeTab === tab.id
                     ? 'bg-[#0F1A41] text-white shadow-sm'
                     : 'bg-white text-[#0F1A41]/70 hover:bg-[#B9887B]/15 hover:text-[#0F1A41] border border-[#0F1A41]/10'
@@ -698,20 +698,20 @@ export default function CareersPage({ onOpenModal }) {
                   >
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-2 text-xs">
-                        <span className="font-bold text-[#B9887B] tracking-wider">
+                        <span className="font-mono font-bold text-[#B9887B] tracking-wider">
                           {job.code} //
                         </span>
-                        <span className="px-2.5 py-0.5 rounded bg-[#0F1A41]/5 text-[#0F1A41] font-medium text-[11px]">
+                        <span className="px-2.5 py-0.5 rounded bg-[#0F1A41]/5 text-[#0F1A41] font-mono font-medium text-[11px]">
                           {job.categoryLabel}
                         </span>
-                        <span className="px-2.5 py-0.5 rounded bg-[#B9887B]/15 text-[#B9887B] font-semibold text-[11px]">
+                        <span className="px-2.5 py-0.5 rounded bg-[#B9887B]/15 text-[#B9887B] font-mono font-semibold text-[11px]">
                           {job.experienceLabel}
                         </span>
                         <span className="text-gray-400">·</span>
-                        <span className="text-gray-500 text-[11px]">SL: {job.quantity}</span>
+                        <span className="text-gray-500 font-mono text-[11px]">SL: {job.quantity}</span>
                       </div>
 
-                      <h3 className="font-sans text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2">
+                      <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2">
                         {job.title}
                       </h3>
 
@@ -719,7 +719,7 @@ export default function CareersPage({ onOpenModal }) {
                         {job.summary}
                       </p>
 
-                      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 text-xs text-gray-500">
+                      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 text-xs font-mono text-gray-500">
                         <span className="flex items-center gap-1.5">
                           <MapPin size={13} className="text-[#B9887B]" /> {job.location}
                         </span>
@@ -764,7 +764,7 @@ export default function CareersPage({ onOpenModal }) {
                     <div className="px-6 md:px-8 pb-8 pt-2 border-t border-gray-100 bg-[#FAF6EF]/30 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
                       {/* Duties */}
                       <div className="p-5 rounded bg-white border border-gray-100">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
+                        <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                           <span>Nhiệm vụ chính</span>
                         </h4>
@@ -780,7 +780,7 @@ export default function CareersPage({ onOpenModal }) {
 
                       {/* Requirements */}
                       <div className="p-5 rounded bg-white border border-gray-100">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
+                        <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                           <span>Yêu cầu ứng viên</span>
                         </h4>
@@ -797,7 +797,7 @@ export default function CareersPage({ onOpenModal }) {
                       {/* Benefits */}
                       <div className="p-5 rounded bg-white border border-gray-100 flex flex-col justify-between">
                         <div>
-                          <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
+                          <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                             <span>Quyền lợi & Đãi ngộ</span>
                           </h4>
@@ -843,9 +843,9 @@ export default function CareersPage({ onOpenModal }) {
                 <School size={16} className="text-[#B9887B]" />
                 KẾT NỐI CÙNG NHÀ TRƯỜNG & HỌC VIỆN
               </p>
-              <h2 className="font-sans text-3xl sm:text-4xl font-bold text-white leading-[1.3] mb-6 tracking-tight">
+              <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-white leading-[1.3] mb-6 tracking-tight">
                 Hợp tác thực tập, tuyển dụng<br />
-                và <em className="text-[#B9887B] font-serif italic inline-block mt-1">định hướng nghề nghiệp</em>
+                và <em className="text-[#B9887B] italic inline-block mt-1">định hướng nghề nghiệp</em>
               </h2>
               <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-8">
                 CityHouse More chủ động kết nối cùng các trường Đại học, Cao đẳng đào tạo ngành Quản trị Khách sạn, Du lịch, Quản trị Kinh doanh và Bất động sản để tạo môi trường trải nghiệm thực chiến cho sinh viên.
@@ -853,7 +853,7 @@ export default function CareersPage({ onOpenModal }) {
 
               <div className="flex flex-col gap-4 mb-8">
                 <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-bold text-[#B9887B] block mb-2">
+                  <span className="text-xs font-mono font-bold text-[#B9887B] block mb-2">
                     01 · KẾT NỐI THỰC TẬP DOANH NGHIỆP
                   </span>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -862,7 +862,7 @@ export default function CareersPage({ onOpenModal }) {
                 </div>
 
                 <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-bold text-[#B9887B] block mb-2">
+                  <span className="text-xs font-mono font-bold text-[#B9887B] block mb-2">
                     02 · GIỚI THIỆU VIỆC LÀM CHO SINH VIÊN
                   </span>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -871,7 +871,7 @@ export default function CareersPage({ onOpenModal }) {
                 </div>
 
                 <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-bold text-[#B9887B] block mb-2">
+                  <span className="text-xs font-mono font-bold text-[#B9887B] block mb-2">
                     03 · ĐỒNG HÀNH CÙNG NHÀ TRƯỜNG
                   </span>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -881,16 +881,16 @@ export default function CareersPage({ onOpenModal }) {
               </div>
 
               {/* Direct HR Contact */}
-              <div className="p-4 rounded bg-[#B9887B]/15 border border-[#B9887B]/30 flex flex-wrap items-center justify-between gap-4 text-xs">
+              <div className="p-4 rounded bg-[#B9887B]/15 border border-[#B9887B]/30 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
                 <div>
                   <span className="text-white/60 block text-[10px] uppercase font-mono">ĐẦU MỐI PHỤ TRÁCH NHÂN SỰ</span>
-                  <strong className="text-sm text-white">Phòng Nhân Sự CityHouse More</strong>
+                  <strong className="text-sm text-white font-sans font-bold">Phòng Nhân Sự CityHouse More</strong>
                 </div>
                 <div className="flex items-center gap-4">
-                  <a href="mailto:hr@cityhousemore.com" className="flex items-center gap-1.5 text-[#B9887B] hover:underline">
+                  <a href="mailto:hr@cityhousemore.com" className="flex items-center gap-1.5 text-[#B9887B] hover:underline font-mono">
                     <Mail size={13} /> hr@cityhousemore.com
                   </a>
-                  <a href="tel:0966891218" className="flex items-center gap-1.5 text-white font-bold hover:underline">
+                  <a href="tel:0966891218" className="flex items-center gap-1.5 text-white font-bold hover:underline font-mono">
                     <Phone size={13} className="text-[#B9887B]" /> 0966 891 218
                   </a>
                 </div>
@@ -899,7 +899,7 @@ export default function CareersPage({ onOpenModal }) {
 
             {/* Right Column: University Cooperation Form */}
             <div className="lg:col-span-6 bg-white p-6 sm:p-8 rounded-lg text-[#0F1A41] shadow-2xl">
-              <h3 className="font-sans text-xl sm:text-2xl font-bold text-[#0F1A41] mb-3 leading-snug">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-3 leading-snug">
                 ĐĂNG KÝ KẾT NỐI HỢP TÁC
               </h3>
               <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed mb-6">
@@ -909,7 +909,7 @@ export default function CareersPage({ onOpenModal }) {
               {uniSuccess ? (
                 <div className="p-8 text-center bg-[#FAF6EF] border border-[#B9887B]/30 rounded">
                   <CheckCircle2 size={40} className="text-[#B9887B] mx-auto mb-3" />
-                  <h4 className="font-sans text-lg font-bold text-[#0F1A41] mb-2">
+                  <h4 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
                     GỬI ĐỀ NGHỊ HỢP TÁC THÀNH CÔNG
                   </h4>
                   <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed">
@@ -1026,7 +1026,7 @@ export default function CareersPage({ onOpenModal }) {
               <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
               QUY TRÌNH ỨNG TUYỂN RÕ RÀNG
             </p>
-            <h2 className="font-sans text-3xl sm:text-4xl font-bold text-[#0F1A41] leading-snug tracking-tight mb-3">
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-[#0F1A41] leading-snug tracking-tight mb-3">
               6 bước gia nhập CityHouse More
             </h2>
             <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed">
@@ -1048,10 +1048,10 @@ export default function CareersPage({ onOpenModal }) {
                 className="p-4 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 flex flex-col justify-between"
               >
                 <div>
-                  <span className="font-bold text-sm text-[#B9887B] block mb-2">
+                  <span className="font-mono font-bold text-sm text-[#B9887B] block mb-2">
                     {p.step}
                   </span>
-                  <h3 className="font-sans text-sm font-bold text-[#0F1A41] mb-2">
+                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#0F1A41] mb-1.5">
                     {p.title}
                   </h3>
                 </div>
@@ -1067,17 +1067,17 @@ export default function CareersPage({ onOpenModal }) {
       {/* ── 8. Bottom Talent Pool / General Application ── */}
       <section className="py-16 md:py-20 bg-[#FAF6EF] text-[#0F1A41]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-xs font-bold text-[#B9887B] uppercase tracking-wider block mb-3">
+          <span className="text-xs font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-3">
             MẠNG LƯỚI TÀI NĂNG LƯU TRÚ
           </span>
-          <h2 className="font-sans text-2xl sm:text-3xl font-bold text-[#0F1A41] mb-3.5 leading-snug">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0F1A41] mb-3.5 leading-snug">
             Chưa tìm thấy vị trí phù hợp với bạn?
           </h2>
           <p className="text-xs sm:text-sm text-[#0F1A41]/75 max-w-xl mx-auto leading-relaxed mb-8">
             Hãy gửi CV và thông tin liên hệ về hòm thư của chúng tôi. Phòng Nhân sự CityHouse More sẽ liên hệ ngay khi có cơ hội tương thích với năng lực của bạn.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono font-semibold">
             <a
               href="mailto:hr@cityhousemore.com"
               className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#0F1A41] text-white hover:bg-[#B9887B] transition-colors"
@@ -1110,13 +1110,13 @@ export default function CareersPage({ onOpenModal }) {
             </button>
 
             <div className="mb-6">
-              <span className="text-[11px] font-bold text-[#B9887B] uppercase tracking-wider block mb-2">
+              <span className="text-[11px] font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-2">
                 ỨNG TUYỂN VỊ TRÍ
               </span>
-              <h3 className="font-sans text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2 leading-snug">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2 leading-snug">
                 {selectedJobForModal.title}
               </h3>
-              <p className="text-xs sm:text-sm text-gray-500">
+              <p className="text-xs sm:text-sm font-mono text-gray-500">
                 {selectedJobForModal.location} · {selectedJobForModal.salary}
               </p>
             </div>
@@ -1124,7 +1124,7 @@ export default function CareersPage({ onOpenModal }) {
             {applySuccess ? (
               <div className="p-6 text-center bg-[#FAF6EF] border border-[#B9887B]/30 rounded">
                 <CheckCircle2 size={40} className="text-[#B9887B] mx-auto mb-3" />
-                <h4 className="font-sans text-base font-bold text-[#0F1A41] mb-2">
+                <h4 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
                   NỘP HỒ SƠ THÀNH CÔNG!
                 </h4>
                 <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed">

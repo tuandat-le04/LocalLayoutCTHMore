@@ -105,7 +105,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
         <div className="p-6 sm:p-8 overflow-y-auto space-y-8">
           {/* Visual Showcase: Architecture & Interior Reality Tabs */}
           <div>
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-3">
               <div className="flex items-center gap-2">
                 <span className="font-mono text-xs font-bold text-[#0F1A41] uppercase tracking-wider flex items-center gap-1.5">
                   <Eye size={14} className="text-[#B9887B]" />

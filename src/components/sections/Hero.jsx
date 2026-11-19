@@ -35,10 +35,10 @@ export default function Hero({ onContactClick, onSolutionsClick }) {
           </p>
 
           {/* 2 Clear, Benefit-Driven CTAs */}
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             {/* CTA 1: Solid Terracotta Button */}
             <button
-              className="solid-btn flex items-center gap-2.5 px-6 py-3.5 text-xs md:text-sm font-bold uppercase tracking-wider rounded transition-all duration-300 shadow-xl transform hover:-translate-y-0.5 cursor-pointer"
+              className="solid-btn w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3.5 text-xs md:text-sm font-bold uppercase tracking-wider rounded transition-all duration-300 shadow-xl transform hover:-translate-y-0.5 cursor-pointer"
               style={{
                 backgroundColor: '#B9887B',
                 color: '#FFFFFF',
@@ -55,7 +55,7 @@ export default function Hero({ onContactClick, onSolutionsClick }) {
 
             {/* CTA 2: Secondary Solution Discovery Button */}
             <button
-              className="outline-btn flex items-center gap-2 px-5 py-3.5 text-xs md:text-sm font-semibold uppercase tracking-wider text-[#F4EFEA] border border-white/30 hover:border-[#B9887B] hover:text-[#B9887B] hover:bg-white/[0.04] transition-all duration-300 rounded cursor-pointer"
+              className="outline-btn w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 text-xs md:text-sm font-semibold uppercase tracking-wider text-[#F4EFEA] border border-white/30 hover:border-[#B9887B] hover:text-[#B9887B] hover:bg-white/[0.04] transition-all duration-300 rounded cursor-pointer"
               onClick={onSolutionsClick}
               aria-label="Xem giải pháp của CityHouseMore"
             >

@@ -294,7 +294,7 @@ export default function SolutionsPage({ onOpenModal }) {
                       {/* Top Pillar Badge */}
                       <div className="absolute top-5 left-5 bg-[#0F1A41]/90 backdrop-blur-md border border-[#B9887B]/40 px-3.5 py-1.5 rounded text-white flex items-center gap-2 shadow-lg">
                         <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-                        <span className="font-sans text-xs font-bold uppercase tracking-wider text-[#B9887B]">
+                        <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#B9887B]">
                           {sol.pillarName}
                         </span>
                       </div>
@@ -302,10 +302,10 @@ export default function SolutionsPage({ onOpenModal }) {
                       {/* Overlaid Frosted Glass Metric Card */}
                       <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded border border-white/60 shadow-2xl text-[#0F1A41]">
                         <div className="flex items-baseline justify-between mb-1.5">
-                          <span className="font-sans text-3xl sm:text-4xl font-extrabold text-[#0F1A41] tracking-tight">
+                          <span className="font-serif text-3xl sm:text-4xl font-bold text-[#0F1A41] tracking-tight">
                             {sol.metricValue}
                           </span>
-                          <span className="font-sans text-[11px] font-bold uppercase tracking-widest text-[#B9887B]">
+                          <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-[#B9887B]">
                             {sol.metricLabel}
                           </span>
                         </div>
@@ -324,17 +324,17 @@ export default function SolutionsPage({ onOpenModal }) {
                       <div>
                         {/* Eyebrow badge: Unified, clean, no code slashes */}
                         <div className="flex items-center gap-2 mb-3">
-                          <span className="text-[11px] font-bold tracking-widest text-[#B9887B] uppercase font-sans">
+                          <span className="text-[11px] font-mono font-bold tracking-widest text-[#B9887B] uppercase">
                             {sol.pillarName}
                           </span>
                           <span className="text-gray-300">·</span>
-                          <span className="text-[11px] tracking-wider text-[#0F1A41]/50 uppercase font-medium font-sans">
+                          <span className="text-[11px] font-mono tracking-wider text-[#0F1A41]/50 uppercase font-medium">
                             GIẢI PHÁP GIA SẢN
                           </span>
                         </div>
 
-                        {/* Title: Unified Plus Jakarta Sans, bold, clean Vietnamese diacritics */}
-                        <h3 className="font-sans text-2xl sm:text-3xl font-bold text-[#0F1A41] mb-3 leading-snug tracking-tight">
+                        {/* Title: Unified Serif Cormorant Garamond, bold */}
+                        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0F1A41] mb-3 leading-snug tracking-tight">
                           {sol.title}
                         </h3>
 

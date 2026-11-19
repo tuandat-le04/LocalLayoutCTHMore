@@ -25,7 +25,7 @@ export default function Brands({ onContactClick }) {
 
         <button
           onClick={() => navigate('/thuong-hieu')}
-          className="outline-btn text-xs flex items-center gap-1.5 border border-white/20 text-white/90 hover:border-[#B9887B] hover:text-[#B9887B] transition-colors rounded px-4 py-2.5 cursor-pointer"
+          className="outline-btn text-xs flex items-center gap-1.5 border border-white/20 text-white/90 hover:border-[#B9887B] hover:text-[#B9887B] transition-colors rounded px-4 py-2.5 cursor-pointer self-start md:self-auto shrink-0"
         >
           <span>Xem chi tiết 5 thương hiệu</span>
           <ArrowUpRight size={14} />

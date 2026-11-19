@@ -81,7 +81,7 @@ function MainRouter() {
       <Footer onOpenModal={openModal} />
 
       {/* 4. Global Fixed Floating CTA Bar (Hotline & Consultation) */}
-      <FloatingCTA onOpenModal={openModal} isModalOpen={isModalOpen} />
+      <FloatingCTA onOpenModal={openModal} isModalOpen={isModalOpen || menuOpen} />
 
       {/* 5. Quick Consultation Popup Form */}
       <QuickModal isOpen={isModalOpen} onClose={closeModal} />

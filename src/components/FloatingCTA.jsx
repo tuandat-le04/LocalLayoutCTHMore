@@ -36,7 +36,7 @@ export default function FloatingCTA({ onOpenModal, isModalOpen }) {
 
       {/* ── Compact Floating Action Widget (Both Desktop & Mobile) ── */}
       <aside
-        className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2.5 font-sans pointer-events-auto"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5 font-sans pointer-events-auto"
         aria-label="Thanh hành động liên hệ nhanh"
       >
         {/* ── Unfolded Quick Menu ("Xổ ra" khi ấn icon) ── */}
