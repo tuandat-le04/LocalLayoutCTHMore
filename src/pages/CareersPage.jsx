@@ -896,7 +896,7 @@ export default function CareersPage({ onOpenModal }) {
             </div>
 
             {/* Right Column: University Cooperation Form */}
-            <div className="lg:col-span-6 bg-white p-6 sm:p-8 rounded-lg text-[#0F1A41] shadow-2xl">
+            <div className="lg:col-span-6 bg-white p-6 sm:p-8 rounded-2xl text-[#0F1A41] shadow-2xl border border-[#0F1A41]/10">
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-3 leading-snug">
                 ĐĂNG KÝ KẾT NỐI HỢP TÁC
               </h3>
@@ -905,7 +905,7 @@ export default function CareersPage({ onOpenModal }) {
               </p>
 
               {uniSuccess ? (
-                <div className="p-8 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-xl shadow-xs">
+                <div className="p-8 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-2xl shadow-xs">
                   <div className="w-14 h-14 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] flex items-center justify-center mx-auto mb-3 border border-[#0F1A41]/15">
                     <Check size={28} strokeWidth={2.5} />
                   </div>
@@ -926,7 +926,7 @@ export default function CareersPage({ onOpenModal }) {
                       type="text"
                       required
                       placeholder="Ví dụ: Đại học Kinh tế TP.HCM (UEH)..."
-                      className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                       value={uniForm.schoolName}
                       onChange={(e) => setUniForm({ ...uniForm, schoolName: e.target.value })}
                     />
@@ -940,7 +940,7 @@ export default function CareersPage({ onOpenModal }) {
                       <input
                         type="text"
                         placeholder="Khoa Du lịch - Khách sạn..."
-                        className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                         value={uniForm.department}
                         onChange={(e) => setUniForm({ ...uniForm, department: e.target.value })}
                       />
@@ -953,7 +953,7 @@ export default function CareersPage({ onOpenModal }) {
                         type="text"
                         required
                         placeholder="Thầy/Cô phụ trách..."
-                        className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                         value={uniForm.contactPerson}
                         onChange={(e) => setUniForm({ ...uniForm, contactPerson: e.target.value })}
                       />
@@ -969,7 +969,7 @@ export default function CareersPage({ onOpenModal }) {
                         type="tel"
                         required
                         placeholder="09xx xxx xxx"
-                        className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                         value={uniForm.phone}
                         onChange={(e) => setUniForm({ ...uniForm, phone: e.target.value })}
                       />
@@ -982,7 +982,7 @@ export default function CareersPage({ onOpenModal }) {
                         type="email"
                         required
                         placeholder="email@ueh.edu.vn"
-                        className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                         value={uniForm.email}
                         onChange={(e) => setUniForm({ ...uniForm, email: e.target.value })}
                       />
@@ -996,7 +996,7 @@ export default function CareersPage({ onOpenModal }) {
                     <textarea
                       rows={3}
                       placeholder="Chia sẻ số lượng sinh viên thực tập dự kiến, thời gian hoặc chương trình Ngày hội việc làm..."
-                      className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none resize-none"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none resize-none"
                       value={uniForm.notes}
                       onChange={(e) => setUniForm({ ...uniForm, notes: e.target.value })}
                     />
@@ -1004,7 +1004,7 @@ export default function CareersPage({ onOpenModal }) {
 
                   <button
                     type="submit"
-                    className="solid-btn w-full py-3.5 text-center text-xs font-bold uppercase tracking-wider rounded transition-all cursor-pointer shadow-md text-white mt-2"
+                    className="solid-btn w-full py-3.5 text-center text-xs font-bold uppercase tracking-wider rounded-full transition-all cursor-pointer shadow-md text-white mt-2"
                     style={{
                       backgroundColor: '#B9887B',
                     }}
@@ -1100,7 +1100,7 @@ export default function CareersPage({ onOpenModal }) {
       {/* ── Modal: Candidate Application Form ── */}
       {selectedJobForModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0F1A41]/85 backdrop-blur-md animate-fadeIn">
-          <div className="relative w-full max-w-lg bg-white text-[#0F1A41] rounded-lg shadow-2xl border border-gray-200 p-6 sm:p-8 max-h-[92vh] overflow-y-auto">
+          <div className="relative w-full max-w-lg bg-white text-[#0F1A41] rounded-2xl shadow-2xl border border-gray-200 p-6 sm:p-8 max-h-[92vh] overflow-y-auto">
             {/* Close Button */}
             <button
               onClick={() => setSelectedJobForModal(null)}
@@ -1122,7 +1122,7 @@ export default function CareersPage({ onOpenModal }) {
             </div>
 
             {applySuccess ? (
-              <div className="p-6 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-xl shadow-xs">
+              <div className="p-6 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-2xl shadow-xs">
                 <div className="w-14 h-14 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] flex items-center justify-center mx-auto mb-3 border border-[#0F1A41]/15">
                   <Check size={28} strokeWidth={2.5} />
                 </div>
@@ -1143,7 +1143,7 @@ export default function CareersPage({ onOpenModal }) {
                     type="text"
                     required
                     placeholder="Nguyễn Văn A"
-                    className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                     value={candidateForm.name}
                     onChange={(e) => setCandidateForm({ ...candidateForm, name: e.target.value })}
                   />
@@ -1158,7 +1158,7 @@ export default function CareersPage({ onOpenModal }) {
                       type="email"
                       required
                       placeholder="email@example.com"
-                      className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                       value={candidateForm.email}
                       onChange={(e) => setCandidateForm({ ...candidateForm, email: e.target.value })}
                     />
@@ -1171,7 +1171,7 @@ export default function CareersPage({ onOpenModal }) {
                       type="tel"
                       required
                       placeholder="09xx xxx xxx"
-                      className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                       value={candidateForm.phone}
                       onChange={(e) => setCandidateForm({ ...candidateForm, phone: e.target.value })}
                     />
@@ -1186,7 +1186,7 @@ export default function CareersPage({ onOpenModal }) {
                     type="url"
                     required
                     placeholder="https://drive.google.com/... hoặc link CV online"
-                    className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
                     value={candidateForm.cvLink}
                     onChange={(e) => setCandidateForm({ ...candidateForm, cvLink: e.target.value })}
                   />
@@ -1199,7 +1199,7 @@ export default function CareersPage({ onOpenModal }) {
                   <textarea
                     rows={3}
                     placeholder="Giới thiệu ngắn về kinh nghiệm hoặc thời điểm có thể bắt đầu làm việc..."
-                    className="w-full px-3.5 py-2.5 rounded border border-gray-200 focus:border-[#B9887B] focus:outline-none resize-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none resize-none"
                     value={candidateForm.message}
                     onChange={(e) => setCandidateForm({ ...candidateForm, message: e.target.value })}
                   />
@@ -1207,7 +1207,7 @@ export default function CareersPage({ onOpenModal }) {
 
                 <button
                   type="submit"
-                  className="solid-btn w-full py-3 text-center text-xs font-bold uppercase tracking-wider rounded transition-all cursor-pointer shadow-md text-white mt-2"
+                  className="solid-btn w-full py-3.5 text-center text-xs font-bold uppercase tracking-wider rounded-full transition-all cursor-pointer shadow-md text-white mt-2"
                   style={{
                     backgroundColor: '#B9887B',
                   }}

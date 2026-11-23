@@ -177,7 +177,7 @@ export default function InsightsPage() {
           {insightsCategories.map(tab => (
             <button
               key={tab.id}
-              className={`font-sans text-xs px-5 py-2.5 border transition-all ${
+              className={`font-sans text-xs px-5 py-2.5 border rounded-full transition-all cursor-pointer ${
                 activeTab === tab.id
                   ? 'bg-[#0F1A41] text-white border-[#0F1A41]'
                   : 'bg-white text-[#0F1A41]/70 border-[#0F1A41]/15 hover:border-[#0F1A41]'
@@ -191,7 +191,7 @@ export default function InsightsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredArticles.map(article => (
-            <article key={article.id} className="bg-white border border-[#0F1A41]/10 overflow-hidden flex flex-col hover:shadow-lg transition-all">
+            <article key={article.id} className="bg-white border border-[#0F1A41]/10 rounded-2xl overflow-hidden flex flex-col hover:shadow-lg transition-all">
               <div className="aspect-[16/10] overflow-hidden">
                 <img
                   src={article.image}
@@ -237,7 +237,7 @@ export default function InsightsPage() {
           </p>
 
           {subscribed ? (
-            <div className="flex items-center justify-center gap-2 text-[#B9887B] font-sans text-sm py-4 border border-[#B9887B]/40 bg-[#B9887B]/10">
+            <div className="flex items-center justify-center gap-2 text-[#B9887B] font-sans text-sm py-4 border border-[#B9887B]/40 bg-[#B9887B]/10 rounded-2xl">
               <Check size={18} />
               <span>Cảm ơn bạn đã đăng ký nhận bản tin thành công!</span>
             </div>
@@ -247,11 +247,11 @@ export default function InsightsPage() {
                 type="email"
                 required
                 placeholder="Nhập địa chỉ email của bạn..."
-                className="bg-white/10 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/40 flex-grow outline-none focus:border-[#B9887B]"
+                className="bg-white/10 border border-white/20 px-5 py-3.5 text-sm text-white placeholder:text-white/40 flex-grow outline-none focus:border-[#B9887B] rounded-full transition-all"
                 value={emailInput}
                 onChange={(e) => setEmailInput(e.target.value)}
               />
-              <button type="submit" className="solid-btn whitespace-nowrap">
+              <button type="submit" className="solid-btn whitespace-nowrap rounded-full">
                 ĐĂNG KÝ NGAY <ArrowUpRight size={15} />
               </button>
             </form>

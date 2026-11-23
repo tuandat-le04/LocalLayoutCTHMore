@@ -156,23 +156,23 @@ export default function BrandsPage({ onOpenModal }) {
             Mỗi bất động sản chỉ phát huy tối đa doanh thu khi gắn đúng phân khúc thương hiệu. CityHouse chuẩn hóa 5 mô hình lưu trú với tệp khách hàng và tiêu chuẩn vận hành riêng biệt.
           </p>
 
-          {/* Quick Metrics Bar for Investors: Unified Sans Font */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-8 max-w-3xl border-t border-white/10 pt-6 font-sans">
+          {/* Quick Metrics Bar for Investors: Unified Typography */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-8 max-w-3xl border-t border-white/10 pt-6">
             <div>
               <div className="font-serif text-2xl sm:text-3xl font-bold text-[#B9887B] tracking-tight">05</div>
-              <div className="text-[10.5px] font-bold tracking-[0.15em] text-white/70 uppercase mt-0.5">Phân khúc độc bản</div>
+              <div className="font-sans text-[10.5px] font-bold tracking-[0.15em] text-white/70 uppercase mt-0.5">Phân khúc độc bản</div>
             </div>
             <div>
               <div className="font-serif text-2xl sm:text-3xl font-bold text-[#B9887B] tracking-tight">95%+</div>
-              <div className="text-[10.5px] font-bold tracking-[0.15em] text-white/70 uppercase mt-0.5">Tỷ lệ kín phòng</div>
+              <div className="font-sans text-[10.5px] font-bold tracking-[0.15em] text-white/70 uppercase mt-0.5">Tỷ lệ kín phòng</div>
             </div>
             <div>
-              <div className="font-sans text-2xl sm:text-3xl font-extrabold text-[#B9887B] tracking-tight">$450 – $5.000</div>
-              <div className="text-[10.5px] font-bold tracking-[0.15em] text-white/70 uppercase mt-0.5">Phổ giá linh hoạt</div>
+              <div className="font-serif text-2xl sm:text-3xl font-bold text-[#B9887B] tracking-tight whitespace-nowrap">$450 – $5.000</div>
+              <div className="font-sans text-[10.5px] font-bold tracking-[0.15em] text-white/70 uppercase mt-0.5">Phổ giá linh hoạt</div>
             </div>
             <div>
               <div className="font-serif text-2xl sm:text-3xl font-bold text-[#B9887B] tracking-tight">35+</div>
-              <div className="text-[10.5px] font-bold tracking-[0.15em] text-white/70 uppercase mt-0.5">Tòa nhà vận hành</div>
+              <div className="font-sans text-[10.5px] font-bold tracking-[0.15em] text-white/70 uppercase mt-0.5">Tòa nhà vận hành</div>
             </div>
           </div>
         </div>
@@ -180,11 +180,19 @@ export default function BrandsPage({ onOpenModal }) {
 
       {/* ── Brand Navigation Bar & Mode Switcher: Synchronized Sans ── */}
       <section className="bg-[#FAF6EF] border-b border-[#0F1A41]/10 sticky top-[72px] z-30 shadow-xs backdrop-blur-md bg-opacity-95 font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col md:flex-row items-center justify-between gap-3">
           {/* Brand Tabs */}
-          <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar w-full md:w-auto pb-1 md:pb-0">
+          <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar w-full md:w-auto pb-1 md:pb-0 scroll-smooth">
             {BRAND_PORTFOLIO.map((b) => {
               const isActive = selectedBrandCode === b.code;
+              const shortTag = {
+                MARK: 'Siêu sang',
+                SOUL: 'Boutique',
+                VIBE: 'Sáng tạo',
+                TERA: 'Dài hạn',
+                NEST: 'Studio'
+              }[b.code] || b.code;
+
               return (
                 <button
                   key={b.code}
@@ -192,10 +200,10 @@ export default function BrandsPage({ onOpenModal }) {
                     setSelectedBrandCode(b.code);
                     if (viewMode !== 'showcase') setViewMode('showcase');
                   }}
-                  className={`px-3.5 sm:px-4 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 whitespace-nowrap shrink-0 ${
+                  className={`px-3.5 sm:px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 whitespace-nowrap shrink-0 ${
                     isActive
                       ? 'bg-[#0F1A41] text-white shadow-sm'
-                      : 'bg-white/80 text-[#0F1A41]/75 hover:bg-white hover:text-[#0F1A41] border border-[#0F1A41]/10'
+                      : 'bg-white text-[#0F1A41]/75 hover:bg-white hover:text-[#0F1A41] border border-[#0F1A41]/12 hover:border-[#B9887B]/40'
                   }`}
                 >
                   <span
@@ -203,8 +211,8 @@ export default function BrandsPage({ onOpenModal }) {
                     style={{ backgroundColor: b.accent }}
                   />
                   <span>{b.code}</span>
-                  <span className={`text-[10px] hidden sm:inline font-medium ${isActive ? 'text-white/70' : 'text-[#0F1A41]/50'}`}>
-                    · {b.segment.split('(')[0].replace('Phân khúc', '').trim()}
+                  <span className={`text-[10.5px] hidden sm:inline font-normal ${isActive ? 'text-white/75' : 'text-[#0F1A41]/55'}`}>
+                    · {shortTag}
                   </span>
                 </button>
               );
@@ -212,12 +220,12 @@ export default function BrandsPage({ onOpenModal }) {
           </div>
 
           {/* View Mode Toggle Button: Showcase vs Matrix */}
-          <div className="flex items-center gap-1 bg-white p-1 rounded border border-[#0F1A41]/10 self-end md:self-auto shrink-0 text-xs font-semibold">
+          <div className="flex items-center gap-1 bg-white p-1 rounded-full border border-[#0F1A41]/12 self-end md:self-auto shrink-0 text-xs font-semibold shadow-2xs">
             <button
               onClick={() => setViewMode('showcase')}
-              className={`px-3 py-1.5 rounded flex items-center gap-1.5 transition-colors cursor-pointer ${
+              className={`px-3.5 py-1.5 rounded-full flex items-center gap-1.5 transition-colors cursor-pointer ${
                 viewMode === 'showcase'
-                  ? 'bg-[#0F1A41] text-white'
+                  ? 'bg-[#0F1A41] text-white shadow-xs'
                   : 'text-[#0F1A41]/70 hover:text-[#0F1A41]'
               }`}
             >
@@ -226,9 +234,9 @@ export default function BrandsPage({ onOpenModal }) {
             </button>
             <button
               onClick={() => setViewMode('matrix')}
-              className={`px-3 py-1.5 rounded flex items-center gap-1.5 transition-colors cursor-pointer ${
+              className={`px-3.5 py-1.5 rounded-full flex items-center gap-1.5 transition-colors cursor-pointer ${
                 viewMode === 'matrix'
-                  ? 'bg-[#0F1A41] text-white'
+                  ? 'bg-[#0F1A41] text-white shadow-xs'
                   : 'text-[#0F1A41]/70 hover:text-[#0F1A41]'
               }`}
             >
@@ -392,7 +400,7 @@ export default function BrandsPage({ onOpenModal }) {
                   <div className="pt-5 border-t border-[#101C42]/10 flex flex-col sm:flex-row items-center gap-3 font-sans">
                     <button
                       onClick={handleCtaClick}
-                      className="w-full sm:w-auto px-6 py-3.5 bg-[#101C42] hover:bg-[#1A2C6B] text-white rounded text-xs font-bold uppercase tracking-[0.15em] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-md hover:shadow-lg font-sans"
+                      className="w-full sm:w-auto px-6 py-3.5 bg-[#101C42] hover:bg-[#1A2C6B] text-white rounded-full text-xs font-bold uppercase tracking-[0.12em] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-md hover:shadow-lg font-sans"
                     >
                       <span>TƯ VẤN ĐỊNH VỊ CHO TÒA NHÀ NÀY</span>
                       <ArrowUpRight size={14} />
@@ -400,7 +408,7 @@ export default function BrandsPage({ onOpenModal }) {
 
                     <button
                       onClick={() => navigate('/danh-muc-tai-san')}
-                      className="w-full sm:w-auto px-5 py-3.5 bg-white hover:bg-[#FAF6EF] text-[#101C42] border border-[#101C42]/20 hover:border-[#B9887B] hover:text-[#B9887B] rounded text-xs font-bold uppercase tracking-[0.15em] transition-all cursor-pointer text-center font-sans"
+                      className="w-full sm:w-auto px-5 py-3.5 bg-white hover:bg-[#FAF6EF] text-[#101C42] border border-[#101C42]/20 hover:border-[#B9887B] hover:text-[#B9887B] rounded-full text-xs font-bold uppercase tracking-[0.12em] transition-all cursor-pointer text-center font-sans"
                     >
                       <span>XEM TẤT CẢ DỰ ÁN {activeBrand.code}</span>
                     </button>
@@ -468,7 +476,7 @@ export default function BrandsPage({ onOpenModal }) {
                               setSelectedBrandCode(b.code);
                               setViewMode('showcase');
                             }}
-                            className="px-3 py-1.5 bg-[#0F1A41] hover:bg-[#B9887B] text-white rounded text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                            className="px-4 py-2 bg-[#0F1A41] hover:bg-[#B9887B] text-white rounded-full text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer"
                           >
                             Xem chi tiết
                           </button>
@@ -516,7 +524,7 @@ export default function BrandsPage({ onOpenModal }) {
                   >
                     <div className="relative aspect-[16/10] rounded-lg overflow-hidden mb-3 bg-[#0F1A41]">
                       <img src={b.image} alt={b.name} className="w-full h-full object-cover" loading="lazy" />
-                      <div className="absolute top-2 left-2 bg-[#0F1A41]/90 text-white text-xs font-bold px-2 py-0.5 rounded">
+                      <div className="absolute top-2 left-2 bg-[#0F1A41]/90 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">
                         {b.code}
                       </div>
                     </div>

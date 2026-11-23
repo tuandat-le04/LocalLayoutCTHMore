@@ -25,7 +25,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Company Details */}
           <div>
-            <div className="bg-white p-8 md:p-12 border border-[#0F1A41]/10 mb-8">
+            <div className="bg-white p-8 md:p-12 border border-[#0F1A41]/10 mb-8 rounded-2xl shadow-sm">
               <span className="font-sans text-xs uppercase tracking-widest text-[#B9887B] font-semibold block mb-2">TRỤ SỞ CHÍNH</span>
               <h2 className="font-serif text-3xl font-semibold mb-6">CÔNG TY TNHH CITYHOUSE MORE</h2>
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
             </div>
 
             {/* Privacy Promise */}
-            <div className="bg-[#FAF6EF] p-6 border border-[#0F1A41]/10 flex items-start gap-4">
+            <div className="bg-[#FAF6EF] p-6 border border-[#0F1A41]/10 flex items-start gap-4 rounded-2xl">
               <ShieldCheck size={28} className="text-[#B9887B] shrink-0" />
               <div>
                 <h4 className="font-serif text-base font-semibold mb-2">Cam kết bảo mật tuyệt đối</h4>
@@ -81,7 +81,7 @@ export default function ContactPage() {
           </div>
 
           {/* Form */}
-          <div className="bg-white p-8 md:p-12 border border-[#0F1A41]/10">
+          <div className="bg-white p-8 md:p-12 border border-[#0F1A41]/10 rounded-2xl shadow-sm">
             <h3 className="font-serif text-2xl sm:text-3xl font-semibold mb-3 leading-snug">ĐĂNG KÝ LỊCH HẸN TƯ VẤN</h3>
             <p className="text-xs sm:text-sm text-[#0F1A41]/70 leading-relaxed mb-8">
               Chuyên gia của CityHouse sẽ liên hệ lại trong vòng 24 giờ làm việc để sắp xếp buổi gặp trực tiếp tại trụ sở hoặc khảo sát tại địa điểm tòa nhà của bạn.

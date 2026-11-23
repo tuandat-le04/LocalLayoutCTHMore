@@ -29,18 +29,18 @@ export default function ContactForm({
 
   if (sent) {
     return (
-      <div className="p-8 text-center bg-white rounded border border-[#0F1A41]/10 shadow-lg font-sans">
+      <div className="p-8 text-center bg-white rounded-2xl border border-[#0F1A41]/10 shadow-lg font-sans">
         <div className="w-14 h-14 rounded-full bg-[#B9887B]/15 text-[#B9887B] flex items-center justify-center mx-auto mb-4">
           <Check size={32} />
         </div>
         <h3 className="font-serif text-2xl font-bold text-[#0F1A41] mb-3 leading-snug">
           ĐÃ TIẾP NHẬN YÊU CẦU THÀNH CÔNG
         </h3>
-        <p className="text-xs sm:text-sm text-[#0F1A41]/75 max-w-md mx-auto leading-relaxed mb-6">
+        <p className="text-xs sm:text-sm text-[#0F1A41]/75 max-w-md mx-auto leading-relaxed mb-6 font-normal">
           Cảm ơn Quý khách <strong>{formData.fullName}</strong>. Chuyên gia quản lý tài sản CityHouseMore đã nhận được thông tin và sẽ trực tiếp liên hệ qua số điện thoại <strong>{formData.phone}</strong> trong vòng <strong>24 giờ làm việc</strong> để gửi báo cáo phân tích sơ bộ.
         </p>
 
-        <div className="p-3.5 bg-[#FAF9F6] rounded-lg border border-[#0F1A41]/10 text-xs text-[#0F1A41]/85 max-w-sm mx-auto mb-6">
+        <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/10 text-xs text-[#0F1A41]/85 max-w-sm mx-auto mb-6">
           <div className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase mb-1">
             CAM KẾT DỊCH VỤ
           </div>
@@ -48,7 +48,7 @@ export default function ContactForm({
         </div>
 
         <button
-          className="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white rounded cursor-pointer transition-all shadow"
+          className="px-6 py-3 text-xs font-bold uppercase tracking-[0.15em] text-white rounded-full cursor-pointer transition-all shadow hover:shadow-md"
           style={{
             backgroundColor: '#B9887B',
             color: '#FFFFFF',
@@ -75,7 +75,7 @@ export default function ContactForm({
   return (
     <form className="b2b-form flex flex-col gap-5 font-sans text-[#0F1A41]" onSubmit={handleSubmit}>
       {/* Motivating Benefit Box: What the user will receive */}
-      <div className="p-4 bg-[#FAF9F6] rounded-lg border border-[#0F1A41]/10 text-xs text-[#0F1A41]/85 shadow-2xs">
+      <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/10 text-xs text-[#0F1A41]/85 shadow-2xs">
         <div className="font-sans text-[10px] font-bold uppercase tracking-wider text-[#0F1A41] mb-2.5 flex items-center gap-1.5">
           <ShieldCheck size={14} className="text-[#0F1A41]" />
           <span>QUYỀN LỢI KHI ĐĂNG KÝ HÔM NAY:</span>
@@ -102,7 +102,7 @@ export default function ContactForm({
           type="text"
           required
           placeholder="Ví dụ: Nguyễn Văn An"
-          className="w-full p-3 bg-white border border-[#0F1A41]/20 rounded text-xs sm:text-sm text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B]"
+          className="w-full p-3.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs sm:text-sm text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-2 focus:ring-[#B9887B]/20 transition-all"
           value={formData.fullName}
           onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
         />
@@ -118,7 +118,7 @@ export default function ContactForm({
           type="tel"
           required
           placeholder="Ví dụ: 0912 345 678"
-          className="w-full p-3 bg-white border border-[#0F1A41]/20 rounded text-xs sm:text-sm text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B]"
+          className="w-full p-3.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs sm:text-sm text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-2 focus:ring-[#B9887B]/20 transition-all"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
         />
@@ -131,7 +131,7 @@ export default function ContactForm({
         </label>
         <select
           id="formPropertyType"
-          className="w-full p-3 bg-white border border-[#0F1A41]/20 rounded text-xs sm:text-sm text-[#0F1A41] focus:outline-none focus:border-[#B9887B] cursor-pointer"
+          className="w-full p-3.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs sm:text-sm text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-2 focus:ring-[#B9887B]/20 cursor-pointer transition-all"
           value={formData.propertyType}
           onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
         >
@@ -158,9 +158,9 @@ export default function ContactForm({
           ].map((item) => (
             <label
               key={item.id}
-              className={`flex items-center gap-2 p-2.5 rounded border text-xs cursor-pointer transition-all ${
+              className={`flex items-center gap-2.5 p-3 rounded-xl border text-xs cursor-pointer transition-all ${
                 formData.interest === item.id
-                  ? 'bg-[#B9887B]/15 border-[#B9887B] text-[#0F1A41] font-bold'
+                  ? 'bg-[#B9887B]/15 border-[#B9887B] text-[#0F1A41] font-bold shadow-2xs'
                   : 'bg-white border-[#0F1A41]/15 text-[#0F1A41]/75 hover:bg-black/[0.02]'
               }`}
             >
@@ -182,14 +182,14 @@ export default function ContactForm({
         <button
           type="button"
           onClick={() => setShowOptional(!showOptional)}
-          className="text-xs text-[#B9887B] hover:underline flex items-center gap-1 font-sans cursor-pointer mb-2"
+          className="text-xs text-[#B9887B] hover:underline flex items-center gap-1 font-sans cursor-pointer mb-2 font-medium"
         >
           <span>{showOptional ? '- Thu gọn thông tin bổ sung' : '+ Thêm Email hoặc thông tin chi tiết (Tùy chọn)'}</span>
           <ChevronDown size={13} className={`transform transition-transform ${showOptional ? 'rotate-180' : ''}`} />
         </button>
 
         {showOptional && (
-          <div className="mt-3 flex flex-col gap-3.5 p-3.5 bg-white/60 border border-[#0F1A41]/10 rounded animate-fadeIn">
+          <div className="mt-3 flex flex-col gap-3.5 p-4 bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-xl animate-fadeIn">
             <div className="flex flex-col gap-2">
               <label htmlFor="formEmail" className="text-[11px] font-medium text-[#0F1A41]/70">
                 Email nhận báo cáo (Tùy chọn)
@@ -198,7 +198,7 @@ export default function ContactForm({
                 id="formEmail"
                 type="email"
                 placeholder="name@gmail.com"
-                className="w-full p-2.5 bg-white border border-[#0F1A41]/20 rounded text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B]"
+                className="w-full p-3 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] transition-all"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
@@ -212,7 +212,7 @@ export default function ContactForm({
                 id="formNote"
                 rows={2}
                 placeholder="Ví dụ: Tòa nhà 30 phòng tại Quận 3, hiện đang trống 10 phòng..."
-                className="w-full p-2.5 bg-white border border-[#0F1A41]/20 rounded text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B]"
+                className="w-full p-3 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] transition-all"
                 value={formData.note}
                 onChange={(e) => setFormData({ ...formData, note: e.target.value })}
               />
@@ -227,10 +227,10 @@ export default function ContactForm({
         <span><strong>Cam kết:</strong> CityHouseMore sẽ phản hồi và gửi báo cáo trong vòng <strong>24 giờ làm việc</strong>.</span>
       </div>
 
-      {/* High-visibility Action CTA Button: 100% Solid Terracotta, Never Transparent */}
+      {/* High-visibility Action CTA Button: Rounded-Full Luxury Button */}
       <button
         type="submit"
-        className="form-submit-btn w-full py-3.5 px-5 text-center text-xs md:text-sm font-bold uppercase tracking-wider rounded transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:shadow-xl mt-2"
+        className="form-submit-btn w-full py-3.5 px-6 text-center text-xs md:text-sm font-bold uppercase tracking-[0.12em] rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:shadow-xl mt-2"
         style={{
           backgroundColor: '#B9887B',
           color: '#FFFFFF',

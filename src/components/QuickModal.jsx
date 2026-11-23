@@ -109,7 +109,7 @@ export default function QuickModal({ isOpen, onClose }) {
                 <button
                   type="button"
                   onClick={handleResetAndClose}
-                  className="px-6 py-2.5 bg-[#0F1A41] text-white rounded text-xs font-bold uppercase tracking-wider hover:bg-[#162456] transition-colors cursor-pointer shadow"
+                  className="px-6 py-2.5 bg-[#0F1A41] text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#162456] transition-colors cursor-pointer shadow"
                 >
                   HOÀN TẤT & ĐÓNG
                 </button>
@@ -119,7 +119,7 @@ export default function QuickModal({ isOpen, onClose }) {
             /* Main Input Form */
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
               {/* Compact Benefit Badge */}
-              <div className="p-3 rounded-lg bg-[#FAF9F6] border border-[#0F1A41]/10 flex items-center gap-2 text-[11px] text-[#0F1A41]/85 shadow-2xs">
+              <div className="p-3 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/10 flex items-center gap-2 text-[11px] text-[#0F1A41]/85 shadow-2xs">
                 <ShieldCheck size={14} className="text-[#0F1A41] shrink-0" />
                 <span>Khảo sát hiện trạng & Báo cáo dòng tiền <strong>hoàn toàn miễn phí</strong></span>
               </div>
@@ -133,7 +133,7 @@ export default function QuickModal({ isOpen, onClose }) {
                   type="text"
                   required
                   placeholder="Ví dụ: Nguyễn Văn An"
-                  className="w-full px-3 py-2 bg-white border border-[#0F1A41]/20 rounded text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B]"
+                  className="w-full px-3.5 py-2.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B] transition-all"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 />
@@ -148,7 +148,7 @@ export default function QuickModal({ isOpen, onClose }) {
                   type="tel"
                   required
                   placeholder="Ví dụ: 0912 345 678"
-                  className="w-full px-3 py-2 bg-white border border-[#0F1A41]/20 rounded text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B]"
+                  className="w-full px-3.5 py-2.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B] transition-all"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 />
@@ -160,7 +160,7 @@ export default function QuickModal({ isOpen, onClose }) {
                   Loại tài sản của bạn
                 </label>
                 <select
-                  className="w-full px-3 py-2 bg-white border border-[#0F1A41]/20 rounded text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] cursor-pointer"
+                  className="w-full px-3.5 py-2.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] cursor-pointer transition-all"
                   value={formData.propertyType}
                   onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
                 >
@@ -187,7 +187,7 @@ export default function QuickModal({ isOpen, onClose }) {
                   ].map((item) => (
                     <label
                       key={item.id}
-                      className={`flex items-center gap-1.5 p-2 rounded border text-[11px] cursor-pointer transition-all ${
+                      className={`flex items-center gap-1.5 p-2.5 rounded-xl border text-[11px] cursor-pointer transition-all ${
                         formData.interest === item.id
                           ? 'bg-[#B9887B]/15 border-[#B9887B] text-[#0F1A41] font-bold'
                           : 'bg-white border-[#0F1A41]/15 text-[#0F1A41]/75 hover:bg-black/[0.02]'
@@ -218,18 +218,18 @@ export default function QuickModal({ isOpen, onClose }) {
                 </button>
 
                 {showOptional && (
-                  <div className="mt-2 flex flex-col gap-2 p-2.5 bg-white border border-[#0F1A41]/10 rounded animate-fadeIn">
+                  <div className="mt-2 flex flex-col gap-2 p-3 bg-white border border-[#0F1A41]/10 rounded-xl animate-fadeIn">
                     <input
                       type="email"
                       placeholder="Email nhận báo cáo (Tùy chọn)"
-                      className="w-full px-2.5 py-1.5 bg-white border border-[#0F1A41]/20 rounded text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B]"
+                      className="w-full px-3 py-2 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] transition-all"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                     <textarea
                       rows={2}
                       placeholder="Ghi chú thêm về quy mô, vị trí tòa nhà..."
-                      className="w-full px-2.5 py-1.5 bg-white border border-[#0F1A41]/20 rounded text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] resize-none"
+                      className="w-full px-3 py-2 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] resize-none transition-all"
                       value={formData.note}
                       onChange={(e) => setFormData({ ...formData, note: e.target.value })}
                     />
@@ -240,7 +240,7 @@ export default function QuickModal({ isOpen, onClose }) {
               {/* Submit CTA Button */}
               <button
                 type="submit"
-                className="w-full py-2.5 px-4 text-center text-xs font-bold uppercase tracking-wider rounded transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg text-white mt-1"
+                className="w-full py-3 px-4 text-center text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg text-white mt-1"
                 style={{
                   backgroundColor: '#B9887B',
                   color: '#FFFFFF',

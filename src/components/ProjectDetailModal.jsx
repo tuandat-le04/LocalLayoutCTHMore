@@ -65,7 +65,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
         <div className="bg-white/95 backdrop-blur-md px-6 py-4 border-b border-[#0F1A41]/10 flex items-start justify-between gap-4 shrink-0">
           <div className="pr-2">
             <div className="flex flex-wrap items-center gap-2 mb-1.5">
-              <span className="font-sans text-[11px] font-bold text-white bg-[#B9887B] px-2.5 py-0.5 rounded uppercase tracking-wider">
+              <span className="font-sans text-[11px] font-bold text-white bg-[#B9887B] px-3 py-1 rounded-full uppercase tracking-wider">
                 {project.brand} COLLECTION
               </span>
               <span className="font-sans text-[11px] text-[#0F1A41]/60 font-medium">
@@ -492,7 +492,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                 href={project.agodaUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto px-4 py-2.5 bg-[#FAF6EF] hover:bg-[#F4EFEA] border border-[#0F1A41]/15 text-[#0F1A41] hover:text-[#B9887B] font-sans text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-1.5 shrink-0"
+                className="w-full sm:w-auto px-5 py-2.5 bg-[#FAF6EF] hover:bg-[#F4EFEA] border border-[#0F1A41]/15 text-[#0F1A41] hover:text-[#B9887B] font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-colors flex items-center justify-center gap-1.5 shrink-0"
               >
                 <span>Xem trên Agoda</span>
                 <ArrowUpRight size={14} />
@@ -513,7 +513,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                 href={project.agodaUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="hidden sm:inline-flex items-center gap-1 text-xs font-sans text-[#0F1A41]/70 hover:text-[#B9887B] px-3 py-2.5 transition-colors"
+                className="hidden sm:inline-flex items-center gap-1 text-xs font-sans text-[#0F1A41]/70 hover:text-[#B9887B] px-4 py-2.5 transition-colors rounded-full"
               >
                 <span>Đánh giá Agoda</span>
                 <ArrowUpRight size={12} />
@@ -526,7 +526,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                 onClose();
                 if (onConsult) onConsult(project);
               }}
-              className="w-full sm:w-auto px-6 py-3 bg-[#B9887B] hover:bg-[#A37467] text-white text-xs font-sans font-bold uppercase tracking-wider rounded-lg transition-all shadow-sm hover:shadow flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-6 py-3 bg-[#B9887B] hover:bg-[#A37467] text-white text-xs font-sans font-bold uppercase tracking-wider rounded-full transition-all shadow-sm hover:shadow flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>ĐẶT LỊCH TƯ VẤN DỰ ÁN TƯƠNG TỰ</span>
               <ArrowUpRight size={14} />

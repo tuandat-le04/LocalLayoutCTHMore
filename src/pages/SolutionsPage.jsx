@@ -534,14 +534,14 @@ export default function SolutionsPage({ onOpenModal }) {
                   <span className="text-white/60 block text-[10px] uppercase">HOTLINE TƯ VẤN 24/7</span>
                   <strong className="text-sm text-[#B9887B]">0878 253 545</strong>
                 </div>
-                <div className="bg-white/[0.04] p-3.5 rounded border border-white/10">
+                <div className="bg-white/[0.04] p-3.5 rounded-xl border border-white/10">
                   <span className="text-white/60 block text-[10px] uppercase">EMAIL HỢP TÁC</span>
                   <strong className="text-sm text-white">info@cityhousemore.com</strong>
                 </div>
               </div>
             </div>
 
-            <div className="contact-form-col bg-white p-6 sm:p-8 rounded text-[#0F1A41] shadow-2xl">
+            <div className="contact-form-col bg-white p-6 sm:p-8 rounded-2xl text-[#0F1A41] shadow-2xl">
               <div className="mb-6">
                 <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2.5 leading-snug">
                   GỬI YÊU CẦU TƯ VẤN GIẢI PHÁP
