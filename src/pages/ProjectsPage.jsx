@@ -6,21 +6,21 @@ import ContactForm from '../components/ContactForm.jsx';
 import ProjectDetailModal from '../components/ProjectDetailModal.jsx';
 
 const DISTRICT_FILTERS = [
-  { id: 'all', label: 'TẤT CẢ KHU VỰC' },
-  { id: 'Quận 1', label: 'QUẬN 1' },
-  { id: 'Quận 3', label: 'QUẬN 3' },
-  { id: 'Bình Thạnh', label: 'BÌNH THẠNH' },
-  { id: 'Phú Nhuận', label: 'PHÚ NHUẬN' },
-  { id: 'Thảo Điền', label: 'THẢO ĐIỀN' },
+  { id: 'all', label: 'Tất cả khu vực' },
+  { id: 'Quận 1', label: 'Quận 1' },
+  { id: 'Quận 3', label: 'Quận 3' },
+  { id: 'Bình Thạnh', label: 'Bình Thạnh' },
+  { id: 'Phú Nhuận', label: 'Phú Nhuận' },
+  { id: 'Thảo Điền', label: 'Thảo Điền' },
 ];
 
 const BRAND_FILTERS = [
-  { id: 'all', label: 'TẤT CẢ BRAND' },
-  { id: 'MARK', label: 'MARK', sub: 'THƯỢNG LƯU' },
-  { id: 'VIBE', label: 'VIBE', sub: 'NGHỆ THUẬT' },
-  { id: 'TERA', label: 'TERA', sub: 'DÀI HẠN' },
-  { id: 'NEST', label: 'NEST', sub: 'STUDIO' },
-  { id: 'SOUL', label: 'SOUL', sub: 'BOUTIQUE' },
+  { id: 'all', label: 'Tất cả thương hiệu' },
+  { id: 'MARK', label: 'MARK', tag: 'Siêu sang', color: '#D4AF37', desc: 'Biệt thự và căn hộ siêu sang phục vụ giới tinh hoa và phái đoàn ngoại giao' },
+  { id: 'SOUL', label: 'SOUL', tag: 'Boutique', color: '#6E987D', desc: 'Khách sạn boutique đậm đà trải nghiệm di sản và kiến trúc độc bản' },
+  { id: 'VIBE', label: 'VIBE', tag: 'Sáng tạo', color: '#C87D6D', desc: 'Không gian sống nhiệt đới đương đại và du lịch đô thị năng động' },
+  { id: 'TERA', label: 'TERA', tag: 'Dài hạn', color: '#8A5A3D', desc: 'Căn hộ dịch vụ chuẩn mực cho expat và hợp đồng thuê năm ổn định' },
+  { id: 'NEST', label: 'NEST', tag: 'Studio', color: '#A37367', desc: 'Studio thông minh, tinh gọn tối ưu công suất tại các trục kết nối trung tâm' },
 ];
 
 export default function ProjectsPage({ onOpenModal }) {
@@ -35,6 +35,18 @@ export default function ProjectsPage({ onOpenModal }) {
     setSelectedDistrict('all');
     setSelectedBrand('all');
   };
+
+  const getDistrictCount = (districtId) => {
+    if (districtId === 'all') return projects.length;
+    return projects.filter(p => p.district.includes(districtId)).length;
+  };
+
+  const getBrandCount = (brandId) => {
+    if (brandId === 'all') return projects.length;
+    return projects.filter(p => p.brand === brandId).length;
+  };
+
+  const activeBrandObj = BRAND_FILTERS.find(b => b.id === selectedBrand);
 
   const filteredProjects = projects.filter(p => {
     const matchDistrict = selectedDistrict === 'all' || p.district.includes(selectedDistrict);
@@ -77,63 +89,73 @@ export default function ProjectsPage({ onOpenModal }) {
 
       {/* Multi-Filter Section */}
       <section className="section-pad bg-[#F4EFEA] text-[#0F1A41]">
-        <div className="bg-white p-6 md:p-8 border border-[#0F1A41]/10 mb-12 shadow-sm rounded-2xl">
-          {/* Filter Header with Stats and Reset */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-5 mb-6 border-b border-[#0F1A41]/10 gap-3">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-[#B9887B]/10 flex items-center justify-center text-[#B9887B] shrink-0">
-                <SlidersHorizontal size={15} />
-              </div>
-              <div>
-                <span className="text-[#0F1A41] font-sans text-xs font-bold uppercase tracking-wider block">
-                  Bộ lọc danh mục tài sản thông minh
-                </span>
-                <span className="text-[11px] text-[#0F1A41]/60 font-sans">
-                  Phân loại theo khu vực chiến lược và phân khúc thương hiệu CityHouse
+        <div className="bg-white/95 backdrop-blur-sm p-6 sm:p-8 md:p-10 border border-[#101C42]/10 mb-12 shadow-sm rounded-2xl font-sans">
+          {/* Filter Header with Editorial Luxury Typography */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-[#101C42]/8 gap-4">
+            <div>
+              <div className="flex items-center gap-2 mb-1.5">
+                <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+                <span className="text-[10.5px] font-bold text-[#B9887B] uppercase tracking-[0.2em] font-sans">
+                  TUYỂN TẬP DANH MỤC LƯU TRÚ
                 </span>
               </div>
+              <h2 className="font-serif text-2xl sm:text-[28px] font-normal text-[#101C42] tracking-tight">
+                Tuyển chọn danh mục tài sản
+              </h2>
             </div>
 
             <div className="flex items-center gap-3 self-start sm:self-auto">
-              <span className="font-sans text-xs text-[#0F1A41]/75 bg-[#F4EFEA] px-4 py-1.5 border border-[#0F1A41]/10 rounded-full">
-                Hiển thị: <strong className="text-[#0F1A41] font-bold">{filteredProjects.length}</strong> / {projects.length} tài sản
-              </span>
+              <div className="text-xs font-sans text-[#101C42] bg-[#FAF7F2] border border-[#101C42]/10 px-4 py-1.5 rounded-full flex items-center gap-2 shadow-2xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
+                <span className="font-medium text-[#101C42]/70">Hiển thị</span>
+                <strong className="font-bold text-[#101C42]">{filteredProjects.length}</strong>
+                <span className="text-[#101C42]/30">/</span>
+                <span className="text-[#101C42]/70">{projects.length} tài sản</span>
+              </div>
 
               {isFiltered && (
                 <button
                   onClick={handleReset}
-                  className="font-sans text-xs text-[#B9887B] hover:text-[#0F1A41] font-bold flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors cursor-pointer"
-                  title="Đặt lại toàn bộ bộ lọc"
+                  className="font-sans text-xs text-[#B9887B] hover:text-[#101C42] font-semibold flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#B9887B]/30 hover:border-[#101C42]/30 hover:bg-[#FAF7F2] transition-all cursor-pointer shadow-2xs"
+                  title="Đặt lại toàn bộ tiêu chí lọc"
                 >
-                  <RotateCcw size={12} />
+                  <RotateCcw size={11} />
                   <span>Đặt lại</span>
                 </button>
               )}
             </div>
           </div>
 
-          {/* Filter Rows - Full Width Stacked */}
-          <div className="space-y-4">
+          {/* Filter Rows - Clean Architectural Layout */}
+          <div className="space-y-5">
             {/* Filter by District */}
-            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5">
-              <div className="font-sans text-[11px] text-[#0F1A41]/75 uppercase font-bold tracking-wider md:w-36 shrink-0 flex items-center gap-1.5">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
+              <div className="font-sans text-[11px] text-[#101C42]/80 uppercase font-bold tracking-[0.15em] lg:w-44 shrink-0 flex items-center gap-2">
                 <MapPin size={13} className="text-[#B9887B]" />
-                <span>Khu vực / Quận:</span>
+                <span>TỌA ĐỘ VỊ TRÍ:</span>
               </div>
               <div className="flex flex-wrap gap-2 flex-grow items-center">
                 {DISTRICT_FILTERS.map((d) => {
                   const isSelected = selectedDistrict === d.id;
+                  const count = getDistrictCount(d.id);
                   return (
                     <button
                       key={d.id}
                       onClick={() => setSelectedDistrict(d.id)}
-                      className={`font-sans text-xs px-4 py-2 border rounded-full transition-all cursor-pointer ${
+                      className={`font-sans text-xs px-4 py-2 rounded-full transition-all duration-200 cursor-pointer flex items-center gap-1.5 border ${
                         isSelected
-                          ? 'bg-[#0F1A41] text-white border-[#0F1A41] shadow-xs font-bold'
-                          : 'bg-[#F4EFEA]/80 text-[#0F1A41]/75 border-[#0F1A41]/15 hover:border-[#0F1A41] hover:bg-white'
+                          ? 'bg-[#101C42] text-white border-[#101C42] shadow-xs font-semibold'
+                          : 'bg-white text-[#101C42]/75 border-[#101C42]/12 hover:border-[#B9887B]/50 hover:bg-[#FAF7F2] hover:text-[#101C42]'
                       }`}
                     >
-                      {d.label}
+                      <span>{d.label}</span>
+                      <span
+                        className={`text-[10px] px-1.5 py-0.2 rounded-full font-medium ${
+                          isSelected ? 'bg-white/20 text-white' : 'bg-[#101C42]/5 text-[#101C42]/50'
+                        }`}
+                      >
+                        {count}
+                      </span>
                     </button>
                   );
                 })}
@@ -141,36 +163,62 @@ export default function ProjectsPage({ onOpenModal }) {
             </div>
 
             {/* Filter by Brand */}
-            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5 pt-4 border-t border-[#0F1A41]/8">
-              <div className="font-sans text-[11px] text-[#0F1A41]/75 uppercase font-bold tracking-wider md:w-36 shrink-0 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
-                <span>Dòng thương hiệu:</span>
+            <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6 pt-5 border-t border-[#101C42]/8">
+              <div className="font-sans text-[11px] text-[#101C42]/80 uppercase font-bold tracking-[0.15em] lg:w-44 shrink-0 flex items-center gap-2">
+                <Building2 size={13} className="text-[#B9887B]" />
+                <span>DÒNG THƯƠNG HIỆU:</span>
               </div>
               <div className="flex flex-wrap gap-2 flex-grow items-center">
                 {BRAND_FILTERS.map((b) => {
                   const isSelected = selectedBrand === b.id;
+                  const count = getBrandCount(b.id);
                   return (
                     <button
                       key={b.id}
                       onClick={() => setSelectedBrand(b.id)}
-                      className={`font-sans text-xs px-4 py-2 border rounded-full transition-all cursor-pointer ${
+                      className={`font-sans text-xs px-4 py-2 rounded-full transition-all duration-200 cursor-pointer flex items-center gap-1.5 border ${
                         isSelected
-                          ? 'bg-[#B9887B] text-white border-[#B9887B] shadow-xs font-bold'
-                          : 'bg-[#F4EFEA]/80 text-[#0F1A41]/75 border-[#0F1A41]/15 hover:border-[#B9887B] hover:bg-white'
+                          ? 'bg-[#101C42] text-white border-[#101C42] shadow-xs font-semibold'
+                          : 'bg-white text-[#101C42]/75 border-[#101C42]/12 hover:border-[#B9887B]/50 hover:bg-[#FAF7F2] hover:text-[#101C42]'
                       }`}
                     >
-                      <span className="font-semibold">{b.label}</span>
-                      {b.sub && (
-                        <span className={`ml-1 text-[10px] tracking-normal ${isSelected ? 'text-white/85' : 'text-[#0F1A41]/60 font-normal'}`}>
-                          ({b.sub})
+                      {b.color && (
+                        <span
+                          className="w-1.5 h-1.5 rounded-full shrink-0"
+                          style={{ backgroundColor: isSelected ? '#FFFFFF' : b.color }}
+                        ></span>
+                      )}
+                      <span>{b.label}</span>
+                      {b.tag && (
+                        <span className={`text-[10.5px] ${isSelected ? 'text-white/80' : 'text-[#101C42]/50'}`}>
+                          · {b.tag}
                         </span>
                       )}
+                      <span
+                        className={`text-[10px] px-1.5 py-0.2 rounded-full font-medium ${
+                          isSelected ? 'bg-white/20 text-white' : 'bg-[#101C42]/5 text-[#101C42]/50'
+                        }`}
+                      >
+                        {count}
+                      </span>
                     </button>
                   );
                 })}
               </div>
             </div>
           </div>
+
+          {/* Curated Brand Insight Strip */}
+          {selectedBrand !== 'all' && activeBrandObj && activeBrandObj.desc && (
+            <div className="mt-5 pt-4 border-t border-[#101C42]/8 flex items-center gap-2.5 text-xs text-[#101C42]/80 font-sans bg-[#FAF7F2] px-4 py-2.5 rounded-xl border border-[#101C42]/6">
+              <span
+                className="w-2 h-2 rounded-full shrink-0"
+                style={{ backgroundColor: activeBrandObj.color }}
+              ></span>
+              <span className="font-semibold text-[#101C42]">Định vị {activeBrandObj.label}:</span>
+              <span className="italic text-[#101C42]/75">{activeBrandObj.desc}</span>
+            </div>
+          )}
         </div>
 
         {/* Empty State when no project matches */}
