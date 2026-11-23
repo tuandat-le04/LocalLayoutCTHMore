@@ -9,7 +9,7 @@ export default function Stats() {
     },
     {
       value: "1.850+",
-      label: "PHÒNG & CĂN HỘ CAO CẤP",
+      label: "PHÒNG VÀ CĂN HỘ CAO CẤP",
       desc: "Chuẩn hóa dịch vụ quốc tế"
     },
     {
@@ -20,7 +20,7 @@ export default function Stats() {
     {
       value: "3.800 TỶ",
       label: "TỔNG GIÁ TRỊ TÀI SẢN",
-      desc: "Bảo trợ & tối ưu hóa dòng tiền"
+      desc: "Bảo trợ và tối ưu hóa dòng tiền"
     }
   ];
 

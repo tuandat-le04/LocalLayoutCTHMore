@@ -101,7 +101,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
 
         {/* Scrollable Modal Content */}
         <div className="p-6 sm:p-8 overflow-y-auto space-y-8">
-          {/* Visual Showcase: Architecture & Interior Reality Tabs */}
+          {/* Visual Showcase: Architecture và Interior Reality Tabs */}
           <div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-3">
               <div className="flex items-center gap-2">
@@ -122,7 +122,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                       : 'text-[#0F1A41]/70 hover:text-[#0F1A41]'
                   }`}
                 >
-                  Kiến trúc & Tổng thể
+                  Kiến trúc và Tổng thể
                 </button>
                 <button
                   type="button"
@@ -169,8 +169,8 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-8 text-white">
                 <p className="text-xs sm:text-sm font-medium">
                   {activeImageTab === 'interior'
-                    ? 'Nội thất hoàn thiện & tiêu chuẩn buồng phòng thực tế đang đón khách lưu trú'
-                    : 'Kiến trúc cảnh quan, mặt tiền & hệ tiện ích tổng thể được quản lý bởi CityHouse More'}
+                    ? 'Nội thất hoàn thiện và tiêu chuẩn buồng phòng thực tế đang đón khách lưu trú'
+                    : 'Kiến trúc cảnh quan, mặt tiền và hệ tiện ích tổng thể được quản lý bởi CityHouse More'}
                 </p>
               </div>
             </div>
@@ -192,8 +192,8 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                   className="w-12 h-10 object-cover rounded shrink-0"
                 />
                 <div className="text-[11px] font-sans">
-                  <strong className="block text-[#0F1A41] font-bold">1. Kiến trúc & Ngoại thất</strong>
-                  <span className="text-[#0F1A41]/60 text-[10px]">Cảnh quan & mặt bằng</span>
+                  <strong className="block text-[#0F1A41] font-bold">1. Kiến trúc và Ngoại thất</strong>
+                  <span className="text-[#0F1A41]/60 text-[10px]">Cảnh quan và mặt bằng</span>
                 </div>
               </button>
 
@@ -219,12 +219,12 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
             </div>
           </div>
 
-          {/* Key Specifications & Operational Dossier */}
+          {/* Key Specifications và Operational Dossier */}
           <div>
             <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#0F1A41]/10">
               <h3 className="font-sans text-xs font-bold text-[#0F1A41] uppercase tracking-wider flex items-center gap-2">
                 <Building2 size={14} className="text-[#B9887B]" />
-                Hồ sơ kỹ thuật & Vận hành tài sản
+                Hồ sơ kỹ thuật và Vận hành tài sản
               </h3>
               <span className="font-sans text-[10px] text-[#0F1A41]/60 bg-[#FAF6EF] px-2 py-0.5 rounded border border-[#0F1A41]/10">
                 4 Trụ cột chuẩn hóa
@@ -238,7 +238,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="font-sans text-[10px] text-[#0F1A41]/60 uppercase font-bold flex items-center gap-1.5">
                       <span className="w-4 h-4 rounded-full bg-[#0F1A41] text-white text-[9px] flex items-center justify-center">01</span>
-                      Quy mô & Kiến trúc
+                      Quy mô và Kiến trúc
                     </span>
                     <Layers size={13} className="text-[#0F1A41]/50" />
                   </div>
@@ -332,7 +332,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
               <TrendingUp size={20} className="text-[#B9887B] shrink-0 mt-0.5" />
               <div>
                 <strong className="font-sans text-[11px] text-[#B9887B] uppercase tracking-wider block mb-0.5">
-                  Hiệu quả kinh doanh & Dòng tiền thực tế
+                  Hiệu quả kinh doanh và Dòng tiền thực tế
                 </strong>
                 <p className="text-xs sm:text-sm text-white/95 leading-relaxed">
                   {project.result}
@@ -347,7 +347,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-sans text-xs font-bold text-[#0F1A41] uppercase tracking-wider flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
-                  Phân tích Case Study & Bài toán đầu tư
+                  Phân tích Case Study và Bài toán đầu tư
                 </h3>
                 <span className="font-sans text-[10px] text-[#0F1A41]/50 bg-white px-2 py-0.5 rounded border border-[#0F1A41]/10">
                   DỮ LIỆU ĐO LƯỜNG THỰC TẾ
@@ -377,7 +377,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                       02
                     </span>
                     <span className="font-sans text-[11px] font-bold text-rose-900 uppercase tracking-wider">
-                      Thách thức & Điểm nghẽn của Chủ đầu tư
+                      Thách thức và Điểm nghẽn của Chủ đầu tư
                     </span>
                   </div>
                   <p className="text-xs text-rose-950/85 leading-relaxed pl-7">
@@ -465,7 +465,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
             </div>
           )}
 
-          {/* Agoda Review & Guest Verification Strip */}
+          {/* Agoda Review và Guest Verification Strip */}
           {project.agodaUrl && (
             <div className="bg-white p-5 rounded-xl border border-[#0F1A41]/15 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-3.5">

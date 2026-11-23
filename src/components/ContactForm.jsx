@@ -83,11 +83,11 @@ export default function ContactForm({
         <ul className="flex flex-col gap-2 text-[11.5px] leading-relaxed">
           <li className="flex items-start gap-2">
             <Check size={13} strokeWidth={2.5} className="text-[#0F1A41]/75 shrink-0 mt-0.5" />
-            <span>Khảo sát hiện trạng & Báo cáo đánh giá tiềm năng khai thác <strong>hoàn toàn miễn phí</strong>.</span>
+            <span>Khảo sát hiện trạng và Báo cáo đánh giá tiềm năng khai thác <strong>hoàn toàn miễn phí</strong>.</span>
           </li>
           <li className="flex items-start gap-2">
             <Check size={13} strokeWidth={2.5} className="text-[#0F1A41]/75 shrink-0 mt-0.5" />
-            <span>Dự phóng doanh thu phòng & phương án tối ưu dòng tiền may đo theo vị trí tài sản.</span>
+            <span>Dự phóng doanh thu phòng và phương án tối ưu dòng tiền may đo theo vị trí tài sản.</span>
           </li>
         </ul>
       </div>
@@ -136,7 +136,7 @@ export default function ContactForm({
           onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
         >
           <option value="Căn hộ dịch vụ (Serviced Apartment)">Căn hộ dịch vụ (Serviced Apartment)</option>
-          <option value="Tòa nhà đang cho thuê (Cần tái định vị)">Tòa nhà đang cho thuê (Cần cải tạo & tái định vị)</option>
+          <option value="Tòa nhà đang cho thuê (Cần tái định vị)">Tòa nhà đang cho thuê (Cần cải tạo và tái định vị)</option>
           <option value="Khách sạn boutique trung tâm">Khách sạn boutique trung tâm</option>
           <option value="Đất trống / Dự án chuẩn bị xây dựng">Đất trống / Dự án chuẩn bị đầu tư xây dựng</option>
           <option value="Nhà phố mặt tiền / Hẻm xe hơi lớn">Nhà phố mặt tiền / Hẻm xe hơi lớn</option>
@@ -152,8 +152,8 @@ export default function ContactForm({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
           {[
             { id: 'evaluate', label: 'Nhận đánh giá sơ bộ tài sản' },
-            { id: 'renovate', label: 'Tư vấn cải tạo & tái định vị' },
-            { id: 'operate', label: 'Ủy thác quản lý & vận hành' },
+            { id: 'renovate', label: 'Tư vấn cải tạo và tái định vị' },
+            { id: 'operate', label: 'Ủy thác quản lý và vận hành' },
             { id: 'lease', label: 'Hợp tác thuê khoán trọn gói' },
           ].map((item) => (
             <label
@@ -177,7 +177,7 @@ export default function ContactForm({
         </div>
       </div>
 
-      {/* Optional Fields Toggle (Email & Note) */}
+      {/* Optional Fields Toggle (Email và Note) */}
       <div>
         <button
           type="button"

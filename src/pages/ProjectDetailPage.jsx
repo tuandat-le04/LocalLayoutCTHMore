@@ -237,7 +237,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             </p>
           </div>
 
-          {/* Hero Actions & Agoda Badge */}
+          {/* Hero Actions và Agoda Badge */}
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 lg:min-w-[260px]">
             {project.agodaScore && project.agodaUrl && (
               <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/15 shadow-xs flex items-center justify-between gap-3">
@@ -290,7 +290,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             {[
               { id: 'overview', label: 'Tổng quan' },
               { id: 'specs', label: 'Thông số kỹ thuật' },
-              { id: 'case-study', label: 'Case Study & Dòng tiền' },
+              { id: 'case-study', label: 'Case Study và Dòng tiền' },
               { id: 'gallery', label: 'Không gian' },
               { id: 'contact', label: 'Đặt lịch tư vấn' }
             ].map((tab) => (
@@ -350,7 +350,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
         </div>
       </section>
 
-      {/* 5. Section: Key Specifications & Operational Dossier (#specs) */}
+      {/* 5. Section: Key Specifications và Operational Dossier (#specs) */}
       <section id="specs" className="max-w-7xl mx-auto px-4 md:px-8 py-8">
         <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#0F1A41]/10 shadow-xs mb-8">
           {/* Section Header */}
@@ -361,7 +361,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                 <span>THÔNG SỐ TIÊU CHUẨN — DỰ ÁN #{project.id}</span>
               </div>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0F1A41]">
-                Hồ sơ kỹ thuật & Mô hình vận hành
+                Hồ sơ kỹ thuật và Mô hình vận hành
               </h2>
             </div>
             <span className="font-sans text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3.5 py-1.5 rounded-full border border-[#0F1A41]/15 self-start sm:self-auto">
@@ -371,7 +371,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
 
           {/* 4 Standardized Operational Pillars (2x2 Balanced Grid) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {/* Pillar 1: Quy mô & Kiến trúc */}
+            {/* Pillar 1: Quy mô và Kiến trúc */}
             <div className="p-5 md:p-6 bg-[#FAF6EF]/60 hover:bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10 transition-colors flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -380,7 +380,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                       01
                     </span>
                     <span className="font-sans text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
-                      Quy mô & Kiến trúc
+                      Quy mô và Kiến trúc
                     </span>
                   </div>
                   <div className="w-8 h-8 rounded-lg bg-white border border-[#0F1A41]/10 flex items-center justify-center text-[#0F1A41]">
@@ -533,7 +533,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             <TrendingUp size={24} className="text-[#B9887B] shrink-0 mt-0.5" />
             <div>
               <span className="font-sans text-xs text-[#B9887B] uppercase tracking-wider font-bold block mb-1">
-                Hiệu quả kinh doanh & Dòng tiền thực tế
+                Hiệu quả kinh doanh và Dòng tiền thực tế
               </span>
               <p className="text-sm md:text-base text-white/95 leading-relaxed">
                 {project.result}
@@ -553,7 +553,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                   CASE STUDY #{project.id} — DỮ LIỆU ĐO LƯỜNG THỰC TẾ
                 </span>
                 <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0F1A41]">
-                  Phân tích bài toán đầu tư & Chiến lược triển khai
+                  Phân tích bài toán đầu tư và Chiến lược triển khai
                 </h2>
               </div>
               <span className="font-sans text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3 py-1.5 rounded-full border border-[#0F1A41]/15 self-start">
@@ -585,7 +585,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                     02
                   </span>
                   <strong className="font-sans text-xs text-rose-900 uppercase tracking-wider">
-                    Thách thức & Điểm nghẽn của Chủ đầu tư:
+                    Thách thức và Điểm nghẽn của Chủ đầu tư:
                   </strong>
                 </div>
                 <p className="text-xs sm:text-sm text-rose-950/85 leading-relaxed pl-7">
@@ -671,13 +671,13 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
         </section>
       )}
 
-      {/* 7. Section: Space & Photography Gallery (#gallery) */}
+      {/* 7. Section: Space và Photography Gallery (#gallery) */}
       <section id="gallery" className="max-w-7xl mx-auto px-4 md:px-8 py-8">
         <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#0F1A41]/10 shadow-xs">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div>
               <span className="font-sans text-xs text-[#B9887B] font-bold uppercase tracking-wider block mb-1">
-                KHÔNG GIAN & TIÊU CHUẨN THỰC TẾ
+                KHÔNG GIAN VÀ TIÊU CHUẨN THỰC TẾ
               </span>
               <h2 className="font-serif text-2xl font-bold text-[#0F1A41]">
                 Bộ sưu tập hình ảnh kiến trúc và nội thất

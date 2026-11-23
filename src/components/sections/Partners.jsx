@@ -5,13 +5,13 @@ const FEATURED_PARTNERS = [
   {
     name: "Coteccons Group",
     category: "Phát triển dự án",
-    role: "Đối tác xây dựng & công trình biểu tượng",
+    role: "Đối tác xây dựng và công trình biểu tượng",
     icon: 'building',
   },
   {
     name: "MIA Design Studio",
-    category: "Kiến trúc & Cảnh quan",
-    role: "Tư vấn concept kiến trúc xanh & không gian di sản",
+    category: "Kiến trúc và Cảnh quan",
+    role: "Tư vấn concept kiến trúc xanh và không gian di sản",
     icon: 'building',
   },
   {
@@ -23,7 +23,7 @@ const FEATURED_PARTNERS = [
   {
     name: "Booking.com",
     category: "Kênh khách Âu - Mỹ",
-    role: "Kênh phân phối du khách & chuyên gia toàn cầu",
+    role: "Kênh phân phối du khách và chuyên gia toàn cầu",
     icon: 'globe',
   },
   {
@@ -33,19 +33,19 @@ const FEATURED_PARTNERS = [
     icon: 'globe',
   },
   {
-    name: "Vietcombank & Techcombank",
+    name: "Vietcombank và Techcombank",
     category: "Bảo trợ tài chính",
-    role: "Dịch vụ tài khoản ký quỹ & đối soát doanh thu",
+    role: "Dịch vụ tài khoản ký quỹ và đối soát doanh thu",
     icon: 'landmark',
   },
   {
     name: "Cộng đồng Doanh nghiệp FDI",
     category: "Khách thuê dài hạn",
-    role: "120+ tập đoàn Nhật Bản, Hàn Quốc & Châu Âu",
+    role: "120+ tập đoàn Nhật Bản, Hàn Quốc và Châu Âu",
     icon: 'shield',
   },
   {
-    name: "Hệ thống PMS & Smart IoT",
+    name: "Hệ thống PMS và Smart IoT",
     category: "Công nghệ vận hành",
     role: "Tự động hóa quản trị buồng phòng thời gian thực",
     icon: 'laptop',
@@ -70,7 +70,7 @@ export default function Partners() {
 
           <div className="text-xs font-sans text-[#0F1A41]/75 bg-white border border-[#0F1A41]/10 px-4 py-2.5 rounded-full shadow-sm flex items-center gap-2 self-start md:self-auto font-medium">
             <LuxuryIcon name="globe" size={15} strokeWidth={1.25} className="text-[#0F1A41]/70" />
-            <span>Mạng lưới <strong>120+</strong> Đối tác doanh nghiệp & Phân phối toàn cầu</span>
+            <span>Mạng lưới <strong>120+</strong> Đối tác doanh nghiệp và Phân phối toàn cầu</span>
           </div>
         </div>
 

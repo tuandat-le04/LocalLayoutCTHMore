@@ -18,7 +18,7 @@ export const timelineData = [
   {
     year: "2017",
     tag: "Mở rộng mạng lưới",
-    title: "Tiên phong căn hộ dịch vụ trung & cao cấp",
+    title: "Tiên phong căn hộ dịch vụ trung và cao cấp",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1784272224094-150091.webp",
     desc: "Với danh mục phát triển đạt 60 tòa nhà, CityHouse khẳng định vị thế tiên phong trong phân khúc căn hộ dịch vụ trung cấp và cao cấp tại các quận trung tâm TP.HCM.",
     highlight: "Cột mốc 60 tòa nhà"
@@ -29,7 +29,7 @@ export const timelineData = [
     title: "Chuyển đổi mô hình lưu trú linh hoạt",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1784272586309-243597.jpg",
     desc: "CityHouse tái định vị thương hiệu và mô hình kinh doanh, chuyển từ căn hộ dịch vụ dài hạn sang hệ sinh thái lưu trú linh hoạt, kết hợp ngắn hạn và dài hạn nhằm thích ứng thị trường và tối ưu hiệu quả khai thác dòng tiền.",
-    highlight: "Lưu trú ngắn hạn & dài hạn"
+    highlight: "Lưu trú ngắn hạn và dài hạn"
   },
   {
     year: "2024",

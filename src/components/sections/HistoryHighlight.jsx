@@ -22,7 +22,7 @@ const CONDENSED_MILESTONES = [
     tag: "THÍCH ỨNG",
     title: "Mô hình lưu trú linh hoạt",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1784272586309-243597.jpg",
-    desc: "Tái cấu trúc kết hợp khách dài hạn & du lịch ngắn hạn, tối ưu dòng tiền vượt qua biến động thị trường."
+    desc: "Tái cấu trúc kết hợp khách dài hạn và du lịch ngắn hạn, tối ưu dòng tiền vượt qua biến động thị trường."
   },
   {
     year: "2024 – 2026",
@@ -67,7 +67,7 @@ export default function HistoryHighlight() {
                 boxShadow: '0 4px 18px rgba(185, 136, 123, 0.45)',
               }}
             >
-              <span>XEM NĂNG LỰC & DỰ ÁN TIÊU BIỂU</span>
+              <span>XEM NĂNG LỰC VÀ DỰ ÁN TIÊU BIỂU</span>
               <ArrowUpRight size={16} className="text-white" />
             </button>
 

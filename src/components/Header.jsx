@@ -7,8 +7,8 @@ const PRIMARY_NAV_LINKS = [
   { href: '/danh-muc-tai-san', label: 'DỰ ÁN', desc: 'Danh mục tài sản thực chiến' },
   { href: '/thuong-hieu', label: 'THƯƠNG HIỆU', desc: '5 dòng thương hiệu lưu trú' },
   { href: '/ve-he-thong', label: 'VỀ CITYHOUSE', desc: '15 năm quản lý gia sản' },
-  { href: '/goc-nhin', label: 'GÓC NHÌN', desc: 'Phân tích thị trường & Case study' },
-  { href: '/careers', label: 'TUYỂN DỤNG', desc: 'Cơ hội nghề nghiệp & Lộ trình' },
+  { href: '/goc-nhin', label: 'GÓC NHÌN', desc: 'Phân tích thị trường và Case study' },
+  { href: '/careers', label: 'TUYỂN DỤNG', desc: 'Cơ hội nghề nghiệp và Lộ trình' },
   { href: '/contact', label: 'LIÊN HỆ', desc: 'Trao đổi cùng chuyên gia' },
 ];
 
@@ -71,7 +71,7 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
           </span>
         </a>
 
-        {/* Main Desktop & Tablet Navigation Menu (7 main links) */}
+        {/* Main Desktop và Tablet Navigation Menu (7 main links) */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-7 mx-auto">
           {PRIMARY_NAV_LINKS.map((link) => (
             <a
@@ -138,7 +138,7 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
         </div>
       </header>
 
-      {/* Full-featured Mobile & Tablet Drawer (Rendered outside header to escape containing block) */}
+      {/* Full-featured Mobile và Tablet Drawer (Rendered outside header to escape containing block) */}
       {menuOpen && (
         <div className="mobile-nav-drawer text-white animate-fadeIn">
           {/* Drawer Menu Links */}

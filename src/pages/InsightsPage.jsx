@@ -68,7 +68,7 @@ export default function InsightsPage() {
                   Dữ liệu khảo sát thực chứng
                 </p>
                 <p className="text-xs text-white/90 leading-relaxed font-sans">
-                  Khảo sát từ 35+ tòa nhà lưu trú trung tâm & 1.850+ căn hộ dịch vụ đang vận hành tại TP.HCM.
+                  Khảo sát từ 35+ tòa nhà lưu trú trung tâm và 1.850+ căn hộ dịch vụ đang vận hành tại TP.HCM.
                 </p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function InsightsPage() {
               {/* Meta Header */}
               <div className="flex flex-wrap items-center gap-2.5 font-sans text-xs uppercase mb-3.5">
                 <span className="px-2.5 py-0.5 bg-[#FAF6EF] border border-[#B9887B]/40 text-[#B9887B] font-bold rounded text-[11px]">
-                  THỊ TRƯỜNG & ĐẦU TƯ
+                  THỊ TRƯỜNG VÀ ĐẦU TƯ
                 </span>
                 <span className="text-[#0F1A41]/30">·</span>
                 <span className="text-[#0F1A41]/70 font-semibold flex items-center gap-1">
@@ -128,7 +128,7 @@ export default function InsightsPage() {
                   <div className="flex items-start gap-2">
                     <span className="w-4 h-4 rounded-full bg-[#B9887B]/15 text-[#B9887B] text-[10px] font-sans font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
                     <p className="leading-relaxed">
-                      <strong className="text-[#0F1A41]">Số hóa & Đa kênh OTA:</strong> Cắt giảm tới 40% chi phí hoa hồng môi giới truyền thống, minh bạch dòng tiền hàng tháng.
+                      <strong className="text-[#0F1A41]">Số hóa và Đa kênh OTA:</strong> Cắt giảm tới 40% chi phí hoa hồng môi giới truyền thống, minh bạch dòng tiền hàng tháng.
                     </p>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export default function InsightsPage() {
               </div>
             </div>
 
-            {/* Footer Actions & Source */}
+            {/* Footer Actions và Source */}
             <div className="pt-4 border-t border-[#0F1A41]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3.5">
               <div className="text-[11px] font-sans text-[#0F1A41]/60">
                 <span>Tác giả: <strong>Ban Nghiên cứu Thị trường CityHouse More</strong></span>

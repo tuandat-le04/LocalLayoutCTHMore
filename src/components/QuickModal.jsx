@@ -75,10 +75,10 @@ export default function QuickModal({ isOpen, onClose }) {
               id="popup-consultation-title"
               className="font-serif text-lg sm:text-xl font-bold text-white mt-1 leading-snug"
             >
-              Đặt Lịch Tư Vấn & Đánh Giá
+              Đặt Lịch Tư Vấn và Đánh Giá
             </h3>
             <p className="text-[11px] text-white/75 mt-0.5 leading-normal">
-              Khảo sát hiện trạng & báo cáo dòng tiền trong 24 giờ
+              Khảo sát hiện trạng và báo cáo dòng tiền trong 24 giờ
             </p>
           </div>
 
@@ -111,7 +111,7 @@ export default function QuickModal({ isOpen, onClose }) {
                   onClick={handleResetAndClose}
                   className="px-6 py-2.5 bg-[#0F1A41] text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#162456] transition-colors cursor-pointer shadow"
                 >
-                  HOÀN TẤT & ĐÓNG
+                  HOÀN TẤT VÀ ĐÓNG
                 </button>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function QuickModal({ isOpen, onClose }) {
               {/* Compact Benefit Badge */}
               <div className="p-3 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/10 flex items-center gap-2 text-[11px] text-[#0F1A41]/85 shadow-2xs">
                 <ShieldCheck size={14} className="text-[#0F1A41] shrink-0" />
-                <span>Khảo sát hiện trạng & Báo cáo dòng tiền <strong>hoàn toàn miễn phí</strong></span>
+                <span>Khảo sát hiện trạng và Báo cáo dòng tiền <strong>hoàn toàn miễn phí</strong></span>
               </div>
 
               {/* Field 1: Họ và tên */}
@@ -181,7 +181,7 @@ export default function QuickModal({ isOpen, onClose }) {
                 <div className="grid grid-cols-2 gap-1.5">
                   {[
                     { id: 'evaluate', label: 'Đánh giá tài sản' },
-                    { id: 'renovate', label: 'Cải tạo & tái định vị' },
+                    { id: 'renovate', label: 'Cải tạo và tái định vị' },
                     { id: 'operate', label: 'Ủy thác vận hành' },
                     { id: 'lease', label: 'Thuê khoán trọn gói' },
                   ].map((item) => (
@@ -206,7 +206,7 @@ export default function QuickModal({ isOpen, onClose }) {
                 </div>
               </div>
 
-              {/* Field 5: Optional Collapsible (Email & Note) */}
+              {/* Field 5: Optional Collapsible (Email và Note) */}
               <div>
                 <button
                   type="button"

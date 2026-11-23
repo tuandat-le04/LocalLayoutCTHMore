@@ -15,7 +15,7 @@ export default function Insights() {
           <div>
             <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3">
               <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-              CITYHOUSE INSIGHTS & GÓC NHÌN CHUYÊN MÔN
+              CITYHOUSE INSIGHTS VÀ GÓC NHÌN CHUYÊN MÔN
             </p>
             <h2 className="text-[#0F1A41] text-2xl sm:text-3xl md:text-4xl font-serif leading-[1.25] mb-3">
               Phân tích thị trường<br />

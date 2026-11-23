@@ -65,7 +65,7 @@ function MainRouter() {
 
   return (
     <div className="site-shell relative">
-      {/* 1. Global Header with Active & Functional Action Button */}
+      {/* 1. Global Header with Active và Functional Action Button */}
       <Header
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
@@ -80,7 +80,7 @@ function MainRouter() {
       {/* 3. Global Enterprise Footer */}
       <Footer onOpenModal={openModal} />
 
-      {/* 4. Global Fixed Floating CTA Bar (Hotline & Consultation) */}
+      {/* 4. Global Fixed Floating CTA Bar (Hotline và Consultation) */}
       <FloatingCTA onOpenModal={openModal} isModalOpen={isModalOpen || menuOpen} />
 
       {/* 5. Quick Consultation Popup Form */}

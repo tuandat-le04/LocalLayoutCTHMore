@@ -15,7 +15,7 @@ export default function HomePage({ onOpenModal }) {
 
   return (
     <div className="pb-16 md:pb-0">
-      {/* 1. Hero: Direct Value Proposition & 2 Active CTAs */}
+      {/* 1. Hero: Direct Value Proposition và 2 Active CTAs */}
       <Hero
         onContactClick={onOpenModal || (() => navigate('/contact'))}
         onSolutionsClick={() => {
@@ -25,7 +25,7 @@ export default function HomePage({ onOpenModal }) {
         }}
       />
 
-      {/* 2. Stats: Synchronized Source, Timestamp & 4 Core Executive Metrics */}
+      {/* 2. Stats: Synchronized Source, Timestamp và 4 Core Executive Metrics */}
       <Stats />
 
       {/* 3. Solutions: 3 Practical Client Situations (Tôi chuẩn bị đầu tư / Tài sản chưa hiệu quả / Cần vận hành) */}
@@ -34,7 +34,7 @@ export default function HomePage({ onOpenModal }) {
       {/* 5. Brands: 5 Brands in Responsive Grid with Target Audience, Style, Segment, Type, Differentiator */}
       <Brands onContactClick={onOpenModal || (() => navigate('/contact'))} />
 
-      {/* 6 & 8. Projects & Case Studies: Multi-filters, No '-' placeholders, Detailed Case Study Modals */}
+      {/* 6 VÀ 8. Projects và Case Studies: Multi-filters, No '-' placeholders, Detailed Case Study Modals */}
       <Projects onContactClick={onOpenModal || (() => navigate('/contact'))} />
 
       {/* 9. Awards: Operational B2B Competency Proof + Verified Agoda Reviews */}

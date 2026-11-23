@@ -72,7 +72,7 @@ const JOB_OPENINGS_DATA = [
     code: "01",
     title: "Nhân Viên Marketing",
     category: "commercial",
-    categoryLabel: "Kinh Doanh & Marketing",
+    categoryLabel: "Kinh Doanh và Marketing",
     experienceLevel: "exp",
     experienceLabel: "Có kinh nghiệm",
     location: "485B Nguyễn Đình Chiểu, P. Bàn Cờ, Quận 3, TP.HCM",
@@ -105,7 +105,7 @@ const JOB_OPENINGS_DATA = [
     code: "02",
     title: "Nhân Viên Quản Trị OTA",
     category: "commercial",
-    categoryLabel: "Kinh Doanh & Doanh Thu",
+    categoryLabel: "Kinh Doanh và Doanh Thu",
     experienceLevel: "exp",
     experienceLabel: "Có kinh nghiệm",
     location: "485B Nguyễn Đình Chiểu, P. Bàn Cờ, Quận 3, TP.HCM",
@@ -137,10 +137,10 @@ const JOB_OPENINGS_DATA = [
     code: "03",
     title: "Nhân Viên Hỗ Trợ Sảnh (Bellman)",
     category: "operations",
-    categoryLabel: "Khối Khách Sạn & Vận Hành",
+    categoryLabel: "Khối Khách Sạn và Vận Hành",
     experienceLevel: "entry",
     experienceLabel: "Không cần kinh nghiệm",
-    location: "Các cơ sở Quận 1 & Quận 3, TP.HCM",
+    location: "Các cơ sở Quận 1 và Quận 3, TP.HCM",
     type: "Làm theo ca 12 tiếng (Linh hoạt cuối tuần/lễ)",
     salary: "7,5 – 9 triệu VND/tháng + Phụ cấp + Thưởng",
     quantity: "05+ nhân sự",
@@ -167,9 +167,9 @@ const JOB_OPENINGS_DATA = [
   {
     id: "receptionist",
     code: "04",
-    title: "Nhân Viên Lễ Tân Khách Sạn & Căn Hộ",
+    title: "Nhân Viên Lễ Tân Khách Sạn và Căn Hộ",
     category: "operations",
-    categoryLabel: "Khối Khách Sạn & Vận Hành",
+    categoryLabel: "Khối Khách Sạn và Vận Hành",
     experienceLevel: "entry",
     experienceLabel: "Mới tốt nghiệp / Ít kinh nghiệm",
     location: "Quận 1, Quận 3, Bình Thạnh, Thảo Điền",
@@ -202,10 +202,10 @@ const JOB_OPENINGS_DATA = [
     code: "05",
     title: "Trưởng Ca Lễ Tân (Duty Supervisor)",
     category: "operations",
-    categoryLabel: "Khối Khách Sạn & Vận Hành",
+    categoryLabel: "Khối Khách Sạn và Vận Hành",
     experienceLevel: "exp",
     experienceLabel: "Có kinh nghiệm",
-    location: "Quận 1 & Quận 3, TP.HCM",
+    location: "Quận 1 và Quận 3, TP.HCM",
     type: "Toàn thời gian (Ca 8–9 tiếng hoặc hành chính)",
     salary: "8 – 10 triệu VND/tháng + Phụ cấp + Thưởng",
     quantity: "05+ nhân sự",
@@ -234,7 +234,7 @@ const JOB_OPENINGS_DATA = [
     code: "06",
     title: "Nhân Viên Buồng Phòng (Housekeeping)",
     category: "operations",
-    categoryLabel: "Khối Khách Sạn & Vận Hành",
+    categoryLabel: "Khối Khách Sạn và Vận Hành",
     experienceLevel: "entry",
     experienceLabel: "Không cần kinh nghiệm",
     location: "Các tòa nhà tại Quận 1, Quận 3, Bình Thạnh",
@@ -266,7 +266,7 @@ const JOB_OPENINGS_DATA = [
     code: "07",
     title: "Nhân Viên Chăm Sóc Khách Hàng (CSKH)",
     category: "commercial",
-    categoryLabel: "Kinh Doanh & Dịch Vụ",
+    categoryLabel: "Kinh Doanh và Dịch Vụ",
     experienceLevel: "entry",
     experienceLabel: "Có từ 6 tháng kinh nghiệm",
     location: "485B Nguyễn Đình Chiểu, P. Bàn Cờ, Quận 3, TP.HCM",
@@ -298,7 +298,7 @@ const JOB_OPENINGS_DATA = [
     code: "08",
     title: "Nhân Viên Hành Chính – Nhân Sự (C&B)",
     category: "admin",
-    categoryLabel: "Khối Quản Trị & Nhân Sự",
+    categoryLabel: "Khối Quản Trị và Nhân Sự",
     experienceLevel: "exp",
     experienceLabel: "Có kinh nghiệm từ 1 năm",
     location: "485B Nguyễn Đình Chiểu, P. Bàn Cờ, Quận 3, TP.HCM",
@@ -330,7 +330,7 @@ const JOB_OPENINGS_DATA = [
     code: "09",
     title: "Kế Toán Tổng Hợp Nội Bộ",
     category: "admin",
-    categoryLabel: "Khối Tài Chính & Kế Toán",
+    categoryLabel: "Khối Tài Chính và Kế Toán",
     experienceLevel: "exp",
     experienceLabel: "Từ 2 năm kinh nghiệm",
     location: "485B Nguyễn Đình Chiểu, P. Bàn Cờ, Quận 3, TP.HCM",
@@ -362,12 +362,12 @@ const JOB_OPENINGS_DATA = [
     code: "10",
     title: "Kế Toán Thuế Chuyên Nghiệp",
     category: "admin",
-    categoryLabel: "Khối Tài Chính & Kế Toán",
+    categoryLabel: "Khối Tài Chính và Kế Toán",
     experienceLevel: "exp",
     experienceLabel: "Từ 3–5 năm kinh nghiệm",
     location: "485B Nguyễn Đình Chiểu, P. Bàn Cờ, Quận 3, TP.HCM",
     type: "Toàn thời gian (Thứ 2–Thứ 7, 8:30–17:30)",
-    salary: "Thỏa thuận theo năng lực & kinh nghiệm",
+    salary: "Thỏa thuận theo năng lực và kinh nghiệm",
     quantity: "01 nhân sự",
     summary: "Phụ trách nghiệp vụ kế toán thuế, kê khai và kiểm soát tính hợp lệ của hóa đơn chứng từ, đảm bảo tuân thủ pháp luật và phục vụ quyết toán thuế.",
     duties: [
@@ -595,7 +595,7 @@ export default function CareersPage({ onOpenModal }) {
         </div>
       </section>
 
-      {/* ── 4. Culture & Working Style ── */}
+      {/* ── 4. Culture và Working Style ── */}
       <section className="py-16 md:py-24 bg-white text-[#0F1A41] border-b border-[#0F1A41]/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -659,9 +659,9 @@ export default function CareersPage({ onOpenModal }) {
           <div className="flex gap-2 overflow-x-auto pb-2 mb-10 border-b border-[#0F1A41]/10 no-scrollbar touch-pan-x">
             {[
               { id: 'all', label: 'TẤT CẢ VỊ TRÍ (10)' },
-              { id: 'operations', label: 'VẬN HÀNH & KHÁCH SẠN (4)' },
-              { id: 'commercial', label: 'KINH DOANH & MARKETING (3)' },
-              { id: 'admin', label: 'KẾ TOÁN & NHÂN SỰ (3)' },
+              { id: 'operations', label: 'VẬN HÀNH VÀ KHÁCH SẠN (4)' },
+              { id: 'commercial', label: 'KINH DOANH VÀ MARKETING (3)' },
+              { id: 'admin', label: 'KẾ TOÁN VÀ NHÂN SỰ (3)' },
               { id: 'entry', label: 'KHÔNG YÊU CẦU KINH NGHIỆM' },
               { id: 'exp', label: 'CÓ KINH NGHIỆM' },
             ].map((tab) => (
@@ -797,7 +797,7 @@ export default function CareersPage({ onOpenModal }) {
                         <div>
                           <h4 className="text-xs font-sans font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
-                            <span>Quyền lợi & Đãi ngộ</span>
+                            <span>Quyền lợi và Đãi ngộ</span>
                           </h4>
                           <ul className="flex flex-col gap-2.5 text-xs text-[#0F1A41]/75 leading-relaxed mb-6">
                             {job.benefits.map((b, i) => (
@@ -839,7 +839,7 @@ export default function CareersPage({ onOpenModal }) {
             <div className="lg:col-span-6">
               <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3.5">
                 <School size={16} className="text-[#B9887B]" />
-                KẾT NỐI CÙNG NHÀ TRƯỜNG & HỌC VIỆN
+                KẾT NỐI CÙNG NHÀ TRƯỜNG VÀ HỌC VIỆN
               </p>
               <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-white leading-[1.3] mb-6 tracking-tight">
                 Hợp tác thực tập, tuyển dụng<br />
@@ -1038,7 +1038,7 @@ export default function CareersPage({ onOpenModal }) {
             {[
               { step: "01", title: "Ứng tuyển", desc: "Nộp CV trực tuyến qua website hoặc email." },
               { step: "02", title: "Đánh giá", desc: "Sàng lọc hồ sơ và đối chiếu năng lực." },
-              { step: "03", title: "Trao đổi", desc: "Phỏng vấn sơ bộ về kinh nghiệm & định hướng." },
+              { step: "03", title: "Trao đổi", desc: "Phỏng vấn sơ bộ về kinh nghiệm và định hướng." },
               { step: "04", title: "Chuyên môn", desc: "Kiểm tra kỹ năng nghiệp vụ thực tế (nếu cần)." },
               { step: "05", title: "Gặp đội ngũ", desc: "Gặp Quản lý bộ phận và tham quan cơ sở." },
               { step: "06", title: "Thư mời (Offer)", desc: "Thống nhất chế độ đãi ngộ và bắt đầu." },

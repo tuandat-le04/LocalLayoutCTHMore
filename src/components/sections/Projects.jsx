@@ -68,7 +68,7 @@ export default function Projects({ onContactClick }) {
               )}
             </div>
 
-            {/* Content Details (Clean & Minimalist) */}
+            {/* Content Details (Clean và Minimalist) */}
             <div className="p-6 flex flex-col flex-1 justify-between font-sans">
               <div>
                 <h3 className="font-serif text-xl font-bold text-[#0F1A41] mb-1.5 group-hover:text-[#B9887B] transition-colors">
@@ -122,7 +122,7 @@ export default function Projects({ onContactClick }) {
             border: '1px solid #0F1A41',
           }}
         >
-          <span>XEM TOÀN BỘ 35+ BẤT ĐỘNG SẢN & BỘ LỌC CHI TIẾT</span>
+          <span>XEM TOÀN BỘ 35+ BẤT ĐỘNG SẢN VÀ BỘ LỌC CHI TIẾT</span>
           <ArrowUpRight size={15} className="text-[#B9887B]" />
         </button>
       </div>
@@ -159,7 +159,7 @@ export default function Projects({ onContactClick }) {
               </p>
             </div>
 
-            {/* Visual Photo Showcase: Architecture & Interior Reality */}
+            {/* Visual Photo Showcase: Architecture và Interior Reality */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               <div className="relative rounded overflow-hidden aspect-[16/10] bg-gray-900 border border-[#0F1A41]/10">
                 <img
@@ -168,7 +168,7 @@ export default function Projects({ onContactClick }) {
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute bottom-2 left-2 bg-[#0F1A41]/80 backdrop-blur-xs text-white text-[10px] font-sans px-2 py-0.5 rounded">
-                  Kiến trúc & Không gian
+                  Kiến trúc và Không gian
                 </span>
               </div>
               <div className="relative rounded overflow-hidden aspect-[16/10] bg-gray-900 border border-[#0F1A41]/10">
@@ -199,7 +199,7 @@ export default function Projects({ onContactClick }) {
                 <div className="flex items-center gap-2 mb-1">
                   <span className="w-4 h-4 rounded-full bg-rose-200/80 text-rose-900 text-[9px] font-sans font-bold flex items-center justify-center">2</span>
                   <strong className="text-[11px] font-sans text-rose-900 uppercase tracking-wider">
-                    Thách thức & Vấn đề cần giải quyết:
+                    Thách thức và Vấn đề cần giải quyết:
                   </strong>
                 </div>
                 <p className="text-rose-950/85 pl-6">{selectedCaseStudy.caseStudy.problem}</p>

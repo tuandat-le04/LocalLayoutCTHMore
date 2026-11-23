@@ -16,7 +16,7 @@ const DETAILED_SOLUTIONS = [
   {
     code: "01",
     pillarName: "TRỤ CỘT 01",
-    title: "Tư vấn Đầu tư & Phát triển Dự án",
+    title: "Tư vấn Đầu tư và Phát triển Dự án",
     subtitle: "Xác lập nền móng vững chắc ngay từ quyết định đầu tư đầu tiên",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782203499266-983125.webp",
     metricValue: "12 – 15%",
@@ -27,22 +27,22 @@ const DETAILED_SOLUTIONS = [
     items: [
       {
         icon: 'survey',
-        title: "Khảo sát Địa bàn & Cung - Cầu",
+        title: "Khảo sát Địa bàn và Cung - Cầu",
         desc: "Phân tích nhân khẩu học và đối thủ cạnh tranh trong bán kính 3km."
       },
       {
         icon: 'zoning',
-        title: "Cơ cấu Diện tích & Tiện ích",
+        title: "Cơ cấu Diện tích và Tiện ích",
         desc: "Hoạch định tỷ lệ phòng tối ưu tối đa diện tích thương phẩm."
       },
       {
         icon: 'finance',
-        title: "Mô hình Tài chính & Điểm hòa vốn",
+        title: "Mô hình Tài chính và Điểm hòa vốn",
         desc: "Tính toán chi tiết CAPEX, OPEX, BEP và chu kỳ thu hồi vốn."
       },
       {
         icon: 'legal',
-        title: "Pháp lý Lưu trú & Chuẩn PCCC",
+        title: "Pháp lý Lưu trú và Chuẩn PCCC",
         desc: "Thẩm định quy chuẩn nghiệm thu PCCC và hồ sơ cấp phép kinh doanh."
       }
     ]
@@ -50,7 +50,7 @@ const DETAILED_SOLUTIONS = [
   {
     code: "02",
     pillarName: "TRỤ CỘT 02",
-    title: "Tư vấn Cải tạo & Tái định vị Tòa nhà",
+    title: "Tư vấn Cải tạo và Tái định vị Tòa nhà",
     subtitle: "Hồi sinh tài sản cũ, nhân đôi giá trị khai thác thương mại",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782202629642-67015.webp",
     metricValue: "+45%",
@@ -61,7 +61,7 @@ const DETAILED_SOLUTIONS = [
     items: [
       {
         icon: 'mep',
-        title: "Thẩm định Hiện trạng & Hệ MEP",
+        title: "Thẩm định Hiện trạng và Hệ MEP",
         desc: "Rà soát toàn diện kết cấu, hạ tầng kỹ thuật và trải nghiệm lưu trú."
       },
       {
@@ -76,7 +76,7 @@ const DETAILED_SOLUTIONS = [
       },
       {
         icon: 'launch',
-        title: "Chiến dịch Ra mắt & Khai trương",
+        title: "Chiến dịch Ra mắt và Khai trương",
         desc: "Đẩy bán đồng loạt trên 8+ kênh OTA, phủ kín 85% phòng ngay tháng đầu."
       }
     ]
@@ -84,12 +84,12 @@ const DETAILED_SOLUTIONS = [
   {
     code: "03",
     pillarName: "TRỤ CỘT 03",
-    title: "Tư vấn Mô hình & Quản lý Vận hành Toàn diện",
+    title: "Tư vấn Mô hình và Quản lý Vận hành Toàn diện",
     subtitle: "Vận hành chuẩn mực quốc tế, tối đa hóa công suất và bảo toàn tài sản",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782195854527-583048.webp",
     metricValue: "95%+",
     metricLabel: "Tỷ Lệ Kín Phòng Quanh Năm",
-    metricHighlight: "Tiết kiệm 40% chi phí lễ tân qua Smart IoT & PMS Cloud",
+    metricHighlight: "Tiết kiệm 40% chi phí lễ tân qua Smart IoT và PMS Cloud",
     desc: "Thiết lập bộ máy quản trị 24/7 ứng dụng công nghệ PMS số hóa và định giá buồng phòng động, đảm bảo dòng tiền đỉnh cao qua mọi mùa vụ.",
     deliverable: "Quy chuẩn SOP Vận hành 5 Sao · Hệ thống Cloud PMS · Báo cáo Đối soát Ngày 5 Hàng Tháng",
     items: [
@@ -110,7 +110,7 @@ const DETAILED_SOLUTIONS = [
       },
       {
         icon: 'deliverable',
-        title: "Minh bạch Tài chính & Bảo trì",
+        title: "Minh bạch Tài chính và Bảo trì",
         desc: "Báo cáo doanh thu đối soát chi tiết ngày 5; bảo dưỡng công trình định kỳ."
       }
     ]
@@ -126,7 +126,7 @@ const COLLABORATION_MODELS = [
     highlight: "Không tốn vốn đầu tư ban đầu",
     desc: "CityHouse chịu toàn bộ chi phí thiết kế, thi công và đầu tư nội thất mới theo concept thương hiệu cao cấp. Chủ đầu tư nhận phần trăm doanh thu cố định và sở hữu tài sản nâng cấp giá trị sau thời hạn hợp đồng.",
     features: [
-      "CityHouse chịu 100% chi phí nội thất & decor",
+      "CityHouse chịu 100% chi phí nội thất và decor",
       "Chủ đầu tư nhận chia sẻ doanh thu hàng tháng",
       "Sở hữu toàn bộ tài sản được nâng cấp sau hợp đồng"
     ]
@@ -141,7 +141,7 @@ const COLLABORATION_MODELS = [
     features: [
       "Thu nhập thụ động ổn định 365 ngày/năm",
       "Không chịu rủi ro mùa thấp điểm hay trống phòng",
-      "CityHouse chịu toàn bộ chi phí vận hành & bảo trì"
+      "CityHouse chịu toàn bộ chi phí vận hành và bảo trì"
     ]
   },
   {
@@ -162,25 +162,25 @@ const COLLABORATION_MODELS = [
 const WORKFLOW_STEPS = [
   {
     step: "01",
-    title: "Khảo sát & Thẩm định Hiện trạng",
+    title: "Khảo sát và Thẩm định Hiện trạng",
     time: "Ngày 1 – 3",
     desc: "Đội ngũ chuyên gia trực tiếp khảo sát hiện trạng công trình, đánh giá vị trí, kỹ thuật hạ tầng (MEP) và đo lường dung lượng khách mục tiêu trong khu vực."
   },
   {
     step: "02",
-    title: "Phương án & Bài toán Tài chính",
+    title: "Phương án và Bài toán Tài chính",
     time: "Ngày 4 – 7",
     desc: "Xây dựng phương án định vị thương hiệu, concept cải tạo, dự phóng bảng dòng tiền 5-10 năm chi tiết và đề xuất mô hình hợp tác tối ưu nhất cho Chủ sở hữu."
   },
   {
     step: "03",
-    title: "Ký kết & Chuẩn hóa Sản phẩm",
+    title: "Ký kết và Chuẩn hóa Sản phẩm",
     time: "Ngày 8 – 45",
     desc: "Hoàn thiện hợp đồng pháp lý minh bạch, triển khai thi công nâng cấp không gian kiến trúc và chuẩn hóa toàn bộ bộ máy vận hành SOP."
   },
   {
     step: "04",
-    title: "Khai thác & Đối soát Báo cáo",
+    title: "Khai thác và Đối soát Báo cáo",
     time: "Liên tục 24/7",
     desc: "Đưa tài sản vào hệ thống phân phối đa kênh toàn cầu, tối đa hóa tỷ lệ kín phòng trên 95% và gửi báo cáo doanh thu chi tiết vào ngày 5 hàng tháng."
   }
@@ -305,7 +305,7 @@ export default function SolutionsPage({ onOpenModal }) {
                       </div>
                     </div>
 
-                    {/* Content & Scope Column */}
+                    {/* Content và Scope Column */}
                     <div
                       className={`lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between bg-white ${
                         isEven ? 'lg:order-1' : 'lg:order-2'
@@ -547,7 +547,7 @@ export default function SolutionsPage({ onOpenModal }) {
                   GỬI YÊU CẦU TƯ VẤN GIẢI PHÁP
                 </h3>
                 <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed">
-                  Nhận báo cáo sơ bộ phân tích hiện trạng & mô hình khai thác phù hợp nhất.
+                  Nhận báo cáo sơ bộ phân tích hiện trạng và mô hình khai thác phù hợp nhất.
                 </p>
               </div>
 

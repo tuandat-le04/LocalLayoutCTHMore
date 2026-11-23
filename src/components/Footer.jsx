@@ -75,7 +75,7 @@ export default function Footer({ onOpenModal }) {
       {/* ── 2. Footer Main Information ── */}
       <div className="max-w-7xl mx-auto px-6 py-14 font-sans">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
-          {/* Brand & Prominent Contact Info (lg:col-span-4) */}
+          {/* Brand và Prominent Contact Info (lg:col-span-4) */}
           <div className="lg:col-span-4">
             <a
               href="/"
@@ -121,7 +121,7 @@ export default function Footer({ onOpenModal }) {
               </li>
               <li>
                 <a href="/tu-van" onClick={(e) => handleLink('/tu-van', e)} className="hover:text-white transition-colors">
-                  Cải tạo & Tái định vị tòa nhà cũ
+                  Cải tạo và Tái định vị tòa nhà cũ
                 </a>
               </li>
               <li>
@@ -142,10 +142,10 @@ export default function Footer({ onOpenModal }) {
             </ul>
           </div>
 
-          {/* Column 3: Case Studies & Brands (lg:col-span-3) */}
+          {/* Column 3: Case Studies và Brands (lg:col-span-3) */}
           <div className="lg:col-span-3">
             <h4 className="font-sans text-xs font-bold uppercase tracking-[0.15em] text-[#B9887B] mb-4">
-              CASE STUDY & DỰ ÁN
+              CASE STUDY VÀ DỰ ÁN
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs text-white/75 font-sans">
               <li>
@@ -173,7 +173,7 @@ export default function Footer({ onOpenModal }) {
               </li>
               <li>
                 <a href="/careers" onClick={(e) => handleLink('/careers', e)} className="hover:text-white text-[#B9887B] font-semibold transition-colors flex items-center justify-between">
-                  <span>Tuyển dụng & Cơ hội nghề nghiệp</span>
+                  <span>Tuyển dụng và Cơ hội nghề nghiệp</span>
                   <span className="text-[10px] bg-[#B9887B]/20 text-[#B9887B] px-2 py-0.5 rounded-full font-bold">10 vị trí</span>
                 </a>
               </li>
@@ -185,7 +185,7 @@ export default function Footer({ onOpenModal }) {
             </ul>
           </div>
 
-          {/* Column 4: Quick Actions & Trust (lg:col-span-2) */}
+          {/* Column 4: Quick Actions và Trust (lg:col-span-2) */}
           <div className="lg:col-span-2">
             <h4 className="font-sans text-xs font-bold uppercase tracking-[0.15em] text-[#B9887B] mb-4">
               BẢO CHỨNG B2B

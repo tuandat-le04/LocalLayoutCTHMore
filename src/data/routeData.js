@@ -3,7 +3,7 @@ export const routeData = {
     'TƯ VẤN',
     'Quản lý gia sản\nvững bền gia tộc',
     'Nền tảng quản lý bất động sản dòng tiền Căn hộ · Khách sạn · Văn phòng · Resort.',
-    ['Tư vấn đầu tư & phát triển dự án', 'Cải tạo & tái định vị bất động sản', 'Mô hình & quản lý vận hành'],
+    ['Tư vấn đầu tư và phát triển dự án', 'Cải tạo và tái định vị bất động sản', 'Mô hình và quản lý vận hành'],
   ],
   '/danh-muc-tai-san': [
     'DANH MỤC TÀI SẢN',

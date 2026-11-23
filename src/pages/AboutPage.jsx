@@ -7,7 +7,7 @@ import { useNavigation } from '../context/NavigationContext.jsx';
 const CORE_VALUES = [
   {
     icon: 'shield',
-    title: "Bảo tồn & Gia tăng gia sản",
+    title: "Bảo tồn và Gia tăng gia sản",
     desc: "Bảo vệ nguyên vẹn giá trị công trình và nhân bội dòng tiền theo thời gian qua các thế hệ."
   },
   {
@@ -47,13 +47,13 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* Brand Story & Mission */}
+      {/* Brand Story và Mission */}
       <section className="section-pad bg-[#F9F8F5] text-[#0F1A41]">
         {/* Section Header */}
         <div className="max-w-3xl mb-10">
           <p className="eyebrow eyebrow-accent flex items-center gap-2 mb-2">
             <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
-            CÂU CHUYỆN & TẦM NHÌN CHIẾN LƯỢC
+            CÂU CHUYỆN VÀ TẦM NHÌN CHIẾN LƯỢC
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.2] mb-3">
             Từ kinh nghiệm thực chiến<br />
@@ -64,7 +64,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Master Balanced Grid: Left = Visual Anchor & Factsheet; Right = Strategic Vision, Commitments & Operational Edge */}
+        {/* Master Balanced Grid: Left = Visual Anchor và Factsheet; Right = Strategic Vision, Commitments và Operational Edge */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           {/* Left Column (5 cols): Headquarters Visual + 3 Heritage Milestones */}
           <div className="lg:col-span-5 flex flex-col gap-4 justify-between">
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#0F1A41]/10 shadow-sm group bg-[#0F1A41]">
               <img
                 src="https://cityhousemore.com/uploads/b810c46ef2e5a1410010b30aac5981d6a1.jpeg"
-                alt="Không gian làm việc & điều hành CityHouse More"
+                alt="Không gian làm việc và điều hành CityHouse More"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
@@ -82,7 +82,7 @@ export default function AboutPage() {
                   Trụ sở điều hành trung tâm
                 </span>
                 <div className="text-xs font-semibold">
-                  Trung tâm Điều hành & Tiếp đón đối tác CityHouse More (Quận 3)
+                  Trung tâm Điều hành và Tiếp đón đối tác CityHouse More (Quận 3)
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                     Quy mô vận hành
                   </span>
                 </div>
-                <div className="text-xs font-bold text-[#0F1A41] mb-0.5">Hơn 1.000 căn hộ & phòng khách sạn</div>
+                <div className="text-xs font-bold text-[#0F1A41] mb-0.5">Hơn 1.000 căn hộ và phòng khách sạn</div>
                 <p className="text-[11.5px] text-[#0F1A41]/70 leading-relaxed">
                   Hiện diện tại các quận trung tâm và cộng đồng chuyên gia quốc tế (Quận 1, 3, Bình Thạnh, Thảo Điền).
                 </p>
@@ -130,21 +130,21 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Right Column (7 cols): Strategic Vision, Commitments, 4 Operational Pillars & Signature Pledge */}
+          {/* Right Column (7 cols): Strategic Vision, Commitments, 4 Operational Pillars và Signature Pledge */}
           <div className="lg:col-span-7 bg-white p-6 sm:p-8 md:p-9 rounded-2xl border border-[#0F1A41]/10 shadow-sm flex flex-col justify-between gap-5">
             <div className="space-y-4.5">
               {/* Header */}
               <div className="border-b border-[#0F1A41]/10 pb-3.5">
                 <div className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#B9887B] font-bold mb-1">
                   <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
-                  ĐỊNH HƯỚNG PHÁT TRIỂN & CAM KẾT ĐỒNG HÀNH
+                  ĐỊNH HƯỚNG PHÁT TRIỂN VÀ CAM KẾT ĐỒNG HÀNH
                 </div>
                 <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#0F1A41]">
-                  Tầm nhìn kiến tạo & Sứ mệnh phụng sự
+                  Tầm nhìn kiến tạo và Sứ mệnh phụng sự
                 </h3>
               </div>
 
-              {/* 1. Tầm nhìn & Sứ mệnh (Compact 2-col) */}
+              {/* 1. Tầm nhìn và Sứ mệnh (Compact 2-col) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="bg-[#FAF9F6] p-4 rounded-xl border border-[#0F1A41]/8">
                   <div className="flex items-center gap-2 mb-1">
@@ -154,7 +154,7 @@ export default function AboutPage() {
                     </span>
                   </div>
                   <p className="text-xs text-[#0F1A41]/80 leading-relaxed font-normal">
-                    Trở thành hệ sinh thái quản lý bất động sản dòng tiền được tin cậy hàng đầu cho các gia tộc & nhà đầu tư.
+                    Trở thành hệ sinh thái quản lý bất động sản dòng tiền được tin cậy hàng đầu cho các gia tộc và nhà đầu tư.
                   </p>
                 </div>
 
@@ -181,7 +181,7 @@ export default function AboutPage() {
                     <div className="font-serif text-xl font-bold text-[#B9887B] mb-0.5">92%+</div>
                     <span className="text-xs font-bold text-[#0F1A41] block mb-0.5">Kín phòng ổn định</span>
                     <p className="text-[11px] text-[#0F1A41]/70 leading-snug">
-                      Phân phối 8+ kênh OTA & 120+ đối tác FDI.
+                      Phân phối 8+ kênh OTA VÀ 120+ đối tác FDI.
                     </p>
                   </div>
 
@@ -212,7 +212,7 @@ export default function AboutPage() {
                   <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
                     <div>
-                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Tối ưu công suất & Giá bán linh hoạt</strong>
+                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Tối ưu công suất và Giá bán linh hoạt</strong>
                       <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
                         Thuật toán định giá động kết hợp linh hoạt khách ngắn ngày và dài hạn giúp tối đa doanh thu trên từng phòng.
                       </p>
@@ -232,7 +232,7 @@ export default function AboutPage() {
                   <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
                     <div>
-                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Công nghệ PropTech & Quản lý số</strong>
+                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Công nghệ PropTech và Quản lý số</strong>
                       <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
                         Khóa thẻ từ thông minh, tự động check-in, ứng dụng cư dân và kiểm soát chi phí vận hành minh bạch.
                       </p>
@@ -242,7 +242,7 @@ export default function AboutPage() {
                   <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
                     <div>
-                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Bảo toàn & Nâng cấp tài sản trọn đời</strong>
+                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Bảo toàn và Nâng cấp tài sản trọn đời</strong>
                       <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
                         Kế hoạch bảo trì dự phòng hệ thống MEP, thang máy và đề xuất cải tạo định kỳ giữ tòa nhà luôn mới.
                       </p>

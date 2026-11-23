@@ -16,7 +16,7 @@ export default function Brands({ onContactClick }) {
           </p>
           <h2 className="text-white font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.2] mb-3">
             Định vị chính xác<br />
-            cho <span className="text-[#B9887B] font-serif italic">từng tệp khách hàng & tài sản</span>
+            cho <span className="text-[#B9887B] font-serif italic">từng tệp khách hàng và tài sản</span>
           </h2>
           <p className="text-sm text-white/75 max-w-xl leading-relaxed font-normal">
             Mỗi thương hiệu trong bộ sưu tập CityHouse Collection được thiết kế chuyên biệt cho một phân khúc khách thuê và mô hình bất động sản cụ thể, giúp tối ưu hóa công suất phòng và giá thuê trên từng mét vuông.
@@ -64,14 +64,14 @@ export default function Brands({ onContactClick }) {
                 </div>
               </div>
 
-              {/* Brand Card Content (Streamlined & Minimalist: Key Metrics First) */}
+              {/* Brand Card Content (Streamlined và Minimalist: Key Metrics First) */}
               <div className="p-5 flex flex-col justify-between flex-grow font-sans">
                 <div>
                   <div className="font-serif text-xs sm:text-sm italic text-[#B9887B] mb-3 font-medium">
                     "{brand.tagline}"
                   </div>
 
-                  {/* Core Metrics: Clean & Scannable instead of heavy text */}
+                  {/* Core Metrics: Clean và Scannable instead of heavy text */}
                   <div className="space-y-1.5 mb-4 text-xs font-sans">
                     <div className="flex items-center justify-between text-white/80 bg-white/[0.03] px-2.5 py-1.5 rounded border border-white/5">
                       <span className="text-white/50 text-[10px] uppercase font-semibold">Giá thuê:</span>

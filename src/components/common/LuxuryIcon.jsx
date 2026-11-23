@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * LuxuryIcon — Dedicated Architectural & Bespoke Luxury Icon System for CityHouse More
+ * LuxuryIcon — Dedicated Architectural và Bespoke Luxury Icon System for CityHouse More
  * Crafted with ultra-fine 1.25px hairline geometry, sharp architectural proportions,
  * and high-contrast elegance. Replaces generic SaaS/tech bubbly icons.
  */
@@ -20,7 +20,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
   };
 
   switch (name) {
-    // 1. Khảo sát Địa bàn & Cung - Cầu (Architectural Surveyor Compass)
+    // 1. Khảo sát Địa bàn và Cung - Cầu (Architectural Surveyor Compass)
     case 'compass':
     case 'survey':
       return (
@@ -31,7 +31,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 2. Cơ cấu Diện tích & Tiện ích (Architectural Floor Plan & Modular Space)
+    // 2. Cơ cấu Diện tích và Tiện ích (Architectural Floor Plan và Modular Space)
     case 'layers':
     case 'zoning':
     case 'layout':
@@ -44,7 +44,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 3. Mô hình Tài chính & Điểm hòa vốn (Yield & Financial Candlestick Matrix)
+    // 3. Mô hình Tài chính và Điểm hòa vốn (Yield và Financial Candlestick Matrix)
     case 'finance':
     case 'barchart':
     case 'chart':
@@ -57,7 +57,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 4. Pháp lý Lưu trú & Tiêu chuẩn PCCC (Heritage Seal of Compliance & Legal Crest)
+    // 4. Pháp lý Lưu trú và Tiêu chuẩn PCCC (Heritage Seal of Compliance và Legal Crest)
     case 'legal':
     case 'shield':
     case 'compliance':
@@ -81,7 +81,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 6. Thẩm định Hiện trạng & Hệ MEP (Architectural Caliper & Technical Precision)
+    // 6. Thẩm định Hiện trạng và Hệ MEP (Architectural Caliper và Technical Precision)
     case 'wrench':
     case 'mep':
     case 'inspection':
@@ -93,7 +93,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 7. Thiết kế Concept Tối ưu Chi phí (Architectural Drafting Pen & Compass)
+    // 7. Thiết kế Concept Tối ưu Chi phí (Architectural Drafting Pen và Compass)
     case 'palette':
     case 'design':
     case 'concept':
@@ -115,7 +115,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 9. Ra mắt & Khai trương (Global Prestige Launch / Diamond Star)
+    // 9. Ra mắt và Khai trương (Global Prestige Launch / Diamond Star)
     case 'launch':
     case 'sparkles':
     case 'prestige':
@@ -171,7 +171,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 14. Bản đồ & Tọa độ bất động sản (Map Pin / Coordinates)
+    // 14. Bản đồ và Tọa độ bất động sản (Map Pin / Coordinates)
     case 'mapPin':
     case 'location':
       return (
@@ -219,7 +219,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 19. Toàn cầu & Phân phối (Global Distribution Network)
+    // 19. Toàn cầu và Phân phối (Global Distribution Network)
     case 'globe':
       return (
         <svg {...commonProps}>
@@ -248,7 +248,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 22. Mục tiêu chiến lược / Minh bạch (Precision Reticle & Target)
+    // 22. Mục tiêu chiến lược / Minh bạch (Precision Reticle và Target)
     case 'target':
     case 'focus':
       return (
@@ -263,7 +263,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 23. Danh hiệu & Giải thưởng (Prestige Medallion / Award Crest)
+    // 23. Danh hiệu và Giải thưởng (Prestige Medallion / Award Crest)
     case 'award':
     case 'trophy':
       return (
@@ -312,7 +312,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 27. Nghiên cứu & Báo cáo chuyên sâu (Editorial Journal / Book)
+    // 27. Nghiên cứu và Báo cáo chuyên sâu (Editorial Journal / Book)
     case 'book':
     case 'journal':
       return (

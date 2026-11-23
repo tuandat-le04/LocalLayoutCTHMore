@@ -24,7 +24,7 @@ export default function Contact() {
 
           <div className="contact-security-badge bg-white/5 border border-[#B9887B]/30 p-3.5 rounded-xl flex items-center gap-2.5 mb-6">
             <ShieldCheck size={20} className="shrink-0 text-[#B9887B]" />
-            <span className="text-xs text-white/90 font-medium">Cam kết bảo mật 100% hồ sơ tài sản & thông tin khách hàng</span>
+            <span className="text-xs text-white/90 font-medium">Cam kết bảo mật 100% hồ sơ tài sản và thông tin khách hàng</span>
           </div>
 
           <div className="contact-detail-list grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans mb-6">
@@ -50,7 +50,7 @@ export default function Contact() {
           <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-lg">
             <img
               src="https://cityhousemore.com/uploads/gallery/gallery-1782196352717-398720.webp"
-              alt="Văn phòng điều hành & Tiếp đón đối tác CityHouse More"
+              alt="Văn phòng điều hành và Tiếp đón đối tác CityHouse More"
               loading="lazy"
               className="w-full h-40 object-cover"
             />
@@ -58,7 +58,7 @@ export default function Contact() {
             <div className="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-white text-[11px] font-sans">
               <span className="flex items-center gap-1.5 text-white/90 font-medium">
                 <Building size={13} className="text-[#B9887B]" />
-                Không gian tiếp đón đối tác & Chủ đầu tư
+                Không gian tiếp đón đối tác và Chủ đầu tư
               </span>
               <span className="text-[#B9887B] font-bold">Quận 3, TP.HCM</span>
             </div>
@@ -69,7 +69,7 @@ export default function Contact() {
         <div className="contact-form-col bg-white p-6 md:p-8 rounded-2xl text-[#0F1A41] shadow-2xl font-sans">
           <div className="mb-6">
             <h3 className="font-serif text-2xl font-bold text-[#0F1A41] mb-2.5 leading-snug">
-              ĐĂNG KÝ TƯ VẤN & ĐÁNH GIÁ TÀI SẢN
+              ĐĂNG KÝ TƯ VẤN VÀ ĐÁNH GIÁ TÀI SẢN
             </h3>
             <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed">
               Điền thông tin bên dưới để chuyên gia CityHouse chuẩn bị dữ liệu phân tích thị trường tốt nhất trước khi liên hệ.

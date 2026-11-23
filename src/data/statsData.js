@@ -1,6 +1,6 @@
 export const statsData = {
   lastUpdated: "Tháng 03/2026",
-  source: "Hệ thống Báo cáo Quản trị Doanh thu & Kiểm toán CityHouse More",
+  source: "Hệ thống Báo cáo Quản trị Doanh thu và Kiểm toán CityHouse More",
   metrics: [
     {
       id: "rooms",

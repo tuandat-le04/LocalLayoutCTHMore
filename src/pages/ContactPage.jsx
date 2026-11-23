@@ -49,7 +49,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <Mail size={20} className="text-[#B9887B] shrink-0 mt-1" />
                   <div>
-                    <strong className="block text-[#0F1A41]">Email liên hệ & Tiếp nhận hồ sơ:</strong>
+                    <strong className="block text-[#0F1A41]">Email liên hệ và Tiếp nhận hồ sơ:</strong>
                     <a href="mailto:info@cityhousemore.com" className="text-[#0F1A41]/80 hover:text-[#B9887B]">info@cityhousemore.com</a>
                   </div>
                 </div>

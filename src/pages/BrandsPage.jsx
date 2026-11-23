@@ -32,9 +32,9 @@ const BRAND_PORTFOLIO = [
     flagship: "CityHouse MARK Atelier Thảo Điền",
     flagshipSlug: "cityhouse-mark-atelier-thao-dien",
     highlights: [
-      "Quản gia riêng & Concierge 24/7",
+      "Quản gia riêng và Concierge 24/7",
       "Nội thất gỗ đá tự nhiên thượng hạng",
-      "Hệ thống lọc khí & âm học riêng biệt",
+      "Hệ thống lọc khí và âm học riêng biệt",
       "Bảo mật an ninh đa lớp tuyệt đối"
     ]
   },
@@ -42,7 +42,7 @@ const BRAND_PORTFOLIO = [
     code: "SOUL",
     name: "CityHouse SOUL",
     tagline: "Tĩnh tại · Bản sắc · Cân bằng thân tâm trí",
-    segment: "Boutique Hotel & Trải nghiệm Di sản",
+    segment: "Boutique Hotel và Trải nghiệm Di sản",
     shortDesc: "Điểm chạm cảm xúc giữa lòng đô thị với kiến trúc bền vững, mảng xanh nhiệt đới và văn hóa bản địa độc bản.",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782195854670-640977.webp",
     accent: "#7B9B88",
@@ -53,9 +53,9 @@ const BRAND_PORTFOLIO = [
     flagship: "CityHouse SOUL Kabana (Quận 1)",
     flagshipSlug: "cityhouse-soul-kabana",
     highlights: [
-      "Vườn nhiệt đới & giếng trời tự nhiên",
-      "Không gian trà đạo & thư viện sách",
-      "Liệu trình thư giãn & yoga nội khu",
+      "Vườn nhiệt đới và giếng trời tự nhiên",
+      "Không gian trà đạo và thư viện sách",
+      "Liệu trình thư giãn và yoga nội khu",
       "Bếp ẩm thực hữu cơ chọn lọc"
     ]
   },
@@ -63,7 +63,7 @@ const BRAND_PORTFOLIO = [
     code: "VIBE",
     name: "CityHouse VIBE",
     tagline: "Cảm hứng · Nghệ thuật · Đậm bản sắc thị giác",
-    segment: "Đô thị Năng động & Du lịch Sáng tạo",
+    segment: "Đô thị Năng động và Du lịch Sáng tạo",
     shortDesc: "Nhịp đập sôi động mang phong cách nhiệt đới đương đại, tối đa hóa doanh thu qua mô hình kết hợp ngắn - dài hạn.",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782189976085-753167.webp",
     accent: "#B9887B",
@@ -84,7 +84,7 @@ const BRAND_PORTFOLIO = [
     code: "TERA",
     name: "CityHouse TERA",
     tagline: "Tiện nghi · Thực tế · Bền vững cùng thời gian",
-    segment: "Lưu trú Dài hạn & Khách Doanh nghiệp",
+    segment: "Lưu trú Dài hạn và Khách Doanh nghiệp",
     shortDesc: "Công năng gia đình hoàn chỉnh, dòng tiền ổn định với tỷ lệ khách gia hạn hợp đồng năm vượt mốc 78%.",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782195172539-438850.webp",
     accent: "#8A5A3D",
@@ -92,12 +92,12 @@ const BRAND_PORTFOLIO = [
     priceRange: "700 – 1.600 USD / tháng",
     assetFit: "Tòa nhà căn hộ dịch vụ độc lập (25 – 80 căn hộ)",
     targetGuests: "Chuyên gia expat công tác dài hạn, kỹ sư dự án FDI, gia đình nhỏ",
-    flagship: "CityHouse TERA Kim Nguyen & Villea",
+    flagship: "CityHouse TERA Kim Nguyen và Villea",
     flagshipSlug: "cityhouse-tera-kim-nguyen",
     highlights: [
       "Bếp gia đình đầy đủ thiết bị nấu nướng",
       "Máy giặt sấy riêng từng căn hộ",
-      "Phòng gym & khu thể thao nội khu",
+      "Phòng gym và khu thể thao nội khu",
       "Hợp đồng thuê năm chiếm 80%+, ít trống"
     ]
   },
@@ -113,11 +113,11 @@ const BRAND_PORTFOLIO = [
     priceRange: "450 – 900 USD / tháng (700k – 1.3tr/đêm)",
     assetFit: "Nhà phố cải tạo, tòa nhà mini Quận 1, 3, Bình Thạnh (20 – 60 căn)",
     targetGuests: "Chuyên gia trẻ làm việc trung tâm, người độc thân, nhân sự công tác",
-    flagship: "CityHouse NEST LightHouse & Metro",
+    flagship: "CityHouse NEST LightHouse và Metro",
     flagshipSlug: "cityhouse-nest-lighthouse",
     highlights: [
       "Nội thất thông minh biến đổi đa năng",
-      "Khóa từ thông minh & App quản lý số",
+      "Khóa từ thông minh và App quản lý số",
       "Khu giặt sấy chung tiện lợi",
       "Chi phí hoàn thiện hợp lý, hoàn vốn nhanh"
     ]
@@ -141,7 +141,7 @@ export default function BrandsPage({ onOpenModal }) {
 
   return (
     <div className="brands-page font-sans">
-      {/* ── Page Hero: Focused & High Impact ── */}
+      {/* ── Page Hero: Focused và High Impact ── */}
       <section className="inner-hero section-pad relative overflow-hidden bg-[#101C42] text-white">
         <div className="max-w-7xl mx-auto relative z-10">
           <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-4 flex items-center gap-2">
@@ -178,7 +178,7 @@ export default function BrandsPage({ onOpenModal }) {
         </div>
       </section>
 
-      {/* ── Brand Navigation Bar & Mode Switcher: Synchronized Sans ── */}
+      {/* ── Brand Navigation Bar và Mode Switcher: Synchronized Sans ── */}
       <section className="bg-[#FAF6EF] border-b border-[#0F1A41]/10 sticky top-[72px] z-30 shadow-xs backdrop-blur-md bg-opacity-95 font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col md:flex-row items-center justify-between gap-3">
           {/* Brand Tabs */}
@@ -297,7 +297,7 @@ export default function BrandsPage({ onOpenModal }) {
                   </div>
                 </div>
 
-                {/* Content Dossier (7 Cols) - Harmonized & Clean */}
+                {/* Content Dossier (7 Cols) - Harmonized và Clean */}
                 <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between font-sans">
                   <div>
                     {/* Header: Brand Name + Segment + Tagline */}
@@ -371,7 +371,7 @@ export default function BrandsPage({ onOpenModal }) {
                         <div className="bg-[#F8FAFC] p-4.5 rounded-xl border border-[#101C42]/10 hover:border-[#B9887B]/40 transition-all shadow-2xs flex flex-col justify-between">
                           <div className="flex items-center gap-1.5 text-[10.5px] font-bold text-[#101C42]/60 uppercase tracking-[0.15em] mb-1.5 font-sans">
                             <TrendingUp size={13} className="text-[#B9887B]" />
-                            <span>HIỆU SUẤT & UY TÍN</span>
+                            <span>HIỆU SUẤT VÀ UY TÍN</span>
                           </div>
                           <div className="text-sm sm:text-base font-bold text-[#101C42] leading-snug font-sans">
                             {activeBrand.stats}
@@ -383,7 +383,7 @@ export default function BrandsPage({ onOpenModal }) {
                     {/* 4 Distinct Privileges (Đặc quyền nổi bật - Ngắn gọn) */}
                     <div className="mb-6 font-sans">
                       <span className="text-[10.5px] text-[#101C42]/60 uppercase tracking-[0.2em] font-bold block mb-2.5 font-sans">
-                        TIÊU CHUẨN VẬN HÀNH & ĐẶC QUYỀN:
+                        TIÊU CHUẨN VẬN HÀNH VÀ ĐẶC QUYỀN:
                       </span>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-sans">
                         {activeBrand.highlights.map((item, idx) => (
@@ -572,7 +572,7 @@ export default function BrandsPage({ onOpenModal }) {
               <div className="bg-white/5 border border-white/10 p-4 rounded-xl text-xs text-white/80 space-y-2.5">
                 <div className="flex items-center gap-2">
                   <ShieldCheck size={14} className="text-[#B9887B]" />
-                  <span>Khảo sát hiện trạng & phân tích tệp khách miễn phí</span>
+                  <span>Khảo sát hiện trạng và phân tích tệp khách miễn phí</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award size={14} className="text-[#B9887B]" />

@@ -34,7 +34,7 @@ export default function FloatingCTA({ onOpenModal, isModalOpen }) {
         />
       )}
 
-      {/* ── Compact Floating Action Widget (Both Desktop & Mobile) ── */}
+      {/* ── Compact Floating Action Widget (Both Desktop và Mobile) ── */}
       <aside
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5 font-sans pointer-events-auto"
         aria-label="Thanh hành động liên hệ nhanh"
@@ -42,7 +42,7 @@ export default function FloatingCTA({ onOpenModal, isModalOpen }) {
         {/* ── Unfolded Quick Menu ("Xổ ra" khi ấn icon) ── */}
         {isExpanded && (
           <div className="flex flex-col items-end gap-2.5 mb-1 animate-slideUp">
-            {/* 1. Nút Đặt lịch tư vấn & Đánh giá tài sản */}
+            {/* 1. Nút Đặt lịch tư vấn và Đánh giá tài sản */}
             <button
               onClick={handleOpenConsultation}
               className="flex items-center gap-2.5 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-white shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer border-2 border-white/60 active:scale-95"
@@ -50,10 +50,10 @@ export default function FloatingCTA({ onOpenModal, isModalOpen }) {
                 backgroundColor: '#B9887B',
                 boxShadow: '0 8px 25px rgba(185, 136, 123, 0.65)',
               }}
-              title="Đặt lịch tư vấn & Đánh giá sơ bộ tài sản miễn phí"
+              title="Đặt lịch tư vấn và Đánh giá sơ bộ tài sản miễn phí"
             >
               <Calendar size={16} className="text-white shrink-0" />
-              <span className="whitespace-nowrap">ĐẶT LỊCH TƯ VẤN & ĐÁNH GIÁ</span>
+              <span className="whitespace-nowrap">ĐẶT LỊCH TƯ VẤN VÀ ĐÁNH GIÁ</span>
             </button>
 
             {/* 2. Nút Gọi Hotline 24/7 */}
@@ -79,7 +79,7 @@ export default function FloatingCTA({ onOpenModal, isModalOpen }) {
           {/* Desktop Hover Tooltip (Only visible when collapsed) */}
           {!isExpanded && (
             <div className="hidden md:group-hover:flex absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-full bg-[#0F1A41] text-white text-[11px] font-semibold whitespace-nowrap shadow-xl border border-[#B9887B]/40 pointer-events-none animate-fadeIn">
-              <span>Tư vấn & Đánh giá tài sản</span>
+              <span>Tư vấn và Đánh giá tài sản</span>
             </div>
           )}
 
@@ -93,8 +93,8 @@ export default function FloatingCTA({ onOpenModal, isModalOpen }) {
                 ? '0 8px 30px rgba(15, 26, 65, 0.6)'
                 : '0 8px 30px rgba(185, 136, 123, 0.65)',
             }}
-            aria-label={isExpanded ? "Đóng menu tư vấn" : "Mở menu tư vấn & đánh giá tài sản"}
-            title={isExpanded ? "Đóng" : "Đặt lịch tư vấn & Hotline"}
+            aria-label={isExpanded ? "Đóng menu tư vấn" : "Mở menu tư vấn và đánh giá tài sản"}
+            title={isExpanded ? "Đóng" : "Đặt lịch tư vấn và Hotline"}
           >
             {/* Attention Pulse Dot on Corner (Only when collapsed) */}
             {!isExpanded && (
