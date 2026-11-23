@@ -63,8 +63,8 @@ export default function InsightsPage() {
             {/* Bottom Citation Overlay */}
             <div className="relative z-10 p-5 text-white">
               <div className="bg-[#0F1A41]/75 backdrop-blur-md border border-white/15 p-3.5 rounded-lg">
-                <p className="text-[11px] font-sans text-[#C79A3B] uppercase tracking-wider mb-1 flex items-center gap-1.5 font-bold">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C79A3B]"></span>
+                <p className="text-[11px] font-sans text-[#B9887B] uppercase tracking-wider mb-1 flex items-center gap-1.5 font-bold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                   Dữ liệu khảo sát thực chứng
                 </p>
                 <p className="text-xs text-white/90 leading-relaxed font-sans">

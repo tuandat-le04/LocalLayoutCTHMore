@@ -962,12 +962,16 @@
 .contact-info-col h2 {
   color: #fff;
   margin-bottom: 24px;
+  line-height: 1.35;
+  letter-spacing: 0;
 }
 
 .contact-info-col h2 span {
   color: var(--accent);
   font-family: var(--font-serif);
   font-style: italic;
+  display: inline-block;
+  margin-top: 6px;
 }
 
 .contact-info-col p {

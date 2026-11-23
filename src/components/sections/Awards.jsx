@@ -11,22 +11,22 @@ export default function Awards() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <p className="text-[11px] font-bold tracking-[0.25em] text-[#C79A3B] uppercase mb-3 flex items-center gap-2 font-sans">
-              <span className="w-1.5 h-1.5 rotate-45 bg-[#C79A3B]"></span>
+            <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-3 flex items-center gap-2 font-sans">
+              <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
               BẢO CHỨNG TÍN NHIỆM — AGODA EXCELLENCE
             </p>
             <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-serif font-normal leading-[1.25] mb-3">
               Năng lực vận hành<br />
-              được <span className="text-[#C79A3B] font-serif italic">kiểm chứng thực tế</span>
+              được <span className="text-[#B9887B] font-serif italic">kiểm chứng thực tế</span>
             </h2>
             <p className="text-sm text-white/75 max-w-xl leading-relaxed font-normal">
               Điểm số đánh giá xuất sắc từ hàng trăm ngàn lượt du khách quốc tế là bảo chứng vững bền nhất cho chất lượng tài sản.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 text-xs font-sans font-semibold text-[#C79A3B] bg-white/5 border border-[#C79A3B]/30 px-4 py-2.5 rounded-full self-start md:self-auto">
-            <Star size={15} className="fill-[#C79A3B]" />
-            <span>Điểm số bình quân: <strong>9.0+ / 10</strong> (Xuất sắc)</span>
+          <div className="flex items-center gap-2 text-xs font-sans font-semibold text-[#B9887B] bg-white/5 border border-[#B9887B]/30 px-4 py-2.5 rounded-full self-start md:self-auto">
+            <Star size={15} className="fill-[#C79A3B] text-[#C79A3B]" />
+            <span>Điểm số bình quân: <strong className="text-white">9.0+ / 10</strong> (Xuất sắc)</span>
           </div>
         </div>
 
@@ -34,7 +34,7 @@ export default function Awards() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-sans">
           {featuredAwards.map((item) => (
             <div
-              className="bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#C79A3B] transition-all duration-300 group"
+              className="bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#B9887B]/60 transition-all duration-300 group"
               key={item.id}
             >
               {/* Property Photo with Overlaid Score */}
@@ -57,7 +57,7 @@ export default function Awards() {
                 </div>
 
                 <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <h3 className="font-serif text-lg font-bold truncate group-hover:text-[#C79A3B] transition-colors">
+                  <h3 className="font-serif text-lg font-bold truncate group-hover:text-[#B9887B] transition-colors">
                     {item.property}
                   </h3>
                   <span className="text-[11px] text-white/70 font-sans">
@@ -70,7 +70,7 @@ export default function Awards() {
               <div className="p-4 flex flex-col justify-between flex-1 font-sans">
                 <div>
                   <div className="flex items-center justify-between text-[11px] font-sans text-white/60 mb-2">
-                    <span className="text-[#C79A3B] font-semibold">{item.awardName}</span>
+                    <span className="text-[#B9887B] font-semibold">{item.awardName}</span>
                     <span>{item.reviewsCount}</span>
                   </div>
                   <p className="text-xs text-white/70 leading-relaxed mb-4 font-normal">
@@ -83,7 +83,7 @@ export default function Awards() {
                     href={item.agodaUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-2 px-3 text-center text-xs font-sans uppercase tracking-[0.15em] text-white/80 border border-white/15 hover:border-[#C79A3B] hover:text-[#C79A3B] transition-colors rounded-full flex items-center justify-center gap-1.5 font-bold"
+                    className="w-full py-2.5 px-3 text-center text-xs font-sans uppercase tracking-[0.12em] text-white/80 border border-white/15 hover:border-[#B9887B] hover:bg-[#B9887B] hover:text-white transition-all rounded-full flex items-center justify-center gap-1.5 font-bold"
                   >
                     <span>Xem trên Agoda</span>
                     <ExternalLink size={12} />

@@ -64,20 +64,20 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Master Balanced Grid: Left = Visual Anchor & Factsheet; Right = Strategic Vision, Mission & Pledges */}
+        {/* Master Balanced Grid: Left = Visual Anchor & Factsheet; Right = Strategic Vision, Commitments & Operational Edge */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          {/* Left Column (5 cols): Headquarters Visual + 3 Heritage Milestone Cards */}
-          <div className="lg:col-span-5 flex flex-col gap-4">
+          {/* Left Column (5 cols): Headquarters Visual + 3 Heritage Milestones */}
+          <div className="lg:col-span-5 flex flex-col gap-4 justify-between">
             {/* Headquarters Photo */}
-            <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden border border-[#0F1A41]/10 shadow-sm group bg-[#0F1A41]">
+            <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#0F1A41]/10 shadow-sm group bg-[#0F1A41]">
               <img
                 src="https://cityhousemore.com/uploads/b810c46ef2e5a1410010b30aac5981d6a1.jpeg"
                 alt="Không gian làm việc & điều hành CityHouse More"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/90 via-[#0F1A41]/30 to-transparent"></div>
-              <div className="absolute bottom-3 left-3 right-3 bg-[#0F1A41]/90 backdrop-blur-md text-white p-3.5 rounded-lg border border-white/10">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/90 via-[#0F1A41]/25 to-transparent"></div>
+              <div className="absolute bottom-3 left-3 right-3 bg-[#0F1A41]/90 backdrop-blur-md text-white p-3.5 rounded-xl border border-white/10">
                 <span className="font-sans text-[10px] text-[#B9887B] uppercase tracking-wider font-bold block mb-0.5">
                   Trụ sở điều hành trung tâm
                 </span>
@@ -89,10 +89,10 @@ export default function AboutPage() {
 
             {/* 3 Heritage Milestone Cards */}
             <div className="flex flex-col gap-3 flex-grow justify-between">
-              <div className="bg-white p-4.5 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                <div className="flex items-baseline justify-between mb-1">
+              <div className="bg-white p-4.5 rounded-2xl border border-[#0F1A41]/10 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-baseline justify-between mb-1.5">
                   <span className="font-serif text-2xl font-bold text-[#0F1A41]">2009</span>
-                  <span className="font-sans text-[10px] uppercase tracking-wider text-[#0F1A41]/50 font-bold">
+                  <span className="font-sans text-[10px] uppercase tracking-wider text-[#B9887B] font-bold px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full">
                     Khởi nguồn năng lực
                   </span>
                 </div>
@@ -102,10 +102,10 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="bg-white p-4.5 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                <div className="flex items-baseline justify-between mb-1">
+              <div className="bg-white p-4.5 rounded-2xl border border-[#0F1A41]/10 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-baseline justify-between mb-1.5">
                   <span className="font-serif text-2xl font-bold text-[#0F1A41]">35+</span>
-                  <span className="font-sans text-[10px] uppercase tracking-wider text-[#0F1A41]/50 font-bold">
+                  <span className="font-sans text-[10px] uppercase tracking-wider text-[#B9887B] font-bold px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full">
                     Quy mô vận hành
                   </span>
                 </div>
@@ -115,10 +115,10 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="bg-white p-4.5 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                <div className="flex items-baseline justify-between mb-1">
+              <div className="bg-white p-4.5 rounded-2xl border border-[#0F1A41]/10 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-baseline justify-between mb-1.5">
                   <span className="font-serif text-2xl font-bold text-[#0F1A41]">3.800+ Tỷ</span>
-                  <span className="font-sans text-[10px] uppercase tracking-wider text-[#0F1A41]/50 font-bold">
+                  <span className="font-sans text-[10px] uppercase tracking-wider text-[#B9887B] font-bold px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full">
                     Bảo toàn gia sản
                   </span>
                 </div>
@@ -130,12 +130,12 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Right Column (7 cols): Comprehensive Strategic Vision, Mission & 3 Golden Commitments */}
-          <div className="lg:col-span-7 bg-white p-8 md:p-10 rounded-xl border border-[#0F1A41]/10 shadow-sm flex flex-col justify-between">
-            <div className="space-y-6">
+          {/* Right Column (7 cols): Strategic Vision, Commitments, 4 Operational Pillars & Signature Pledge */}
+          <div className="lg:col-span-7 bg-white p-6 sm:p-8 md:p-9 rounded-2xl border border-[#0F1A41]/10 shadow-sm flex flex-col justify-between gap-5">
+            <div className="space-y-4.5">
               {/* Header */}
-              <div className="border-b border-[#0F1A41]/10 pb-5">
-                <div className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#B9887B] font-bold mb-1.5">
+              <div className="border-b border-[#0F1A41]/10 pb-3.5">
+                <div className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#B9887B] font-bold mb-1">
                   <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
                   ĐỊNH HƯỚNG PHÁT TRIỂN & CAM KẾT ĐỒNG HÀNH
                 </div>
@@ -145,9 +145,9 @@ export default function AboutPage() {
               </div>
 
               {/* 1. Tầm nhìn & Sứ mệnh (Compact 2-col) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                <div className="bg-[#FAF9F6] p-4.5 rounded-xl border border-[#0F1A41]/8">
-                  <div className="flex items-center gap-2 mb-1.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="bg-[#FAF9F6] p-4 rounded-xl border border-[#0F1A41]/8">
+                  <div className="flex items-center gap-2 mb-1">
                     <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
                     <span className="font-sans text-[11px] text-[#0F1A41] uppercase tracking-wider font-bold">
                       TẦM NHÌN 2030
@@ -158,8 +158,8 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="bg-[#FAF9F6] p-4.5 rounded-xl border border-[#0F1A41]/8">
-                  <div className="flex items-center gap-2 mb-1.5">
+                <div className="bg-[#FAF9F6] p-4 rounded-xl border border-[#0F1A41]/8">
+                  <div className="flex items-center gap-2 mb-1">
                     <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
                     <span className="font-sans text-[11px] text-[#0F1A41] uppercase tracking-wider font-bold">
                       SỨ MỆNH ĐỒNG HÀNH
@@ -173,11 +173,11 @@ export default function AboutPage() {
 
               {/* 2. Ba cam kết bảo tồn gia sản */}
               <div>
-                <span className="font-sans text-[11px] text-[#0F1A41]/60 uppercase tracking-wider block font-bold mb-2.5">
+                <span className="font-sans text-[11px] text-[#0F1A41]/60 uppercase tracking-wider block font-bold mb-2">
                   3 CAM KẾT VÀNG VỚI CHỦ SỞ HỮU BẤT ĐỘNG SẢN:
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div className="p-3.5 bg-white rounded-lg border border-[#0F1A41]/10 shadow-2xs">
+                  <div className="p-3 bg-white rounded-xl border border-[#0F1A41]/10 shadow-2xs">
                     <div className="font-serif text-xl font-bold text-[#B9887B] mb-0.5">92%+</div>
                     <span className="text-xs font-bold text-[#0F1A41] block mb-0.5">Kín phòng ổn định</span>
                     <p className="text-[11px] text-[#0F1A41]/70 leading-snug">
@@ -185,7 +185,7 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <div className="p-3.5 bg-white rounded-lg border border-[#0F1A41]/10 shadow-2xs">
+                  <div className="p-3 bg-white rounded-xl border border-[#0F1A41]/10 shadow-2xs">
                     <div className="font-serif text-xl font-bold text-[#B9887B] mb-0.5">100%</div>
                     <span className="text-xs font-bold text-[#0F1A41] block mb-0.5">Minh bạch tài chính</span>
                     <p className="text-[11px] text-[#0F1A41]/70 leading-snug">
@@ -193,7 +193,7 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <div className="p-3.5 bg-white rounded-lg border border-[#0F1A41]/10 shadow-2xs">
+                  <div className="p-3 bg-white rounded-xl border border-[#0F1A41]/10 shadow-2xs">
                     <div className="font-serif text-xl font-bold text-[#B9887B] mb-0.5">24/7</div>
                     <span className="text-xs font-bold text-[#0F1A41] block mb-0.5">Bảo dưỡng công trình</span>
                     <p className="text-[11px] text-[#0F1A41]/70 leading-snug">
@@ -202,15 +202,63 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
+
+              {/* 3. Bốn trụ cột năng lực vận hành thực thi */}
+              <div>
+                <span className="font-sans text-[11px] text-[#0F1A41]/60 uppercase tracking-wider block font-bold mb-2">
+                  4 NĂNG LỰC VẬN HÀNH TẠO DÒNG TIỀN VƯỢT TRỘI:
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
+                    <div>
+                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Tối ưu công suất & Giá bán linh hoạt</strong>
+                      <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
+                        Thuật toán định giá động kết hợp linh hoạt khách ngắn ngày và dài hạn giúp tối đa doanh thu trên từng phòng.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
+                    <div>
+                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Tiêu chuẩn dịch vụ SOP 5 sao</strong>
+                      <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
+                        Quy trình kiểm soát buồng phòng, vệ sinh và an ninh đa lớp giữ điểm đánh giá 9.0+ từ khách quốc tế.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
+                    <div>
+                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Công nghệ PropTech & Quản lý số</strong>
+                      <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
+                        Khóa thẻ từ thông minh, tự động check-in, ứng dụng cư dân và kiểm soát chi phí vận hành minh bạch.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
+                    <div>
+                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Bảo toàn & Nâng cấp tài sản trọn đời</strong>
+                      <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
+                        Kế hoạch bảo trì dự phòng hệ thống MEP, thang máy và đề xuất cải tạo định kỳ giữ tòa nhà luôn mới.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Executive Pledge Signature Quote */}
-            <div className="mt-6 pt-5 border-t border-[#0F1A41]/10 bg-[#FAF9F6] p-4.5 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div className="pt-3 border-t border-[#0F1A41]/10 bg-[#FAF9F6] p-3.5 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <p className="font-serif text-sm italic text-[#0F1A41] leading-relaxed">
+                <p className="font-serif text-xs sm:text-[13px] italic text-[#0F1A41] leading-relaxed">
                   "Xây dựng một tòa nhà đẹp là chưa đủ, biết cách thổi hồn và vận hành nó để tạo ra dòng tiền bền bỉ mới là chìa khóa giữ gìn gia sản."
                 </p>
-                <span className="font-sans text-[10.5px] uppercase tracking-wider text-[#0F1A41]/60 font-bold block mt-1.5">
+                <span className="font-sans text-[10px] uppercase tracking-wider text-[#0F1A41]/60 font-bold block mt-1">
                   — Ban Sáng Lập CityHouse More
                 </span>
               </div>
@@ -228,8 +276,8 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {CORE_VALUES.map((val, idx) => (
-            <div key={idx} className="p-8 border border-white/10 bg-white/[0.02] hover:border-[#B9887B]/40 hover:bg-white/[0.04] transition-all duration-300 rounded-lg flex flex-col group">
-              <div className="w-11 h-11 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#B9887B] mb-6 group-hover:border-[#B9887B]/60 group-hover:bg-[#B9887B]/10 transition-all">
+            <div key={idx} className="p-8 border border-white/10 bg-white/[0.02] hover:border-[#B9887B]/40 hover:bg-white/[0.04] transition-all duration-300 rounded-2xl flex flex-col group">
+              <div className="w-11 h-11 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#B9887B] mb-6 group-hover:border-[#B9887B]/60 group-hover:bg-[#B9887B]/10 transition-all">
                 <LuxuryIcon name={val.icon} size={20} strokeWidth={1.25} />
               </div>
               <h3 className="font-serif text-xl font-semibold mb-3 group-hover:text-[#B9887B] transition-colors">{val.title}</h3>

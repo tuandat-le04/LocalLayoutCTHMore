@@ -148,9 +148,9 @@ export default function BrandsPage({ onOpenModal }) {
             <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
             HỆ SINH THÁI THƯƠNG HIỆU — CITYHOUSE MORE
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-white leading-[1.15] mb-5 font-normal">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-white leading-[1.25] mb-5 font-normal">
             5 DÒNG THƯƠNG HIỆU<br />
-            <span className="text-[#B9887B] font-serif italic">ĐỊNH VỊ CHÍNH XÁC CHO TÀI SẢN</span>
+            <span className="text-[#B9887B] font-serif italic block mt-1.5">ĐỊNH VỊ CHÍNH XÁC CHO TÀI SẢN</span>
           </h1>
           <p className="lead text-sm sm:text-base md:text-lg text-[#F4EFEA]/80 max-w-2xl leading-relaxed mt-4 font-normal">
             Mỗi bất động sản chỉ phát huy tối đa doanh thu khi gắn đúng phân khúc thương hiệu. CityHouse chuẩn hóa 5 mô hình lưu trú với tệp khách hàng và tiêu chuẩn vận hành riêng biệt.
@@ -550,34 +550,40 @@ export default function BrandsPage({ onOpenModal }) {
 
       {/* ── Brand Consultation Form Section ── */}
       <section className="section-pad bg-[#0B1330] text-white font-sans">
-        <div className="contact-layout">
-          <div className="contact-info-col">
-            <p className="eyebrow eyebrow-accent flex items-center gap-1.5 font-semibold text-xs tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-              TƯ VẤN ĐỊNH VỊ THƯƠNG HIỆU MIỄN PHÍ
-            </p>
-            <h2 className="font-serif">
-              LỰA CHỌN THƯƠNG HIỆU<br />
-              <span>TỐI ƯU NHẤT CHO BẤT ĐỘNG SẢN</span>
-            </h2>
-            <p className="text-white/75 text-sm leading-relaxed mb-6 font-normal">
-              Mỗi vị trí và diện tích bất động sản sẽ đạt dòng tiền cao nhất khi gắn đúng thương hiệu. Chuyên gia CityHouse sẽ khảo sát và lập báo cáo định vị chi tiết trong vòng <strong>24 giờ</strong>.
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-6 contact-info-col">
+              <p className="eyebrow eyebrow-accent flex items-center gap-1.5 font-semibold text-xs tracking-wider mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
+                TƯ VẤN ĐỊNH VỊ THƯƠNG HIỆU MIỄN PHÍ
+              </p>
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-[36px] font-normal leading-[1.35] tracking-normal mb-5 text-white">
+                <span className="block text-white">
+                  LỰA CHỌN <span className="whitespace-nowrap">THƯƠNG HIỆU</span>
+                </span>
+                <span className="text-[#B9887B] font-serif italic block mt-2 sm:mt-2.5 leading-[1.35]">
+                  TỐI ƯU NHẤT CHO <span className="whitespace-nowrap">BẤT ĐỘNG SẢN</span>
+                </span>
+              </h2>
+              <p className="text-white/75 text-sm leading-relaxed mb-6 font-normal">
+                Mỗi vị trí và diện tích bất động sản sẽ đạt dòng tiền cao nhất khi gắn đúng thương hiệu. Chuyên gia CityHouse sẽ khảo sát và lập báo cáo định vị chi tiết trong vòng <strong>24 giờ</strong>.
+              </p>
 
-            <div className="bg-white/5 border border-white/10 p-4 rounded-lg text-xs text-white/80 space-y-2">
-              <div className="flex items-center gap-2">
-                <ShieldCheck size={14} className="text-[#B9887B]" />
-                <span>Khảo sát hiện trạng & phân tích tệp khách miễn phí</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award size={14} className="text-[#B9887B]" />
-                <span>Dự phóng bảng dòng tiền 5–10 năm minh bạch</span>
+              <div className="bg-white/5 border border-white/10 p-4 rounded-xl text-xs text-white/80 space-y-2.5">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck size={14} className="text-[#B9887B]" />
+                  <span>Khảo sát hiện trạng & phân tích tệp khách miễn phí</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award size={14} className="text-[#B9887B]" />
+                  <span>Dự phóng bảng dòng tiền 5–10 năm minh bạch</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="contact-form-col">
-            <ContactForm submitLabel="GỬI YÊU CẦU ĐỊNH VỊ THƯƠNG HIỆU" />
+            <div className="lg:col-span-6 contact-form-col">
+              <ContactForm submitLabel="GỬI YÊU CẦU ĐỊNH VỊ THƯƠNG HIỆU" />
+            </div>
           </div>
         </div>
       </section>
