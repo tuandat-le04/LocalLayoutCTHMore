@@ -1,8 +1,10 @@
 import React from 'react';
 import { awards } from '../../data/awards.js';
-import { Award, Star, ExternalLink } from 'lucide-react';
+import { Award, Star, ExternalLink, ArrowUpRight } from 'lucide-react';
+import { useNavigation } from '../../context/NavigationContext.jsx';
 
 export default function Awards() {
+  const { navigate } = useNavigation();
   // Show top 4 flagship verified awards
   const featuredAwards = awards.slice(0, 4);
 
@@ -38,7 +40,11 @@ export default function Awards() {
               key={item.id}
             >
               {/* Property Photo with Overlaid Score */}
-              <div className="relative h-44 overflow-hidden bg-gray-900">
+              <div
+                className="relative h-44 overflow-hidden bg-gray-900 cursor-pointer"
+                onClick={() => item.projectSlug && navigate(`/dang-hoat-dong/${item.projectSlug}`)}
+                title={item.projectSlug ? `Xem chi tiết dự án ${item.property}` : item.property}
+              >
                 <img
                   src={item.image}
                   alt={item.property}
@@ -57,11 +63,14 @@ export default function Awards() {
                 </div>
 
                 <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <h3 className="font-serif text-lg font-bold truncate group-hover:text-[#B9887B] transition-colors">
-                    {item.property}
+                  <h3 className="font-serif text-lg font-bold truncate group-hover:text-[#B9887B] transition-colors flex items-center gap-1">
+                    <span>{item.property}</span>
+                    {item.projectSlug && (
+                      <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-[#B9887B] shrink-0" />
+                    )}
                   </h3>
-                  <span className="text-[11px] text-white/70 font-sans">
-                    {item.location}
+                  <span className="text-[11px] text-white/70 font-sans block truncate">
+                    {item.district || item.location}
                   </span>
                 </div>
               </div>
@@ -71,7 +80,7 @@ export default function Awards() {
                 <div>
                   <div className="flex items-center justify-between text-[11px] font-sans text-white/60 mb-2">
                     <span className="text-[#B9887B] font-semibold">{item.awardName}</span>
-                    <span>{item.reviewsCount}</span>
+                    <span className="text-white/50 text-[10.5px]">{item.reviewCount || item.reviewsCount}</span>
                   </div>
                   <p className="text-xs text-white/70 leading-relaxed mb-4 font-normal">
                     {item.highlight}

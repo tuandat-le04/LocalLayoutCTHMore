@@ -12,6 +12,7 @@ export const awards = [
     awardName: "Customer Review Award 2024",
     goldCircle: "Top Performer 2023 · Agoda",
     highlight: "Tỷ lệ khách công tác quay lại 78%",
+    projectSlug: "cityhouse-tera-kim-nguyen",
     agodaUrl: "https://www.agoda.com/cityhouse-kim-nguyen/hotel/ho-chi-minh-city-vn.html"
   },
   {
@@ -27,6 +28,7 @@ export const awards = [
     awardName: "Customer Review Award 2024",
     goldCircle: "Gold Circle Award 2023 · Agoda",
     highlight: "Top 1% cơ sở lưu trú được yêu thích nhất TP.HCM",
+    projectSlug: "cityhouse-vibe-city-oasis",
     agodaUrl: "https://www.agoda.com/cityhouse-city-oasis/hotel/ho-chi-minh-city-vn.html"
   },
   {
@@ -42,7 +44,8 @@ export const awards = [
     awardName: "Customer Review Award 2024",
     goldCircle: "Gold Circle Award 2022 · Agoda",
     highlight: "Chuẩn mực dịch vụ quản gia cao cấp",
-    agodaUrl: "https://www.agoda.com/cityhouse-atelier-thao-dien/hotel/ho-chi-minh-city-vn.html"
+    projectSlug: "cityhouse-mark-atelier-thao-dien",
+    agodaUrl: "https://www.agoda.com/atelier-thao-dien/hotel/ho-chi-minh-city-vn.html"
   },
   {
     id: "abora",
@@ -57,7 +60,8 @@ export const awards = [
     awardName: "Customer Review Award 2024",
     goldCircle: "Gold Circle Award 2024 · Agoda",
     highlight: "Tái định vị thành công tăng 105% giá trị",
-    agodaUrl: "https://www.agoda.com/cityhouse-abora-ariosa/hotel/ho-chi-minh-city-vn.html"
+    projectSlug: "cityhouse-vibe-abora",
+    agodaUrl: "https://www.agoda.com/cityhouse-ariosa/hotel/ho-chi-minh-city-vn.html"
   },
   {
     id: "lighthouse",
@@ -72,7 +76,8 @@ export const awards = [
     awardName: "Customer Review Award 2025",
     goldCircle: "Gold Circle Award 2023 · Agoda",
     highlight: "Điểm đến hàng đầu của du khách quốc tế",
-    agodaUrl: "https://www.agoda.com/cityhouse-lighthouse-sg-serviced-apartment/hotel/ho-chi-minh-city-vn.html"
+    projectSlug: "cityhouse-nest-lighthouse",
+    agodaUrl: "https://www.agoda.com/cityhouse-lighthouse-sg/hotel/ho-chi-minh-city-vn.html"
   },
   {
     id: "villea",
@@ -87,6 +92,7 @@ export const awards = [
     awardName: "Customer Review Award 2024",
     goldCircle: "Guest Favorite 2023 · Agoda",
     highlight: "Công suất phòng 95% quanh năm",
+    projectSlug: "cityhouse-tera-villea",
     agodaUrl: "https://www.agoda.com/cityhouse-villea/hotel/ho-chi-minh-city-vn.html"
   }
 ];

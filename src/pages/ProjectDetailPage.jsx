@@ -28,8 +28,21 @@ import ContactForm from '../components/ContactForm.jsx';
 export default function ProjectDetailPage({ slug, onOpenModal }) {
   const { navigate } = useNavigation();
 
-  // Find project by slug or fallback to first
-  const project = projects.find((p) => p.slug === slug) || projects[0];
+  // Find project by slug, fuzzy alias, or fallback to first
+  const normalizedSlug = (slug || '').toLowerCase();
+  const project = projects.find((p) => {
+    if (!normalizedSlug) return false;
+    if (p.slug === normalizedSlug) return true;
+    if (p.slug.includes(normalizedSlug) || normalizedSlug.includes(p.slug)) return true;
+    if (normalizedSlug.includes('atelier') && p.slug.includes('atelier')) return true;
+    if ((normalizedSlug.includes('abora') || normalizedSlug.includes('ariosa')) && p.slug.includes('abora')) return true;
+    if (normalizedSlug.includes('kim-nguyen') && p.slug.includes('kim-nguyen')) return true;
+    if (normalizedSlug.includes('oasis') && p.slug.includes('city-oasis')) return true;
+    if (normalizedSlug.includes('kabana') && p.slug.includes('kabana')) return true;
+    if (normalizedSlug.includes('lighthouse') && p.slug.includes('lighthouse')) return true;
+    if (normalizedSlug.includes('villea') && p.slug.includes('villea')) return true;
+    return false;
+  }) || projects[0];
 
   const [activeNav, setActiveNav] = useState('overview');
   const [lightboxOpen, setLightboxOpen] = useState(false);
