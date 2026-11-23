@@ -21,7 +21,7 @@ const BRAND_PORTFOLIO = [
     code: "MARK",
     name: "CityHouse MARK",
     tagline: "Tinh tế · Chuẩn mực · Riêng tư tuyệt đối",
-    segment: "Phân khúc Siêu sang (Luxury Hospitality)",
+    segment: "Lưu trú Siêu sang và Quản gia Riêng",
     shortDesc: "Đỉnh cao lưu trú đương đại kết hợp quản gia cá nhân hóa cho giới tinh hoa và chuyên gia quốc tế cao cấp.",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782197864517-764256.webp",
     accent: "#C79A3B",
@@ -302,12 +302,12 @@ export default function BrandsPage({ onOpenModal }) {
                   <div>
                     {/* Header: Brand Name + Segment + Tagline */}
                     <div className="border-b border-[#101C42]/10 pb-5 mb-6">
-                      <div className="flex flex-wrap items-center justify-between gap-3 mb-2.5">
-                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#101C42] tracking-tight">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 sm:gap-4 mb-2.5">
+                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#101C42] tracking-tight shrink-0">
                           {activeBrand.name}
                         </h2>
                         <span
-                          className="text-[11px] font-bold uppercase tracking-[0.15em] px-3.5 py-1 rounded-full border font-sans"
+                          className="text-[10.5px] sm:text-[11px] font-bold uppercase tracking-[0.15em] px-3.5 py-1 rounded-full border font-sans whitespace-nowrap self-start sm:self-auto shrink-0"
                           style={{
                             backgroundColor: `${activeBrand.accent}12`,
                             color: activeBrand.accent,
@@ -530,7 +530,7 @@ export default function BrandsPage({ onOpenModal }) {
                       {b.name}
                     </div>
                     <div className="text-[10px] text-[#0F1A41]/60 uppercase tracking-wider mb-2 truncate font-semibold">
-                      {b.segment.split('(')[0].trim()}
+                      {b.segment}
                     </div>
 
                     <div className="pt-2 border-t border-[#0F1A41]/10 flex items-center justify-between text-[11px]">
