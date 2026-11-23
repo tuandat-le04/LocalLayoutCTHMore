@@ -500,9 +500,6 @@ export default function BrandsPage({ onOpenModal }) {
                   Khám phá toàn bộ hệ sinh thái
                 </h3>
               </div>
-              <span className="text-xs text-[#0F1A41]/60 font-medium">
-                Click vào thẻ để chuyển đổi nhanh
-              </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
