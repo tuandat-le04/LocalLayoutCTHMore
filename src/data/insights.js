@@ -19,7 +19,7 @@ export const insightsArticles = [
     dataSource: "Dữ liệu vận hành 1.850+ phòng CityHouse & Báo cáo Savills TP.HCM 2025",
     title: "Dòng tiền bền vững trong bất động sản lưu trú đô thị: Xu hướng dịch chuyển 2026",
     excerpt: "Phân tích cơ cấu doanh thu từ khách công tác dài hạn kết hợp du lịch ngắn ngày, mô hình Hybrid Living giúp tối ưu công suất phòng trên 92% quanh năm.",
-    image: "https://cityhousemore.com/uploads/gallery/gallery-1782189975616-358643.webp",
+    image: "https://cityhousemore.com/uploads/gallery/gallery-1782195854670-640977.webp",
     keyTakeaways: [
       "Khách công tác dài hạn chiếm 65% tỷ trọng giúp dòng tiền ổn định bất kể mùa thấp điểm.",
       "Du khách quốc tế ngắn hạn giúp tăng giá bán phòng trung bình (ADR) lên 25-35%.",

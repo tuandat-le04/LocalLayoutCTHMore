@@ -104,10 +104,12 @@
 }
 
 .inner-cards span {
-  font-family: var(--font-serif);
-  font-size: 16px;
+  font-family: var(--font-sans);
+  font-size: 13px;
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .inner-cards h3 {

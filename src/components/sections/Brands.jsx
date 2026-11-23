@@ -1,43 +1,43 @@
 import React from 'react';
 import { brands } from '../../data/brands.js';
-import { Sparkles, ArrowUpRight, Users, Compass, DollarSign, Building, Award, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext.jsx';
 
 export default function Brands({ onContactClick }) {
   const { navigate } = useNavigation();
 
   return (
-    <section id="brands" className="brands-section section-pad bg-[#0F1A41] text-white">
+    <section id="brands" className="brands-section section-pad bg-[#0F1A41] text-white font-sans">
       <div className="section-heading row-heading">
         <div>
-          <p className="eyebrow eyebrow-accent flex items-center gap-1.5">
-            <Sparkles size={14} className="text-[#B9887B]" />
+          <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-3 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
             HỆ SINH THÁI 5 DÒNG THƯƠNG HIỆU LƯU TRÚ
           </p>
-          <h2 className="text-white leading-[1.25] mb-3">
+          <h2 className="text-white font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.2] mb-3">
             Định vị chính xác<br />
-            cho <em>từng tệp khách hàng & tài sản</em>
+            cho <span className="text-[#B9887B] font-serif italic">từng tệp khách hàng & tài sản</span>
           </h2>
-          <p className="text-sm text-white/75 max-w-xl leading-relaxed">
+          <p className="text-sm text-white/75 max-w-xl leading-relaxed font-normal">
             Mỗi thương hiệu trong bộ sưu tập CityHouse Collection được thiết kế chuyên biệt cho một phân khúc khách thuê và mô hình bất động sản cụ thể, giúp tối ưu hóa công suất phòng và giá thuê trên từng mét vuông.
           </p>
         </div>
 
         <button
           onClick={() => navigate('/thuong-hieu')}
-          className="outline-btn text-xs flex items-center gap-1.5 border border-white/20 text-white/90 hover:border-[#B9887B] hover:text-[#B9887B] transition-colors rounded px-4 py-2.5 cursor-pointer self-start md:self-auto shrink-0"
+          className="text-xs font-bold uppercase tracking-[0.15em] flex items-center gap-2 border border-white/30 text-white hover:border-[#B9887B] hover:text-[#B9887B] hover:bg-white/[0.04] transition-all duration-300 rounded-full px-5 py-2.5 cursor-pointer self-start md:self-auto shrink-0 font-sans"
         >
           <span>Xem chi tiết 5 thương hiệu</span>
           <ArrowUpRight size={14} />
         </button>
       </div>
 
-      {/* Responsive Grid View with Brand Photos (Part 5 Request) */}
+      {/* Responsive Grid View with Brand Photos */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mt-10">
         {brands.map((brand) => (
           <div
             key={brand.code}
-            className="bg-white/[0.04] border border-white/10 rounded overflow-hidden flex flex-col justify-between hover:border-[#B9887B] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group"
+            className="bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#B9887B] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl group"
             style={{ borderTop: `3px solid ${brand.accentColor}` }}
           >
             <div>
@@ -53,31 +53,40 @@ export default function Brands({ onContactClick }) {
 
                 {/* Overlaid Brand Code Badge */}
                 <div className="absolute top-3 left-3 bg-[#0F1A41]/90 backdrop-blur-sm border border-white/20 px-3 py-1 rounded">
-                  <span className="font-serif text-2xl font-bold text-white tracking-wider">
+                  <span className="text-lg font-extrabold text-white tracking-wider font-sans">
                     {brand.code}
                   </span>
                 </div>
 
                 {/* Overlaid Performance Badge */}
-                <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-xs text-[10px] font-mono px-2 py-0.5 text-white/90 rounded border border-white/10">
+                <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-xs text-[10px] font-bold px-2 py-0.5 text-white/90 rounded border border-white/10 font-sans">
                   {brand.stats.split('·')[0]}
                 </div>
               </div>
 
-              {/* Brand Card Content (Streamlined & Minimalist) */}
-              <div className="p-5 flex flex-col justify-between flex-grow">
+              {/* Brand Card Content (Streamlined & Minimalist: Key Metrics First) */}
+              <div className="p-5 flex flex-col justify-between flex-grow font-sans">
                 <div>
-                  <div className="font-serif text-sm italic text-[#B9887B] mb-2 font-medium">
+                  <div className="font-serif text-xs sm:text-sm italic text-[#B9887B] mb-3 font-medium">
                     "{brand.tagline}"
                   </div>
 
-                  <p className="text-xs text-white/80 leading-relaxed mb-4 line-clamp-3">
-                    {brand.desc}
-                  </p>
+                  {/* Core Metrics: Clean & Scannable instead of heavy text */}
+                  <div className="space-y-1.5 mb-4 text-xs font-sans">
+                    <div className="flex items-center justify-between text-white/80 bg-white/[0.03] px-2.5 py-1.5 rounded border border-white/5">
+                      <span className="text-white/50 text-[10px] uppercase font-semibold">Giá thuê:</span>
+                      <strong className="text-white font-bold">{brand.priceSegment.split('(')[0].trim()}</strong>
+                    </div>
+                    <div className="flex items-center justify-between text-white/80 bg-white/[0.03] px-2.5 py-1.5 rounded border border-white/5">
+                      <span className="text-white/50 text-[10px] uppercase font-semibold">Tài sản:</span>
+                      <span className="text-white/90 truncate max-w-[140px] text-[11px] font-medium">{brand.assetType.split('(')[1]?.replace(')', '') || 'Tòa nhà độc lập'}</span>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-white/70">
-                  <span className="text-[#B9887B] font-bold">{brand.badge}</span>
+                <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[10px] font-sans text-white/70">
+                  <span className="text-[#B9887B] font-bold uppercase truncate">{brand.badge.split('·')[0]}</span>
+                  <span className="text-white/40 font-semibold">5 SAO</span>
                 </div>
               </div>
             </div>
@@ -86,10 +95,10 @@ export default function Brands({ onContactClick }) {
             <div className="p-5 pt-0">
               <button
                 onClick={() => navigate('/thuong-hieu')}
-                className="w-full py-2.5 px-3 text-center text-xs font-bold uppercase tracking-wider rounded transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer border border-white/20 text-white hover:border-[#B9887B] hover:bg-[#B9887B] hover:text-white"
+                className="w-full py-2.5 px-3 text-center text-xs font-bold uppercase tracking-[0.15em] rounded-full transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer border border-white/20 text-white hover:border-[#B9887B] hover:bg-[#B9887B] hover:text-white font-sans"
               >
                 <span>XEM CHI TIẾT</span>
-                <ArrowUpRight size={14} />
+                <ArrowUpRight size={13} />
               </button>
             </div>
           </div>

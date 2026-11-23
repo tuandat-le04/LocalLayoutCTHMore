@@ -4,15 +4,18 @@ import { Phone, Mail, MapPin, Clock, ShieldCheck, Building2 } from 'lucide-react
 
 export default function ContactPage() {
   return (
-    <div className="contact-page">
+    <div className="contact-page font-sans">
       {/* Hero */}
-      <section className="inner-hero section-pad">
-        <p className="eyebrow eyebrow-accent">KẾT NỐI VỚI CHÚNG TÔI — CITYHOUSE MORE</p>
-        <h1>
+      <section className="inner-hero section-pad font-sans">
+        <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-4 flex items-center gap-2 font-sans">
+          <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+          KẾT NỐI VỚI CHÚNG TÔI — CITYHOUSE MORE
+        </p>
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white leading-[1.18] font-normal mb-5">
           Khởi đầu hành trình<br />
-          <em>quản lý gia sản vững bền</em>
+          <span className="text-[#B9887B] font-serif italic">quản lý gia sản vững bền</span>
         </h1>
-        <p className="lead">
+        <p className="lead text-sm sm:text-base md:text-lg text-[#F4EFEA]/80 max-w-2xl leading-relaxed font-normal font-sans">
           Đội ngũ chuyên gia của CityHouse More luôn sẵn sàng lắng nghe, khảo sát thực tế và đồng hành cùng Quý đối tác để kiến tạo giải pháp sinh lời bền vững nhất cho bất động sản.
         </p>
       </section>
@@ -23,7 +26,7 @@ export default function ContactPage() {
           {/* Company Details */}
           <div>
             <div className="bg-white p-8 md:p-12 border border-[#0F1A41]/10 mb-8">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#B9887B] font-semibold block mb-2">TRỤ SỞ CHÍNH</span>
+              <span className="font-sans text-xs uppercase tracking-widest text-[#B9887B] font-semibold block mb-2">TRỤ SỞ CHÍNH</span>
               <h2 className="font-serif text-3xl font-semibold mb-6">CÔNG TY TNHH CITYHOUSE MORE</h2>
 
               <div className="flex flex-col gap-6 text-sm">
@@ -39,7 +42,7 @@ export default function ContactPage() {
                   <Phone size={20} className="text-[#B9887B] shrink-0 mt-1" />
                   <div>
                     <strong className="block text-[#0F1A41]">Hotline tư vấn phát triển:</strong>
-                    <a href="tel:0878253545" className="text-[#B9887B] font-mono font-bold hover:underline">0878 253 545</a>
+                    <a href="tel:0878253545" className="text-[#B9887B] font-sans font-bold hover:underline">0878 253 545</a>
                   </div>
                 </div>
 
@@ -60,7 +63,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[#0F1A41]/10 text-xs font-mono text-[#0F1A41]/60">
+              <div className="mt-8 pt-6 border-t border-[#0F1A41]/10 text-xs font-sans text-[#0F1A41]/60">
                 <div>Mã số doanh nghiệp: 0316749902 do Sở Kế hoạch và Đầu tư TP.HCM cấp</div>
               </div>
             </div>

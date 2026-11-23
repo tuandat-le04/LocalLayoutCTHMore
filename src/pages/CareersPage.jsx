@@ -14,11 +14,9 @@ import {
   GraduationCap,
   School,
   Send,
-  CheckCircle2,
   Phone,
   Mail,
   Building,
-  Sparkles,
   FileText,
   UserCheck,
   Check,
@@ -447,26 +445,26 @@ export default function CareersPage({ onOpenModal }) {
   };
 
   return (
-    <div className="careers-page text-[#0F1A41] bg-[#FAF6EF]">
+    <div className="careers-page text-[#0F1A41] bg-[#FAF6EF] font-sans">
       {/* ── 1. Page Hero Banner ── */}
-      <section className="inner-hero section-pad relative overflow-hidden bg-[#0F1A41] text-white">
+      <section className="inner-hero section-pad relative overflow-hidden bg-[#0F1A41] text-white font-sans">
         <div className="max-w-7xl mx-auto relative z-10">
-          <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3">
-            <Briefcase size={14} className="text-[#B9887B]" />
+          <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-4 flex items-center gap-2 font-sans">
+            <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
             CƠ HỘI NGHỀ NGHIỆP — CITYHOUSE MORE
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.22] max-w-4xl tracking-tight mb-6">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] max-w-4xl tracking-tight mb-5">
             Bắt đầu ở đây.<br />
-            <em className="text-[#B9887B] italic inline-block mt-1">Phát triển xa hơn.</em>
+            <span className="text-[#B9887B] font-serif italic">Phát triển xa hơn.</span>
           </h1>
-          <p className="lead text-base md:text-lg text-[#F4EFEA]/85 max-w-2xl leading-relaxed mt-6">
+          <p className="lead text-base md:text-lg text-[#F4EFEA]/85 max-w-2xl leading-relaxed mt-4 font-normal font-sans">
             Cơ hội dành cho những ai muốn học nghề thực chiến, phát triển chuyên môn sâu rộng và đồng hành dài hạn cùng hệ sinh thái quản lý gia sản lưu trú CityHouse More.
           </p>
 
           {/* 3 Candidate Audience Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 max-w-3xl">
             <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
-              <span className="text-[11px] font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
+              <span className="text-[11px] font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 01 · Thực Tập Sinh
               </span>
               <p className="text-xs text-white/80 leading-relaxed">
@@ -475,7 +473,7 @@ export default function CareersPage({ onOpenModal }) {
             </div>
 
             <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
-              <span className="text-[11px] font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
+              <span className="text-[11px] font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 02 · Mới Tốt Nghiệp
               </span>
               <p className="text-xs text-white/80 leading-relaxed">
@@ -484,7 +482,7 @@ export default function CareersPage({ onOpenModal }) {
             </div>
 
             <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
-              <span className="text-[11px] font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
+              <span className="text-[11px] font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 03 · Có Kinh Nghiệm
               </span>
               <p className="text-xs text-white/80 leading-relaxed">
@@ -541,7 +539,7 @@ export default function CareersPage({ onOpenModal }) {
                 key={role.step}
                 className="p-6 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 hover:border-[#B9887B]/50 hover:bg-white hover:shadow-md transition-all duration-300"
               >
-                <span className="text-xs font-mono font-bold text-[#B9887B] tracking-wider block mb-2">
+                <span className="text-xs font-sans font-bold text-[#B9887B] tracking-wider block mb-2">
                   {role.step} // VAI TRÒ
                 </span>
                 <h3 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
@@ -581,7 +579,7 @@ export default function CareersPage({ onOpenModal }) {
                 className="p-5 rounded-lg bg-white border border-[#0F1A41]/10 shadow-xs hover:border-[#B9887B]/40 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="text-sm font-mono font-bold text-[#B9887B] tracking-wider mb-3">
+                  <div className="text-sm font-sans font-bold text-[#B9887B] tracking-wider mb-3">
                     BƯỚC {step.step}
                   </div>
                   <h3 className="font-serif text-base font-bold text-[#0F1A41] mb-2">
@@ -619,7 +617,7 @@ export default function CareersPage({ onOpenModal }) {
                 key={val.step}
                 className="p-6 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 hover:bg-white hover:border-[#B9887B]/50 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-xs font-mono font-bold text-[#B9887B] tracking-wider mb-3">
+                <div className="text-xs font-sans font-bold text-[#B9887B] tracking-wider mb-3">
                   0{val.step} // NGUYÊN TẮC
                 </div>
                 <h3 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
@@ -651,8 +649,8 @@ export default function CareersPage({ onOpenModal }) {
               </p>
             </div>
 
-            <div className="text-xs font-mono font-semibold text-[#0F1A41]/75 bg-white border border-[#0F1A41]/10 px-4 py-2.5 rounded shadow-xs flex items-center gap-2 self-start md:self-auto">
-              <CheckCircle2 size={15} className="text-[#B9887B]" />
+            <div className="text-xs font-sans font-semibold text-[#0F1A41]/75 bg-white border border-[#0F1A41]/10 px-4 py-2.5 rounded shadow-xs flex items-center gap-2 self-start md:self-auto">
+              <Check size={14} strokeWidth={2.5} className="text-[#0F1A41]/75" />
               <span>Đang mở <strong>10</strong> vị trí tại TP. Hồ Chí Minh</span>
             </div>
           </div>
@@ -670,7 +668,7 @@ export default function CareersPage({ onOpenModal }) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`text-xs font-mono px-4 py-2.5 whitespace-nowrap rounded font-semibold transition-all cursor-pointer ${
+                className={`text-xs font-sans px-4 py-2.5 whitespace-nowrap rounded font-semibold transition-all cursor-pointer ${
                   activeTab === tab.id
                     ? 'bg-[#0F1A41] text-white shadow-sm'
                     : 'bg-white text-[#0F1A41]/70 hover:bg-[#B9887B]/15 hover:text-[#0F1A41] border border-[#0F1A41]/10'
@@ -698,17 +696,17 @@ export default function CareersPage({ onOpenModal }) {
                   >
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-2 text-xs">
-                        <span className="font-mono font-bold text-[#B9887B] tracking-wider">
+                        <span className="font-sans font-bold text-[#B9887B] tracking-wider">
                           {job.code} //
                         </span>
-                        <span className="px-2.5 py-0.5 rounded bg-[#0F1A41]/5 text-[#0F1A41] font-mono font-medium text-[11px]">
+                        <span className="px-2.5 py-0.5 rounded bg-[#0F1A41]/5 text-[#0F1A41] font-sans font-medium text-[11px]">
                           {job.categoryLabel}
                         </span>
-                        <span className="px-2.5 py-0.5 rounded bg-[#B9887B]/15 text-[#B9887B] font-mono font-semibold text-[11px]">
+                        <span className="px-2.5 py-0.5 rounded bg-[#B9887B]/15 text-[#B9887B] font-sans font-semibold text-[11px]">
                           {job.experienceLabel}
                         </span>
                         <span className="text-gray-400">·</span>
-                        <span className="text-gray-500 font-mono text-[11px]">SL: {job.quantity}</span>
+                        <span className="text-gray-500 font-sans text-[11px]">SL: {job.quantity}</span>
                       </div>
 
                       <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2">
@@ -719,7 +717,7 @@ export default function CareersPage({ onOpenModal }) {
                         {job.summary}
                       </p>
 
-                      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 text-xs font-mono text-gray-500">
+                      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 text-xs font-sans text-gray-500">
                         <span className="flex items-center gap-1.5">
                           <MapPin size={13} className="text-[#B9887B]" /> {job.location}
                         </span>
@@ -764,7 +762,7 @@ export default function CareersPage({ onOpenModal }) {
                     <div className="px-6 md:px-8 pb-8 pt-2 border-t border-gray-100 bg-[#FAF6EF]/30 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
                       {/* Duties */}
                       <div className="p-5 rounded bg-white border border-gray-100">
-                        <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
+                        <h4 className="text-xs font-sans font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                           <span>Nhiệm vụ chính</span>
                         </h4>
@@ -780,7 +778,7 @@ export default function CareersPage({ onOpenModal }) {
 
                       {/* Requirements */}
                       <div className="p-5 rounded bg-white border border-gray-100">
-                        <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
+                        <h4 className="text-xs font-sans font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                           <span>Yêu cầu ứng viên</span>
                         </h4>
@@ -797,7 +795,7 @@ export default function CareersPage({ onOpenModal }) {
                       {/* Benefits */}
                       <div className="p-5 rounded bg-white border border-gray-100 flex flex-col justify-between">
                         <div>
-                          <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
+                          <h4 className="text-xs font-sans font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                             <span>Quyền lợi & Đãi ngộ</span>
                           </h4>
@@ -853,7 +851,7 @@ export default function CareersPage({ onOpenModal }) {
 
               <div className="flex flex-col gap-4 mb-8">
                 <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-mono font-bold text-[#B9887B] block mb-2">
+                  <span className="text-xs font-sans font-bold text-[#B9887B] block mb-2">
                     01 · KẾT NỐI THỰC TẬP DOANH NGHIỆP
                   </span>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -862,7 +860,7 @@ export default function CareersPage({ onOpenModal }) {
                 </div>
 
                 <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-mono font-bold text-[#B9887B] block mb-2">
+                  <span className="text-xs font-sans font-bold text-[#B9887B] block mb-2">
                     02 · GIỚI THIỆU VIỆC LÀM CHO SINH VIÊN
                   </span>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -871,7 +869,7 @@ export default function CareersPage({ onOpenModal }) {
                 </div>
 
                 <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-mono font-bold text-[#B9887B] block mb-2">
+                  <span className="text-xs font-sans font-bold text-[#B9887B] block mb-2">
                     03 · ĐỒNG HÀNH CÙNG NHÀ TRƯỜNG
                   </span>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -881,16 +879,16 @@ export default function CareersPage({ onOpenModal }) {
               </div>
 
               {/* Direct HR Contact */}
-              <div className="p-4 rounded bg-[#B9887B]/15 border border-[#B9887B]/30 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+              <div className="p-4 rounded bg-[#B9887B]/15 border border-[#B9887B]/30 flex flex-wrap items-center justify-between gap-4 text-xs font-sans">
                 <div>
-                  <span className="text-white/60 block text-[10px] uppercase font-mono">ĐẦU MỐI PHỤ TRÁCH NHÂN SỰ</span>
+                  <span className="text-white/60 block text-[10px] uppercase font-sans">ĐẦU MỐI PHỤ TRÁCH NHÂN SỰ</span>
                   <strong className="text-sm text-white font-sans font-bold">Phòng Nhân Sự CityHouse More</strong>
                 </div>
                 <div className="flex items-center gap-4">
-                  <a href="mailto:hr@cityhousemore.com" className="flex items-center gap-1.5 text-[#B9887B] hover:underline font-mono">
+                  <a href="mailto:hr@cityhousemore.com" className="flex items-center gap-1.5 text-[#B9887B] hover:underline font-sans">
                     <Mail size={13} /> hr@cityhousemore.com
                   </a>
-                  <a href="tel:0966891218" className="flex items-center gap-1.5 text-white font-bold hover:underline font-mono">
+                  <a href="tel:0966891218" className="flex items-center gap-1.5 text-white font-bold hover:underline font-sans">
                     <Phone size={13} className="text-[#B9887B]" /> 0966 891 218
                   </a>
                 </div>
@@ -907,8 +905,10 @@ export default function CareersPage({ onOpenModal }) {
               </p>
 
               {uniSuccess ? (
-                <div className="p-8 text-center bg-[#FAF6EF] border border-[#B9887B]/30 rounded">
-                  <CheckCircle2 size={40} className="text-[#B9887B] mx-auto mb-3" />
+                <div className="p-8 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-xl shadow-xs">
+                  <div className="w-14 h-14 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] flex items-center justify-center mx-auto mb-3 border border-[#0F1A41]/15">
+                    <Check size={28} strokeWidth={2.5} />
+                  </div>
                   <h4 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
                     GỬI ĐỀ NGHỊ HỢP TÁC THÀNH CÔNG
                   </h4>
@@ -1048,7 +1048,7 @@ export default function CareersPage({ onOpenModal }) {
                 className="p-4 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 flex flex-col justify-between"
               >
                 <div>
-                  <span className="font-mono font-bold text-sm text-[#B9887B] block mb-2">
+                  <span className="font-sans font-bold text-sm text-[#B9887B] block mb-2">
                     {p.step}
                   </span>
                   <h3 className="font-serif text-base sm:text-lg font-bold text-[#0F1A41] mb-1.5">
@@ -1067,7 +1067,7 @@ export default function CareersPage({ onOpenModal }) {
       {/* ── 8. Bottom Talent Pool / General Application ── */}
       <section className="py-16 md:py-20 bg-[#FAF6EF] text-[#0F1A41]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-xs font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-3">
+          <span className="text-xs font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-3">
             MẠNG LƯỚI TÀI NĂNG LƯU TRÚ
           </span>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0F1A41] mb-3.5 leading-snug">
@@ -1077,7 +1077,7 @@ export default function CareersPage({ onOpenModal }) {
             Hãy gửi CV và thông tin liên hệ về hòm thư của chúng tôi. Phòng Nhân sự CityHouse More sẽ liên hệ ngay khi có cơ hội tương thích với năng lực của bạn.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono font-semibold">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-semibold">
             <a
               href="mailto:hr@cityhousemore.com"
               className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#0F1A41] text-white hover:bg-[#B9887B] transition-colors"
@@ -1110,20 +1110,22 @@ export default function CareersPage({ onOpenModal }) {
             </button>
 
             <div className="mb-6">
-              <span className="text-[11px] font-mono font-bold text-[#B9887B] uppercase tracking-wider block mb-2">
+              <span className="text-[11px] font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-2">
                 ỨNG TUYỂN VỊ TRÍ
               </span>
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2 leading-snug">
                 {selectedJobForModal.title}
               </h3>
-              <p className="text-xs sm:text-sm font-mono text-gray-500">
+              <p className="text-xs sm:text-sm font-sans text-gray-500">
                 {selectedJobForModal.location} · {selectedJobForModal.salary}
               </p>
             </div>
 
             {applySuccess ? (
-              <div className="p-6 text-center bg-[#FAF6EF] border border-[#B9887B]/30 rounded">
-                <CheckCircle2 size={40} className="text-[#B9887B] mx-auto mb-3" />
+              <div className="p-6 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-xl shadow-xs">
+                <div className="w-14 h-14 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] flex items-center justify-center mx-auto mb-3 border border-[#0F1A41]/15">
+                  <Check size={28} strokeWidth={2.5} />
+                </div>
                 <h4 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
                   NỘP HỒ SƠ THÀNH CÔNG!
                 </h4>

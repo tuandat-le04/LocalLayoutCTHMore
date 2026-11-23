@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, CheckCircle2, TrendingUp, Sparkles, Building2, UserCheck, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext.jsx';
 
 export default function Solutions({ onOpenModal }) {
@@ -44,43 +44,38 @@ export default function Solutions({ onOpenModal }) {
   ];
 
   return (
-    <section id="solutions" className="solutions section-pad bg-[#FAF6EF] text-[#0F1A41]">
+    <section id="solutions" className="solutions section-pad bg-[#FAF6EF] text-[#0F1A41] font-sans">
       <div className="section-heading row-heading mb-10">
         <div>
-          <p className="eyebrow eyebrow-accent flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
+          <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-3 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
             GIẢI PHÁP TÀI SẢN THEO TÌNH HUỐNG THỰC TẾ
           </p>
-          <h2 className="text-[#0F1A41] leading-[1.25] mb-3">
+          <h2 className="text-[#0F1A41] font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.2] mb-3">
             Giải pháp chuyên biệt<br />
-            cho <em>từng bài toán của Chủ sở hữu</em>
+            cho <span className="text-[#B9887B] font-serif italic">từng bài toán của Chủ sở hữu</span>
           </h2>
-          <p className="text-sm text-[#0F1A41]/75 max-w-xl leading-relaxed">
+          <p className="text-sm text-[#0F1A41]/75 max-w-xl leading-relaxed font-normal">
             Phân loại theo đúng thực trạng tài sản để đề xuất lộ trình tối ưu dòng tiền hiệu quả nhất.
           </p>
         </div>
 
         <button
           onClick={() => navigate('/tu-van')}
-          className="outline-btn-dark inline-flex items-center gap-2 px-5 py-2.5 rounded text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md self-start md:self-auto shrink-0"
-          style={{
-            color: '#0F1A41',
-            backgroundColor: '#FFFFFF',
-            border: '1.5px solid rgba(15, 26, 65, 0.25)',
-          }}
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md self-start md:self-auto shrink-0 bg-white border border-[#0F1A41]/20 hover:border-[#B9887B] hover:text-[#B9887B]"
           aria-label="Khám phá toàn bộ giải pháp"
         >
-          <span className="font-bold">Khám phá toàn bộ giải pháp</span>
+          <span>Khám phá toàn bộ giải pháp</span>
           <ArrowUpRight size={15} />
         </button>
       </div>
 
       {/* 3 Streamlined Client Situations Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 font-sans">
         {CLIENT_SITUATIONS.map((item) => (
           <article
             key={item.code}
-            className="bg-white rounded border border-[#0F1A41]/12 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group border-t-4 border-t-[#B9887B]"
+            className="bg-white rounded-2xl border border-[#0F1A41]/10 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group border-t-4 border-t-[#B9887B]"
           >
             <div>
               {/* Scenario Context Photo */}
@@ -93,12 +88,12 @@ export default function Solutions({ onOpenModal }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute top-3 left-3">
-                  <span className="text-[10px] font-mono font-bold px-2.5 py-1 bg-[#0F1A41]/90 backdrop-blur-sm text-white rounded uppercase tracking-wider">
+                  <span className="text-[10px] font-sans font-bold px-3 py-1 bg-[#0F1A41]/90 backdrop-blur-sm text-white rounded-full uppercase tracking-wider">
                     {item.badge}
                   </span>
                 </div>
                 <div className="absolute bottom-3 left-4 right-4 text-white">
-                  <span className="font-mono text-xs font-bold text-[#B9887B] block mb-0.5">
+                  <span className="font-sans text-[11px] font-bold text-[#B9887B] block mb-0.5 tracking-wider uppercase">
                     NHÓM {item.code}
                   </span>
                   <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#B9887B] transition-colors">
@@ -109,11 +104,11 @@ export default function Solutions({ onOpenModal }) {
 
               {/* Card Body (Concise, no clutter) */}
               <div className="p-6">
-                <p className="text-xs text-[#0F1A41]/60 mb-3 font-mono uppercase tracking-wider">
+                <p className="text-xs text-[#0F1A41]/60 mb-2.5 font-sans font-semibold uppercase tracking-wider">
                   {item.situationSubtitle}
                 </p>
 
-                <p className="text-sm text-[#0F1A41]/80 leading-relaxed">
+                <p className="text-sm text-[#0F1A41]/80 leading-relaxed font-normal">
                   {item.desc}
                 </p>
               </div>
@@ -123,7 +118,7 @@ export default function Solutions({ onOpenModal }) {
             <div className="p-6 pt-0">
               <button
                 onClick={handleCtaClick}
-                className="w-full py-3.5 px-4 text-center text-xs font-bold uppercase tracking-wider rounded transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-md hover:shadow-lg"
+                className="w-full py-3 px-4 text-center text-xs font-bold uppercase tracking-[0.15em] rounded-full transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-md hover:shadow-lg font-sans"
                 style={{
                   backgroundColor: '#B9887B',
                   color: '#FFFFFF',

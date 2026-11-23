@@ -57,7 +57,7 @@ export const awards = [
     awardName: "Customer Review Award 2024",
     goldCircle: "Gold Circle Award 2024 · Agoda",
     highlight: "Tái định vị thành công tăng 105% giá trị",
-    agodaUrl: "https://www.agoda.com/abora-cityhouse/hotel/ho-chi-minh-city-vn.html"
+    agodaUrl: "https://www.agoda.com/cityhouse-abora-ariosa/hotel/ho-chi-minh-city-vn.html"
   },
   {
     id: "lighthouse",
@@ -72,7 +72,7 @@ export const awards = [
     awardName: "Customer Review Award 2025",
     goldCircle: "Gold Circle Award 2023 · Agoda",
     highlight: "Điểm đến hàng đầu của du khách quốc tế",
-    agodaUrl: "https://www.agoda.com/lighthouse-cityhouse/hotel/ho-chi-minh-city-vn.html"
+    agodaUrl: "https://www.agoda.com/cityhouse-lighthouse-sg-serviced-apartment/hotel/ho-chi-minh-city-vn.html"
   },
   {
     id: "villea",
@@ -87,6 +87,6 @@ export const awards = [
     awardName: "Customer Review Award 2024",
     goldCircle: "Guest Favorite 2023 · Agoda",
     highlight: "Công suất phòng 95% quanh năm",
-    agodaUrl: "https://www.agoda.com/villea-cityhouse/hotel/ho-chi-minh-city-vn.html"
+    agodaUrl: "https://www.agoda.com/cityhouse-villea/hotel/ho-chi-minh-city-vn.html"
   }
 ];

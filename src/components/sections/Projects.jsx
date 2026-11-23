@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { projects } from '../../data/projects.js';
-import { ArrowUpRight, MapPin, Building2, Star, CheckCircle2, ChevronRight, X, TrendingUp, Quote, Layers, Wrench } from 'lucide-react';
+import { ArrowUpRight, MapPin, Building2, Star, ChevronRight, X, Quote } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext.jsx';
 
 export default function Projects({ onContactClick }) {
@@ -11,43 +11,38 @@ export default function Projects({ onContactClick }) {
   const featuredProjects = projects.slice(0, 3);
 
   return (
-    <section id="projects" className="projects section-pad bg-white text-[#0F1A41]">
+    <section id="projects" className="projects section-pad bg-white text-[#0F1A41] font-sans">
       <div className="section-heading row-heading mb-10">
         <div>
-          <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
+          <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-3 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
             CÔNG TRÌNH TIÊU BIỂU — CITYHOUSE MORE
           </p>
-          <h2 className="text-[#0F1A41] leading-[1.25] mb-3">
+          <h2 className="text-[#0F1A41] font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.2] mb-3">
             Những dự án<br />
-            tạo nên <em>dấu ấn CityHouse</em>
+            tạo nên <span className="text-[#B9887B] font-serif italic">dấu ấn CityHouse</span>
           </h2>
-          <p className="text-sm text-[#0F1A41]/75 max-w-xl leading-relaxed">
+          <p className="text-sm text-[#0F1A41]/75 max-w-xl leading-relaxed font-normal">
             Các công trình đã được tối ưu hóa thành công về mặt công năng, chi phí đầu tư và dòng tiền khai thác thực tế.
           </p>
         </div>
 
         <button
           onClick={() => navigate('/danh-muc-tai-san')}
-          className="outline-btn-dark inline-flex items-center gap-2 px-5 py-2.5 rounded text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md self-start md:self-auto shrink-0"
-          style={{
-            color: '#0F1A41',
-            backgroundColor: '#FFFFFF',
-            border: '1.5px solid rgba(15, 26, 65, 0.25)',
-          }}
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md self-start md:self-auto shrink-0 bg-white border border-[#0F1A41]/20 hover:border-[#B9887B] hover:text-[#B9887B]"
           aria-label="Xem toàn bộ 35+ dự án"
         >
-          <span className="font-bold">Xem tất cả 35+ dự án</span>
+          <span>Xem tất cả 35+ dự án</span>
           <ArrowUpRight size={15} />
         </button>
       </div>
 
       {/* 3 Featured Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-sans">
         {featuredProjects.map((project) => (
           <article
             key={project.id}
-            className="bg-[#FAF6EF] rounded border border-[#0F1A41]/12 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group"
+            className="bg-[#FAF6EF] rounded-2xl border border-[#0F1A41]/10 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group"
           >
             {/* Image Banner */}
             <div className="relative aspect-[16/10] overflow-hidden bg-gray-200">
@@ -58,21 +53,23 @@ export default function Projects({ onContactClick }) {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-3 left-3 flex gap-1.5">
-                <span className="px-2.5 py-1 bg-[#0F1A41]/90 backdrop-blur-sm text-white font-mono text-[10px] font-bold rounded uppercase">
+                <span className="px-3 py-1 bg-[#0F1A41]/90 backdrop-blur-sm text-white font-sans text-[10px] font-bold rounded-full uppercase tracking-wider">
                   {project.brand}
                 </span>
-                <span className="px-2.5 py-1 bg-[#B9887B] text-white font-mono text-[10px] font-bold rounded uppercase">
+                <span className="px-3 py-1 bg-[#B9887B] text-white font-sans text-[10px] font-bold rounded-full uppercase tracking-wider">
                   {project.district}
                 </span>
               </div>
-              <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-mono font-bold text-[#0F1A41] flex items-center gap-1 shadow">
-                <Star size={12} className="fill-[#C79A3B] text-[#C79A3B]" />
-                <span>Agoda {project.agodaScore}</span>
-              </div>
+              {project.agodaScore && project.agodaUrl && (
+                <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-sans font-bold text-[#0F1A41] flex items-center gap-1 shadow">
+                  <Star size={12} className="fill-[#C79A3B] text-[#C79A3B]" />
+                  <span>Agoda {project.agodaScore}</span>
+                </div>
+              )}
             </div>
 
             {/* Content Details (Clean & Minimalist) */}
-            <div className="p-6 flex flex-col flex-1 justify-between">
+            <div className="p-6 flex flex-col flex-1 justify-between font-sans">
               <div>
                 <h3 className="font-serif text-xl font-bold text-[#0F1A41] mb-1.5 group-hover:text-[#B9887B] transition-colors">
                   {project.name}
@@ -83,13 +80,13 @@ export default function Projects({ onContactClick }) {
                   <span className="truncate">{project.fullAddress}</span>
                 </p>
 
-                <div className="flex items-center gap-3 text-xs font-mono text-[#0F1A41]/80 mb-3 pb-3 border-b border-[#0F1A41]/10">
+                <div className="flex items-center gap-3 text-xs font-sans text-[#0F1A41]/80 mb-3 pb-3 border-b border-[#0F1A41]/10">
                   <span>Quy mô: <strong>{project.rooms}</strong></span>
                   <span>·</span>
                   <span className="text-[#B9887B] font-bold">Kín phòng {project.occupancy}</span>
                 </div>
 
-                <p className="text-xs text-[#0F1A41]/80 leading-relaxed mb-4">
+                <p className="text-xs text-[#0F1A41]/80 leading-relaxed mb-4 line-clamp-2 font-normal">
                   {project.result}
                 </p>
               </div>
@@ -98,7 +95,7 @@ export default function Projects({ onContactClick }) {
               <div className="pt-2">
                 <button
                   onClick={() => setSelectedCaseStudy(project)}
-                  className="w-full py-2.5 px-4 text-center text-xs font-bold uppercase tracking-wider rounded transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer shadow-sm hover:shadow"
+                  className="w-full py-2.5 px-4 text-center text-xs font-bold uppercase tracking-[0.15em] rounded-full transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer shadow-sm hover:shadow"
                   style={{
                     backgroundColor: '#B9887B',
                     color: '#FFFFFF',
@@ -146,10 +143,10 @@ export default function Projects({ onContactClick }) {
             {/* Modal Header */}
             <div className="mb-4 pr-8">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-mono font-bold px-2 py-0.5 bg-[#B9887B] text-white rounded uppercase">
+                <span className="text-xs font-sans font-bold px-2 py-0.5 bg-[#B9887B] text-white rounded uppercase">
                   CASE STUDY #{selectedCaseStudy.id}
                 </span>
-                <span className="text-xs font-mono text-[#0F1A41]/60">
+                <span className="text-xs font-sans text-[#0F1A41]/60">
                   {selectedCaseStudy.accompanied}
                 </span>
               </div>
@@ -170,7 +167,7 @@ export default function Projects({ onContactClick }) {
                   alt={`${selectedCaseStudy.name} - Kiến trúc ngoại thất`}
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute bottom-2 left-2 bg-[#0F1A41]/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded">
+                <span className="absolute bottom-2 left-2 bg-[#0F1A41]/80 backdrop-blur-xs text-white text-[10px] font-sans px-2 py-0.5 rounded">
                   Kiến trúc & Không gian
                 </span>
               </div>
@@ -180,52 +177,67 @@ export default function Projects({ onContactClick }) {
                   alt={`${selectedCaseStudy.name} - Nội thất thực tế`}
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute bottom-2 left-2 bg-[#0F1A41]/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded">
+                <span className="absolute bottom-2 left-2 bg-[#0F1A41]/80 backdrop-blur-xs text-white text-[10px] font-sans px-2 py-0.5 rounded">
                   Nội thất căn hộ vận hành
                 </span>
               </div>
             </div>
 
             {/* Case Study 5 Pillars: Bối cảnh, Vấn đề, Giải pháp, Phạm vi, Kết quả */}
-            <div className="flex flex-col gap-4 text-xs leading-relaxed mb-6">
-              <div className="p-3.5 bg-[#F4EFEA] rounded border-l-2 border-[#0F1A41]">
-                <strong className="text-[11px] font-mono text-[#0F1A41] uppercase tracking-wider block mb-1">
-                  1. Bối cảnh ban đầu:
-                </strong>
-                <p className="text-[#0F1A41]/85">{selectedCaseStudy.caseStudy.context}</p>
+            <div className="flex flex-col gap-3 text-xs leading-relaxed mb-6">
+              <div className="p-3.5 bg-[#FAF9F6] rounded-lg border border-[#0F1A41]/8">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-4 h-4 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] text-[9px] font-sans font-bold flex items-center justify-center">1</span>
+                  <strong className="text-[11px] font-sans text-[#0F1A41] uppercase tracking-wider">
+                    Bối cảnh ban đầu:
+                  </strong>
+                </div>
+                <p className="text-[#0F1A41]/85 pl-6">{selectedCaseStudy.caseStudy.context}</p>
               </div>
 
-              <div className="p-3.5 bg-red-50 rounded border-l-2 border-red-500">
-                <strong className="text-[11px] font-mono text-red-800 uppercase tracking-wider block mb-1">
-                  2. Thách thức & Vấn đề cần giải quyết:
-                </strong>
-                <p className="text-red-950/85">{selectedCaseStudy.caseStudy.problem}</p>
+              <div className="p-3.5 bg-rose-50/50 rounded-lg border border-rose-200/60">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-4 h-4 rounded-full bg-rose-200/80 text-rose-900 text-[9px] font-sans font-bold flex items-center justify-center">2</span>
+                  <strong className="text-[11px] font-sans text-rose-900 uppercase tracking-wider">
+                    Thách thức & Vấn đề cần giải quyết:
+                  </strong>
+                </div>
+                <p className="text-rose-950/85 pl-6">{selectedCaseStudy.caseStudy.problem}</p>
               </div>
 
-              <div className="p-3.5 bg-[#FAF6EF] rounded border-l-2 border-[#B9887B]">
-                <strong className="text-[11px] font-mono text-[#B9887B] uppercase tracking-wider block mb-1">
-                  3. Giải pháp chiến lược từ CityHouse More:
-                </strong>
-                <p className="text-[#0F1A41]/85">{selectedCaseStudy.caseStudy.solution}</p>
+              <div className="p-3.5 bg-[#FAF9F6] rounded-lg border border-[#0F1A41]/10">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-4 h-4 rounded-full bg-[#0F1A41] text-white text-[9px] font-sans font-bold flex items-center justify-center">3</span>
+                  <strong className="text-[11px] font-sans text-[#0F1A41] uppercase tracking-wider font-bold">
+                    Giải pháp chiến lược từ CityHouse More:
+                  </strong>
+                </div>
+                <p className="text-[#0F1A41]/90 pl-6">{selectedCaseStudy.caseStudy.solution}</p>
               </div>
 
-              <div className="p-3.5 bg-white rounded border border-[#0F1A41]/10">
-                <strong className="text-[11px] font-mono text-[#0F1A41] uppercase tracking-wider block mb-1">
-                  4. Phạm vi tham gia thực hiện:
-                </strong>
-                <p className="text-[#0F1A41]/85">{selectedCaseStudy.caseStudy.scope}</p>
+              <div className="p-3.5 bg-white rounded-lg border border-[#0F1A41]/10">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-4 h-4 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] text-[9px] font-sans font-bold flex items-center justify-center">4</span>
+                  <strong className="text-[11px] font-sans text-[#0F1A41] uppercase tracking-wider">
+                    Phạm vi tham gia thực hiện:
+                  </strong>
+                </div>
+                <p className="text-[#0F1A41]/85 pl-6">{selectedCaseStudy.caseStudy.scope}</p>
               </div>
 
               {/* Result Metrics */}
-              <div className="p-4 bg-[#B9887B]/10 rounded border border-[#B9887B]/30">
-                <strong className="text-[11px] font-mono text-[#B9887B] uppercase tracking-wider block mb-2">
-                  5. Kết quả đo lường thực tế:
-                </strong>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div className="p-4 bg-[#FAF9F6] rounded-lg border border-[#0F1A41]/10">
+                <div className="flex items-center gap-2 mb-2.5">
+                  <span className="w-4 h-4 rounded-full bg-emerald-600 text-white text-[9px] font-sans font-bold flex items-center justify-center">5</span>
+                  <strong className="text-[11px] font-sans text-[#0F1A41] uppercase tracking-wider font-bold">
+                    Kết quả đo lường thực tế:
+                  </strong>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pl-6">
                   {selectedCaseStudy.caseStudy.resultMetrics.map((m, idx) => (
-                    <div key={idx} className="bg-white p-2.5 rounded text-center border border-[#B9887B]/20">
-                      <span className="text-[10px] text-[#0F1A41]/60 font-mono block">{m.label}</span>
-                      <strong className="text-xs text-[#B9887B] font-bold mt-0.5 block">{m.val}</strong>
+                    <div key={idx} className="bg-white p-2.5 rounded text-center border border-[#0F1A41]/10 shadow-2xs">
+                      <span className="text-[10px] text-[#0F1A41]/60 font-sans block">{m.label}</span>
+                      <strong className="text-xs text-[#0F1A41] font-bold mt-0.5 block">{m.val}</strong>
                     </div>
                   ))}
                 </div>
@@ -238,7 +250,7 @@ export default function Projects({ onContactClick }) {
                   <p className="text-xs text-white/90 italic leading-relaxed mb-1">
                     "{selectedCaseStudy.caseStudy.ownerFeedback}"
                   </p>
-                  <span className="text-[10px] font-mono text-[#B9887B] font-bold block">
+                  <span className="text-[10px] font-sans text-[#B9887B] font-bold block">
                     — Nhận xét từ Chủ sở hữu tòa nhà
                   </span>
                 </div>
@@ -247,15 +259,21 @@ export default function Projects({ onContactClick }) {
 
             {/* Modal Bottom CTA */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-[#0F1A41]/10">
-              <a
-                href={selectedCaseStudy.agodaUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs font-mono text-[#B9887B] hover:underline flex items-center gap-1"
-              >
-                <span>Xem kiểm chứng đánh giá trên Agoda ({selectedCaseStudy.reviewCount})</span>
-                <ArrowUpRight size={13} />
-              </a>
+              {selectedCaseStudy.agodaUrl ? (
+                <a
+                  href={selectedCaseStudy.agodaUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs font-sans text-[#B9887B] hover:underline flex items-center gap-1"
+                >
+                  <span>Xem kiểm chứng đánh giá trên Agoda ({selectedCaseStudy.reviewCount})</span>
+                  <ArrowUpRight size={13} />
+                </a>
+              ) : (
+                <span className="text-xs font-sans text-[#0F1A41]/50 flex items-center gap-1">
+                  Đánh giá đang được cập nhật
+                </span>
+              )}
 
               <div className="flex items-center gap-2 w-full sm:w-auto">
                 <button

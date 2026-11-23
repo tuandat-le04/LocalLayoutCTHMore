@@ -57,13 +57,13 @@ export default function Insights() {
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-[#0F1A41]/90 backdrop-blur-sm text-white px-2.5 py-1 text-[10px] font-mono font-bold uppercase rounded">
+                  <div className="absolute top-3 left-3 bg-[#0F1A41]/90 backdrop-blur-sm text-white px-2.5 py-1 text-[10px] font-sans font-bold uppercase rounded">
                     {article.categoryLabel}
                   </div>
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center gap-3 text-[11px] font-mono text-[#0F1A41]/60 mb-2.5">
+                  <div className="flex items-center gap-3 text-[11px] font-sans text-[#0F1A41]/60 mb-2.5">
                     <span className="flex items-center gap-1">
                       <Calendar size={11} className="text-[#B9887B]" /> {article.date}
                     </span>
@@ -84,7 +84,7 @@ export default function Insights() {
               </div>
 
               <div className="p-6 pt-0">
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#B9887B] group-hover:text-[#0F1A41] transition-colors">
+                <span className="inline-flex items-center gap-1.5 text-xs font-sans font-bold uppercase tracking-wider text-[#B9887B] group-hover:text-[#0F1A41] transition-colors">
                   <span>Đọc bài viết</span>
                   <ArrowUpRight size={13} className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>

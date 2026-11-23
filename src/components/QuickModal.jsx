@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Phone, Sparkles, ShieldCheck, CheckCircle2, ChevronDown } from 'lucide-react';
+import { X, Phone, ShieldCheck, Check, ChevronDown } from 'lucide-react';
 
 export default function QuickModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -67,8 +67,8 @@ export default function QuickModal({ isOpen, onClose }) {
         {/* ── Popup Header (Deep Navy Luxury Bar) ── */}
         <div className="bg-[#0F1A41] text-white px-5 py-4 flex items-start justify-between relative border-b border-white/10 shrink-0">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-[10px] font-mono text-[#B9887B] font-bold uppercase tracking-wider">
-              <Sparkles size={12} className="text-[#B9887B]" />
+            <div className="inline-flex items-center gap-1.5 text-[10px] font-sans text-[#B9887B] font-bold uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
               <span>KẾT NỐI CHUYÊN GIA CITYHOUSE</span>
             </div>
             <h3
@@ -96,8 +96,8 @@ export default function QuickModal({ isOpen, onClose }) {
           {sent ? (
             /* Success State */
             <div className="py-6 px-2 text-center space-y-3">
-              <div className="w-12 h-12 rounded-full bg-[#B9887B]/15 text-[#B9887B] flex items-center justify-center mx-auto mb-2">
-                <CheckCircle2 size={32} />
+              <div className="w-14 h-14 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] flex items-center justify-center mx-auto mb-2 border border-[#0F1A41]/15">
+                <Check size={28} strokeWidth={2.5} />
               </div>
               <h4 className="font-serif text-lg font-bold text-[#0F1A41]">
                 GỬI YÊU CẦU THÀNH CÔNG!
@@ -109,7 +109,7 @@ export default function QuickModal({ isOpen, onClose }) {
                 <button
                   type="button"
                   onClick={handleResetAndClose}
-                  className="px-6 py-2.5 bg-[#0F1A41] text-white rounded text-xs font-bold uppercase tracking-wider hover:bg-[#B9887B] transition-colors cursor-pointer shadow"
+                  className="px-6 py-2.5 bg-[#0F1A41] text-white rounded text-xs font-bold uppercase tracking-wider hover:bg-[#162456] transition-colors cursor-pointer shadow"
                 >
                   HOÀN TẤT & ĐÓNG
                 </button>
@@ -119,8 +119,8 @@ export default function QuickModal({ isOpen, onClose }) {
             /* Main Input Form */
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
               {/* Compact Benefit Badge */}
-              <div className="p-2.5 rounded bg-[#FAF6EF] border border-[#B9887B]/30 flex items-center gap-2 text-[11px] text-[#0F1A41]/85">
-                <ShieldCheck size={14} className="text-[#B9887B] shrink-0" />
+              <div className="p-3 rounded-lg bg-[#FAF9F6] border border-[#0F1A41]/10 flex items-center gap-2 text-[11px] text-[#0F1A41]/85 shadow-2xs">
+                <ShieldCheck size={14} className="text-[#0F1A41] shrink-0" />
                 <span>Khảo sát hiện trạng & Báo cáo dòng tiền <strong>hoàn toàn miễn phí</strong></span>
               </div>
 
@@ -211,7 +211,7 @@ export default function QuickModal({ isOpen, onClose }) {
                 <button
                   type="button"
                   onClick={() => setShowOptional(!showOptional)}
-                  className="text-[11px] text-[#B9887B] hover:underline flex items-center gap-1 font-mono cursor-pointer py-1"
+                  className="text-[11px] text-[#B9887B] hover:underline flex items-center gap-1 font-sans cursor-pointer py-1"
                 >
                   <span>{showOptional ? '- Thu gọn thông tin thêm' : '+ Thêm Email hoặc ghi chú (Tùy chọn)'}</span>
                   <ChevronDown size={12} className={`transform transition-transform ${showOptional ? 'rotate-180' : ''}`} />
@@ -250,7 +250,7 @@ export default function QuickModal({ isOpen, onClose }) {
               </button>
 
               {/* Micro Footer Notice */}
-              <div className="pt-1 flex items-center justify-between text-[10.5px] text-[#0F1A41]/60 font-mono">
+              <div className="pt-1 flex items-center justify-between text-[10.5px] text-[#0F1A41]/60 font-sans">
                 <span>Hotline 24/7: <a href="tel:0878253545" className="text-[#B9887B] font-bold hover:underline">0878 253 545</a></span>
                 <span>Bảo mật 100%</span>
               </div>

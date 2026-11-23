@@ -1,24 +1,14 @@
 import React from 'react';
 import {
   ArrowUpRight,
-  CheckCircle2,
   ChevronRight,
   Shield,
   TrendingUp,
-  KeyRound,
-  Building2,
-  Compass,
-  Layers,
-  BarChart3,
-  ShieldCheck,
-  Wrench,
-  Palette,
-  Sparkles,
-  FileText,
   Clock,
   Check,
   Percent
 } from 'lucide-react';
+import LuxuryIcon from '../components/common/LuxuryIcon.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import { useNavigation } from '../context/NavigationContext.jsx';
 
@@ -32,28 +22,28 @@ const DETAILED_SOLUTIONS = [
     metricValue: "12 – 15%",
     metricLabel: "ROI Dự phóng / Năm",
     metricHighlight: "Tiết kiệm 20 – 30% tổng suất đầu tư (CAPEX)",
-    desc: "CityHouse đồng hành cùng Chủ đầu tư ngay từ giai đoạn ý tưởng: khảo sát địa bàn, phân tích nhân khẩu học và thiết lập mô hình lưu trú có biên lợi nhuận cao nhất. Tránh lãng phí chi phí xây dựng và tối ưu tính thanh khoản dài hạn.",
-    deliverable: "Báo cáo Thẩm định Khả thi (Feasibility Study) · Bản vẽ Cơ cấu Phòng · Bảng Dự phóng Dòng tiền 10 Năm",
+    desc: "Đồng hành từ ý tưởng sơ khởi: khảo sát thực địa, tối ưu cơ cấu phòng và lập bài toán tài chính hoàn vốn nhanh nhất ngay từ bản vẽ đầu tiên.",
+    deliverable: "Báo cáo Thẩm định Khả thi (FS) · Bản vẽ Cơ cấu Phòng · Dự phóng Dòng tiền 10 Năm",
     items: [
       {
-        icon: Compass,
+        icon: 'survey',
         title: "Khảo sát Địa bàn & Cung - Cầu",
-        desc: "Phân tích nhân khẩu học, đối thủ cạnh tranh và dung lượng thị trường trong bán kính 3km."
+        desc: "Phân tích nhân khẩu học và đối thủ cạnh tranh trong bán kính 3km."
       },
       {
-        icon: Layers,
+        icon: 'zoning',
         title: "Cơ cấu Diện tích & Tiện ích",
-        desc: "Hoạch định tỷ lệ phòng (Studio, 1PN, Duplex) và tiện ích gia tăng tối ưu diện tích thương phẩm."
+        desc: "Hoạch định tỷ lệ phòng tối ưu tối đa diện tích thương phẩm."
       },
       {
-        icon: BarChart3,
+        icon: 'finance',
         title: "Mô hình Tài chính & Điểm hòa vốn",
-        desc: "Tính toán chi tiết suất đầu tư, chi phí vận hành (OPEX), điểm hòa vốn (BEP) và chu kỳ thu hồi vốn."
+        desc: "Tính toán chi tiết CAPEX, OPEX, BEP và chu kỳ thu hồi vốn."
       },
       {
-        icon: ShieldCheck,
-        title: "Pháp lý Lưu trú & Tiêu chuẩn PCCC",
-        desc: "Thẩm định điều kiện pháp lý, quy chuẩn nghiệm thu PCCC và hồ sơ cấp phép kinh doanh khách sạn/căn hộ."
+        icon: 'legal',
+        title: "Pháp lý Lưu trú & Chuẩn PCCC",
+        desc: "Thẩm định quy chuẩn nghiệm thu PCCC và hồ sơ cấp phép kinh doanh."
       }
     ]
   },
@@ -66,28 +56,28 @@ const DETAILED_SOLUTIONS = [
     metricValue: "+45%",
     metricLabel: "Tăng Trưởng Giá Thuê",
     metricHighlight: "Thời gian cải tạo thần tốc: 45 – 60 ngày hoàn thiện",
-    desc: "Giải pháp chuyên sâu dành cho các tòa nhà xuống cấp, doanh thu suy giảm hoặc không còn phù hợp thị hiếu. CityHouse tái thiết kế kiến trúc nội thất đương đại và tái định vị thương hiệu để thu hút tệp khách sẵn sàng chi trả mức giá cao.",
-    deliverable: "Hồ sơ Thiết kế Concept 3D Boutique · Dự toán Thi công Bóc tách (BOQ) · Kế hoạch Ra mắt lại",
+    desc: "Hồi sinh tòa nhà xuống cấp qua thiết kế nội thất đương đại và tái định vị thương hiệu tiếp cận tệp khách quốc tế sẵn sàng chi trả cao.",
+    deliverable: "Thiết kế Concept 3D Boutique · Dự toán Thi công Bóc tách (BOQ) · Kế hoạch Ra mắt",
     items: [
       {
-        icon: Wrench,
+        icon: 'mep',
         title: "Thẩm định Hiện trạng & Hệ MEP",
-        desc: "Rà soát toàn diện kết cấu công trình, hạ tầng điện nước, điều hòa và trải nghiệm của khách lưu trú."
+        desc: "Rà soát toàn diện kết cấu, hạ tầng kỹ thuật và trải nghiệm lưu trú."
       },
       {
-        icon: Palette,
+        icon: 'design',
         title: "Thiết kế Concept Tối ưu Chi phí",
-        desc: "Tận dụng tối đa khung kết cấu có sẵn, kiến tạo không gian sống giàu trải nghiệm thẩm mỹ cao cấp."
+        desc: "Tận dụng tối đa khung kết cấu có sẵn, nâng tầm thẩm mỹ không gian."
       },
       {
-        icon: TrendingUp,
+        icon: 'growth',
         title: "Tái định vị Phân khúc Mục tiêu",
-        desc: "Nâng cấp mô hình từ căn hộ bình dân sang chuỗi boutique sang trọng, tiếp cận khách quốc tế."
+        desc: "Nâng cấp từ mô hình bình dân sang chuỗi boutique sang trọng."
       },
       {
-        icon: Sparkles,
+        icon: 'launch',
         title: "Chiến dịch Ra mắt & Khai trương",
-        desc: "Đẩy bán đồng loạt trên 8+ kênh OTA toàn cầu, phủ kín 85% công suất phòng ngay trong tháng đầu."
+        desc: "Đẩy bán đồng loạt trên 8+ kênh OTA, phủ kín 85% phòng ngay tháng đầu."
       }
     ]
   },
@@ -100,28 +90,28 @@ const DETAILED_SOLUTIONS = [
     metricValue: "95%+",
     metricLabel: "Tỷ Lệ Kín Phòng Quanh Năm",
     metricHighlight: "Tiết kiệm 40% chi phí lễ tân qua Smart IoT & PMS Cloud",
-    desc: "Thiết lập bộ máy quản trị chuyên nghiệp giúp tài sản luôn vận hành trơn tru 24/7. Ứng dụng công nghệ quản trị số và thuật toán định giá buồng phòng động giúp dòng tiền của Chủ đầu tư luôn duy trì đỉnh cao qua mọi mùa vụ.",
-    deliverable: "Quy chuẩn SOP Vận hành 5 Sao · Hệ thống Quản trị Cloud PMS · Báo cáo Kiểm toán Ngày 5 Hàng Tháng",
+    desc: "Thiết lập bộ máy quản trị 24/7 ứng dụng công nghệ PMS số hóa và định giá buồng phòng động, đảm bảo dòng tiền đỉnh cao qua mọi mùa vụ.",
+    deliverable: "Quy chuẩn SOP Vận hành 5 Sao · Hệ thống Cloud PMS · Báo cáo Đối soát Ngày 5 Hàng Tháng",
     items: [
       {
-        icon: ShieldCheck,
-        title: "Quy chuẩn SOP Vận hành Quốc tế",
-        desc: "Đồng bộ nghiệp vụ Lễ tân 24/7, Buồng phòng chuẩn 5 sao, Kỹ thuật bảo trì nhanh và An ninh bảo mật."
+        icon: 'legal',
+        title: "Quy chuẩn SOP Vận hành 5 Sao",
+        desc: "Đồng bộ nghiệp vụ Lễ tân 24/7, Buồng phòng, Kỹ thuật và An ninh bảo mật."
       },
       {
-        icon: BarChart3,
-        title: "Chiến lược Định giá Doanh thu Động",
-        desc: "Thuật toán Revenue Management tự động tối ưu giá phòng theo thời gian thực theo nhu cầu thị trường."
+        icon: 'finance',
+        title: "Định giá Doanh thu Động (Dynamic)",
+        desc: "Thuật toán Revenue Management tự động tối ưu giá bán theo thị trường."
       },
       {
-        icon: Building2,
-        title: "Khai thác Mạng lưới Khách thuê FDI",
-        desc: "Ký kết lưu trú dài hạn với hơn 120+ tập đoàn quốc tế, đảm bảo nguồn khách ổn định liên tục."
+        icon: 'building',
+        title: "Mạng lưới Khách thuê FDI",
+        desc: "Ký kết lưu trú dài hạn với hơn 120+ tập đoàn đa quốc gia."
       },
       {
-        icon: FileText,
-        title: "Minh bạch Tài chính & Bảo trì Tài sản",
-        desc: "Báo cáo doanh thu đối soát chi tiết từng đồng vào ngày 5 hàng tháng; bảo dưỡng công trình định kỳ."
+        icon: 'deliverable',
+        title: "Minh bạch Tài chính & Bảo trì",
+        desc: "Báo cáo doanh thu đối soát chi tiết ngày 5; bảo dưỡng công trình định kỳ."
       }
     ]
   }
@@ -129,7 +119,7 @@ const DETAILED_SOLUTIONS = [
 
 const COLLABORATION_MODELS = [
   {
-    icon: Building2,
+    icon: 'design',
     badge: "Mô hình 01",
     name: "Đầu tư Cải tạo Mới",
     tagline: "CityHouse đầu tư 100% nội thất",
@@ -142,7 +132,7 @@ const COLLABORATION_MODELS = [
     ]
   },
   {
-    icon: KeyRound,
+    icon: 'key',
     badge: "Mô hình 02",
     name: "Thuê Khoán Toàn Bộ",
     tagline: "Dòng tiền cố định, an tâm tuyệt đối",
@@ -155,7 +145,7 @@ const COLLABORATION_MODELS = [
     ]
   },
   {
-    icon: TrendingUp,
+    icon: 'growth',
     badge: "Mô hình 03",
     name: "Quản lý Gia sản Gia tộc",
     tagline: "Chia sẻ lợi nhuận, tối đa hóa dòng tiền",
@@ -208,26 +198,26 @@ export default function SolutionsPage({ onOpenModal }) {
   };
 
   return (
-    <div className="solutions-page">
+    <div className="solutions-page font-sans">
       {/* ── Page Hero ── */}
-      <section className="inner-hero section-pad relative overflow-hidden bg-[#0F1A41] text-white">
+      <section className="inner-hero section-pad relative overflow-hidden bg-[#0F1A41] text-white font-sans">
         <div className="max-w-7xl mx-auto relative z-10">
-          <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
+          <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-4 flex items-center gap-2 font-sans">
+            <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
             GIẢI PHÁP TÀI SẢN — CITYHOUSE MORE
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-tight max-w-4xl">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] max-w-4xl mb-6">
             Giải pháp chuyên biệt<br />
-            cho <em>chu kỳ bất động sản lưu trú</em>
+            cho <span className="text-[#B9887B] font-serif italic">chu kỳ bất động sản lưu trú</span>
           </h1>
-          <p className="lead text-base md:text-lg text-[#F4EFEA]/80 max-w-2xl leading-relaxed mt-6">
+          <p className="lead text-base md:text-lg text-[#F4EFEA]/80 max-w-2xl leading-relaxed mt-4 font-normal font-sans">
             Đồng hành cùng Chủ đầu tư từ ý tưởng quy hoạch ban đầu đến khi tòa nhà đi vào vận hành ổn định, đảm bảo tài sản vừa sinh dòng tiền vượt trội hôm nay, vừa gia tăng giá trị trường tồn qua các thế hệ.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-8">
+          <div className="flex flex-wrap gap-4 mt-8 font-sans">
             <button
               onClick={handleCtaClick}
-              className="solid-btn inline-flex items-center gap-2 px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded cursor-pointer transition-all duration-300 shadow-xl"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 text-xs font-bold uppercase tracking-[0.15em] rounded-full cursor-pointer transition-all duration-300 shadow-xl hover:shadow-2xl font-sans"
               style={{
                 backgroundColor: '#B9887B',
                 color: '#FFFFFF',
@@ -240,7 +230,7 @@ export default function SolutionsPage({ onOpenModal }) {
             </button>
             <a
               href="#partnership-models"
-              className="outline-btn inline-flex items-center gap-2 px-5 py-3.5 text-xs font-semibold uppercase tracking-wider border border-white/30 text-white hover:border-[#B9887B] hover:text-[#B9887B] transition-all rounded"
+              className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 text-xs font-bold uppercase tracking-[0.15em] border border-white/40 text-white hover:border-[#B9887B] hover:text-[#B9887B] transition-all rounded-full font-sans"
             >
               <span>3 MÔ HÌNH HỢP TÁC</span>
               <ChevronRight size={16} />
@@ -294,7 +284,7 @@ export default function SolutionsPage({ onOpenModal }) {
                       {/* Top Pillar Badge */}
                       <div className="absolute top-5 left-5 bg-[#0F1A41]/90 backdrop-blur-md border border-[#B9887B]/40 px-3.5 py-1.5 rounded text-white flex items-center gap-2 shadow-lg">
                         <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-                        <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#B9887B]">
+                        <span className="font-sans text-xs font-bold uppercase tracking-wider text-[#B9887B]">
                           {sol.pillarName}
                         </span>
                       </div>
@@ -305,7 +295,7 @@ export default function SolutionsPage({ onOpenModal }) {
                           <span className="font-serif text-3xl sm:text-4xl font-bold text-[#0F1A41] tracking-tight">
                             {sol.metricValue}
                           </span>
-                          <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-[#B9887B]">
+                          <span className="font-sans text-[11px] font-bold uppercase tracking-widest text-[#B9887B]">
                             {sol.metricLabel}
                           </span>
                         </div>
@@ -324,11 +314,11 @@ export default function SolutionsPage({ onOpenModal }) {
                       <div>
                         {/* Eyebrow badge: Unified, clean, no code slashes */}
                         <div className="flex items-center gap-2 mb-3">
-                          <span className="text-[11px] font-mono font-bold tracking-widest text-[#B9887B] uppercase">
+                          <span className="text-[11px] font-sans font-bold tracking-widest text-[#B9887B] uppercase">
                             {sol.pillarName}
                           </span>
                           <span className="text-gray-300">·</span>
-                          <span className="text-[11px] font-mono tracking-wider text-[#0F1A41]/50 uppercase font-medium">
+                          <span className="text-[11px] font-sans tracking-wider text-[#0F1A41]/50 uppercase font-medium">
                             GIẢI PHÁP GIA SẢN
                           </span>
                         </div>
@@ -346,38 +336,35 @@ export default function SolutionsPage({ onOpenModal }) {
                         {/* Scope of Work Grid (4 Balanced Minimalist Cards) */}
                         <div className="mb-6">
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                            {sol.items.map((item, idx) => {
-                              const ItemIcon = item.icon;
-                              return (
-                                <div
-                                  key={idx}
-                                  className="p-4 rounded-lg bg-gray-50/70 border border-gray-100 hover:bg-white hover:border-[#B9887B]/40 hover:shadow-sm transition-all duration-200 group/item flex flex-col justify-between"
-                                >
-                                  <div>
-                                    <div className="flex items-center gap-2.5 mb-2">
-                                      <div className="w-7 h-7 rounded-md bg-white text-[#B9887B] flex items-center justify-center shrink-0 border border-gray-100 shadow-2xs group-hover/item:bg-[#B9887B] group-hover/item:text-white transition-colors">
-                                        <ItemIcon size={14} />
-                                      </div>
-                                      <h4 className="font-sans text-xs sm:text-[13px] text-[#0F1A41] font-semibold truncate leading-tight">
-                                        {item.title}
-                                      </h4>
+                            {sol.items.map((item, idx) => (
+                              <div
+                                key={idx}
+                                className="p-4.5 rounded-xl bg-white border border-[#0F1A41]/10 hover:border-[#0F1A41]/30 hover:shadow-2xs transition-all duration-300 group/item flex flex-col justify-between"
+                              >
+                                <div>
+                                  <div className="flex items-center gap-3 mb-2.5">
+                                    <div className="w-8 h-8 rounded-lg bg-[#FAF9F6] border border-[#0F1A41]/8 text-[#0F1A41] flex items-center justify-center shrink-0 group-hover/item:bg-[#0F1A41] group-hover/item:text-white transition-all duration-300 shadow-2xs">
+                                      <LuxuryIcon name={item.icon} size={15} strokeWidth={1.35} />
                                     </div>
-                                    <p className="font-sans text-xs text-[#0F1A41]/65 leading-relaxed">
-                                      {item.desc}
-                                    </p>
+                                    <h4 className="font-serif text-[13.5px] sm:text-sm text-[#0F1A41] font-bold leading-snug">
+                                      {item.title}
+                                    </h4>
                                   </div>
+                                  <p className="font-sans text-xs text-[#0F1A41]/70 leading-relaxed font-normal pl-0.5">
+                                    {item.desc}
+                                  </p>
                                 </div>
-                              );
-                            })}
+                              </div>
+                            ))}
                           </div>
                         </div>
 
                         {/* Key Deliverables: Sleek metadata line, not an overpowering heavy box */}
-                        <div className="pt-4 pb-2 border-t border-gray-100 flex items-start gap-2.5 mb-8 text-xs text-[#0F1A41]/70 font-sans">
-                          <FileText size={15} className="text-[#B9887B] shrink-0 mt-0.5" />
+                        <div className="pt-4 pb-2 border-t border-[#0F1A41]/10 flex items-start gap-2.5 mb-8 text-xs text-[#0F1A41]/80 font-sans">
+                          <LuxuryIcon name="deliverable" size={15} strokeWidth={1.35} className="text-[#0F1A41]/70 shrink-0 mt-0.5" />
                           <div className="leading-relaxed">
-                            <span className="text-[#0F1A41] font-semibold">Kết quả bàn giao: </span>
-                            <span>{sol.deliverable}</span>
+                            <span className="text-[#0F1A41] font-bold">Kết quả bàn giao: </span>
+                            <span className="text-[#0F1A41]/75">{sol.deliverable}</span>
                           </div>
                         </div>
                       </div>
@@ -427,28 +414,26 @@ export default function SolutionsPage({ onOpenModal }) {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {COLLABORATION_MODELS.map((m, i) => {
-              const Icon = m.icon;
-              return (
-                <div
-                  key={i}
-                  className="p-8 rounded-lg border border-white/10 bg-white/[0.03] hover:border-[#B9887B] hover:bg-white/[0.05] transition-all duration-300 flex flex-col justify-between group"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 rounded-full bg-[#B9887B]/20 flex items-center justify-center text-[#B9887B] group-hover:scale-110 transition-transform">
-                        <Icon size={22} />
-                      </div>
-                      <span className="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-white/10 text-[#B9887B] font-bold border border-white/10">
-                        {m.badge}
-                      </span>
+            {COLLABORATION_MODELS.map((m, i) => (
+              <div
+                key={i}
+                className="p-8 rounded-lg border border-white/10 bg-white/[0.03] hover:border-[#B9887B] hover:bg-white/[0.05] transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-11 h-11 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#B9887B] group-hover:border-[#B9887B]/60 group-hover:bg-[#B9887B]/10 transition-all">
+                      <LuxuryIcon name={m.icon} size={20} strokeWidth={1.25} />
                     </div>
+                    <span className="text-[10px] font-sans uppercase tracking-wider px-2.5 py-1 rounded bg-white/10 text-[#B9887B] font-bold border border-white/10">
+                      {m.badge}
+                    </span>
+                  </div>
 
                     <h3 className="font-serif text-2xl font-bold text-white mb-1.5 group-hover:text-[#B9887B] transition-colors">
                       {m.name}
                     </h3>
 
-                    <div className="font-mono text-xs text-[#B9887B] mb-4 font-semibold">
+                    <div className="font-sans text-xs text-[#B9887B] mb-4 font-semibold">
                       {m.tagline}
                     </div>
 
@@ -480,8 +465,7 @@ export default function SolutionsPage({ onOpenModal }) {
                     <ArrowUpRight size={14} />
                   </button>
                 </div>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>
@@ -511,7 +495,7 @@ export default function SolutionsPage({ onOpenModal }) {
                     <span className="font-serif text-3xl font-bold text-[#B9887B]">
                       {step.step}
                     </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF6EF] text-[#0F1A41]/60 font-semibold border border-[#0F1A41]/5">
+                    <span className="text-[10px] font-sans px-2 py-0.5 rounded bg-[#FAF6EF] text-[#0F1A41]/60 font-semibold border border-[#0F1A41]/5">
                       {step.time}
                     </span>
                   </div>
@@ -545,7 +529,7 @@ export default function SolutionsPage({ onOpenModal }) {
                 Hãy chia sẻ thông tin về bất động sản của bạn. Đội ngũ chuyên gia giàu kinh nghiệm của CityHouse More sẽ trực tiếp khảo sát hiện trạng và gửi báo cáo phân tích tiềm năng khai thác trong vòng <strong>24 giờ làm việc</strong>.
               </p>
 
-              <div className="contact-detail-list grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono mb-6">
+              <div className="contact-detail-list grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans mb-6">
                 <div className="bg-white/[0.04] p-3.5 rounded border border-white/10">
                   <span className="text-white/60 block text-[10px] uppercase">HOTLINE TƯ VẤN 24/7</span>
                   <strong className="text-sm text-[#B9887B]">0878 253 545</strong>

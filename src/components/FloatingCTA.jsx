@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Calendar, Sparkles, X } from 'lucide-react';
+import { Phone, Calendar, X } from 'lucide-react';
 
 export default function FloatingCTA({ onOpenModal, isModalOpen }) {
   const [isExpanded, setIsExpanded] = useState(false);

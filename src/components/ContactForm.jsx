@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Check, ShieldCheck, Clock, CheckCircle2, ChevronDown } from 'lucide-react';
+import { ArrowUpRight, Check, ShieldCheck, Clock, ChevronDown } from 'lucide-react';
 
 export default function ContactForm({
   title = "ĐĂNG KÝ NHẬN ĐÁNH GIÁ TÀI SẢN",
@@ -40,8 +40,8 @@ export default function ContactForm({
           Cảm ơn Quý khách <strong>{formData.fullName}</strong>. Chuyên gia quản lý tài sản CityHouseMore đã nhận được thông tin và sẽ trực tiếp liên hệ qua số điện thoại <strong>{formData.phone}</strong> trong vòng <strong>24 giờ làm việc</strong> để gửi báo cáo phân tích sơ bộ.
         </p>
 
-        <div className="p-3.5 bg-[#FAF6EF] rounded border border-[#B9887B]/30 text-xs text-[#0F1A41]/80 max-w-sm mx-auto mb-6">
-          <div className="font-mono text-[11px] font-bold text-[#B9887B] uppercase mb-2">
+        <div className="p-3.5 bg-[#FAF9F6] rounded-lg border border-[#0F1A41]/10 text-xs text-[#0F1A41]/85 max-w-sm mx-auto mb-6">
+          <div className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase mb-1">
             CAM KẾT DỊCH VỤ
           </div>
           Bảo mật thông tin hồ sơ tài sản 100% theo tiêu chuẩn quản lý gia sản.
@@ -75,18 +75,18 @@ export default function ContactForm({
   return (
     <form className="b2b-form flex flex-col gap-5 font-sans text-[#0F1A41]" onSubmit={handleSubmit}>
       {/* Motivating Benefit Box: What the user will receive */}
-      <div className="p-3.5 bg-[#FAF6EF] rounded border border-[#B9887B]/30 text-xs text-[#0F1A41]/85">
-        <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#B9887B] mb-2 flex items-center gap-1">
-          <ShieldCheck size={13} />
+      <div className="p-4 bg-[#FAF9F6] rounded-lg border border-[#0F1A41]/10 text-xs text-[#0F1A41]/85 shadow-2xs">
+        <div className="font-sans text-[10px] font-bold uppercase tracking-wider text-[#0F1A41] mb-2.5 flex items-center gap-1.5">
+          <ShieldCheck size={14} className="text-[#0F1A41]" />
           <span>QUYỀN LỢI KHI ĐĂNG KÝ HÔM NAY:</span>
         </div>
-        <ul className="flex flex-col gap-1.5 text-[11.5px] leading-relaxed">
-          <li className="flex items-center gap-1.5">
-            <CheckCircle2 size={13} className="text-[#B9887B] shrink-0" />
+        <ul className="flex flex-col gap-2 text-[11.5px] leading-relaxed">
+          <li className="flex items-start gap-2">
+            <Check size={13} strokeWidth={2.5} className="text-[#0F1A41]/75 shrink-0 mt-0.5" />
             <span>Khảo sát hiện trạng & Báo cáo đánh giá tiềm năng khai thác <strong>hoàn toàn miễn phí</strong>.</span>
           </li>
-          <li className="flex items-center gap-1.5">
-            <CheckCircle2 size={13} className="text-[#B9887B] shrink-0" />
+          <li className="flex items-start gap-2">
+            <Check size={13} strokeWidth={2.5} className="text-[#0F1A41]/75 shrink-0 mt-0.5" />
             <span>Dự phóng doanh thu phòng & phương án tối ưu dòng tiền may đo theo vị trí tài sản.</span>
           </li>
         </ul>
@@ -182,7 +182,7 @@ export default function ContactForm({
         <button
           type="button"
           onClick={() => setShowOptional(!showOptional)}
-          className="text-xs text-[#B9887B] hover:underline flex items-center gap-1 font-mono cursor-pointer mb-2"
+          className="text-xs text-[#B9887B] hover:underline flex items-center gap-1 font-sans cursor-pointer mb-2"
         >
           <span>{showOptional ? '- Thu gọn thông tin bổ sung' : '+ Thêm Email hoặc thông tin chi tiết (Tùy chọn)'}</span>
           <ChevronDown size={13} className={`transform transition-transform ${showOptional ? 'rotate-180' : ''}`} />

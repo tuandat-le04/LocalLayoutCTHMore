@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Sparkles, ArrowRight, Calendar } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
 import { timelineData } from '../../data/timeline.js';
 
 export default function Story() {
@@ -42,23 +42,23 @@ export default function Story() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         {/* ── Section Header (Clean Full Width) ── */}
-        <div className="max-w-3xl mb-12 pb-8 border-b border-white/10">
-          <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#B9887B] mb-3 font-semibold">
-            <Sparkles size={14} />
+        <div className="max-w-3xl mb-12 pb-8 border-b border-white/10 font-sans">
+          <div className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.25em] text-[#B9887B] mb-3 font-bold">
+            <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
             <span>DẤU ẤN CITYHOUSE — HÀNH TRÌNH 15 NĂM</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-[1.2]">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal text-white leading-[1.2]">
             15 năm phát triển <br />
-            <em className="italic text-[#B9887B] font-serif">và đồng hành cùng Chủ đầu tư</em>
+            <span className="text-[#B9887B] font-serif italic">và đồng hành cùng Chủ đầu tư</span>
           </h2>
-          <p className="font-sans text-sm sm:text-base text-white/70 mt-4 leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-white/70 mt-4 leading-relaxed font-normal">
             Từ dấu ấn khởi đầu tại Saigon Pavillon năm 2009 đến quy mô 35+ tòa nhà hiện hữu, 
             CityHouse More kiên định bảo toàn và tối ưu giá trị tài sản qua từng thời kỳ thị trường.
           </p>
         </div>
 
         {/* ── Horizontal Interactive Milestone Track (Dòng thời gian nằm ngang) ── */}
-        <div className="mb-10 hidden sm:block">
+        <div className="mb-10 hidden sm:block font-sans">
           <div className="relative">
             {/* Continuous Track Line */}
             <div className="absolute top-5 left-6 right-6 h-[2px] bg-gradient-to-r from-[#B9887B]/20 via-[#B9887B]/40 to-[#B9887B]/20 -z-0" />
@@ -76,7 +76,7 @@ export default function Story() {
                   >
                     {/* Node Dot / Badge */}
                     <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-300 ${
+                      className={`w-10 h-10 rounded-full flex items-center justify-center font-sans text-xs font-bold transition-all duration-300 ${
                         isActive
                           ? 'bg-[#B9887B] text-white scale-110 shadow-lg shadow-[#B9887B]/50 ring-4 ring-[#B9887B]/25'
                           : 'bg-[#0F1A41] text-[#B9887B] border border-[#B9887B]/40 group-hover:border-[#B9887B] group-hover:bg-[#B9887B]/10'
@@ -95,7 +95,7 @@ export default function Story() {
                     </span>
 
                     {/* Milestone Mini Tag */}
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-white/50 mt-1 line-clamp-1 max-w-[140px] group-hover:text-white/80 transition-colors">
+                    <span className="font-sans text-[10.5px] uppercase tracking-wider text-white/50 mt-1 line-clamp-1 max-w-[140px] group-hover:text-white/80 transition-colors font-medium">
                       {item.tag}
                     </span>
                   </button>
@@ -151,18 +151,18 @@ export default function Story() {
                   </div>
 
                   {/* Step Sequence Badge (Top-Right) */}
-                  <div className="absolute top-3.5 right-3.5 bg-[#0F1A41]/90 backdrop-blur-md px-2.5 py-1 rounded border border-white/10">
-                    <span className="font-mono text-[11px] font-bold text-white/80">
+                  <div className="absolute top-3.5 right-3.5 bg-[#0F1A41]/90 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+                    <span className="font-sans text-[10.5px] font-bold text-white/80">
                       CỘT MỐC 0{index + 1}
                     </span>
                   </div>
                 </div>
 
                 {/* 2. Card Content */}
-                <div className="p-6 flex flex-col flex-1 justify-between gap-4">
+                <div className="p-6 flex flex-col flex-1 justify-between gap-4 font-sans">
                   <div>
                     {/* Eyebrow Tag */}
-                    <div className="font-mono text-[11px] uppercase tracking-wider text-[#B9887B] font-semibold mb-2 flex items-center gap-1.5">
+                    <div className="font-sans text-[11px] uppercase tracking-wider text-[#B9887B] font-semibold mb-2 flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]" />
                       <span>{item.tag}</span>
                     </div>
@@ -173,13 +173,13 @@ export default function Story() {
                     </h3>
 
                     {/* Milestone Description */}
-                    <p className="font-sans text-xs sm:text-sm text-white/75 leading-relaxed line-clamp-4">
+                    <p className="font-sans text-xs sm:text-sm text-white/75 leading-relaxed line-clamp-4 font-normal">
                       {item.desc}
                     </p>
                   </div>
 
                   {/* 3. Card Bottom Highlight Tag */}
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+                  <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-sans">
                     <span className="text-[#B9887B] font-semibold flex items-center gap-1.5">
                       <span>{item.highlight}</span>
                     </span>

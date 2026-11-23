@@ -25,7 +25,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-[#F4EFEA] text-[#0F1A41] border-b border-[#0F1A41]/10" id="value-metrics">
+    <section className="py-12 md:py-16 bg-[#F4EFEA] text-[#0F1A41] border-b border-[#0F1A41]/10 font-sans" id="value-metrics">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#0F1A41]/10">
           {METRICS.map((m, idx) => (
@@ -33,10 +33,10 @@ export default function Stats() {
               <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F1A41] tracking-tight">
                 {m.value}
               </div>
-              <div className="font-mono text-xs uppercase tracking-widest text-[#B9887B] font-bold mt-2">
+              <div className="font-sans text-[10.5px] md:text-[11px] uppercase tracking-[0.15em] text-[#B9887B] font-bold mt-2.5">
                 {m.label}
               </div>
-              <p className="text-xs text-[#0F1A41]/65 mt-1 leading-relaxed">
+              <p className="text-xs text-[#0F1A41]/70 mt-1 leading-relaxed font-normal">
                 {m.desc}
               </p>
             </div>

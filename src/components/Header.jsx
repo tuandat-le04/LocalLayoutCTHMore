@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Menu, X, Phone, Calendar, ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Menu, X, Phone, Calendar, ChevronRight } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext.jsx';
 
 const PRIMARY_NAV_LINKS = [
@@ -67,20 +67,20 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
           aria-label="CityHouse More Trang chủ"
         >
           <span className="font-serif tracking-wider font-semibold text-lg md:text-xl text-white">
-            <span>CITY</span>HOUSE<small className="text-[#B9887B] text-[10px] tracking-widest font-mono font-bold block ml-1">MORE</small>
+            <span className="font-light">CITY</span>HOUSE<small className="text-[#B9887B] text-[10px] tracking-[0.25em] font-sans font-bold block ml-1">MORE</small>
           </span>
         </a>
 
-        {/* Main Desktop & Tablet Navigation Menu (5 main links) */}
-        <nav className="hidden lg:flex items-center gap-7 mx-auto">
+        {/* Main Desktop & Tablet Navigation Menu (7 main links) */}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-7 mx-auto">
           {PRIMARY_NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`font-mono text-[11.5px] uppercase tracking-wider py-1.5 transition-colors duration-200 relative ${
+              className={`font-sans text-[11.5px] uppercase tracking-[0.15em] font-bold py-1.5 transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:bg-[#B9887B] after:transition-all after:duration-300 ${
                 isLinkActive(link.href)
-                  ? 'text-[#B9887B] font-bold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#B9887B]'
-                  : 'text-[#F4EFEA]/80 hover:text-[#B9887B]'
+                  ? 'text-white after:w-full'
+                  : 'text-white/70 hover:text-white after:w-0 hover:after:w-full'
               }`}
               onClick={(e) => {
                 e.preventDefault();
@@ -93,20 +93,20 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
         </nav>
 
         {/* Header Actions */}
-        <div className="flex items-center gap-4 sm:gap-6 ml-auto lg:ml-0">
+        <div className="flex items-center gap-4 sm:gap-5 ml-auto lg:ml-0">
           {/* Click-to-call Phone */}
           <a
             href="tel:0878253545"
-            className="hidden sm:flex items-center gap-2 text-xs font-mono text-[#F4EFEA] hover:text-[#B9887B] transition-colors"
+            className="hidden sm:flex items-center gap-2 text-xs font-sans text-[#F4EFEA] hover:text-[#B9887B] transition-colors"
             title="Gọi Hotline 24/7"
           >
             <Phone size={13} className="text-[#B9887B]" />
-            <span className="font-semibold tracking-wide">0878 253 545</span>
+            <span className="font-bold tracking-wide">0878 253 545</span>
           </a>
 
-          {/* High-visibility Action Button (Solid Terracotta #B9887B - Never Transparent) */}
+          {/* Action Button: Rounded-full Luxury Button (Consistent with cityhousemore.com) */}
           <button
-            className="solid-btn flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-2.5 text-xs font-semibold uppercase tracking-wider transition-all duration-200 rounded-sm shadow-md hover:shadow-lg cursor-pointer"
+            className="flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-5 sm:py-2.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 rounded-full shadow-md hover:shadow-lg cursor-pointer transform hover:-translate-y-0.5"
             style={{
               backgroundColor: '#B9887B',
               color: '#FFFFFF',
@@ -122,7 +122,7 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
             }}
             aria-label="Đặt lịch tư vấn"
           >
-            <Calendar size={14} className="text-white shrink-0" />
+            <Calendar size={13} className="text-white shrink-0" />
             <span className="whitespace-nowrap font-bold sm:hidden">ĐẶT LỊCH</span>
             <span className="whitespace-nowrap font-bold hidden sm:inline">ĐẶT LỊCH TƯ VẤN</span>
           </button>
@@ -142,15 +142,15 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
       {menuOpen && (
         <div className="mobile-nav-drawer text-white animate-fadeIn">
           {/* Drawer Menu Links */}
-          <div className="p-6 flex flex-col gap-2">
-            <div className="text-[10px] font-mono uppercase tracking-widest text-[#B9887B] mb-2 font-bold">
+          <div className="p-6 flex flex-col gap-2 font-sans">
+            <div className="text-[10px] uppercase tracking-widest text-[#B9887B] mb-2 font-bold">
               DANH MỤC TRUY CẬP CHÍNH
             </div>
             {PRIMARY_NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`flex items-center justify-between p-3.5 rounded border transition-all cursor-pointer ${
+                className={`flex items-center justify-between p-3.5 rounded-lg border transition-all cursor-pointer ${
                   isLinkActive(link.href)
                     ? 'bg-[#B9887B]/15 border-[#B9887B] text-white font-bold'
                     : 'bg-white/[0.02] border-white/10 text-white/90 hover:bg-white/[0.06] hover:border-[#B9887B]/40'
@@ -161,8 +161,8 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
                 }}
               >
                 <div>
-                  <div className="font-mono text-sm tracking-wider uppercase">{link.label}</div>
-                  <div className="text-xs text-white/50 mt-0.5">{link.desc}</div>
+                  <div className="font-bold text-sm tracking-wider uppercase">{link.label}</div>
+                  <div className="text-xs text-white/50 mt-0.5 font-normal">{link.desc}</div>
                 </div>
                 <ChevronRight size={16} className="text-[#B9887B]" />
               </a>
@@ -170,13 +170,13 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
           </div>
 
           {/* Fixed CTA at the Bottom of Mobile Menu */}
-          <div className="p-6 bg-[#080E24] border-t border-[#B9887B]/30 flex flex-col gap-3 mt-auto shrink-0">
+          <div className="p-6 bg-[#080E24] border-t border-[#B9887B]/30 flex flex-col gap-3 mt-auto shrink-0 font-sans">
             <button
               onClick={() => {
                 setMenuOpen(false);
                 if (onOpenModal) onOpenModal();
               }}
-              className="w-full py-3.5 px-4 text-center font-bold text-xs uppercase tracking-wider text-white flex items-center justify-center gap-2 rounded shadow-lg cursor-pointer"
+              className="w-full py-3.5 px-4 text-center font-bold text-xs uppercase tracking-wider text-white flex items-center justify-center gap-2 rounded-full shadow-lg cursor-pointer"
               style={{
                 backgroundColor: '#B9887B',
                 color: '#FFFFFF',
@@ -190,7 +190,7 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
 
             <a
               href="tel:0878253545"
-              className="w-full py-3 px-4 text-center font-semibold text-xs uppercase tracking-wider text-white flex items-center justify-center gap-2 rounded bg-white/5 border border-white/20 hover:border-[#B9887B] transition-colors"
+              className="w-full py-3 px-4 text-center font-bold text-xs uppercase tracking-wider text-white flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/20 hover:border-[#B9887B] transition-colors"
             >
               <Phone size={14} className="text-[#B9887B]" />
               <span>HOTLINE 24/7: 0878 253 545</span>

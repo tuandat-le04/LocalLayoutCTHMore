@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { projects } from '../data/projects.js';
-import { ArrowUpRight, Building2, MapPin, Star, SlidersHorizontal, Check, Eye, RotateCcw, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Building2, MapPin, Star, SlidersHorizontal, Check, Eye, RotateCcw } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import ProjectDetailModal from '../components/ProjectDetailModal.jsx';
@@ -43,31 +43,34 @@ export default function ProjectsPage({ onOpenModal }) {
   });
 
   return (
-    <div className="projects-page">
+    <div className="projects-page font-sans">
       {/* Page Hero */}
-      <section className="inner-hero section-pad">
-        <p className="eyebrow eyebrow-accent">DANH MỤC TÀI SẢN — CITYHOUSE MORE</p>
-        <h1>
+      <section className="inner-hero section-pad font-sans">
+        <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-4 flex items-center gap-2 font-sans">
+          <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+          DANH MỤC TÀI SẢN — CITYHOUSE MORE
+        </p>
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white leading-[1.18] font-normal mb-5">
           Hệ thống tài sản<br />
-          <em>đang vận hành hiệu quả</em>
+          <span className="text-[#B9887B] font-serif italic">đang vận hành hiệu quả</span>
         </h1>
-        <p className="lead">
+        <p className="lead text-sm sm:text-base md:text-lg text-[#F4EFEA]/80 max-w-2xl leading-relaxed font-normal font-sans">
           Thông tin chi tiết, chuẩn hóa và minh bạch về hơn 35 bất động sản lưu trú đang được CityHouse bảo trợ và quản lý dòng tiền tại các vị trí đắc địa nhất TP.HCM.
         </p>
 
         {/* Quick Stats Strip */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 max-w-2xl border-t border-white/10 pt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 max-w-2xl border-t border-white/10 pt-6 font-sans">
           <div>
             <div className="font-serif text-3xl font-bold text-[#B9887B]">35+</div>
-            <div className="font-mono text-xs text-white/70 mt-1 uppercase">Tòa nhà đang vận hành</div>
+            <div className="font-sans text-[11px] font-bold text-white/70 mt-1 uppercase tracking-wider">Tòa nhà đang vận hành</div>
           </div>
           <div>
             <div className="font-serif text-3xl font-bold text-[#B9887B]">1.000+</div>
-            <div className="font-mono text-xs text-white/70 mt-1 uppercase">Đơn vị lưu trú cao cấp</div>
+            <div className="font-sans text-[11px] font-bold text-white/70 mt-1 uppercase tracking-wider">Đơn vị lưu trú cao cấp</div>
           </div>
           <div>
             <div className="font-serif text-3xl font-bold text-[#B9887B]">95%+</div>
-            <div className="font-mono text-xs text-white/70 mt-1 uppercase">Công suất phòng ổn định</div>
+            <div className="font-sans text-[11px] font-bold text-white/70 mt-1 uppercase tracking-wider">Công suất phòng ổn định</div>
           </div>
         </div>
       </section>
@@ -82,24 +85,24 @@ export default function ProjectsPage({ onOpenModal }) {
                 <SlidersHorizontal size={15} />
               </div>
               <div>
-                <span className="text-[#0F1A41] font-mono text-xs font-bold uppercase tracking-wider block">
+                <span className="text-[#0F1A41] font-sans text-xs font-bold uppercase tracking-wider block">
                   Bộ lọc danh mục tài sản thông minh
                 </span>
-                <span className="text-[11px] text-[#0F1A41]/60 font-mono">
+                <span className="text-[11px] text-[#0F1A41]/60 font-sans">
                   Phân loại theo khu vực chiến lược và phân khúc thương hiệu CityHouse
                 </span>
               </div>
             </div>
 
             <div className="flex items-center gap-3 self-start sm:self-auto">
-              <span className="font-mono text-xs text-[#0F1A41]/75 bg-[#F4EFEA] px-3.5 py-1.5 border border-[#0F1A41]/10">
+              <span className="font-sans text-xs text-[#0F1A41]/75 bg-[#F4EFEA] px-3.5 py-1.5 border border-[#0F1A41]/10">
                 Hiển thị: <strong className="text-[#0F1A41] font-bold">{filteredProjects.length}</strong> / {projects.length} tài sản
               </span>
 
               {isFiltered && (
                 <button
                   onClick={handleReset}
-                  className="font-mono text-xs text-[#B9887B] hover:text-[#0F1A41] font-bold flex items-center gap-1.5 px-2.5 py-1.5 transition-colors cursor-pointer"
+                  className="font-sans text-xs text-[#B9887B] hover:text-[#0F1A41] font-bold flex items-center gap-1.5 px-2.5 py-1.5 transition-colors cursor-pointer"
                   title="Đặt lại toàn bộ bộ lọc"
                 >
                   <RotateCcw size={12} />
@@ -113,7 +116,7 @@ export default function ProjectsPage({ onOpenModal }) {
           <div className="space-y-4">
             {/* Filter by District */}
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5">
-              <div className="font-mono text-[11px] text-[#0F1A41]/75 uppercase font-bold tracking-wider md:w-36 shrink-0 flex items-center gap-1.5">
+              <div className="font-sans text-[11px] text-[#0F1A41]/75 uppercase font-bold tracking-wider md:w-36 shrink-0 flex items-center gap-1.5">
                 <MapPin size={13} className="text-[#B9887B]" />
                 <span>Khu vực / Quận:</span>
               </div>
@@ -124,7 +127,7 @@ export default function ProjectsPage({ onOpenModal }) {
                     <button
                       key={d.id}
                       onClick={() => setSelectedDistrict(d.id)}
-                      className={`font-mono text-xs px-3.5 py-2 border transition-all cursor-pointer ${
+                      className={`font-sans text-xs px-3.5 py-2 border transition-all cursor-pointer ${
                         isSelected
                           ? 'bg-[#0F1A41] text-white border-[#0F1A41] shadow-xs font-bold'
                           : 'bg-[#F4EFEA]/80 text-[#0F1A41]/75 border-[#0F1A41]/15 hover:border-[#0F1A41] hover:bg-white'
@@ -139,8 +142,8 @@ export default function ProjectsPage({ onOpenModal }) {
 
             {/* Filter by Brand */}
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5 pt-4 border-t border-[#0F1A41]/8">
-              <div className="font-mono text-[11px] text-[#0F1A41]/75 uppercase font-bold tracking-wider md:w-36 shrink-0 flex items-center gap-1.5">
-                <Sparkles size={13} className="text-[#B9887B]" />
+              <div className="font-sans text-[11px] text-[#0F1A41]/75 uppercase font-bold tracking-wider md:w-36 shrink-0 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
                 <span>Dòng thương hiệu:</span>
               </div>
               <div className="flex flex-wrap gap-2 flex-grow items-center">
@@ -150,7 +153,7 @@ export default function ProjectsPage({ onOpenModal }) {
                     <button
                       key={b.id}
                       onClick={() => setSelectedBrand(b.id)}
-                      className={`font-mono text-xs px-3.5 py-2 border transition-all cursor-pointer ${
+                      className={`font-sans text-xs px-3.5 py-2 border transition-all cursor-pointer ${
                         isSelected
                           ? 'bg-[#B9887B] text-white border-[#B9887B] shadow-xs font-bold'
                           : 'bg-[#F4EFEA]/80 text-[#0F1A41]/75 border-[#0F1A41]/15 hover:border-[#B9887B] hover:bg-white'
@@ -177,12 +180,12 @@ export default function ProjectsPage({ onOpenModal }) {
             <h3 className="font-serif text-xl font-bold text-[#0F1A41] mb-2">
               Không tìm thấy dự án phù hợp
             </h3>
-            <p className="text-xs text-[#0F1A41]/70 max-w-md mx-auto mb-6 font-mono leading-relaxed">
+            <p className="text-xs text-[#0F1A41]/70 max-w-md mx-auto mb-6 font-sans leading-relaxed">
               Không có bất động sản nào đáp ứng đồng thời cả khu vực và dòng thương hiệu đã chọn. Quý khách vui lòng điều chỉnh tiêu chí tìm kiếm.
             </p>
             <button
               onClick={handleReset}
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0F1A41] hover:bg-[#B9887B] text-white text-xs font-mono font-bold uppercase tracking-wider transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0F1A41] hover:bg-[#B9887B] text-white text-xs font-sans font-bold uppercase tracking-wider transition-colors cursor-pointer"
             >
               <RotateCcw size={13} />
               <span>Xem tất cả {projects.length} tài sản</span>
@@ -204,12 +207,12 @@ export default function ProjectsPage({ onOpenModal }) {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute top-3 left-3 bg-[#B9887B] text-white text-[9px] font-mono font-bold uppercase tracking-wider px-2.5 py-1">
+                <div className="absolute top-3 left-3 bg-[#B9887B] text-white text-[9px] font-sans font-bold uppercase tracking-wider px-2.5 py-1">
                   {p.tag}
                 </div>
 
-                {p.agodaScore && (
-                  <div className="absolute bottom-3 right-3 bg-[#0F1A41]/90 backdrop-blur-md text-white text-[11px] font-mono px-2.5 py-1 flex items-center gap-1 border border-white/20">
+                {p.agodaScore && p.agodaUrl && (
+                  <div className="absolute bottom-3 right-3 bg-[#0F1A41]/90 backdrop-blur-md text-white text-[11px] font-sans px-2.5 py-1 flex items-center gap-1 border border-white/20">
                     <Star size={12} className="fill-[#C79A3B] text-[#C79A3B]" />
                     <span>{p.agodaScore}</span>
                   </div>
@@ -217,7 +220,7 @@ export default function ProjectsPage({ onOpenModal }) {
 
                 {/* Subtle overlay hint on hover */}
                 <div className="absolute inset-0 bg-[#0F1A41]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="bg-white/95 text-[#0F1A41] text-xs font-mono font-bold px-3 py-1.5 rounded shadow-lg flex items-center gap-1.5">
+                  <span className="bg-white/95 text-[#0F1A41] text-xs font-sans font-bold px-3 py-1.5 rounded shadow-lg flex items-center gap-1.5">
                     <Eye size={13} className="text-[#B9887B]" />
                     Xem trang chi tiết
                   </span>
@@ -226,8 +229,8 @@ export default function ProjectsPage({ onOpenModal }) {
 
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="font-mono text-xs text-[#B9887B] font-bold">{p.brand} COLLECTION</span>
-                  <span className="font-mono text-[10px] text-green-700 bg-green-50 px-2 py-0.5 border border-green-200">
+                  <span className="font-sans text-xs text-[#B9887B] font-bold">{p.brand} COLLECTION</span>
+                  <span className="font-sans text-[10px] text-green-700 bg-green-50 px-2 py-0.5 border border-green-200">
                     Kín phòng {p.occupancy}
                   </span>
                 </div>
@@ -240,25 +243,25 @@ export default function ProjectsPage({ onOpenModal }) {
                 </h3>
 
                 {/* Standardized Information Table */}
-                <div className="space-y-1.5 text-xs text-[#0F1A41]/80 font-mono mb-4 bg-[#F4EFEA] p-3 border-l-2 border-[#B9887B]">
-                  <div className="flex items-start gap-1.5">
-                    <MapPin size={12} className="text-[#B9887B] shrink-0 mt-0.5" />
+                <div className="space-y-2 text-xs text-[#0F1A41]/85 font-sans mb-4 bg-[#FAF9F6] p-3.5 rounded-lg border border-[#0F1A41]/8">
+                  <div className="flex items-start gap-2">
+                    <MapPin size={12} className="text-[#0F1A41]/60 shrink-0 mt-0.5" />
                     <span className="truncate">{p.fullAddress}</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <Building2 size={12} className="text-[#B9887B] shrink-0" />
+                  <div className="flex items-center gap-2">
+                    <Building2 size={12} className="text-[#0F1A41]/60 shrink-0" />
                     <span>Quy mô: <strong>{p.rooms}</strong> ({p.scale})</span>
                   </div>
-                  <div className="text-[11px] text-[#0F1A41]/60">
-                    Gói giải pháp: <span className="text-[#0F1A41] font-semibold">{p.solutionLabel || p.service || 'Quản lý Toàn diện'}</span>
+                  <div className="text-[11px] text-[#0F1A41]/60 pt-1.5 border-t border-[#0F1A41]/6">
+                    Gói giải pháp: <span className="text-[#0F1A41] font-bold">{p.solutionLabel || p.service || 'Quản lý Toàn diện'}</span>
                   </div>
                 </div>
 
-                <p className="text-xs text-[#0F1A41]/70 leading-relaxed mb-6 flex-grow">{p.description}</p>
+                <p className="text-xs text-[#0F1A41]/70 leading-relaxed mb-5 line-clamp-2">{p.description}</p>
 
                 {/* Card Actions Footer */}
                 <div className="border-t border-[#0F1A41]/10 pt-4 mt-auto space-y-3">
-                  <div className="flex justify-between items-center text-xs font-mono">
+                  <div className="flex justify-between items-center text-xs font-sans">
                     <span className="text-[#0F1A41]/60 font-semibold">{p.accompanied}</span>
 
                     {p.agodaUrl ? (
@@ -286,7 +289,7 @@ export default function ProjectsPage({ onOpenModal }) {
                   <button
                     type="button"
                     onClick={() => navigate(`/dang-hoat-dong/${p.slug}`)}
-                    className="w-full py-2.5 px-4 bg-[#0F1A41] hover:bg-[#B9887B] text-white text-xs font-mono font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 rounded cursor-pointer group/btn shadow-xs"
+                    className="w-full py-2.5 px-4 bg-[#0F1A41] hover:bg-[#B9887B] text-white text-xs font-sans font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 rounded cursor-pointer group/btn shadow-xs"
                   >
                     <span>XEM CHI TIẾT DỰ ÁN</span>
                     <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />

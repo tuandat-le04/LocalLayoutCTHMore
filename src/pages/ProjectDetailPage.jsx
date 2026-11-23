@@ -9,14 +9,12 @@ import {
   Quote,
   TrendingUp,
   ShieldCheck,
-  CheckCircle2,
   ChevronRight,
   ArrowLeft,
   X,
   Phone,
   Mail,
   Eye,
-  Sparkles,
   Layers,
   Calendar,
   Share2,
@@ -99,7 +97,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
       {/* 1. Breadcrumb Bar */}
       <div className="w-full bg-[#FAF6EF] border-b border-[#0F1A41]/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#0F1A41]/70 overflow-x-auto whitespace-nowrap">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-sans text-[#0F1A41]/70 overflow-x-auto whitespace-nowrap">
             <button
               onClick={() => navigate('/')}
               className="hover:text-[#B9887B] transition-colors cursor-pointer"
@@ -121,7 +119,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
 
           <button
             onClick={handleShare}
-            className="hidden sm:flex items-center gap-1.5 text-xs font-mono text-[#0F1A41]/70 hover:text-[#B9887B] transition-colors cursor-pointer px-2.5 py-1 rounded hover:bg-black/5"
+            className="hidden sm:flex items-center gap-1.5 text-xs font-sans text-[#0F1A41]/70 hover:text-[#B9887B] transition-colors cursor-pointer px-2.5 py-1 rounded hover:bg-black/5"
             title="Sao chép liên kết"
           >
             {copiedLink ? (
@@ -154,16 +152,16 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute top-4 left-4 flex items-center gap-2">
-              <span className="bg-[#B9887B] text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded shadow-xs">
+              <span className="bg-[#B9887B] text-white text-[10px] font-sans font-bold uppercase tracking-wider px-3 py-1 rounded shadow-xs">
                 {project.brand} COLLECTION
               </span>
-              <span className="bg-emerald-700 text-white text-[10px] font-mono font-semibold px-2.5 py-1 rounded shadow-xs">
+              <span className="bg-emerald-700 text-white text-[10px] font-sans font-semibold px-2.5 py-1 rounded shadow-xs">
                 Kín phòng {project.occupancy}
               </span>
             </div>
 
             <div className="absolute inset-0 bg-[#0F1A41]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <span className="bg-white/95 text-[#0F1A41] text-xs font-mono font-bold px-3.5 py-2 rounded shadow-lg flex items-center gap-2">
+              <span className="bg-white/95 text-[#0F1A41] text-xs font-sans font-bold px-3.5 py-2 rounded shadow-lg flex items-center gap-2">
                 <Eye size={14} className="text-[#B9887B]" />
                 Xem toàn cảnh
               </span>
@@ -189,7 +187,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {isLast && remainingCount > 0 && (
-                    <div className="absolute inset-0 bg-[#0F1A41]/75 backdrop-blur-xs text-white flex flex-col items-center justify-center font-mono transition-colors group-hover:bg-[#0F1A41]/85">
+                    <div className="absolute inset-0 bg-[#0F1A41]/75 backdrop-blur-xs text-white flex flex-col items-center justify-center font-sans transition-colors group-hover:bg-[#0F1A41]/85">
                       <span className="text-xl md:text-2xl font-bold">+{remainingCount + 1}</span>
                       <span className="text-xs tracking-wider uppercase mt-1">Xem thêm ảnh</span>
                     </div>
@@ -209,7 +207,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#0F1A41]/10">
           <div className="max-w-3xl">
             {/* Status Pills */}
-            <div className="flex flex-wrap items-center gap-2.5 mb-3 font-mono text-xs">
+            <div className="flex flex-wrap items-center gap-2.5 mb-3 font-sans text-xs">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
                 Đang vận hành
@@ -228,7 +226,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             </h1>
 
             {/* Address */}
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-mono text-[#0F1A41]/75 mb-4">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-sans text-[#0F1A41]/75 mb-4">
               <MapPin size={15} className="text-[#B9887B] shrink-0" />
               <span>{project.fullAddress}</span>
             </div>
@@ -241,16 +239,16 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
 
           {/* Hero Actions & Agoda Badge */}
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 lg:min-w-[260px]">
-            {project.agodaScore && (
+            {project.agodaScore && project.agodaUrl && (
               <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/15 shadow-xs flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-10 h-10 rounded-lg bg-[#0F1A41] text-white flex flex-col items-center justify-center font-mono shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-[#0F1A41] text-white flex flex-col items-center justify-center font-sans shrink-0">
                     <Star size={13} className="fill-[#C79A3B] text-[#C79A3B]" />
                     <span className="text-[11px] font-bold leading-none mt-0.5">{project.agodaScore.split('/')[0]}</span>
                   </div>
                   <div>
-                    <span className="text-xs font-mono font-bold text-[#0F1A41] block">Agoda Verified</span>
-                    <span className="text-[11px] text-[#0F1A41]/60 font-mono">{project.reviewCount}</span>
+                    <span className="text-xs font-sans font-bold text-[#0F1A41] block">Agoda Verified</span>
+                    <span className="text-[11px] text-[#0F1A41]/60 font-sans">{project.reviewCount}</span>
                   </div>
                 </div>
 
@@ -259,7 +257,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                     href={project.agodaUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs font-mono text-[#B9887B] hover:underline flex items-center gap-0.5 font-bold"
+                    className="text-xs font-sans text-[#B9887B] hover:underline flex items-center gap-0.5 font-bold"
                   >
                     <span>Xem</span>
                     <ArrowUpRight size={13} />
@@ -276,7 +274,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                   scrollToSection('contact');
                 }
               }}
-              className="w-full py-3.5 px-6 bg-[#0F1A41] hover:bg-[#B9887B] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-3.5 px-6 bg-[#0F1A41] hover:bg-[#B9887B] text-white text-xs font-sans font-bold uppercase tracking-wider rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>ĐĂNG KÝ KHẢO SÁT TÀI SẢN</span>
               <ArrowUpRight size={14} />
@@ -288,7 +286,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
       {/* 3. Sticky Sub-Navigation Bar (Project Nav) */}
       <nav className="sticky top-[72px] sm:top-[80px] z-30 bg-white/95 backdrop-blur-md border-y border-[#0F1A41]/10 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-1 sm:gap-6 overflow-x-auto whitespace-nowrap text-xs font-mono font-bold uppercase tracking-wider no-scrollbar touch-pan-x">
+          <div className="flex items-center gap-1 sm:gap-6 overflow-x-auto whitespace-nowrap text-xs font-sans font-bold uppercase tracking-wider no-scrollbar touch-pan-x">
             {[
               { id: 'overview', label: 'Tổng quan' },
               { id: 'specs', label: 'Thông số kỹ thuật' },
@@ -318,7 +316,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                 scrollToSection('contact');
               }
             }}
-            className="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 bg-[#B9887B] hover:bg-[#A37467] text-white text-[11px] font-mono font-bold uppercase tracking-wider rounded-lg transition-colors cursor-pointer"
+            className="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 bg-[#B9887B] hover:bg-[#A37467] text-white text-[11px] font-sans font-bold uppercase tracking-wider rounded-lg transition-colors cursor-pointer"
           >
             <span>Trao đổi cùng CityHouse</span>
             <ChevronRight size={13} />
@@ -341,7 +339,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               key={idx}
               className="bg-white p-4 rounded-xl border border-[#0F1A41]/10 text-center flex flex-col justify-center"
             >
-              <span className="font-mono text-[10px] text-[#0F1A41]/60 uppercase tracking-wider block mb-1">
+              <span className="font-sans text-[10px] text-[#0F1A41]/60 uppercase tracking-wider block mb-1">
                 {item.label}
               </span>
               <strong className="text-xs sm:text-sm font-semibold text-[#0F1A41]">
@@ -358,7 +356,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
           {/* Section Header */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-6 border-b border-[#0F1A41]/10">
             <div>
-              <div className="flex items-center gap-2 text-[#B9887B] font-mono text-xs font-bold uppercase tracking-wider mb-1">
+              <div className="flex items-center gap-2 text-[#B9887B] font-sans text-xs font-bold uppercase tracking-wider mb-1">
                 <Building2 size={15} />
                 <span>THÔNG SỐ TIÊU CHUẨN — DỰ ÁN #{project.id}</span>
               </div>
@@ -366,7 +364,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                 Hồ sơ kỹ thuật & Mô hình vận hành
               </h2>
             </div>
-            <span className="font-mono text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3.5 py-1.5 rounded-full border border-[#0F1A41]/15 self-start sm:self-auto">
+            <span className="font-sans text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3.5 py-1.5 rounded-full border border-[#0F1A41]/15 self-start sm:self-auto">
               Chuẩn hóa 4 trụ cột vận hành
             </span>
           </div>
@@ -378,10 +376,10 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-full bg-[#0F1A41] text-white text-[10px] font-mono font-bold flex items-center justify-center">
+                    <span className="w-5 h-5 rounded-full bg-[#0F1A41] text-white text-[10px] font-sans font-bold flex items-center justify-center">
                       01
                     </span>
-                    <span className="font-mono text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
                       Quy mô & Kiến trúc
                     </span>
                   </div>
@@ -400,7 +398,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-sans">
                 <span className="bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] flex items-center gap-1.5 font-semibold shadow-2xs">
                   <Maximize2 size={12} className="text-[#B9887B]" />
                   Tổng diện tích: <strong>{project.scale}</strong>
@@ -416,10 +414,10 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-full bg-[#B9887B] text-white text-[10px] font-mono font-bold flex items-center justify-center">
+                    <span className="w-5 h-5 rounded-full bg-[#B9887B] text-white text-[10px] font-sans font-bold flex items-center justify-center">
                       02
                     </span>
-                    <span className="font-mono text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
                       Gói giải pháp CityHouse
                     </span>
                   </div>
@@ -438,7 +436,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-sans">
                 <span className="bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] flex items-center gap-1.5 font-semibold shadow-2xs">
                   <Building2 size={12} className="text-[#B9887B]" />
                   Phân khúc: <strong>{project.propertyType}</strong>
@@ -454,10 +452,10 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-full bg-[#0F1A41] text-white text-[10px] font-mono font-bold flex items-center justify-center">
+                    <span className="w-5 h-5 rounded-full bg-[#0F1A41] text-white text-[10px] font-sans font-bold flex items-center justify-center">
                       03
                     </span>
-                    <span className="font-mono text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
                       Mô hình hợp tác
                     </span>
                   </div>
@@ -476,7 +474,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+              <div className="pt-3 border-t border-[#0F1A41]/10 flex flex-wrap items-center justify-between gap-2 text-xs font-sans">
                 <span className="bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] flex items-center gap-1.5 font-semibold shadow-2xs">
                   <Calendar size={12} className="text-[#B9887B]" />
                   Thời gian: <strong>{project.accompanied}</strong>
@@ -492,15 +490,15 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-full bg-emerald-700 text-white text-[10px] font-mono font-bold flex items-center justify-center">
+                    <span className="w-5 h-5 rounded-full bg-emerald-700 text-white text-[10px] font-sans font-bold flex items-center justify-center">
                       04
                     </span>
-                    <span className="font-mono text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41]/70 uppercase tracking-wider">
                       Vai trò triển khai
                     </span>
                   </div>
                   <div className="w-8 h-8 rounded-lg bg-white border border-[#0F1A41]/10 flex items-center justify-center text-emerald-700">
-                    <CheckCircle2 size={16} />
+                    <Check size={15} strokeWidth={2.5} />
                   </div>
                 </div>
 
@@ -519,7 +517,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                   {(project.role || '').split(',').map((r, i) => (
                     <span
                       key={i}
-                      className="inline-flex items-center gap-1.5 text-xs font-mono bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] shadow-2xs font-semibold"
+                      className="inline-flex items-center gap-1.5 text-xs font-sans bg-white px-2.5 py-1 rounded border border-[#0F1A41]/10 text-[#0F1A41] shadow-2xs font-semibold"
                     >
                       <Check size={11} className="text-emerald-600 stroke-[3]" />
                       <span>{r.trim()}</span>
@@ -534,7 +532,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
           <div className="mt-6 bg-gradient-to-r from-[#0F1A41] to-[#1E2E62] text-white p-5 md:p-6 rounded-xl flex items-start gap-4 shadow-sm">
             <TrendingUp size={24} className="text-[#B9887B] shrink-0 mt-0.5" />
             <div>
-              <span className="font-mono text-xs text-[#B9887B] uppercase tracking-wider font-bold block mb-1">
+              <span className="font-sans text-xs text-[#B9887B] uppercase tracking-wider font-bold block mb-1">
                 Hiệu quả kinh doanh & Dòng tiền thực tế
               </span>
               <p className="text-sm md:text-base text-white/95 leading-relaxed">
@@ -551,14 +549,14 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
           <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#0F1A41]/10 shadow-xs">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-[#0F1A41]/10">
               <div>
-                <span className="font-mono text-xs text-[#B9887B] font-bold uppercase tracking-wider block mb-1">
+                <span className="font-sans text-xs text-[#B9887B] font-bold uppercase tracking-wider block mb-1">
                   CASE STUDY #{project.id} — DỮ LIỆU ĐO LƯỜNG THỰC TẾ
                 </span>
                 <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0F1A41]">
                   Phân tích bài toán đầu tư & Chiến lược triển khai
                 </h2>
               </div>
-              <span className="font-mono text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3 py-1.5 rounded-full border border-[#0F1A41]/15 self-start">
+              <span className="font-sans text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3 py-1.5 rounded-full border border-[#0F1A41]/15 self-start">
                 Tài sản đang vận hành hiệu quả
               </span>
             </div>
@@ -566,41 +564,61 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             {/* 4 Strategic Pillars */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               {/* Pillar 1 */}
-              <div className="p-5 bg-[#FAF6EF] rounded-xl border-l-4 border-[#0F1A41]">
-                <strong className="font-mono text-xs text-[#0F1A41] uppercase tracking-wider block mb-2">
-                  1. Bối cảnh ban đầu:
-                </strong>
-                <p className="text-xs sm:text-sm text-[#0F1A41]/85 leading-relaxed">
+              <div className="p-5 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/10 shadow-2xs">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-5 h-5 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] text-[10px] font-sans font-bold flex items-center justify-center">
+                    01
+                  </span>
+                  <strong className="font-sans text-xs text-[#0F1A41] uppercase tracking-wider">
+                    Bối cảnh ban đầu:
+                  </strong>
+                </div>
+                <p className="text-xs sm:text-sm text-[#0F1A41]/85 leading-relaxed pl-7">
                   {project.caseStudy.context}
                 </p>
               </div>
 
               {/* Pillar 2 */}
-              <div className="p-5 bg-amber-50/70 rounded-xl border-l-4 border-amber-600">
-                <strong className="font-mono text-xs text-amber-900 uppercase tracking-wider block mb-2">
-                  2. Thách thức & Điểm nghẽn của Chủ đầu tư:
-                </strong>
-                <p className="text-xs sm:text-sm text-amber-950/85 leading-relaxed">
+              <div className="p-5 bg-rose-50/50 rounded-xl border border-rose-200/60 shadow-2xs">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-5 h-5 rounded-full bg-rose-200/80 text-rose-900 text-[10px] font-sans font-bold flex items-center justify-center">
+                    02
+                  </span>
+                  <strong className="font-sans text-xs text-rose-900 uppercase tracking-wider">
+                    Thách thức & Điểm nghẽn của Chủ đầu tư:
+                  </strong>
+                </div>
+                <p className="text-xs sm:text-sm text-rose-950/85 leading-relaxed pl-7">
                   {project.caseStudy.problem}
                 </p>
               </div>
 
               {/* Pillar 3 */}
-              <div className="p-5 bg-[#FAF6EF] rounded-xl border-l-4 border-[#B9887B]">
-                <strong className="font-mono text-xs text-[#B9887B] uppercase tracking-wider block mb-2">
-                  3. Giải pháp chiến lược từ CityHouse More:
-                </strong>
-                <p className="text-xs sm:text-sm text-[#0F1A41]/85 leading-relaxed">
+              <div className="p-5 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/10 shadow-2xs">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-5 h-5 rounded-full bg-[#0F1A41] text-white text-[10px] font-sans font-bold flex items-center justify-center">
+                    03
+                  </span>
+                  <strong className="font-sans text-xs text-[#0F1A41] uppercase tracking-wider font-bold">
+                    Giải pháp chiến lược từ CityHouse More:
+                  </strong>
+                </div>
+                <p className="text-xs sm:text-sm text-[#0F1A41]/85 leading-relaxed pl-7">
                   {project.caseStudy.solution}
                 </p>
               </div>
 
               {/* Pillar 4 */}
-              <div className="p-5 bg-white rounded-xl border-l-4 border-slate-500 border border-[#0F1A41]/10">
-                <strong className="font-mono text-xs text-slate-800 uppercase tracking-wider block mb-2">
-                  4. Phạm vi triển khai thực tế:
-                </strong>
-                <p className="text-xs sm:text-sm text-[#0F1A41]/85 leading-relaxed">
+              <div className="p-5 bg-white rounded-xl border border-[#0F1A41]/10 shadow-2xs">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-5 h-5 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] text-[10px] font-sans font-bold flex items-center justify-center">
+                    04
+                  </span>
+                  <strong className="font-sans text-xs text-slate-800 uppercase tracking-wider">
+                    Phạm vi triển khai thực tế:
+                  </strong>
+                </div>
+                <p className="text-xs sm:text-sm text-[#0F1A41]/85 leading-relaxed pl-7">
                   {project.caseStudy.scope}
                 </p>
               </div>
@@ -608,14 +626,19 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
 
             {/* Pillar 5: Measurable Result Metrics */}
             {project.caseStudy.resultMetrics && project.caseStudy.resultMetrics.length > 0 && (
-              <div className="p-5 bg-[#FAF6EF] rounded-xl border border-[#B9887B]/30 mb-6">
-                <strong className="font-mono text-xs text-[#B9887B] uppercase tracking-wider block mb-3">
-                  5. Các chỉ số đo lường hiệu quả định lượng:
-                </strong>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="p-5 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/10 mb-6 shadow-2xs">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-5 h-5 rounded-full bg-emerald-600 text-white text-[10px] font-sans font-bold flex items-center justify-center">
+                    05
+                  </span>
+                  <strong className="font-sans text-xs text-[#0F1A41] uppercase tracking-wider font-bold">
+                    Các chỉ số đo lường hiệu quả định lượng:
+                  </strong>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-7">
                   {project.caseStudy.resultMetrics.map((m, idx) => (
-                    <div key={idx} className="bg-white p-4 rounded-lg text-center border border-[#B9887B]/20">
-                      <span className="font-mono text-[11px] text-[#0F1A41]/65 uppercase block mb-1">
+                    <div key={idx} className="bg-white p-4 rounded-lg text-center border border-[#0F1A41]/10 shadow-2xs">
+                      <span className="font-sans text-[11px] text-[#0F1A41]/65 uppercase block mb-1">
                         {m.label}
                       </span>
                       <strong className="text-base sm:text-lg font-bold text-[#0F1A41] block">
@@ -636,8 +659,8 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                     "{project.caseStudy.ownerFeedback}"
                   </p>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={15} className="text-[#B9887B]" />
-                    <span className="font-mono text-xs text-[#B9887B] font-bold uppercase tracking-wider">
+                    <Check size={14} strokeWidth={2.5} className="text-[#B9887B]" />
+                    <span className="font-sans text-xs text-[#B9887B] font-bold uppercase tracking-wider">
                       Nhận xét xác thực từ Chủ sở hữu tòa nhà {project.name}
                     </span>
                   </div>
@@ -653,7 +676,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
         <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#0F1A41]/10 shadow-xs">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div>
-              <span className="font-mono text-xs text-[#B9887B] font-bold uppercase tracking-wider block mb-1">
+              <span className="font-sans text-xs text-[#B9887B] font-bold uppercase tracking-wider block mb-1">
                 KHÔNG GIAN & TIÊU CHUẨN THỰC TẾ
               </span>
               <h2 className="font-serif text-2xl font-bold text-[#0F1A41]">
@@ -661,7 +684,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               </h2>
             </div>
 
-            <div className="inline-flex p-1 bg-[#FAF6EF] rounded-lg border border-[#0F1A41]/10 text-xs font-mono">
+            <div className="inline-flex p-1 bg-[#FAF6EF] rounded-lg border border-[#0F1A41]/10 text-xs font-sans">
               <button
                 type="button"
                 onClick={() => setActiveGalleryTab('all')}
@@ -713,7 +736,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-[#0F1A41]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="bg-white/95 text-[#0F1A41] text-xs font-mono font-bold px-3 py-1.5 rounded shadow flex items-center gap-1.5">
+                  <span className="bg-white/95 text-[#0F1A41] text-xs font-sans font-bold px-3 py-1.5 rounded shadow flex items-center gap-1.5">
                     <Eye size={13} className="text-[#B9887B]" />
                     Xem ảnh lớn
                   </span>
@@ -736,7 +759,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-8">
               CityHouse More khảo sát hiện trạng tài sản, xác định điểm nghẽn khai thác và đề xuất phương án tạo dòng tiền tối ưu hoàn toàn miễn phí cho Anh/Chị.
             </p>
-            <div className="contact-detail-list space-y-4 font-mono text-xs">
+            <div className="contact-detail-list space-y-4 font-sans text-xs">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-[#B9887B]/20 flex items-center justify-center text-[#B9887B]">
                   <Phone size={15} />
@@ -779,7 +802,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-16">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <span className="font-mono text-xs text-[#B9887B] font-bold uppercase tracking-wider block mb-1">
+            <span className="font-sans text-xs text-[#B9887B] font-bold uppercase tracking-wider block mb-1">
               DANH MỤC THAM KHẢO
             </span>
             <h2 className="font-serif text-2xl font-bold text-[#0F1A41]">
@@ -789,7 +812,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
 
           <button
             onClick={() => navigate('/danh-muc-tai-san')}
-            className="text-xs font-mono font-bold text-[#0F1A41] hover:text-[#B9887B] flex items-center gap-1 cursor-pointer transition-colors"
+            className="text-xs font-sans font-bold text-[#0F1A41] hover:text-[#B9887B] flex items-center gap-1 cursor-pointer transition-colors"
           >
             <span>Xem tất cả 35+ tòa nhà</span>
             <ChevronRight size={14} />
@@ -809,11 +832,11 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                   alt={rel.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3 bg-[#B9887B] text-white text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                <div className="absolute top-3 left-3 bg-[#B9887B] text-white text-[9px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded">
                   {rel.brand} COLLECTION
                 </div>
-                {rel.agodaScore && (
-                  <div className="absolute bottom-3 right-3 bg-[#0F1A41]/90 backdrop-blur-md text-white text-[11px] font-mono px-2 py-0.5 rounded flex items-center gap-1">
+                {rel.agodaScore && rel.agodaUrl && (
+                  <div className="absolute bottom-3 right-3 bg-[#0F1A41]/90 backdrop-blur-md text-white text-[11px] font-sans px-2 py-0.5 rounded flex items-center gap-1">
                     <Star size={11} className="fill-[#C79A3B] text-[#C79A3B]" />
                     <span>{rel.agodaScore}</span>
                   </div>
@@ -821,7 +844,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               </div>
 
               <div className="p-5 flex flex-col flex-grow">
-                <div className="flex items-center justify-between text-xs font-mono mb-1.5">
+                <div className="flex items-center justify-between text-xs font-sans mb-1.5">
                   <span className="text-[#0F1A41]/60">{rel.district}</span>
                   <span className="text-emerald-700 font-bold">Kín phòng {rel.occupancy}</span>
                 </div>
@@ -834,7 +857,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                   {rel.description}
                 </p>
 
-                <div className="border-t border-[#0F1A41]/10 pt-3 flex items-center justify-between text-xs font-mono font-bold text-[#0F1A41] group-hover:text-[#B9887B]">
+                <div className="border-t border-[#0F1A41]/10 pt-3 flex items-center justify-between text-xs font-sans font-bold text-[#0F1A41] group-hover:text-[#B9887B]">
                   <span>XEM CHI TIẾT DỰ ÁN</span>
                   <ArrowUpRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                 </div>
@@ -860,7 +883,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
           </button>
 
           {/* Photo Counter */}
-          <div className="absolute top-5 left-5 font-mono text-xs text-white/80 bg-white/10 px-3 py-1 rounded-full z-10">
+          <div className="absolute top-5 left-5 font-sans text-xs text-white/80 bg-white/10 px-3 py-1 rounded-full z-10">
             {lightboxIndex + 1} / {allImages.length}
           </div>
 

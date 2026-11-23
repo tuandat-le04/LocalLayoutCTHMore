@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, History, Award, CheckCircle2, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, History, ChevronRight } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext.jsx';
 
 const CONDENSED_MILESTONES = [
@@ -99,10 +99,10 @@ export default function HistoryHighlight() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41] via-[#0F1A41]/40 to-transparent"></div>
                   <div className="absolute top-2.5 left-2.5 flex items-center gap-2">
-                    <span className="font-mono text-sm text-[#B9887B] font-bold bg-[#0F1A41]/90 px-2 py-0.5 rounded border border-[#B9887B]/40">
+                    <span className="font-sans text-sm text-[#B9887B] font-bold bg-[#0F1A41]/90 px-2 py-0.5 rounded border border-[#B9887B]/40">
                       {item.year}
                     </span>
-                    <span className="text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 bg-black/60 text-white/90 rounded backdrop-blur-xs">
+                    <span className="text-[9px] font-sans uppercase tracking-wider px-2 py-0.5 bg-black/60 text-white/90 rounded backdrop-blur-xs">
                       {item.tag}
                     </span>
                   </div>
