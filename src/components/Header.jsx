@@ -190,7 +190,7 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
 
             <a
               href="tel:0878253545"
-              className="w-full py-3 px-4 text-center font-bold text-xs uppercase tracking-wider text-white flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/20 hover:border-[#B9887B] transition-colors"
+              className="w-full py-3.5 px-4 text-center font-bold text-xs uppercase tracking-wider text-white flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/20 hover:border-[#B9887B] transition-colors"
             >
               <Phone size={14} className="text-[#B9887B]" />
               <span>HOTLINE 24/7: 0878 253 545</span>

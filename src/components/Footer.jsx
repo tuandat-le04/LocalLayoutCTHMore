@@ -48,7 +48,7 @@ export default function Footer({ onOpenModal }) {
                 if (onOpenModal) onOpenModal();
                 else navigate('/contact');
               }}
-              className="flex items-center gap-2 px-6 sm:px-7 py-3.5 text-xs font-bold uppercase tracking-[0.15em] rounded-full transition-all duration-300 shadow-xl cursor-pointer hover:shadow-2xl"
+              className="w-[260px] max-w-full shrink-0 flex items-center justify-center gap-2 px-6 py-3.5 min-h-[46px] text-xs font-bold uppercase tracking-[0.15em] rounded-full transition-all duration-300 shadow-xl cursor-pointer hover:shadow-2xl whitespace-nowrap"
               style={{
                 backgroundColor: '#B9887B',
                 color: '#FFFFFF',
@@ -56,16 +56,16 @@ export default function Footer({ onOpenModal }) {
                 boxShadow: '0 4px 20px rgba(185, 136, 123, 0.45)',
               }}
             >
-              <Calendar size={15} className="text-white" />
+              <Calendar size={15} className="text-white shrink-0" />
               <span>ĐẶT LỊCH TƯ VẤN NGAY</span>
             </button>
 
             {/* Action 2: Tải hồ sơ năng lực PDF */}
             <button
               onClick={handleDownloadProfile}
-              className="flex items-center gap-2 px-5 sm:px-6 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-white border border-white/40 hover:border-[#B9887B] hover:text-[#B9887B] transition-all duration-300 rounded-full cursor-pointer"
+              className="w-[260px] max-w-full shrink-0 flex items-center justify-center gap-2 px-6 py-3.5 min-h-[46px] text-xs font-bold uppercase tracking-[0.15em] text-white border border-white/40 hover:border-[#B9887B] hover:text-[#B9887B] transition-all duration-300 rounded-full cursor-pointer whitespace-nowrap"
             >
-              <Download size={15} />
+              <Download size={15} className="shrink-0" />
               <span>{downloadSuccess ? "ĐANG TẢI XUỐNG..." : "TẢI HỒ SƠ NĂNG LỰC"}</span>
             </button>
           </div>

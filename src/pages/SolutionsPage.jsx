@@ -230,7 +230,7 @@ export default function SolutionsPage({ onOpenModal }) {
             </button>
             <a
               href="#partnership-models"
-              className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 text-xs font-bold uppercase tracking-[0.15em] border border-white/40 text-white hover:border-[#B9887B] hover:text-[#B9887B] transition-all rounded-full font-sans"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 text-xs font-bold uppercase tracking-[0.15em] border border-white/40 text-white hover:border-[#B9887B] hover:text-[#B9887B] transition-all rounded-full font-sans"
             >
               <span>3 MÔ HÌNH HỢP TÁC</span>
               <ChevronRight size={16} />
