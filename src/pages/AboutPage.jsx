@@ -259,7 +259,7 @@ export default function AboutPage() {
                   "Xây dựng một tòa nhà đẹp là chưa đủ, biết cách thổi hồn và vận hành nó để tạo ra dòng tiền bền bỉ mới là chìa khóa giữ gìn gia sản."
                 </p>
                 <span className="font-sans text-[10px] uppercase tracking-wider text-[#0F1A41]/60 font-bold block mt-1">
-                  — Ban Sáng Lập CityHouse More
+                  - Ban Sáng Lập CityHouse More
                 </span>
               </div>
             </div>
