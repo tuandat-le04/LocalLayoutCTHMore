@@ -463,7 +463,7 @@ export default function CareersPage({ onOpenModal }) {
 
           {/* 3 Candidate Audience Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 max-w-3xl">
-            <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
+            <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
               <span className="text-[11px] font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 01 · Thực Tập Sinh
               </span>
@@ -472,7 +472,7 @@ export default function CareersPage({ onOpenModal }) {
               </p>
             </div>
 
-            <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
+            <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
               <span className="text-[11px] font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 02 · Mới Tốt Nghiệp
               </span>
@@ -481,7 +481,7 @@ export default function CareersPage({ onOpenModal }) {
               </p>
             </div>
 
-            <div className="p-4 rounded bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
+            <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10 hover:border-[#B9887B]/50 transition-colors">
               <span className="text-[11px] font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-1">
                 03 · Có Kinh Nghiệm
               </span>
@@ -668,7 +668,7 @@ export default function CareersPage({ onOpenModal }) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`text-xs font-sans px-4 py-2.5 whitespace-nowrap rounded font-semibold transition-all cursor-pointer ${
+                className={`text-xs font-sans px-4 py-2.5 whitespace-nowrap rounded-full font-semibold transition-all cursor-pointer ${
                   activeTab === tab.id
                     ? 'bg-[#0F1A41] text-white shadow-sm'
                     : 'bg-white text-[#0F1A41]/70 hover:bg-[#B9887B]/15 hover:text-[#0F1A41] border border-[#0F1A41]/10'
@@ -687,7 +687,7 @@ export default function CareersPage({ onOpenModal }) {
               return (
                 <div
                   key={job.id}
-                  className="bg-white rounded-lg border border-[#0F1A41]/10 overflow-hidden shadow-xs hover:border-[#B9887B]/50 transition-all duration-300"
+                  className="bg-white rounded-2xl border border-[#0F1A41]/10 overflow-hidden shadow-xs hover:border-[#B9887B]/50 transition-all duration-300"
                 >
                   {/* Job Card Header */}
                   <div
@@ -697,12 +697,12 @@ export default function CareersPage({ onOpenModal }) {
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-2 text-xs">
                         <span className="font-sans font-bold text-[#B9887B] tracking-wider">
-                          {job.code} //
+                          {job.code} ·
                         </span>
-                        <span className="px-2.5 py-0.5 rounded bg-[#0F1A41]/5 text-[#0F1A41] font-sans font-medium text-[11px]">
+                        <span className="px-2.5 py-0.5 rounded-full bg-[#0F1A41]/5 text-[#0F1A41] font-sans font-medium text-[11px]">
                           {job.categoryLabel}
                         </span>
-                        <span className="px-2.5 py-0.5 rounded bg-[#B9887B]/15 text-[#B9887B] font-sans font-semibold text-[11px]">
+                        <span className="px-2.5 py-0.5 rounded-full bg-[#B9887B]/15 text-[#B9887B] font-sans font-semibold text-[11px]">
                           {job.experienceLabel}
                         </span>
                         <span className="text-gray-400">·</span>
@@ -737,7 +737,7 @@ export default function CareersPage({ onOpenModal }) {
                           setSelectedJobForModal(job);
                           setCandidateForm((prev) => ({ ...prev, position: job.title }));
                         }}
-                        className="solid-btn px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded transition-all cursor-pointer shadow-sm hover:shadow"
+                        className="solid-btn px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-full transition-all cursor-pointer shadow-sm hover:shadow"
                         style={{
                           backgroundColor: '#B9887B',
                           color: '#FFFFFF',

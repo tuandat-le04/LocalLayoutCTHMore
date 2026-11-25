@@ -148,10 +148,11 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
 
               {/* Top Badges */}
               <div className="absolute top-3 left-3 flex items-center gap-2">
-                <span className="bg-[#0F1A41]/85 backdrop-blur-md text-white text-[10px] font-sans px-2.5 py-1 rounded border border-white/20">
+                <span className="bg-[#0F1A41]/85 backdrop-blur-md text-white text-[10px] font-sans px-2.5 py-1 rounded-full border border-white/20">
                   {project.tag}
                 </span>
-                <span className="bg-emerald-700/90 backdrop-blur-md text-white text-[10px] font-sans px-2.5 py-1 rounded border border-emerald-400/30">
+                <span className="bg-[#0F1A41]/90 backdrop-blur-md text-white text-[10px] font-sans px-2.5 py-1 rounded-full border border-[#C79A3B]/40 inline-flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C79A3B]"></span>
                   Kín phòng {project.occupancy}
                 </span>
               </div>
@@ -233,21 +234,24 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {/* Pillar 1 */}
-              <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+              <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="font-sans text-[10px] text-[#0F1A41]/60 uppercase font-bold flex items-center gap-1.5">
-                      <span className="w-4 h-4 rounded-full bg-[#0F1A41] text-white text-[9px] flex items-center justify-center">01</span>
-                      Quy mô và Kiến trúc
-                    </span>
-                    <Layers size={13} className="text-[#0F1A41]/50" />
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-serif italic text-sm font-bold text-[#B9887B] leading-none">01</span>
+                      <span className="text-[#0F1A41]/20 text-xs">/</span>
+                      <span className="font-sans text-[10px] text-[#0F1A41]/65 uppercase font-bold tracking-[0.14em]">
+                        Quy mô & Kiến trúc
+                      </span>
+                    </div>
+                    <Layers size={13} className="text-[#0F1A41]/35" />
                   </div>
-                  <p className="text-sm font-bold text-[#0F1A41] mb-1">
+                  <h4 className="font-serif text-base font-bold text-[#0F1A41] mb-1">
                     {project.rooms}
-                  </p>
+                  </h4>
                 </div>
                 <div className="pt-2 border-t border-[#0F1A41]/8 flex items-center justify-between text-xs font-sans">
-                  <span className="text-[#0F1A41]/80 font-semibold flex items-center gap-1">
+                  <span className="text-[#0F1A41]/80 font-medium flex items-center gap-1">
                     <Maximize2 size={11} className="text-[#B9887B]" />
                     {project.scale}
                   </span>
@@ -256,21 +260,24 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
               </div>
 
               {/* Pillar 2 */}
-              <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+              <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="font-sans text-[10px] text-[#B9887B] uppercase font-bold flex items-center gap-1.5">
-                      <span className="w-4 h-4 rounded-full bg-[#B9887B] text-white text-[9px] flex items-center justify-center">02</span>
-                      Gói giải pháp
-                    </span>
-                    <Briefcase size={13} className="text-[#B9887B]/60" />
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-serif italic text-sm font-bold text-[#B9887B] leading-none">02</span>
+                      <span className="text-[#0F1A41]/20 text-xs">/</span>
+                      <span className="font-sans text-[10px] text-[#0F1A41]/65 uppercase font-bold tracking-[0.14em]">
+                        Gói giải pháp
+                      </span>
+                    </div>
+                    <Briefcase size={13} className="text-[#0F1A41]/35" />
                   </div>
-                  <p className="text-sm font-bold text-[#B9887B] mb-1">
+                  <h4 className="font-serif text-base font-bold text-[#0F1A41] mb-1">
                     {project.solutionLabel || project.service || 'Quản lý Vận hành Toàn diện'}
-                  </p>
+                  </h4>
                 </div>
                 <div className="pt-2 border-t border-[#0F1A41]/8 flex items-center justify-between text-xs font-sans">
-                  <span className="text-[#0F1A41]/80 font-semibold truncate">
+                  <span className="text-[#0F1A41]/80 font-medium truncate">
                     {project.propertyType}
                   </span>
                   <span className="text-[10px] text-[#0F1A41]/55">{project.brand}</span>
@@ -278,47 +285,56 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
               </div>
 
               {/* Pillar 3 */}
-              <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+              <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="font-sans text-[10px] text-[#0F1A41]/60 uppercase font-bold flex items-center gap-1.5">
-                      <span className="w-4 h-4 rounded-full bg-[#0F1A41] text-white text-[9px] flex items-center justify-center">03</span>
-                      Mô hình hợp tác
-                    </span>
-                    <Handshake size={13} className="text-[#0F1A41]/50" />
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-serif italic text-sm font-bold text-[#B9887B] leading-none">03</span>
+                      <span className="text-[#0F1A41]/20 text-xs">/</span>
+                      <span className="font-sans text-[10px] text-[#0F1A41]/65 uppercase font-bold tracking-[0.14em]">
+                        Mô hình hợp tác
+                      </span>
+                    </div>
+                    <Handshake size={13} className="text-[#0F1A41]/35" />
                   </div>
-                  <p className="text-sm font-bold text-[#0F1A41] mb-1">
+                  <h4 className="font-serif text-base font-bold text-[#0F1A41] mb-1">
                     {project.model}
-                  </p>
+                  </h4>
                 </div>
                 <div className="pt-2 border-t border-[#0F1A41]/8 flex items-center justify-between text-xs font-sans">
-                  <span className="text-[#0F1A41]/80 font-semibold flex items-center gap-1">
+                  <span className="text-[#0F1A41]/80 font-medium flex items-center gap-1">
                     <Calendar size={11} className="text-[#B9887B]" />
                     {project.accompanied}
                   </span>
-                  <span className="text-[10px] text-green-700 bg-green-50 px-1.5 py-0.5 rounded border border-green-200">Ổn định</span>
+                  <span className="inline-flex items-center gap-1 text-[10px] text-[#0F1A41]/60 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C79A3B]"></span>
+                    Ổn định
+                  </span>
                 </div>
               </div>
 
               {/* Pillar 4 */}
-              <div className="bg-white p-3.5 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+              <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="font-sans text-[10px] text-emerald-700 uppercase font-bold flex items-center gap-1.5">
-                      <span className="w-4 h-4 rounded-full bg-emerald-700 text-white text-[9px] flex items-center justify-center">04</span>
-                      Vai trò triển khai
-                    </span>
-                    <Check size={13} strokeWidth={2.5} className="text-emerald-700" />
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-serif italic text-sm font-bold text-[#B9887B] leading-none">04</span>
+                      <span className="text-[#0F1A41]/20 text-xs">/</span>
+                      <span className="font-sans text-[10px] text-[#0F1A41]/65 uppercase font-bold tracking-[0.14em]">
+                        Vai trò triển khai
+                      </span>
+                    </div>
+                    <Check size={13} className="text-[#0F1A41]/35" />
                   </div>
-                  <p className="text-sm font-bold text-[#0F1A41] mb-1">
+                  <h4 className="font-serif text-base font-bold text-[#0F1A41] mb-1">
                     Trách nhiệm trọn gói
-                  </p>
+                  </h4>
                 </div>
                 <div className="pt-2 border-t border-[#0F1A41]/8">
                   <div className="flex flex-wrap gap-1">
                     {(project.role || '').split(',').map((r, i) => (
-                      <span key={i} className="inline-flex items-center gap-1 text-[11px] font-sans bg-[#FAF9F6] px-1.5 py-0.5 rounded border border-[#0F1A41]/10 text-[#0F1A41]">
-                        <Check size={9} className="text-emerald-600 stroke-[3]" />
+                      <span key={i} className="inline-flex items-center gap-1 text-[10.5px] font-sans bg-[#FAF6EF] px-2 py-0.5 rounded-full border border-[#0F1A41]/10 text-[#0F1A41]/80 font-medium">
+                        <span className="w-1 h-1 rounded-full bg-[#B9887B]"></span>
                         <span>{r.trim()}</span>
                       </span>
                     ))}
@@ -341,127 +357,126 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
             </div>
           </div>
 
-          {/* Deep-Dive Case Study: 5 Pillars */}
+          {/* Deep-Dive Case Study: Editorial Dossier */}
           {project.caseStudy && (
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-sans text-xs font-bold text-[#0F1A41] uppercase tracking-wider flex items-center gap-2">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-sans text-xs font-bold text-[#0F1A41] uppercase tracking-[0.15em] flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
-                  Phân tích Case Study và Bài toán đầu tư
+                  Phân tích Case Study & Bài toán đầu tư
                 </h3>
-                <span className="font-sans text-[10px] text-[#0F1A41]/50 bg-white px-2 py-0.5 rounded border border-[#0F1A41]/10">
-                  DỮ LIỆU ĐO LƯỜNG THỰC TẾ
+                <span className="font-sans text-[10px] font-semibold uppercase tracking-wider text-[#B9887B] bg-white px-2.5 py-1 rounded-full border border-[#0F1A41]/10">
+                  Dữ liệu đo lường thực tế
                 </span>
               </div>
 
-              <div className="space-y-3.5">
-                {/* 1. Context */}
-                <div className="bg-[#FAF9F6] p-4 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="w-5 h-5 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] text-[10px] font-sans font-bold flex items-center justify-center">
+              {/* Executive KPI Strip */}
+              {project.caseStudy.resultMetrics && project.caseStudy.resultMetrics.length > 0 && (
+                <div className="bg-white rounded-xl border border-[#0F1A41]/10 p-5 shadow-2xs">
+                  <div className="flex items-center gap-2 pb-3 mb-4 border-b border-[#0F1A41]/8">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#C79A3B]"></span>
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em]">
+                      Kết quả đo lường định lượng
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#0F1A41]/10">
+                    {project.caseStudy.resultMetrics.map((metric, idx) => (
+                      <div
+                        key={idx}
+                        className="py-2.5 sm:py-1 sm:px-4 first:pt-0 sm:first:pl-0 last:pb-0 sm:last:pr-0 text-center sm:text-left"
+                      >
+                        <span className="font-sans text-[10px] text-[#0F1A41]/55 uppercase tracking-wider font-semibold block mb-1">
+                          {metric.label}
+                        </span>
+                        <strong className="font-serif text-base sm:text-lg font-bold text-[#0F1A41] block leading-snug">
+                          {metric.val}
+                        </strong>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* 4 Narrative Pillars in 2x2 Editorial Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                {/* 01. Context */}
+                <div className="bg-white p-4.5 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
+                  <div className="flex items-baseline gap-2.5 mb-2">
+                    <span className="font-serif italic text-base font-bold text-[#B9887B] leading-none">
                       01
                     </span>
-                    <span className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase tracking-wider">
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em]">
                       Bối cảnh ban đầu
                     </span>
                   </div>
-                  <p className="text-xs text-[#0F1A41]/85 leading-relaxed pl-7">
+                  <p className="text-xs text-[#0F1A41]/80 leading-relaxed">
                     {project.caseStudy.context}
                   </p>
                 </div>
 
-                {/* 2. Challenge / Problem */}
-                <div className="bg-rose-50/50 p-4 rounded-xl border border-rose-200/60 shadow-2xs">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="w-5 h-5 rounded-full bg-rose-200/80 text-rose-900 text-[10px] font-sans font-bold flex items-center justify-center">
+                {/* 02. Challenge / Problem */}
+                <div className="bg-white p-4.5 rounded-xl border border-[#0F1A41]/10 border-l-2 border-l-[#B9887B] shadow-2xs">
+                  <div className="flex items-baseline gap-2.5 mb-2">
+                    <span className="font-serif italic text-base font-bold text-[#B9887B] leading-none">
                       02
                     </span>
-                    <span className="font-sans text-[11px] font-bold text-rose-900 uppercase tracking-wider">
-                      Thách thức và Điểm nghẽn của Chủ đầu tư
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em]">
+                      Thách thức & Điểm nghẽn
                     </span>
                   </div>
-                  <p className="text-xs text-rose-950/85 leading-relaxed pl-7">
+                  <p className="text-xs text-[#0F1A41]/80 leading-relaxed">
                     {project.caseStudy.problem}
                   </p>
                 </div>
 
-                {/* 3. Solution */}
-                <div className="bg-[#FAF9F6] p-4 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="w-5 h-5 rounded-full bg-[#0F1A41] text-white text-[10px] font-sans font-bold flex items-center justify-center">
+                {/* 03. Solution */}
+                <div className="bg-white p-4.5 rounded-xl border border-[#0F1A41]/10 border-l-2 border-l-[#0F1A41] shadow-2xs">
+                  <div className="flex items-baseline gap-2.5 mb-2">
+                    <span className="font-serif italic text-base font-bold text-[#0F1A41] leading-none">
                       03
                     </span>
-                    <span className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase tracking-wider">
-                      Giải pháp chiến lược từ CityHouse More
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em]">
+                      Giải pháp từ CityHouse More
                     </span>
                   </div>
-                  <p className="text-xs text-[#0F1A41]/85 leading-relaxed pl-7">
+                  <p className="text-xs text-[#0F1A41]/85 leading-relaxed">
                     {project.caseStudy.solution}
                   </p>
                 </div>
 
-                {/* 4. Scope */}
-                <div className="bg-white p-4 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="w-5 h-5 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] text-[10px] font-sans font-bold flex items-center justify-center">
+                {/* 04. Scope */}
+                <div className="bg-white p-4.5 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
+                  <div className="flex items-baseline gap-2.5 mb-2">
+                    <span className="font-serif italic text-base font-bold text-[#B9887B] leading-none">
                       04
                     </span>
-                    <span className="font-sans text-[11px] font-bold text-slate-800 uppercase tracking-wider">
-                      Phạm vi CityHouse More triển khai thực tế
+                    <span className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em]">
+                      Phạm vi triển khai thực tế
                     </span>
                   </div>
-                  <p className="text-xs text-[#0F1A41]/85 leading-relaxed pl-7">
+                  <p className="text-xs text-[#0F1A41]/80 leading-relaxed">
                     {project.caseStudy.scope}
                   </p>
                 </div>
-
-                {/* 5. Result Metrics */}
-                {project.caseStudy.resultMetrics && project.caseStudy.resultMetrics.length > 0 && (
-                  <div className="bg-[#FAF9F6] p-4 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="w-5 h-5 rounded-full bg-emerald-600 text-white text-[10px] font-sans font-bold flex items-center justify-center">
-                        05
-                      </span>
-                      <span className="font-sans text-[11px] font-bold text-[#0F1A41] uppercase tracking-wider">
-                        Kết quả đo lường định lượng
-                      </span>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pl-7">
-                      {project.caseStudy.resultMetrics.map((metric, idx) => (
-                        <div
-                          key={idx}
-                          className="bg-white p-3 rounded-lg border border-[#0F1A41]/10 text-center shadow-2xs"
-                        >
-                          <span className="font-sans text-[10px] text-[#0F1A41]/65 block mb-1 uppercase">
-                            {metric.label}
-                          </span>
-                          <strong className="text-sm font-bold text-[#0F1A41] block">
-                            {metric.val}
-                          </strong>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Owner Testimonial */}
-                {project.caseStudy.ownerFeedback && (
-                  <div className="bg-[#0F1A41] text-white p-5 rounded-xl flex items-start gap-4 shadow-md">
-                    <Quote size={28} className="text-[#B9887B] shrink-0 opacity-80 mt-1" />
-                    <div>
-                      <p className="text-xs sm:text-sm text-white/95 italic leading-relaxed mb-2 font-serif">
-                        "{project.caseStudy.ownerFeedback}"
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <Check size={13} strokeWidth={2.5} className="text-[#B9887B]" />
-                        <span className="font-sans text-[11px] text-[#B9887B] font-bold uppercase tracking-wider">
-                          Xác nhận từ Chủ sở hữu tòa nhà {project.name}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
+
+              {/* Owner Testimonial */}
+              {project.caseStudy.ownerFeedback && (
+                <div className="bg-gradient-to-br from-[#0F1A41] to-[#162456] text-white p-5 rounded-xl flex items-start gap-4 shadow-md border border-white/10">
+                  <Quote size={26} className="text-[#B9887B] shrink-0 opacity-85 mt-0.5" />
+                  <div>
+                    <p className="text-xs sm:text-sm text-white/95 italic leading-relaxed mb-2 font-serif">
+                      "{project.caseStudy.ownerFeedback}"
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <Check size={12} strokeWidth={2.5} className="text-[#B9887B]" />
+                      <span className="font-sans text-[10px] text-[#B9887B] font-bold uppercase tracking-[0.15em]">
+                        Xác nhận từ Chủ sở hữu tòa nhà {project.name}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           )}
 

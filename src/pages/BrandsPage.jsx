@@ -3,18 +3,11 @@ import {
   ArrowUpRight, 
   Check, 
   Star, 
-  Building2, 
-  Users, 
-  DollarSign, 
   Table, 
   LayoutGrid, 
-  ShieldCheck, 
-  ChevronRight,
-  TrendingUp,
-  Award
+  ChevronRight
 } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext.jsx';
-import ContactForm from '../components/ContactForm.jsx';
 
 const BRAND_PORTFOLIO = [
   {
@@ -251,144 +244,143 @@ export default function BrandsPage({ onOpenModal }) {
       <section className="section-pad bg-[#F9F8F5] text-[#0F1A41]">
         <div className="max-w-7xl mx-auto">
           {viewMode === 'showcase' ? (
-            /* ── VIEW 1: INTERACTIVE LUXURY STAGE (SHOWCASE) ── */
-            <div className="bg-white border border-[#0F1A41]/10 rounded-2xl overflow-hidden shadow-lg transition-all duration-300">
+            /* ── VIEW 1: REFINED LUXURY ARCHITECTURAL SHOWCASE ── */
+            <div className="bg-white border border-[#0F1A41]/10 rounded-2xl overflow-hidden shadow-sm transition-all duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-                {/* Visual Anchor (5 Cols) */}
-                <div className="lg:col-span-5 relative min-h-[360px] lg:min-h-[580px] bg-[#0F1A41] overflow-hidden group font-sans">
+                {/* Visual Anchor (5 Cols): Clean, Cinematic Presentation */}
+                <div className="lg:col-span-5 relative min-h-[380px] lg:min-h-[580px] bg-[#0F1A41] overflow-hidden group font-sans flex flex-col justify-between p-6">
                   <img
                     src={activeBrand.image}
                     alt={activeBrand.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/90 via-[#0F1A41]/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/90 via-[#0F1A41]/25 to-black/20 pointer-events-none"></div>
 
-                  {/* Overlaid Brand Badge: Synchronized Sans */}
-                  <div className="absolute top-5 left-5 bg-[#101C42] border border-white/20 px-3.5 py-1.5 rounded-full text-white flex items-center gap-2 shadow-lg">
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: activeBrand.accent }}></span>
-                    <span className="text-sm font-extrabold tracking-wider font-sans">{activeBrand.code}</span>
-                  </div>
-
-                  {/* Overlaid Performance Badge: Synchronized Sans */}
-                  <div className="absolute top-5 right-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full flex items-center gap-1.5 text-[#101C42] text-xs font-bold shadow-lg border border-slate-200/80 font-sans">
-                    <Star size={13} className="fill-[#C79A3B] text-[#C79A3B]" />
-                    <span>{activeBrand.stats}</span>
-                  </div>
-
-                  {/* Bottom Flagship Card: Synchronized Sans */}
-                  <div className="absolute bottom-5 left-5 right-5 bg-[#101C42]/95 backdrop-blur-md text-white p-4.5 rounded-xl border border-white/15 shadow-xl font-sans">
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[10px] text-[#B9887B] uppercase tracking-[0.15em] font-bold">
-                        Dự án biểu tượng mẫu
-                      </span>
-                      <span className="text-[10px] text-white/60 uppercase tracking-wider font-semibold px-2 py-0.5 bg-white/10 rounded-full">Flagship</span>
+                  {/* Top Badges */}
+                  <div className="relative z-10 flex items-center justify-between">
+                    <div className="bg-[#0F1A41]/90 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-white flex items-center gap-2 shadow-md">
+                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: activeBrand.accent }}></span>
+                      <span className="text-xs font-bold tracking-wider font-sans">{activeBrand.code} COLLECTION</span>
                     </div>
-                    <div className="text-sm sm:text-base font-bold text-white mb-1.5">
+
+                    <div className="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 text-[#0F1A41] text-xs font-semibold shadow-md border border-white/60">
+                      <Star size={12} className="fill-[#C79A3B] text-[#C79A3B]" />
+                      <span>{activeBrand.stats.split('·')[0].trim()}</span>
+                    </div>
+                  </div>
+
+                  {/* Refined Bottom Flagship Showcase Caption */}
+                  <div className="relative z-10 bg-[#0F1A41]/90 backdrop-blur-md text-white p-4 rounded-xl border border-white/15 shadow-lg">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[10px] text-[#B9887B] uppercase tracking-[0.16em] font-semibold">
+                        Công trình biểu tượng
+                      </span>
+                      <span className="text-[10px] text-white/60 uppercase tracking-wider px-2 py-0.5 bg-white/10 rounded-full font-medium">Flagship</span>
+                    </div>
+                    <div className="text-sm font-semibold text-white mb-1.5">
                       {activeBrand.flagship}
                     </div>
                     <button
                       onClick={() => navigate(`/dang-hoat-dong/${activeBrand.flagshipSlug}`)}
-                      className="text-xs font-semibold text-[#B9887B] hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
+                      className="text-xs font-medium text-[#B9887B] hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
                     >
-                      <span>Xem hình ảnh thực tế công trình</span>
+                      <span>Khám phá dự án thực tế</span>
                       <ChevronRight size={12} />
                     </button>
                   </div>
                 </div>
 
-                {/* Content Dossier (7 Cols) - Harmonized và Clean */}
-                <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between font-sans">
+                {/* Content Dossier (7 Cols) - Spacious & Minimalist */}
+                <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between font-sans bg-white">
                   <div>
                     {/* Header: Brand Name + Segment + Tagline */}
-                    <div className="border-b border-[#101C42]/10 pb-5 mb-6">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 sm:gap-4 mb-2.5">
-                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#101C42] tracking-tight shrink-0">
+                    <div className="border-b border-[#0F1A41]/10 pb-5 mb-6">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 mb-2.5">
+                        <h2 className="font-serif text-3xl sm:text-4xl font-normal text-[#0F1A41] tracking-tight">
                           {activeBrand.name}
                         </h2>
                         <span
-                          className="text-[10.5px] sm:text-[11px] font-bold uppercase tracking-[0.15em] px-3.5 py-1 rounded-full border font-sans whitespace-nowrap self-start sm:self-auto shrink-0"
+                          className="text-[10.5px] font-semibold uppercase tracking-[0.14em] px-3.5 py-1 rounded-full border whitespace-nowrap self-start sm:self-auto"
                           style={{
                             backgroundColor: `${activeBrand.accent}12`,
                             color: activeBrand.accent,
-                            borderColor: `${activeBrand.accent}35`
+                            borderColor: `${activeBrand.accent}30`
                           }}
                         >
                           {activeBrand.segment}
                         </span>
                       </div>
 
-                      <div className="font-serif text-sm sm:text-base italic text-[#B9887B] font-medium mb-3 tracking-wide">
+                      <div className="font-serif text-sm sm:text-base italic text-[#B9887B] font-normal mb-3">
                         "{activeBrand.tagline}"
                       </div>
 
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal font-sans">
+                      <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed font-normal">
                         {activeBrand.shortDesc}
                       </p>
                     </div>
 
-                    {/* 4 Core Executive Decision Metrics (Synchronized Inter Typography Stack) */}
+                    {/* 4 Core Financial & Asset Specifications: Clean Minimalist Architectural Grid */}
                     <div className="mb-6 font-sans">
-                      <span className="text-[10.5px] text-[#101C42]/60 uppercase tracking-[0.2em] font-bold block mb-3 font-sans">
-                        THÔNG SỐ ĐẦU TƯ CỐT LÕI (CHỦ SỞ HỮU CẦN BIẾT):
-                      </span>
+                      <div className="text-[10.5px] text-[#B9887B] uppercase tracking-[0.18em] font-bold mb-3 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+                        THÔNG SỐ ĐẦU TƯ & KHAI THÁC TÀI SẢN
+                      </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {/* Metric 1: Giá thuê kỳ vọng */}
-                        <div className="bg-[#F8FAFC] p-4.5 rounded-xl border border-[#101C42]/10 hover:border-[#B9887B]/40 transition-all shadow-2xs flex flex-col justify-between">
-                          <div className="flex items-center gap-1.5 text-[10.5px] font-bold text-[#101C42]/60 uppercase tracking-[0.15em] mb-1.5 font-sans">
-                            <DollarSign size={13} className="text-[#B9887B]" />
-                            <span>MỨC GIÁ CHO THUÊ KỲ VỌNG</span>
-                          </div>
-                          <div className="text-sm sm:text-base font-bold text-[#101C42] leading-snug font-sans">
+                        <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 flex flex-col justify-between">
+                          <span className="text-[10px] font-bold text-[#0F1A41]/60 uppercase tracking-[0.12em] mb-1">
+                            GIÁ CHO THUÊ KỲ VỌNG
+                          </span>
+                          <span className="text-sm font-semibold text-[#0F1A41]">
                             {activeBrand.priceRange}
-                          </div>
+                          </span>
                         </div>
 
                         {/* Metric 2: Quy mô BĐS phù hợp */}
-                        <div className="bg-[#F8FAFC] p-4.5 rounded-xl border border-[#101C42]/10 hover:border-[#B9887B]/40 transition-all shadow-2xs flex flex-col justify-between">
-                          <div className="flex items-center gap-1.5 text-[10.5px] font-bold text-[#101C42]/60 uppercase tracking-[0.15em] mb-1.5 font-sans">
-                            <Building2 size={13} className="text-[#B9887B]" />
-                            <span>LOẠI HÌNH BĐS PHÙ HỢP</span>
-                          </div>
-                          <div className="text-xs sm:text-sm font-semibold text-[#101C42] leading-snug font-sans">
+                        <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 flex flex-col justify-between">
+                          <span className="text-[10px] font-bold text-[#0F1A41]/60 uppercase tracking-[0.12em] mb-1">
+                            QUY MÔ BẤT ĐỘNG SẢN PHÙ HỢP
+                          </span>
+                          <span className="text-xs sm:text-sm font-medium text-[#0F1A41]">
                             {activeBrand.assetFit}
-                          </div>
+                          </span>
                         </div>
 
                         {/* Metric 3: Khách thuê mục tiêu */}
-                        <div className="bg-[#F8FAFC] p-4.5 rounded-xl border border-[#101C42]/10 hover:border-[#B9887B]/40 transition-all shadow-2xs flex flex-col justify-between">
-                          <div className="flex items-center gap-1.5 text-[10.5px] font-bold text-[#101C42]/60 uppercase tracking-[0.15em] mb-1.5 font-sans">
-                            <Users size={13} className="text-[#B9887B]" />
-                            <span>HỒ SƠ KHÁCH THUÊ MỤC TIÊU</span>
-                          </div>
-                          <div className="text-xs sm:text-sm font-semibold text-[#101C42] leading-snug font-sans">
+                        <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 flex flex-col justify-between">
+                          <span className="text-[10px] font-bold text-[#0F1A41]/60 uppercase tracking-[0.12em] mb-1">
+                            HỒ SƠ KHÁCH THUÊ CỐT LÕI
+                          </span>
+                          <span className="text-xs sm:text-sm font-medium text-[#0F1A41]">
                             {activeBrand.targetGuests}
-                          </div>
+                          </span>
                         </div>
 
                         {/* Metric 4: Hiệu suất vận hành */}
-                        <div className="bg-[#F8FAFC] p-4.5 rounded-xl border border-[#101C42]/10 hover:border-[#B9887B]/40 transition-all shadow-2xs flex flex-col justify-between">
-                          <div className="flex items-center gap-1.5 text-[10.5px] font-bold text-[#101C42]/60 uppercase tracking-[0.15em] mb-1.5 font-sans">
-                            <TrendingUp size={13} className="text-[#B9887B]" />
-                            <span>HIỆU SUẤT VÀ UY TÍN</span>
-                          </div>
-                          <div className="text-sm sm:text-base font-bold text-[#101C42] leading-snug font-sans">
+                        <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 flex flex-col justify-between">
+                          <span className="text-[10px] font-bold text-[#0F1A41]/60 uppercase tracking-[0.12em] mb-1">
+                            BẢO CHỨNG HIỆU SUẤT
+                          </span>
+                          <span className="text-sm font-semibold text-[#B9887B]">
                             {activeBrand.stats}
-                          </div>
+                          </span>
                         </div>
                       </div>
                     </div>
 
-                    {/* 4 Distinct Privileges (Đặc quyền nổi bật - Ngắn gọn) */}
+                    {/* Operational Highlights (Đặc quyền vận hành chuẩn mực) */}
                     <div className="mb-6 font-sans">
-                      <span className="text-[10.5px] text-[#101C42]/60 uppercase tracking-[0.2em] font-bold block mb-2.5 font-sans">
-                        TIÊU CHUẨN VẬN HÀNH VÀ ĐẶC QUYỀN:
-                      </span>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-sans">
+                      <div className="text-[10.5px] text-[#0F1A41]/60 uppercase tracking-[0.18em] font-bold mb-2.5 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rotate-45 bg-[#0F1A41]/40"></span>
+                        TIÊU CHUẨN VẬN HÀNH & ĐẶC QUYỀN
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-[13px] text-[#0F1A41]/80 font-medium">
                         {activeBrand.highlights.map((item, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-xs sm:text-[13px] text-slate-700 font-medium font-sans">
-                            <Check size={14} className="text-[#B9887B] shrink-0" strokeWidth={2.5} />
+                          <div key={idx} className="flex items-center gap-2">
+                            <Check size={13} className="text-[#B9887B] shrink-0" strokeWidth={2.5} />
                             <span>{item}</span>
                           </div>
                         ))}
@@ -397,10 +389,10 @@ export default function BrandsPage({ onOpenModal }) {
                   </div>
 
                   {/* Actions Bar */}
-                  <div className="pt-5 border-t border-[#101C42]/10 flex flex-col sm:flex-row items-center gap-3 font-sans">
+                  <div className="pt-5 border-t border-[#0F1A41]/10 flex flex-col sm:flex-row items-center gap-3 font-sans">
                     <button
                       onClick={handleCtaClick}
-                      className="w-full sm:w-auto px-6 py-3.5 bg-[#101C42] hover:bg-[#1A2C6B] text-white rounded-full text-xs font-bold uppercase tracking-[0.12em] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-md hover:shadow-lg font-sans"
+                      className="w-full sm:w-auto px-6 py-3.5 bg-[#0F1A41] hover:bg-[#1A2C6B] text-white rounded-full text-xs font-bold uppercase tracking-[0.14em] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-sm hover:shadow-md font-sans"
                     >
                       <span>TƯ VẤN ĐỊNH VỊ CHO TÒA NHÀ NÀY</span>
                       <ArrowUpRight size={14} />
@@ -408,9 +400,9 @@ export default function BrandsPage({ onOpenModal }) {
 
                     <button
                       onClick={() => navigate('/danh-muc-tai-san')}
-                      className="w-full sm:w-auto px-5 py-3.5 bg-white hover:bg-[#FAF6EF] text-[#101C42] border border-[#101C42]/20 hover:border-[#B9887B] hover:text-[#B9887B] rounded-full text-xs font-bold uppercase tracking-[0.12em] transition-all cursor-pointer text-center font-sans"
+                      className="w-full sm:w-auto px-5 py-3.5 bg-white hover:bg-[#FAF6EF] text-[#0F1A41] border border-[#0F1A41]/20 hover:border-[#B9887B] hover:text-[#B9887B] rounded-full text-xs font-bold uppercase tracking-[0.14em] transition-all cursor-pointer text-center font-sans"
                     >
-                      <span>XEM TẤT CẢ DỰ ÁN {activeBrand.code}</span>
+                      <span>XEM DỰ ÁN {activeBrand.code}</span>
                     </button>
                   </div>
                 </div>
@@ -423,7 +415,7 @@ export default function BrandsPage({ onOpenModal }) {
                 <span className="text-xs uppercase tracking-wider text-[#B9887B] font-bold block mb-1">
                   BẢNG ĐỐI CHIẾU TỔNG QUAN
                 </span>
-                <h3 className="text-2xl font-extrabold text-[#0F1A41]">
+                <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#0F1A41]">
                   So sánh 5 thương hiệu CityHouse Collection
                 </h3>
                 <p className="text-xs sm:text-sm text-[#0F1A41]/70 mt-1">
@@ -488,100 +480,6 @@ export default function BrandsPage({ onOpenModal }) {
               </div>
             </div>
           )}
-
-          {/* ── Quick Cards Strip of All 5 Brands (Glanceable) ── */}
-          <div className="mt-12 font-sans">
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <span className="text-xs uppercase tracking-wider text-[#B9887B] font-bold block mb-1">
-                  BỘ SƯU TẬP 5 DÒNG THƯƠNG HIỆU
-                </span>
-                <h3 className="text-2xl font-extrabold text-[#0F1A41]">
-                  Khám phá toàn bộ hệ sinh thái
-                </h3>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {BRAND_PORTFOLIO.map((b) => {
-                const isSelected = selectedBrandCode === b.code;
-                return (
-                  <div
-                    key={b.code}
-                    onClick={() => {
-                      setSelectedBrandCode(b.code);
-                      setViewMode('showcase');
-                      window.scrollTo({ top: 380, behavior: 'smooth' });
-                    }}
-                    className={`bg-white rounded-xl border p-4.5 cursor-pointer transition-all duration-300 hover:-translate-y-1 ${
-                      isSelected
-                        ? 'border-[#0F1A41] shadow-md ring-2 ring-[#0F1A41]/10'
-                        : 'border-[#0F1A41]/10 hover:border-[#B9887B] shadow-2xs'
-                    }`}
-                  >
-                    <div className="relative aspect-[16/10] rounded-lg overflow-hidden mb-3 bg-[#0F1A41]">
-                      <img src={b.image} alt={b.name} className="w-full h-full object-cover" loading="lazy" />
-                      <div className="absolute top-2 left-2 bg-[#0F1A41]/90 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">
-                        {b.code}
-                      </div>
-                    </div>
-
-                    <div className="text-sm font-bold text-[#0F1A41] mb-0.5">
-                      {b.name}
-                    </div>
-                    <div className="text-[10px] text-[#0F1A41]/60 uppercase tracking-wider mb-2 truncate font-semibold">
-                      {b.segment}
-                    </div>
-
-                    <div className="pt-2 border-t border-[#0F1A41]/10 flex items-center justify-between text-[11px]">
-                      <span className="text-[#B9887B] font-bold">{b.priceRange.split('(')[0].trim()}</span>
-                      <ArrowUpRight size={12} className="text-[#0F1A41]/40" />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Brand Consultation Form Section ── */}
-      <section className="section-pad bg-[#0B1330] text-white font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 contact-info-col">
-              <p className="eyebrow eyebrow-accent flex items-center gap-1.5 font-semibold text-xs tracking-wider mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-                TƯ VẤN ĐỊNH VỊ THƯƠNG HIỆU MIỄN PHÍ
-              </p>
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-[36px] font-normal leading-[1.35] tracking-normal mb-5 text-white">
-                <span className="block text-white">
-                  LỰA CHỌN <span className="whitespace-nowrap">THƯƠNG HIỆU</span>
-                </span>
-                <span className="text-[#B9887B] font-serif italic block mt-2 sm:mt-2.5 leading-[1.35]">
-                  TỐI ƯU NHẤT CHO <span className="whitespace-nowrap">BẤT ĐỘNG SẢN</span>
-                </span>
-              </h2>
-              <p className="text-white/75 text-sm leading-relaxed mb-6 font-normal">
-                Mỗi vị trí và diện tích bất động sản sẽ đạt dòng tiền cao nhất khi gắn đúng thương hiệu. Chuyên gia CityHouse sẽ khảo sát và lập báo cáo định vị chi tiết trong vòng <strong>24 giờ</strong>.
-              </p>
-
-              <div className="bg-white/5 border border-white/10 p-4 rounded-xl text-xs text-white/80 space-y-2.5">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck size={14} className="text-[#B9887B]" />
-                  <span>Khảo sát hiện trạng và phân tích tệp khách miễn phí</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Award size={14} className="text-[#B9887B]" />
-                  <span>Dự phóng bảng dòng tiền 5–10 năm minh bạch</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 contact-form-col">
-              <ContactForm submitLabel="GỬI YÊU CẦU ĐỊNH VỊ THƯƠNG HIỆU" />
-            </div>
-          </div>
         </div>
       </section>
     </div>

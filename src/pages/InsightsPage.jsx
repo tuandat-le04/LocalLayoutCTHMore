@@ -1,24 +1,15 @@
 import React, { useState } from 'react';
 import { insightsCategories, insightsArticles } from '../data/insights.js';
-import { ArrowUpRight, Clock, BookOpen, Mail, Check, Calendar, TrendingUp, FileText, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Clock, BookOpen, Calendar, TrendingUp, FileText, ShieldCheck } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext.jsx';
 
 export default function InsightsPage() {
   const [activeTab, setActiveTab] = useState('all');
-  const [subscribed, setSubscribed] = useState(false);
-  const [emailInput, setEmailInput] = useState('');
   const { navigate } = useNavigation();
 
   const filteredArticles = activeTab === 'all'
     ? insightsArticles
     : insightsArticles.filter(a => a.category === activeTab);
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (emailInput) {
-      setSubscribed(true);
-    }
-  };
 
   return (
     <div className="insights-page font-sans">
@@ -52,23 +43,23 @@ export default function InsightsPage() {
 
             {/* Top Badges */}
             <div className="relative z-10 flex flex-wrap items-center gap-2">
-              <span className="px-3 py-1 bg-[#0A1128]/90 backdrop-blur-md text-[#F4EFEA] font-sans text-[10px] font-bold tracking-[0.18em] rounded-full uppercase border border-white/20 shadow-sm flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B] animate-pulse"></span>
+              <span className="px-3 py-1 bg-[#0A1128]/90 backdrop-blur-md text-[#F4EFEA] font-sans text-[10px] font-bold tracking-[0.16em] rounded-full uppercase border border-white/20 shadow-sm flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                 BÁO CÁO TIÊU ĐIỂM 2026
               </span>
-              <span className="px-3 py-1 bg-gradient-to-r from-[#B9887B] to-[#A37367] text-white font-sans text-[10px] font-bold tracking-[0.16em] rounded-full uppercase shadow">
+              <span className="px-3 py-1 bg-[#B9887B] text-white font-sans text-[10px] font-bold tracking-[0.14em] rounded-full uppercase">
                 EXECUTIVE SUMMARY
               </span>
             </div>
 
             {/* Bottom Citation Overlay */}
             <div className="relative z-10 mt-auto pt-6 text-white">
-              <div className="bg-[#0A1128]/85 backdrop-blur-md border border-[#B9887B]/25 p-4 rounded-xl shadow-xl">
+              <div className="bg-[#0A1128]/90 backdrop-blur-md border border-[#B9887B]/30 p-4 rounded-xl shadow-lg">
                 <p className="text-[11px] font-sans text-[#B9887B] uppercase tracking-[0.16em] mb-1.5 flex items-center gap-2 font-bold">
                   <ShieldCheck size={14} className="text-[#B9887B]" />
                   Dữ liệu khảo sát thực chứng độc quyền
                 </p>
-                <p className="text-xs text-white/85 leading-relaxed font-sans">
+                <p className="text-xs text-white/85 leading-relaxed font-sans font-normal">
                   Khảo sát từ 35+ tòa nhà lưu trú trung tâm và 1.850+ căn hộ dịch vụ đang vận hành tại TP.HCM.
                 </p>
               </div>
@@ -76,12 +67,12 @@ export default function InsightsPage() {
           </div>
 
           {/* Right Column: Rich Editorial Dossier (7 Cols) */}
-          <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-gradient-to-br from-white via-[#FCFAF7] to-[#FAF6EF]">
+          <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-white">
             <div>
               {/* Meta Header */}
               <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 font-sans text-xs mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.18em] uppercase bg-[#101C42] text-[#F4EFEA] shadow-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B] animate-pulse"></span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.16em] uppercase bg-[#101C42] text-[#F4EFEA]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
                   THỊ TRƯỜNG & ĐẦU TƯ
                 </span>
                 <span className="text-[#101C42]/20 font-serif">/</span>
@@ -107,22 +98,19 @@ export default function InsightsPage() {
                 Nghiên cứu chỉ ra sự chuyển dịch mạnh mẽ từ mô hình thuê thuần dài hạn sang mô hình lưu trú linh hoạt <strong className="text-[#101C42] font-semibold">(Hybrid Living)</strong> kết hợp ngắn hạn du lịch và trung hạn chuyên gia công tác, giúp công suất phòng duy trì trên <strong className="text-[#101C42] font-semibold">92%</strong> và gia tăng doanh thu thuần tới <strong className="text-[#B9887B] font-semibold">30%</strong>.
               </p>
 
-              {/* 3 Key Takeaways: Redesigned Executive Briefing Dossier */}
-              <div className="bg-gradient-to-br from-[#FAF7F2] via-[#F6F1E9] to-[#EFE7DC] rounded-xl border border-[#B9887B]/30 p-5 sm:p-5.5 mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_4px_20px_rgba(16,28,66,0.03)] relative overflow-hidden">
-                {/* Subtle corner watermark/accent */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#B9887B]/10 to-transparent rounded-bl-full pointer-events-none" />
-
-                <div className="flex items-center justify-between mb-3.5 pb-2.5 border-b border-[#B9887B]/20 relative z-10">
+              {/* 3 Key Takeaways: Refined Clean Editorial Box */}
+              <div className="bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/10 p-5 mb-5 font-sans">
+                <div className="flex items-center justify-between mb-3.5 pb-2.5 border-b border-[#0F1A41]/10">
                   <span className="font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-[#101C42] flex items-center gap-2">
-
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
                     3 ĐÚC KẾT THEN CHỐT CHO CHỦ SỞ HỮU BẤT ĐỘNG SẢN
                   </span>
-                  <span className="text-[10px] font-sans font-semibold tracking-wider text-[#B9887B] uppercase bg-white/80 px-2 py-0.5 rounded border border-[#B9887B]/20">
+                  <span className="text-[10px] font-sans font-semibold tracking-wider text-[#B9887B] uppercase">
                     CITYHOUSE RESEARCH
                   </span>
                 </div>
 
-                <div className="space-y-3 relative z-10">
+                <div className="space-y-3">
                   {/* Item 1 */}
                   <div className="flex items-start gap-3">
                     <span className="font-serif text-[#B9887B] font-bold text-base leading-none mt-0.5 tracking-tight w-5 shrink-0">
@@ -133,7 +121,7 @@ export default function InsightsPage() {
                     </p>
                   </div>
 
-                  <div className="h-[1px] bg-[#B9887B]/15" />
+                  <div className="h-[1px] bg-[#0F1A41]/8" />
 
                   {/* Item 2 */}
                   <div className="flex items-start gap-3">
@@ -145,7 +133,7 @@ export default function InsightsPage() {
                     </p>
                   </div>
 
-                  <div className="h-[1px] bg-[#B9887B]/15" />
+                  <div className="h-[1px] bg-[#0F1A41]/8" />
 
                   {/* Item 3 */}
                   <div className="flex items-start gap-3">
@@ -161,38 +149,38 @@ export default function InsightsPage() {
 
               {/* 3 Metric Chips: High-End Architectural Stat Cards */}
               <div className="grid grid-cols-3 gap-3 mb-6">
-                <div className="bg-white rounded-xl p-3 sm:p-3.5 border border-[#B9887B]/20 text-center shadow-sm hover:border-[#B9887B]/50 hover:shadow-md transition-all group">
-                  <span className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-[#101C42] block tracking-tight group-hover:text-[#B9887B] transition-colors">
+                <div className="bg-[#FAF9F6] rounded-xl p-3.5 border border-[#0F1A41]/8 text-center transition-all group">
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#101C42] block tracking-tight group-hover:text-[#B9887B] transition-colors">
                     92%+
                   </span>
-                  <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.14em] text-[#101C42]/65 font-semibold block mt-1">
+                  <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.12em] text-[#101C42]/65 font-semibold block mt-1">
                     Công suất thực tế
                   </span>
-                  <span className="text-[9px] font-sans text-[#B9887B] font-medium hidden sm:block mt-0.5">
+                  <span className="text-[9.5px] font-sans text-[#B9887B] font-medium hidden sm:block mt-0.5">
                     Duy trì quanh năm
                   </span>
                 </div>
 
-                <div className="bg-white rounded-xl p-3 sm:p-3.5 border border-[#B9887B]/20 text-center shadow-sm hover:border-[#B9887B]/50 hover:shadow-md transition-all group">
-                  <span className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-[#B9887B] block tracking-tight group-hover:scale-105 transition-transform">
+                <div className="bg-[#FAF9F6] rounded-xl p-3.5 border border-[#0F1A41]/8 text-center transition-all group">
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#B9887B] block tracking-tight">
                     +30%
                   </span>
-                  <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.14em] text-[#101C42]/65 font-semibold block mt-1">
+                  <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.12em] text-[#101C42]/65 font-semibold block mt-1">
                     Doanh thu thuần
                   </span>
-                  <span className="text-[9px] font-sans text-[#B9887B] font-medium hidden sm:block mt-0.5">
+                  <span className="text-[9.5px] font-sans text-[#B9887B] font-medium hidden sm:block mt-0.5">
                     Mô hình Hybrid
                   </span>
                 </div>
 
-                <div className="bg-white rounded-xl p-3 sm:p-3.5 border border-[#B9887B]/20 text-center shadow-sm hover:border-[#B9887B]/50 hover:shadow-md transition-all group">
-                  <span className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-[#101C42] block tracking-tight group-hover:text-[#B9887B] transition-colors">
+                <div className="bg-[#FAF9F6] rounded-xl p-3.5 border border-[#0F1A41]/8 text-center transition-all group">
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#101C42] block tracking-tight group-hover:text-[#B9887B] transition-colors">
                     1.850+
                   </span>
-                  <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.14em] text-[#101C42]/65 font-semibold block mt-1">
+                  <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.12em] text-[#101C42]/65 font-semibold block mt-1">
                     Phòng khảo sát
                   </span>
-                  <span className="text-[9px] font-sans text-[#B9887B] font-medium hidden sm:block mt-0.5">
+                  <span className="text-[9.5px] font-sans text-[#B9887B] font-medium hidden sm:block mt-0.5">
                     35+ tòa nhà TP.HCM
                   </span>
                 </div>
@@ -200,17 +188,16 @@ export default function InsightsPage() {
             </div>
 
             {/* Footer Actions & Source */}
-            <div className="pt-4 border-t border-[#101C42]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div className="flex items-center gap-2.5">
-                <div className="text-[11px] font-sans text-[#101C42]/70">
-                </div>
-              </div>
+            <div className="pt-4 border-t border-[#0F1A41]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <span className="text-xs text-[#0F1A41]/60 font-sans">
+                Được xuất bản bởi Hội Đồng Nghiên Cứu CityHouse More
+              </span>
 
               <button
                 onClick={() => navigate('/contact')}
-                className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#101C42] to-[#1C2D6B] hover:from-[#B9887B] hover:to-[#A37367] text-white font-sans text-xs font-bold uppercase tracking-[0.15em] rounded-lg transition-all duration-300 shadow-md hover:shadow-xl flex items-center justify-center gap-2 group cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 bg-[#101C42] hover:bg-[#1C2D6B] text-white font-sans text-xs font-bold uppercase tracking-[0.14em] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group cursor-pointer"
               >
-                <span>ĐĂNG KÝ NHẬN BẢN FULL (PDF)</span>
+                <span>ĐĂNG KÝ NHẬN BẢN ĐẦY ĐỦ (PDF)</span>
                 <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </button>
             </div>
@@ -268,40 +255,6 @@ export default function InsightsPage() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-
-      {/* Newsletter Subscription Strip */}
-      <section className="section-pad bg-[#0B1330] text-white">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="eyebrow eyebrow-accent">BẢN TIN THỊ TRƯỜNG ĐỊNH KỲ</p>
-          <h2 className="font-serif text-3xl font-semibold mb-4">
-            Đón đầu xu hướng<br /><em>bất động sản lưu trú</em>
-          </h2>
-          <p className="text-sm text-white/70 mb-8 leading-relaxed">
-            Đăng ký nhận báo cáo phân tích công suất phòng, chỉ số doanh thu và các chuyển động chính sách mới nhất do CityHouse More tổng hợp hàng tháng.
-          </p>
-
-          {subscribed ? (
-            <div className="flex items-center justify-center gap-2 text-[#B9887B] font-sans text-sm py-4 border border-[#B9887B]/40 bg-[#B9887B]/10 rounded-2xl">
-              <Check size={18} />
-              <span>Cảm ơn bạn đã đăng ký nhận bản tin thành công!</span>
-            </div>
-          ) : (
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                required
-                placeholder="Nhập địa chỉ email của bạn..."
-                className="bg-white/10 border border-white/20 px-5 py-3.5 text-sm text-white placeholder:text-white/40 flex-grow outline-none focus:border-[#B9887B] rounded-full transition-all"
-                value={emailInput}
-                onChange={(e) => setEmailInput(e.target.value)}
-              />
-              <button type="submit" className="solid-btn whitespace-nowrap rounded-full">
-                ĐĂNG KÝ NGAY <ArrowUpRight size={15} />
-              </button>
-            </form>
-          )}
         </div>
       </section>
     </div>

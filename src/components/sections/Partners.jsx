@@ -1,5 +1,4 @@
 import React from 'react';
-import LuxuryIcon from '../common/LuxuryIcon.jsx';
 
 const FEATURED_PARTNERS = [
   {
@@ -69,7 +68,7 @@ export default function Partners() {
           </div>
 
           <div className="text-xs font-sans text-[#0F1A41]/75 bg-white border border-[#0F1A41]/10 px-4 py-2.5 rounded-full shadow-sm flex items-center gap-2 self-start md:self-auto font-medium">
-            <LuxuryIcon name="globe" size={15} strokeWidth={1.25} className="text-[#0F1A41]/70" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B]"></span>
             <span>Mạng lưới <strong>120+</strong> Đối tác doanh nghiệp và Phân phối toàn cầu</span>
           </div>
         </div>
@@ -86,7 +85,9 @@ export default function Partners() {
                   <span className="text-[10px] font-sans uppercase tracking-wider text-[#B9887B] font-bold">
                     {p.category}
                   </span>
-                  <LuxuryIcon name={p.icon} size={15} strokeWidth={1.25} className="text-[#0F1A41]/40 group-hover:text-[#B9887B] transition-colors" />
+                  <span className="text-[10px] font-mono text-[#0F1A41]/30">
+                    0{idx + 1}
+                  </span>
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#0F1A41] mb-1 group-hover:text-[#B9887B] transition-colors">
                   {p.name}

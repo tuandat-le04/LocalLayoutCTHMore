@@ -96,20 +96,20 @@ export default function QuickModal({ isOpen, onClose }) {
           {sent ? (
             /* Success State */
             <div className="py-6 px-2 text-center space-y-3">
-              <div className="w-14 h-14 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] flex items-center justify-center mx-auto mb-2 border border-[#0F1A41]/15">
+              <div className="w-14 h-14 rounded-full bg-[#101C42] text-[#C79A3B] flex items-center justify-center mx-auto mb-2 border border-[#C79A3B]/30 shadow-md">
                 <Check size={28} strokeWidth={2.5} />
               </div>
-              <h4 className="font-serif text-lg font-bold text-[#0F1A41]">
+              <h4 className="font-serif text-lg font-bold text-[#101C42]">
                 GỬI YÊU CẦU THÀNH CÔNG!
               </h4>
-              <p className="text-xs text-[#0F1A41]/75 leading-relaxed max-w-xs mx-auto">
+              <p className="text-xs text-[#101C42]/75 leading-relaxed max-w-xs mx-auto">
                 Cảm ơn Quý khách <strong>{formData.fullName}</strong>. Chuyên gia CityHouse More đã tiếp nhận và sẽ trực tiếp liên hệ qua số <strong>{formData.phone}</strong> trong vòng 24 giờ làm việc.
               </p>
               <div className="pt-2">
                 <button
                   type="button"
                   onClick={handleResetAndClose}
-                  className="px-6 py-2.5 bg-[#0F1A41] text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#162456] transition-colors cursor-pointer shadow"
+                  className="px-6 py-2.5 bg-[#101C42] text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#1A2C6B] transition-colors cursor-pointer shadow"
                 >
                   HOÀN TẤT VÀ ĐÓNG
                 </button>
@@ -117,23 +117,23 @@ export default function QuickModal({ isOpen, onClose }) {
             </div>
           ) : (
             /* Main Input Form */
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3 font-sans">
               {/* Compact Benefit Badge */}
-              <div className="p-3 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/10 flex items-center gap-2 text-[11px] text-[#0F1A41]/85 shadow-2xs">
-                <ShieldCheck size={14} className="text-[#0F1A41] shrink-0" />
+              <div className="p-3 rounded-xl bg-[#FAF6EF]/80 border border-[#B9887B]/25 border-l-2 border-l-[#B9887B] flex items-center gap-2 text-[11px] text-[#101C42]/85 shadow-2xs">
+                <ShieldCheck size={14} className="text-[#B9887B] shrink-0" />
                 <span>Khảo sát hiện trạng và Báo cáo dòng tiền <strong>hoàn toàn miễn phí</strong></span>
               </div>
 
               {/* Field 1: Họ và tên */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-[11px] font-bold text-[#0F1A41] uppercase tracking-wider">
-                  Họ và tên của bạn <span className="text-red-500">*</span>
+                <label className="text-[11px] font-bold text-[#101C42] uppercase tracking-[0.14em]">
+                  Họ và tên của bạn <span className="text-[#B9887B]">*</span>
                 </label>
                 <input
                   type="text"
                   required
                   placeholder="Ví dụ: Nguyễn Văn An"
-                  className="w-full px-3.5 py-2.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B] transition-all"
+                  className="w-full px-3.5 py-2.5 bg-[#FCFBF9] border border-[#101C42]/15 rounded-xl text-xs text-[#101C42] placeholder:text-[#101C42]/35 focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] transition-all"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 />
@@ -141,14 +141,14 @@ export default function QuickModal({ isOpen, onClose }) {
 
               {/* Field 2: Số điện thoại */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-[11px] font-bold text-[#0F1A41] uppercase tracking-wider">
-                  Số điện thoại liên hệ <span className="text-red-500">*</span>
+                <label className="text-[11px] font-bold text-[#101C42] uppercase tracking-[0.14em]">
+                  Số điện thoại liên hệ <span className="text-[#B9887B]">*</span>
                 </label>
                 <input
                   type="tel"
                   required
                   placeholder="Ví dụ: 0912 345 678"
-                  className="w-full px-3.5 py-2.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B] transition-all"
+                  className="w-full px-3.5 py-2.5 bg-[#FCFBF9] border border-[#101C42]/15 rounded-xl text-xs text-[#101C42] placeholder:text-[#101C42]/35 focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] transition-all"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 />
@@ -156,11 +156,11 @@ export default function QuickModal({ isOpen, onClose }) {
 
               {/* Field 3: Loại tài sản */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-[11px] font-bold text-[#0F1A41] uppercase tracking-wider">
+                <label className="text-[11px] font-bold text-[#101C42] uppercase tracking-[0.14em]">
                   Loại tài sản của bạn
                 </label>
                 <select
-                  className="w-full px-3.5 py-2.5 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] cursor-pointer transition-all"
+                  className="w-full px-3.5 py-2.5 bg-[#FCFBF9] border border-[#101C42]/15 rounded-xl text-xs text-[#101C42] focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] cursor-pointer transition-all"
                   value={formData.propertyType}
                   onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
                 >
@@ -175,34 +175,39 @@ export default function QuickModal({ isOpen, onClose }) {
 
               {/* Field 4: Nhu cầu quan tâm chính (4 Quick Compact Pills) */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-[11px] font-bold text-[#0F1A41] uppercase tracking-wider">
+                <label className="text-[11px] font-bold text-[#101C42] uppercase tracking-[0.14em]">
                   Nhu cầu quan tâm chính
                 </label>
                 <div className="grid grid-cols-2 gap-1.5">
                   {[
                     { id: 'evaluate', label: 'Đánh giá tài sản' },
-                    { id: 'renovate', label: 'Cải tạo và tái định vị' },
+                    { id: 'renovate', label: 'Tái định vị' },
                     { id: 'operate', label: 'Ủy thác vận hành' },
                     { id: 'lease', label: 'Thuê khoán trọn gói' },
-                  ].map((item) => (
-                    <label
-                      key={item.id}
-                      className={`flex items-center gap-1.5 p-2.5 rounded-xl border text-[11px] cursor-pointer transition-all ${
-                        formData.interest === item.id
-                          ? 'bg-[#B9887B]/15 border-[#B9887B] text-[#0F1A41] font-bold'
-                          : 'bg-white border-[#0F1A41]/15 text-[#0F1A41]/75 hover:bg-black/[0.02]'
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name="popupInterest"
-                        checked={formData.interest === item.id}
-                        onChange={() => setFormData({ ...formData, interest: item.id })}
-                        className="text-[#B9887B] focus:ring-[#B9887B] shrink-0"
-                      />
-                      <span className="truncate">{item.label}</span>
-                    </label>
-                  ))}
+                  ].map((item) => {
+                    const isSelected = formData.interest === item.id;
+                    return (
+                      <button
+                        type="button"
+                        key={item.id}
+                        onClick={() => setFormData({ ...formData, interest: item.id })}
+                        className={`flex items-center gap-1.5 p-2.5 rounded-xl border text-[11px] cursor-pointer transition-all ${
+                          isSelected
+                            ? 'bg-[#101C42] border-[#101C42] text-white font-semibold shadow-xs'
+                            : 'bg-[#FAF6EF]/60 border-[#101C42]/12 text-[#101C42]/75 hover:bg-white'
+                        }`}
+                      >
+                        <span
+                          className={`w-2.5 h-2.5 rounded-full flex items-center justify-center shrink-0 border ${
+                            isSelected
+                              ? 'border-[#C79A3B] bg-[#C79A3B]'
+                              : 'border-[#101C42]/30 bg-transparent'
+                          }`}
+                        />
+                        <span className="truncate">{item.label}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -211,25 +216,25 @@ export default function QuickModal({ isOpen, onClose }) {
                 <button
                   type="button"
                   onClick={() => setShowOptional(!showOptional)}
-                  className="text-[11px] text-[#B9887B] hover:underline flex items-center gap-1 font-sans cursor-pointer py-1"
+                  className="text-[11px] text-[#101C42]/70 hover:text-[#B9887B] flex items-center gap-1 font-sans cursor-pointer py-1 transition-colors"
                 >
-                  <span>{showOptional ? '- Thu gọn thông tin thêm' : '+ Thêm Email hoặc ghi chú (Tùy chọn)'}</span>
+                  <span>{showOptional ? '− Thu gọn thông tin thêm' : '+ Thêm Email hoặc ghi chú (Tùy chọn)'}</span>
                   <ChevronDown size={12} className={`transform transition-transform ${showOptional ? 'rotate-180' : ''}`} />
                 </button>
 
                 {showOptional && (
-                  <div className="mt-2 flex flex-col gap-2 p-3 bg-white border border-[#0F1A41]/10 rounded-xl animate-fadeIn">
+                  <div className="mt-2 flex flex-col gap-2 p-3 bg-[#FAF6EF]/50 border border-[#101C42]/10 rounded-xl animate-fadeIn">
                     <input
                       type="email"
                       placeholder="Email nhận báo cáo (Tùy chọn)"
-                      className="w-full px-3 py-2 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] transition-all"
+                      className="w-full px-3 py-2 bg-white border border-[#101C42]/15 rounded-xl text-xs text-[#101C42] placeholder:text-[#101C42]/35 focus:outline-none focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] transition-all"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                     <textarea
                       rows={2}
                       placeholder="Ghi chú thêm về quy mô, vị trí tòa nhà..."
-                      className="w-full px-3 py-2 bg-white border border-[#0F1A41]/20 rounded-xl text-xs text-[#0F1A41] focus:outline-none focus:border-[#B9887B] resize-none transition-all"
+                      className="w-full px-3 py-2 bg-white border border-[#101C42]/15 rounded-xl text-xs text-[#101C42] placeholder:text-[#101C42]/35 focus:outline-none focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] resize-none transition-all"
                       value={formData.note}
                       onChange={(e) => setFormData({ ...formData, note: e.target.value })}
                     />
@@ -240,19 +245,16 @@ export default function QuickModal({ isOpen, onClose }) {
               {/* Submit CTA Button */}
               <button
                 type="submit"
-                className="w-full py-3 px-4 text-center text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg text-white mt-1"
-                style={{
-                  backgroundColor: '#B9887B',
-                  color: '#FFFFFF',
-                }}
+                className="w-full py-3.5 px-4 text-center text-xs font-bold uppercase tracking-[0.14em] rounded-full transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg text-white mt-1 bg-[#101C42] hover:bg-[#1A2C6B] flex items-center justify-center gap-2 group"
               >
-                XÁC NHẬN GỬI YÊU CẦU (MIỄN PHÍ) →
+                <span>XÁC NHẬN GỬI YÊU CẦU (MIỄN PHÍ)</span>
+                <span className="text-[#C79A3B] group-hover:translate-x-0.5 transition-transform">→</span>
               </button>
 
               {/* Micro Footer Notice */}
-              <div className="pt-1 flex items-center justify-between text-[10.5px] text-[#0F1A41]/60 font-sans">
-                <span>Hotline 24/7: <a href="tel:0878253545" className="text-[#B9887B] font-bold hover:underline">0878 253 545</a></span>
-                <span>Bảo mật 100%</span>
+              <div className="pt-1 flex items-center justify-between text-[10.5px] text-[#101C42]/60 font-sans">
+                <span>Hotline 24/7: <a href="tel:0878253545" className="text-[#101C42] font-bold hover:underline">0878 253 545</a></span>
+                <span className="flex items-center gap-1"><ShieldCheck size={12} className="text-[#B9887B]" /> Bảo mật 100%</span>
               </div>
             </form>
           )}

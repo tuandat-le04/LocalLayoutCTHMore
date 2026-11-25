@@ -1,7 +1,6 @@
 import React from 'react';
 import Story from '../components/sections/Story.jsx';
 import Awards from '../components/sections/Awards.jsx';
-import LuxuryIcon from '../components/common/LuxuryIcon.jsx';
 import { useNavigation } from '../context/NavigationContext.jsx';
 
 const CORE_VALUES = [
@@ -173,93 +172,46 @@ export default function AboutPage() {
 
               {/* 2. Ba cam kết bảo tồn gia sản */}
               <div>
-                <span className="font-sans text-[11px] text-[#0F1A41]/60 uppercase tracking-wider block font-bold mb-2">
-                  3 CAM KẾT VÀNG VỚI CHỦ SỞ HỮU BẤT ĐỘNG SẢN:
+                <span className="font-sans text-[11px] text-[#B9887B] uppercase tracking-[0.16em] block font-bold mb-2.5 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+                  3 NGUYÊN TẮC BẢO TOÀN GIA SẢN VỮNG BỀN:
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div className="p-3 bg-white rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                    <div className="font-serif text-xl font-bold text-[#B9887B] mb-0.5">92%+</div>
-                    <span className="text-xs font-bold text-[#0F1A41] block mb-0.5">Kín phòng ổn định</span>
-                    <p className="text-[11px] text-[#0F1A41]/70 leading-snug">
-                      Phân phối 8+ kênh OTA VÀ 120+ đối tác FDI.
+                  <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
+                    <div className="font-serif text-2xl font-bold text-[#B9887B] mb-0.5">92%+</div>
+                    <span className="text-xs font-bold text-[#0F1A41] block mb-1">Công suất ổn định</span>
+                    <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed font-normal">
+                      Phân phối 8+ kênh OTA toàn cầu và mạng lưới 120+ tập đoàn FDI.
                     </p>
                   </div>
 
-                  <div className="p-3 bg-white rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                    <div className="font-serif text-xl font-bold text-[#B9887B] mb-0.5">100%</div>
-                    <span className="text-xs font-bold text-[#0F1A41] block mb-0.5">Minh bạch tài chính</span>
-                    <p className="text-[11px] text-[#0F1A41]/70 leading-snug">
-                      PMS theo thời gian thực, đối soát ngày 5.
+                  <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
+                    <div className="font-serif text-2xl font-bold text-[#B9887B] mb-0.5">100%</div>
+                    <span className="text-xs font-bold text-[#0F1A41] block mb-1">Minh bạch tài chính</span>
+                    <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed font-normal">
+                      Cloud PMS giám sát thời gian thực, đối soát dòng tiền chuẩn xác ngày 5 hàng tháng.
                     </p>
                   </div>
 
-                  <div className="p-3 bg-white rounded-xl border border-[#0F1A41]/10 shadow-2xs">
-                    <div className="font-serif text-xl font-bold text-[#B9887B] mb-0.5">24/7</div>
-                    <span className="text-xs font-bold text-[#0F1A41] block mb-0.5">Bảo dưỡng công trình</span>
-                    <p className="text-[11px] text-[#0F1A41]/70 leading-snug">
-                      Bảo trì phòng ngừa giữ tài sản như mới.
+                  <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
+                    <div className="font-serif text-2xl font-bold text-[#B9887B] mb-0.5">24/7</div>
+                    <span className="text-xs font-bold text-[#0F1A41] block mb-1">Bảo dưỡng công trình</span>
+                    <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed font-normal">
+                      Quy trình bảo trì kỹ thuật MEP phòng ngừa giữ tài sản luôn bền mới theo năm tháng.
                     </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* 3. Bốn trụ cột năng lực vận hành thực thi */}
-              <div>
-                <span className="font-sans text-[11px] text-[#0F1A41]/60 uppercase tracking-wider block font-bold mb-2">
-                  4 NĂNG LỰC VẬN HÀNH TẠO DÒNG TIỀN VƯỢT TRỘI:
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
-                    <div>
-                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Tối ưu công suất và Giá bán linh hoạt</strong>
-                      <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
-                        Thuật toán định giá động kết hợp linh hoạt khách ngắn ngày và dài hạn giúp tối đa doanh thu trên từng phòng.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
-                    <div>
-                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Tiêu chuẩn dịch vụ SOP 5 sao</strong>
-                      <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
-                        Quy trình kiểm soát buồng phòng, vệ sinh và an ninh đa lớp giữ điểm đánh giá 9.0+ từ khách quốc tế.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
-                    <div>
-                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Công nghệ PropTech và Quản lý số</strong>
-                      <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
-                        Khóa thẻ từ thông minh, tự động check-in, ứng dụng cư dân và kiểm soát chi phí vận hành minh bạch.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] mt-1 shrink-0"></span>
-                    <div>
-                      <strong className="text-xs text-[#0F1A41] block mb-0.5">Bảo toàn và Nâng cấp tài sản trọn đời</strong>
-                      <p className="text-[10.5px] text-[#0F1A41]/70 leading-relaxed">
-                        Kế hoạch bảo trì dự phòng hệ thống MEP, thang máy và đề xuất cải tạo định kỳ giữ tòa nhà luôn mới.
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Executive Pledge Signature Quote */}
-            <div className="pt-3 border-t border-[#0F1A41]/10 bg-[#FAF9F6] p-3.5 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div className="pt-3 border-t border-[#0F1A41]/10 bg-[#FAF9F6] p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <p className="font-serif text-xs sm:text-[13px] italic text-[#0F1A41] leading-relaxed">
-                  "Xây dựng một tòa nhà đẹp là chưa đủ, biết cách thổi hồn và vận hành nó để tạo ra dòng tiền bền bỉ mới là chìa khóa giữ gìn gia sản."
+                <p className="font-serif text-xs sm:text-[13.5px] italic text-[#0F1A41] leading-relaxed">
+                  "Xây dựng một tòa nhà đẹp là chưa đủ, biết cách thổi hồn và vận hành để tạo ra dòng tiền bền bỉ mới là chìa khóa giữ gìn gia sản truyền đời."
                 </p>
-                <span className="font-sans text-[10px] uppercase tracking-wider text-[#0F1A41]/60 font-bold block mt-1">
-                  - Ban Sáng Lập CityHouse More
+                <span className="font-sans text-[10px] uppercase tracking-wider text-[#B9887B] font-bold block mt-1.5">
+                  — Ban Sáng Lập CityHouse More
                 </span>
               </div>
             </div>
@@ -277,9 +229,9 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {CORE_VALUES.map((val, idx) => (
             <div key={idx} className="p-8 border border-white/10 bg-white/[0.02] hover:border-[#B9887B]/40 hover:bg-white/[0.04] transition-all duration-300 rounded-2xl flex flex-col group">
-              <div className="w-11 h-11 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#B9887B] mb-6 group-hover:border-[#B9887B]/60 group-hover:bg-[#B9887B]/10 transition-all">
-                <LuxuryIcon name={val.icon} size={20} strokeWidth={1.25} />
-              </div>
+              <span className="font-serif text-3xl font-normal text-[#B9887B] mb-5 block">
+                0{idx + 1}
+              </span>
               <h3 className="font-serif text-xl font-semibold mb-3 group-hover:text-[#B9887B] transition-colors">{val.title}</h3>
               <p className="text-xs text-white/70 leading-relaxed">{val.desc}</p>
             </div>

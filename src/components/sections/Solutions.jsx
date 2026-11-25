@@ -75,7 +75,7 @@ export default function Solutions({ onOpenModal }) {
         {CLIENT_SITUATIONS.map((item) => (
           <article
             key={item.code}
-            className="bg-white rounded-2xl border border-[#0F1A41]/10 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group border-t-4 border-t-[#B9887B]"
+            className="bg-white rounded-2xl border border-[#0F1A41]/10 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group hover:border-[#B9887B]/50"
           >
             <div>
               {/* Scenario Context Photo */}

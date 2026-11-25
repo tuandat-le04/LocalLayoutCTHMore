@@ -375,6 +375,17 @@ export default function ProjectsPage({ onOpenModal }) {
           </div>
 
           <div className="contact-form-col">
+            <div className="mb-6 pb-4 border-b border-[#0F1A41]/10">
+              <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-[#B9887B] block mb-1">
+                KẾT NỐI ĐỘI NGŨ PHÁT TRIỂN
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0F1A41] leading-tight">
+                Đăng Ký Khảo Sát Bất Động Sản
+              </h3>
+              <p className="text-xs sm:text-sm text-[#0F1A41]/70 mt-1 leading-relaxed">
+                Đội ngũ chuyên gia tiếp nhận hồ sơ và trực tiếp liên hệ trao đổi phương án khai thác.
+              </p>
+            </div>
             <ContactForm submitLabel="GỬI THÔNG TIN BẤT ĐỘNG SẢN" />
           </div>
         </div>

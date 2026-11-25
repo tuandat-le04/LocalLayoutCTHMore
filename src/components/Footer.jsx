@@ -18,10 +18,8 @@ export default function Footer({ onOpenModal }) {
   const handleDownloadProfile = () => {
     setDownloadSuccess(true);
     setTimeout(() => {
-      // Simulate brochure download
-      alert("Hồ sơ năng lực CityHouse More (Company Profile 2026) đang được tải xuống!");
       setDownloadSuccess(false);
-    }, 400);
+    }, 2500);
   };
 
   return (
@@ -63,10 +61,23 @@ export default function Footer({ onOpenModal }) {
             {/* Action 2: Tải hồ sơ năng lực PDF */}
             <button
               onClick={handleDownloadProfile}
-              className="w-[260px] max-w-full shrink-0 flex items-center justify-center gap-2 px-6 py-3.5 min-h-[46px] text-xs font-bold uppercase tracking-[0.15em] text-white border border-white/40 hover:border-[#B9887B] hover:text-[#B9887B] transition-all duration-300 rounded-full cursor-pointer whitespace-nowrap"
+              className={`w-[260px] max-w-full shrink-0 flex items-center justify-center gap-2 px-6 py-3.5 min-h-[46px] text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 rounded-full cursor-pointer whitespace-nowrap border ${
+                downloadSuccess
+                  ? 'border-[#B9887B] text-[#B9887B] bg-[#B9887B]/10'
+                  : 'text-white border-white/40 hover:border-[#B9887B] hover:text-[#B9887B]'
+              }`}
             >
-              <Download size={15} className="shrink-0" />
-              <span>{downloadSuccess ? "ĐANG TẢI XUỐNG..." : "TẢI HỒ SƠ NĂNG LỰC"}</span>
+              {downloadSuccess ? (
+                <>
+                  <Check size={15} className="text-[#B9887B] shrink-0" />
+                  <span>ĐÃ TẢI XUỐNG HỒ SƠ (PDF)</span>
+                </>
+              ) : (
+                <>
+                  <Download size={15} className="shrink-0" />
+                  <span>TẢI HỒ SƠ NĂNG LỰC</span>
+                </>
+              )}
             </button>
           </div>
         </div>

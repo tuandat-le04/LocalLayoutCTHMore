@@ -2,7 +2,16 @@ import React from 'react';
 import { ArrowUpRight, Menu, X, Phone, Calendar, ChevronRight } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext.jsx';
 
-const PRIMARY_NAV_LINKS = [
+const DESKTOP_NAV_LINKS = [
+  { href: '/tu-van', label: 'GIẢI PHÁP' },
+  { href: '/danh-muc-tai-san', label: 'DỰ ÁN' },
+  { href: '/thuong-hieu', label: 'THƯƠNG HIỆU' },
+  { href: '/ve-he-thong', label: 'VỀ CITYHOUSE' },
+  { href: '/goc-nhin', label: 'GÓC NHÌN' },
+  { href: '/contact', label: 'LIÊN HỆ' },
+];
+
+const MOBILE_NAV_LINKS = [
   { href: '/tu-van', label: 'GIẢI PHÁP', desc: 'Đầu tư · Cải tạo · Vận hành' },
   { href: '/danh-muc-tai-san', label: 'DỰ ÁN', desc: 'Danh mục tài sản thực chiến' },
   { href: '/thuong-hieu', label: 'THƯƠNG HIỆU', desc: '5 dòng thương hiệu lưu trú' },
@@ -71,15 +80,15 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
           </span>
         </a>
 
-        {/* Main Desktop và Tablet Navigation Menu (7 main links) */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-7 mx-auto">
-          {PRIMARY_NAV_LINKS.map((link) => (
+        {/* Main Desktop và Tablet Navigation Menu: Clean, Focused on Core Investor Needs */}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 mx-auto">
+          {DESKTOP_NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`font-sans text-[11.5px] uppercase tracking-[0.15em] font-bold py-1.5 transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:bg-[#B9887B] after:transition-all after:duration-300 ${
+              className={`font-sans text-[11.5px] uppercase tracking-[0.16em] font-semibold py-1.5 transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:bg-[#B9887B] after:transition-all after:duration-300 ${
                 isLinkActive(link.href)
-                  ? 'text-white after:w-full'
+                  ? 'text-white after:w-full font-bold'
                   : 'text-white/70 hover:text-white after:w-0 hover:after:w-full'
               }`}
               onClick={(e) => {
@@ -146,7 +155,7 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
             <div className="text-[10px] uppercase tracking-widest text-[#B9887B] mb-2 font-bold">
               DANH MỤC TRUY CẬP CHÍNH
             </div>
-            {PRIMARY_NAV_LINKS.map((link) => (
+            {MOBILE_NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}

@@ -1017,12 +1017,12 @@
 }
 
 .contact-form-col {
-  background: var(--paper-light);
+  background: #FFFFFF;
   color: var(--ink);
-  padding: 48px;
-  border: 1px solid var(--line);
+  padding: 40px;
+  border: 1px solid rgba(16, 28, 66, 0.1);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(15, 26, 65, 0.08);
+  box-shadow: 0 20px 50px -10px rgba(10, 17, 40, 0.25);
 }
 
 .contact-form-col h3 {

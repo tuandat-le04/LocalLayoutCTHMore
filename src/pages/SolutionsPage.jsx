@@ -8,8 +8,6 @@ import {
   Check,
   Percent
 } from 'lucide-react';
-import LuxuryIcon from '../components/common/LuxuryIcon.jsx';
-import ContactForm from '../components/ContactForm.jsx';
 import { useNavigation } from '../context/NavigationContext.jsx';
 
 const DETAILED_SOLUTIONS = [
@@ -342,15 +340,15 @@ export default function SolutionsPage({ onOpenModal }) {
                                 className="p-4.5 rounded-xl bg-white border border-[#0F1A41]/10 hover:border-[#0F1A41]/30 hover:shadow-2xs transition-all duration-300 group/item flex flex-col justify-between"
                               >
                                 <div>
-                                  <div className="flex items-center gap-3 mb-2.5">
-                                    <div className="w-8 h-8 rounded-lg bg-[#FAF9F6] border border-[#0F1A41]/8 text-[#0F1A41] flex items-center justify-center shrink-0 group-hover/item:bg-[#0F1A41] group-hover/item:text-white transition-all duration-300 shadow-2xs">
-                                      <LuxuryIcon name={item.icon} size={15} strokeWidth={1.35} />
-                                    </div>
-                                    <h4 className="font-serif text-[13.5px] sm:text-sm text-[#0F1A41] font-bold leading-snug">
+                                  <div className="mb-2">
+                                    <span className="text-[10px] font-sans font-bold text-[#B9887B] tracking-wider block mb-1">
+                                      0{idx + 1}
+                                    </span>
+                                    <h4 className="font-serif text-[14px] text-[#0F1A41] font-semibold leading-snug">
                                       {item.title}
                                     </h4>
                                   </div>
-                                  <p className="font-sans text-xs text-[#0F1A41]/70 leading-relaxed font-normal pl-0.5">
+                                  <p className="font-sans text-xs text-[#0F1A41]/70 leading-relaxed font-normal">
                                     {item.desc}
                                   </p>
                                 </div>
@@ -361,7 +359,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
                         {/* Key Deliverables: Sleek metadata line, not an overpowering heavy box */}
                         <div className="pt-4 pb-2 border-t border-[#0F1A41]/10 flex items-start gap-2.5 mb-8 text-xs text-[#0F1A41]/80 font-sans">
-                          <LuxuryIcon name="deliverable" size={15} strokeWidth={1.35} className="text-[#0F1A41]/70 shrink-0 mt-0.5" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B] shrink-0 mt-1.5"></span>
                           <div className="leading-relaxed">
                             <span className="text-[#0F1A41] font-bold">Kết quả bàn giao: </span>
                             <span className="text-[#0F1A41]/75">{sol.deliverable}</span>
@@ -421,9 +419,9 @@ export default function SolutionsPage({ onOpenModal }) {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-11 h-11 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#B9887B] group-hover:border-[#B9887B]/60 group-hover:bg-[#B9887B]/10 transition-all">
-                      <LuxuryIcon name={m.icon} size={20} strokeWidth={1.25} />
-                    </div>
+                    <span className="font-serif text-2xl text-[#B9887B]/70 group-hover:text-[#B9887B] font-light">
+                      0{i + 1}
+                    </span>
                     <span className="text-[10px] font-sans uppercase tracking-wider px-2.5 py-1 rounded bg-white/10 text-[#B9887B] font-bold border border-white/10">
                       {m.badge}
                     </span>
@@ -508,51 +506,6 @@ export default function SolutionsPage({ onOpenModal }) {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Consultation Form Section ── */}
-      <section id="contact-solutions" className="py-20 md:py-28 bg-[#0F1A41] text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="contact-layout">
-            <div className="contact-info-col">
-              <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3">
-                <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-                KẾT NỐI VỚI CHUYÊN GIA CITYHOUSE MORE
-              </p>
-              <h2 className="text-white font-serif text-3xl sm:text-4xl md:text-5xl leading-[1.25] mb-6">
-                ĐẶT LỊCH TƯ VẤN<br />
-                <span className="text-[#B9887B]">GIẢI PHÁP TÀI SẢN</span>
-              </h2>
-              <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-8 max-w-lg">
-                Hãy chia sẻ thông tin về bất động sản của bạn. Đội ngũ chuyên gia giàu kinh nghiệm của CityHouse More sẽ trực tiếp khảo sát hiện trạng và gửi báo cáo phân tích tiềm năng khai thác trong vòng <strong>24 giờ làm việc</strong>.
-              </p>
-
-              <div className="contact-detail-list grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans mb-6">
-                <div className="bg-white/[0.04] p-3.5 rounded border border-white/10">
-                  <span className="text-white/60 block text-[10px] uppercase">HOTLINE TƯ VẤN 24/7</span>
-                  <strong className="text-sm text-[#B9887B]">0878 253 545</strong>
-                </div>
-                <div className="bg-white/[0.04] p-3.5 rounded-xl border border-white/10">
-                  <span className="text-white/60 block text-[10px] uppercase">EMAIL HỢP TÁC</span>
-                  <strong className="text-sm text-white">info@cityhousemore.com</strong>
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-form-col bg-white p-6 sm:p-8 rounded-2xl text-[#0F1A41] shadow-2xl">
-              <div className="mb-6">
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2.5 leading-snug">
-                  GỬI YÊU CẦU TƯ VẤN GIẢI PHÁP
-                </h3>
-                <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed">
-                  Nhận báo cáo sơ bộ phân tích hiện trạng và mô hình khai thác phù hợp nhất.
-                </p>
-              </div>
-
-              <ContactForm submitLabel="GỬI YÊU CẦU TƯ VẤN GIẢI PHÁP" />
-            </div>
           </div>
         </div>
       </section>
