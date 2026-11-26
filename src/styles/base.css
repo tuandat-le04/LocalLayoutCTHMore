@@ -5,6 +5,28 @@
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* CityHouse More Official Color Tokens for Tailwind v4 */
+  --color-brand-navy: #0F1A41;
+  --color-brand-navy-dark: #0A1128;
+  --color-brand-navy-soft: #131E3D;
+  --color-brand-navy-elevated: #1C2D6B;
+
+  --color-brand-terracotta: #B9887B;
+  --color-brand-terracotta-hover: #A37367;
+  --color-brand-terracotta-dark: #8A5A3D;
+  --color-brand-terracotta-light: #DFC4BC;
+  --color-brand-terracotta-soft: #EAB2A2;
+
+  --color-brand-cream: #FAF6EF;
+  --color-brand-linen: #F4EFEA;
+  --color-brand-sand: #E9E1D2;
+  --color-brand-sand-dark: #E5DFD5;
+  --color-brand-card: #FFFEFB;
+
+  --color-brand-charcoal: #1C2530;
+  --color-brand-gold: #C79A3B;
+  --color-brand-gold-light: #D5B06A;
 }
 
 :root {
@@ -16,15 +38,17 @@
   --font-body: var(--font-sans);
   --font-label: var(--font-sans);
 
-  /* CityHouse More Official Brand Palette */
-  --ink: #101C42;             /* Deep Midnight Navy (cityhousemore.com) */
+  /* CityHouse More Official Brand Palette (Exact from cityhousemore.com) */
+  --ink: #0F1A41;             /* Deep Midnight Navy (cityhousemore.com official) */
   --ink-deep: #0A1128;        /* Darker Navy for shadows/contrast */
-  --ink-soft: #162456;        /* Soft Navy for cards/panels */
+  --ink-soft: #131E3D;        /* Soft Navy for cards/panels */
   --ink-elevated: #1C2D6B;    /* Highlight Navy */
   
   --accent: #B9887B;          /* Warm Terracotta / Luxury Copper */
-  --accent-hover: #A37367;    /* Deep Terracotta */
+  --accent-hover: #A37367;    /* Deep Terracotta Hover */
+  --accent-deep: #8A5A3D;     /* Dark Terracotta Accent */
   --accent-light: #DFC4BC;    /* Soft Terracotta */
+  --accent-soft: #EAB2A2;
   --accent-tint: rgba(185, 136, 123, 0.15);
   
   --gold: #C79A3B;            /* Agoda & Awards Luxury Gold */
@@ -33,14 +57,17 @@
   
   --paper: #F4EFEA;           /* Warm Luxury Linen */
   --paper-light: #FAF6EF;     /* Soft Linen Cream */
-  --paper-card: #FFFFFF;      /* Pure Card White */
+  --paper-card: #FFFEFB;      /* Pure Card Warm White */
   
+  --sand: #E9E1D2;            /* Warm Sand Border & Divider */
+  --sand-dark: #E5DFD5;       /* Muted Sand */
+  --charcoal: #1C2530;        /* Deep Charcoal Text for Light Surfaces */
   --muted: #8E95A5;           /* Light Muted Text on Dark */
   --muted-dark: #64748B;      /* Slate-500 Text on Light */
   
   --line: rgba(244, 239, 234, 0.15);
   --line-strong: rgba(185, 136, 123, 0.35);
-  --line-dark: rgba(16, 28, 66, 0.1);
+  --line-dark: rgba(15, 26, 65, 0.1);
 }
 
 @layer base {

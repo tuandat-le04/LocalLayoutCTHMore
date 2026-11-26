@@ -107,11 +107,19 @@ export default function Solutions({ onOpenModal }) {
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 self-start md:self-auto shrink-0">
             <button
-              onClick={() => navigate('/tu-van')}
+              onClick={() => navigate('/giai-phap')}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md bg-white border border-[#0F1A41]/15 hover:border-[#B9887B] hover:text-[#B9887B] text-[#0F1A41] font-sans"
               aria-label="Khám phá toàn bộ giải pháp"
             >
               <span>Khám phá toàn bộ giải pháp</span>
+              <ArrowUpRight size={15} />
+            </button>
+            <button
+              onClick={() => navigate('/tu-van')}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md bg-[#B9887B] text-white hover:bg-[#a57467] font-sans"
+              aria-label="Đặt lịch tư vấn"
+            >
+              <span>Đặt lịch tư vấn</span>
               <ArrowUpRight size={15} />
             </button>
           </div>
@@ -251,10 +259,10 @@ export default function Solutions({ onOpenModal }) {
 
                 <div className="mt-3 text-center">
                   <button
-                    onClick={() => navigate('/tu-van')}
+                    onClick={() => navigate('/giai-phap')}
                     className="text-[11px] font-semibold text-[#0F1A41]/60 hover:text-[#B9887B] transition-colors inline-flex items-center gap-1 cursor-pointer font-sans"
                   >
-                    <span>Xem phân tích chuyên sâu tại trang Giải pháp</span>
+                    <span>Khám phá toàn bộ hệ khung Giải pháp</span>
                     <ChevronRight size={12} />
                   </button>
                 </div>

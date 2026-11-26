@@ -4,7 +4,8 @@ import ContactForm from '../components/ContactForm.jsx';
 import Footer from '../components/Footer.jsx';
 
 const NAV_LINKS = [
-  { href: '/tu-van', label: 'GIẢI PHÁP' },
+  { href: '/giai-phap', label: 'GIẢI PHÁP' },
+  { href: '/tu-van', label: 'TƯ VẤN' },
   { href: '/danh-muc-tai-san', label: 'DANH MỤC TÀI SẢN' },
   { href: '/ve-he-thong', label: 'VỀ HỆ THỐNG' },
   { href: '/goc-nhin', label: 'GÓC NHÌN' },

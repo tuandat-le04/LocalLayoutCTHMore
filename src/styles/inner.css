@@ -17,7 +17,7 @@
   overflow: hidden;
   padding-top: 160px;
   padding-bottom: 80px;
-  background: radial-gradient(circle at 75% 42%, #18285c 0%, #101c42 35%, var(--ink) 70%);
+  background: radial-gradient(circle at 75% 42%, #18285c 0%, #0F1A41 35%, var(--ink) 70%);
 }
 
 .inner-hero h1 {

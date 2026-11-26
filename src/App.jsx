@@ -5,6 +5,7 @@ import FloatingCTA from './components/FloatingCTA.jsx';
 import QuickModal from './components/QuickModal.jsx';
 import HomePage from './pages/HomePage.jsx';
 import SolutionsPage from './pages/SolutionsPage.jsx';
+import ConsultationPage from './pages/ConsultationPage.jsx';
 import ProjectsPage from './pages/ProjectsPage.jsx';
 import ProjectDetailPage from './pages/ProjectDetailPage.jsx';
 import BrandsPage from './pages/BrandsPage.jsx';
@@ -32,9 +33,14 @@ function MainRouter() {
     }
 
     switch (currentPath) {
-      case '/tu-van':
       case '/giai-phap':
         return <SolutionsPage onOpenModal={openModal} />;
+
+      case '/tu-van':
+      case '/tu-van/dau-tu':
+      case '/tu-van/cai-tao':
+      case '/tu-van/mo-hinh':
+        return <ConsultationPage onOpenModal={openModal} />;
 
       case '/danh-muc-tai-san':
       case '/dang-hoat-dong':
@@ -44,6 +50,7 @@ function MainRouter() {
         return <BrandsPage onOpenModal={openModal} />;
 
       case '/ve-he-thong':
+      case '/about':
         return <AboutPage onOpenModal={openModal} />;
 
       case '/goc-nhin':

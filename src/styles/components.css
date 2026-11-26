@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: radial-gradient(circle at 75% 45%, #18285c 0%, #101c42 35%, var(--ink) 70%);
+  background: radial-gradient(circle at 75% 45%, #18285c 0%, #0F1A41 35%, var(--ink) 70%);
   padding-top: 130px;
   padding-bottom: 90px;
 }

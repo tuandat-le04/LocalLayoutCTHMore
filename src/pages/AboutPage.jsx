@@ -38,7 +38,7 @@ export default function AboutPage() {
           VỀ HỆ THỐNG — CITYHOUSE MORE
         </p>
         <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white leading-[1.18] font-normal mb-5">
-          15 năm kiến tạo<br />
+          Hành trình kiến tạo<br />
           <span className="text-[#B9887B] font-serif italic">giá trị dòng tiền bền vững</span>
         </h1>
         <p className="lead text-sm sm:text-base md:text-lg text-[#F4EFEA]/80 max-w-2xl leading-relaxed font-normal">

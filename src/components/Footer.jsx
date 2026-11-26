@@ -119,35 +119,40 @@ export default function Footer({ onOpenModal }) {
             </div>
           </div>
 
-          {/* Column 2: Solutions (lg:col-span-3) */}
+          {/* Column 2: Solutions & Advisory (lg:col-span-3) */}
           <div className="lg:col-span-3">
             <h4 className="font-sans text-xs font-bold uppercase tracking-[0.15em] text-[#B9887B] mb-4">
-              GIẢI PHÁP TÀI SẢN
+              GIẢI PHÁP & TƯ VẤN
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs text-white/75 font-sans">
               <li>
-                <a href="/tu-van" onClick={(e) => handleLink('/tu-van', e)} className="hover:text-white transition-colors">
-                  Tôi đang chuẩn bị đầu tư
+                <a href="/giai-phap" onClick={(e) => handleLink('/giai-phap', e)} className="hover:text-white transition-colors">
+                  Hệ thống Giải pháp Tài sản
+                </a>
+              </li>
+              <li>
+                <a href="/giai-phap#partnership-models" onClick={(e) => handleLink('/giai-phap', e)} className="hover:text-white transition-colors">
+                  3 Mô hình Hợp tác Chiến lược
+                </a>
+              </li>
+              <li>
+                <a href="/tu-van/dau-tu" onClick={(e) => handleLink('/tu-van/dau-tu', e)} className="hover:text-white transition-colors">
+                  Tư vấn Đầu tư và Phát triển
+                </a>
+              </li>
+              <li>
+                <a href="/tu-van/cai-tao" onClick={(e) => handleLink('/tu-van/cai-tao', e)} className="hover:text-white transition-colors">
+                  Tư vấn Cải tạo và Tái định vị
+                </a>
+              </li>
+              <li>
+                <a href="/tu-van/mo-hinh" onClick={(e) => handleLink('/tu-van/mo-hinh', e)} className="hover:text-white transition-colors">
+                  Tư vấn Mô hình & Vận hành 24/7
                 </a>
               </li>
               <li>
                 <a href="/tu-van" onClick={(e) => handleLink('/tu-van', e)} className="hover:text-white transition-colors">
-                  Cải tạo và Tái định vị tòa nhà cũ
-                </a>
-              </li>
-              <li>
-                <a href="/tu-van" onClick={(e) => handleLink('/tu-van', e)} className="hover:text-white transition-colors">
-                  Ủy thác Quản lý vận hành 24/7
-                </a>
-              </li>
-              <li>
-                <a href="/contact" onClick={(e) => handleLink('/contact', e)} className="hover:text-white transition-colors">
-                  Hợp tác Thuê khoán trọn gói
-                </a>
-              </li>
-              <li>
-                <a href="/contact" onClick={(e) => handleLink('/contact', e)} className="hover:text-white transition-colors">
-                  Bảo toàn giá trị gia sản gia tộc
+                  Đặt lịch Đánh giá Sơ bộ Tài sản
                 </a>
               </li>
             </ul>
