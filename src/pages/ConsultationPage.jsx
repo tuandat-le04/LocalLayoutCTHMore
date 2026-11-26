@@ -25,6 +25,7 @@ const CONSULTING_PILLARS = [
   {
     code: "01",
     id: "tu-van-dau-tu",
+    path: "/tu-van/dau-tu",
     pillarName: "TRỤ CỘT 01",
     serviceTitle: "Tư vấn Đầu tư và Phát triển Dự án Mới",
     subtitle: "Xác lập nền móng vững chắc ngay từ quyết định đầu tư ban đầu",
@@ -62,6 +63,7 @@ const CONSULTING_PILLARS = [
   {
     code: "02",
     id: "tu-van-cai-tao",
+    path: "/tu-van/cai-tao",
     pillarName: "TRỤ CỘT 02",
     serviceTitle: "Tư vấn Cải tạo và Tái định vị Tòa nhà Cũ",
     subtitle: "Hồi sinh tài sản xuống cấp, nhân đôi giá trị khai thác thương mại",
@@ -99,6 +101,7 @@ const CONSULTING_PILLARS = [
   {
     code: "03",
     id: "tu-van-mo-hinh",
+    path: "/tu-van/mo-hinh",
     pillarName: "TRỤ CỘT 03",
     serviceTitle: "Tư vấn Mô hình và Thiết lập Bộ máy Vận hành",
     subtitle: "Vận hành chuẩn mực quốc tế, tối đa hóa công suất và bảo toàn tài sản",
@@ -215,24 +218,24 @@ export default function ConsultationPage({ onOpenModal }) {
             Đội ngũ chuyên gia CityHouseMore cung cấp dịch vụ tư vấn đo ni đóng giày dựa trên dữ liệu vận hành thực tế tại 35+ tòa nhà khắp TP.HCM. Chúng tôi đồng hành giúp Quý vị tối ưu hóa suất đầu tư, giải cứu tài sản sa sút và thiết lập bộ máy khai thác dòng tiền an nhàn.
           </p>
 
-          {/* Quick Pillar Selector Pills */}
+          {/* Quick Pillar Direct Links */}
           <div className="flex flex-wrap gap-3 mt-8 pt-6 border-t border-white/10 font-sans">
             <button
-              onClick={() => scrollToSection('tu-van-dau-tu')}
+              onClick={() => navigate('/tu-van/dau-tu')}
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-[#B9887B] text-white hover:text-white transition-all cursor-pointer border border-white/15"
             >
               <span>1. TƯ VẤN ĐẦU TƯ</span>
               <ChevronRight size={13} />
             </button>
             <button
-              onClick={() => scrollToSection('tu-van-cai-tao')}
+              onClick={() => navigate('/tu-van/cai-tao')}
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-[#B9887B] text-white hover:text-white transition-all cursor-pointer border border-white/15"
             >
               <span>2. TƯ VẤN CẢI TẠO</span>
               <ChevronRight size={13} />
             </button>
             <button
-              onClick={() => scrollToSection('tu-van-mo-hinh')}
+              onClick={() => navigate('/tu-van/mo-hinh')}
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-[#B9887B] text-white hover:text-white transition-all cursor-pointer border border-white/15"
             >
               <span>3. TƯ VẤN MÔ HÌNH</span>
@@ -445,8 +448,8 @@ export default function ConsultationPage({ onOpenModal }) {
                       {/* Action Button */}
                       <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-[#0F1A41]/10">
                         <button
-                          onClick={() => handleConsultCta(sol.code)}
-                          className="solid-btn inline-flex items-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
+                          onClick={() => navigate(sol.path)}
+                          className="solid-btn inline-flex items-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer text-white"
                           style={{
                             backgroundColor: '#B9887B',
                             color: '#FFFFFF',
@@ -454,15 +457,15 @@ export default function ConsultationPage({ onOpenModal }) {
                             boxShadow: '0 4px 18px rgba(185, 136, 123, 0.45)',
                           }}
                         >
-                          <span>ĐĂNG KÝ {sol.pillarName}</span>
+                          <span>XEM CHI TIẾT TRANG {sol.pillarName}</span>
                           <ArrowUpRight size={15} className="text-white" />
                         </button>
 
                         <button
-                          onClick={() => navigate('/giai-phap')}
-                          className="inline-flex items-center gap-1.5 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-[#0F1A41]/70 hover:text-[#B9887B] transition-colors cursor-pointer"
+                          onClick={() => handleConsultCta(sol.code)}
+                          className="inline-flex items-center gap-1.5 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#0F1A41] hover:text-[#B9887B] transition-colors cursor-pointer border border-[#0F1A41]/15 rounded-full"
                         >
-                          <span>Xem giải pháp tương ứng</span>
+                          <span>Đăng ký tư vấn gói này</span>
                           <ChevronRight size={13} />
                         </button>
                       </div>

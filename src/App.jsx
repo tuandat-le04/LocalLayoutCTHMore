@@ -6,6 +6,9 @@ import QuickModal from './components/QuickModal.jsx';
 import HomePage from './pages/HomePage.jsx';
 import SolutionsPage from './pages/SolutionsPage.jsx';
 import ConsultationPage from './pages/ConsultationPage.jsx';
+import ConsultingInvestmentPage from './pages/ConsultingInvestmentPage.jsx';
+import ConsultingRenovationPage from './pages/ConsultingRenovationPage.jsx';
+import ConsultingModelPage from './pages/ConsultingModelPage.jsx';
 import ProjectsPage from './pages/ProjectsPage.jsx';
 import ProjectDetailPage from './pages/ProjectDetailPage.jsx';
 import BrandsPage from './pages/BrandsPage.jsx';
@@ -37,10 +40,16 @@ function MainRouter() {
         return <SolutionsPage onOpenModal={openModal} />;
 
       case '/tu-van':
-      case '/tu-van/dau-tu':
-      case '/tu-van/cai-tao':
-      case '/tu-van/mo-hinh':
         return <ConsultationPage onOpenModal={openModal} />;
+
+      case '/tu-van/dau-tu':
+        return <ConsultingInvestmentPage onOpenModal={openModal} />;
+
+      case '/tu-van/cai-tao':
+        return <ConsultingRenovationPage onOpenModal={openModal} />;
+
+      case '/tu-van/mo-hinh':
+        return <ConsultingModelPage onOpenModal={openModal} />;
 
       case '/danh-muc-tai-san':
       case '/dang-hoat-dong':
