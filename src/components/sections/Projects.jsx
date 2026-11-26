@@ -27,7 +27,7 @@ export default function Projects({ onContactClick }) {
   const featuredProjects = projects.slice(0, 3);
 
   return (
-    <section id="projects" className="projects section-pad bg-white text-[#0F1A41] font-sans">
+    <section id="projects" className="projects section-pad bg-[#F8F9FA] text-[#0F1A41] font-sans border-t border-[#0F1A41]/5">
       <div className="section-heading row-heading mb-10">
         <div>
           <p className="text-[11px] font-bold tracking-[0.25em] text-[#B9887B] uppercase mb-3 flex items-center gap-2">
@@ -45,7 +45,7 @@ export default function Projects({ onContactClick }) {
 
         <button
           onClick={() => navigate('/danh-muc-tai-san')}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md self-start md:self-auto shrink-0 bg-white border border-[#0F1A41]/20 hover:border-[#B9887B] hover:text-[#B9887B]"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.14em] transition-all duration-300 cursor-pointer shadow-2xs hover:shadow-md self-start md:self-auto shrink-0 bg-white text-[#0F1A41] border border-[#0F1A41]/15 hover:border-[#0F1A41] hover:bg-[#0F1A41] hover:text-white"
           aria-label="Xem toàn bộ 35+ dự án"
         >
           <span>Xem tất cả 35+ dự án</span>
@@ -58,51 +58,56 @@ export default function Projects({ onContactClick }) {
         {featuredProjects.map((project) => (
           <article
             key={project.id}
-            className="bg-[#FAF6EF] rounded-2xl border border-[#0F1A41]/10 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group"
+            className="bg-white rounded-2xl border border-[#0F1A41]/8 overflow-hidden flex flex-col justify-between shadow-[0_4px_24px_-4px_rgba(15,26,65,0.06)] hover:shadow-[0_20px_40px_-12px_rgba(15,26,65,0.12)] hover:-translate-y-1 transition-all duration-300 group"
           >
             {/* Image Banner */}
-            <div className="relative aspect-[16/10] overflow-hidden bg-gray-200">
+            <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
               <img
                 src={project.image}
                 alt={project.name}
                 loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10 pointer-events-none" />
               <div className="absolute top-3 left-3 flex gap-1.5">
-                <span className="px-3 py-1 bg-[#0F1A41]/90 backdrop-blur-sm text-white font-sans text-[10px] font-bold rounded-full uppercase tracking-wider">
+                <span className="px-3 py-1 bg-[#0F1A41]/90 backdrop-blur-md text-white font-sans text-[10px] font-bold rounded-full uppercase tracking-wider border border-white/10 shadow-xs">
                   {project.brand}
                 </span>
-                <span className="px-3 py-1 bg-[#B9887B] text-white font-sans text-[10px] font-bold rounded-full uppercase tracking-wider">
+                <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-[#0F1A41] font-sans text-[10px] font-bold rounded-full uppercase tracking-wider border border-white/40 shadow-xs">
                   {project.district}
                 </span>
               </div>
               {project.agodaScore && project.agodaUrl && (
-                <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-sans font-bold text-[#0F1A41] flex items-center gap-1 shadow">
+                <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-sans font-bold text-[#0F1A41] flex items-center gap-1.5 shadow-sm border border-white/50">
                   <Star size={12} className="fill-[#C79A3B] text-[#C79A3B]" />
                   <span>Agoda {project.agodaScore}</span>
                 </div>
               )}
             </div>
 
-            {/* Content Details (Clean và Minimalist) */}
-            <div className="p-6 flex flex-col flex-1 justify-between font-sans">
+            {/* Content Details (Clean & Modern Luxury) */}
+            <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between font-sans">
               <div>
-                <h3 className="font-serif text-xl font-bold text-[#0F1A41] mb-1.5 group-hover:text-[#B9887B] transition-colors">
+                <h3 className="font-serif text-xl sm:text-[22px] font-bold text-[#0F1A41] mb-2 group-hover:text-[#B9887B] transition-colors leading-snug">
                   {project.name}
                 </h3>
 
-                <p className="text-xs text-[#0F1A41]/65 flex items-center gap-1 mb-3">
+                <p className="text-xs text-[#0F1A41]/65 flex items-center gap-1.5 mb-3.5">
                   <MapPin size={12} className="text-[#B9887B] shrink-0" />
                   <span className="truncate">{project.fullAddress}</span>
                 </p>
 
-                <div className="flex items-center gap-3 text-xs font-sans text-[#0F1A41]/80 mb-3 pb-3 border-b border-[#0F1A41]/10">
-                  <span>Quy mô: <strong>{project.rooms}</strong></span>
-                  <span>·</span>
-                  <span className="text-[#B9887B] font-bold">Kín phòng {project.occupancy}</span>
+                <div className="flex items-center justify-between text-xs font-sans bg-[#F8F9FA] rounded-xl px-3.5 py-2.5 mb-4 border border-[#0F1A41]/5">
+                  <span className="text-[#0F1A41]/75">
+                    Quy mô: <strong className="text-[#0F1A41] font-semibold">{project.rooms}</strong>
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0F1A41] bg-white px-2.5 py-1 rounded-full border border-[#0F1A41]/10 shadow-2xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    Kín phòng {project.occupancy}
+                  </span>
                 </div>
 
-                <p className="text-xs text-[#0F1A41]/80 leading-relaxed mb-4 line-clamp-2 font-normal">
+                <p className="text-xs text-[#0F1A41]/75 leading-relaxed mb-5 line-clamp-2 font-normal">
                   {project.result}
                 </p>
               </div>
@@ -111,15 +116,12 @@ export default function Projects({ onContactClick }) {
               <div className="pt-2">
                 <button
                   onClick={() => setSelectedCaseStudy(project)}
-                  className="w-full py-2.5 px-4 text-center text-xs font-bold uppercase tracking-[0.15em] rounded-full transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer shadow-sm hover:shadow"
-                  style={{
-                    backgroundColor: '#B9887B',
-                    color: '#FFFFFF',
-                    border: '1px solid #B9887B',
-                  }}
+                  className="w-full py-3 px-5 text-center text-xs font-bold uppercase tracking-[0.14em] rounded-full transition-all duration-300 flex items-center justify-between cursor-pointer bg-[#F8F9FA] hover:bg-[#0F1A41] text-[#0F1A41] hover:text-white border border-[#0F1A41]/12 hover:border-[#0F1A41] shadow-2xs hover:shadow-md group/btn font-sans"
                 >
                   <span>XEM CASE STUDY</span>
-                  <ChevronRight size={15} className="text-white" />
+                  <span className="w-6 h-6 rounded-full bg-[#0F1A41]/6 group-hover/btn:bg-white/20 flex items-center justify-center transition-colors">
+                    <ArrowUpRight size={13} className="text-[#0F1A41] group-hover/btn:text-white group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                  </span>
                 </button>
               </div>
             </div>
@@ -128,15 +130,10 @@ export default function Projects({ onContactClick }) {
       </div>
 
       {/* Bottom CTA to view complete directory */}
-      <div className="text-center mt-10 pt-4">
+      <div className="text-center mt-12 pt-2">
         <button
           onClick={() => navigate('/danh-muc-tai-san')}
-          className="solid-btn inline-flex items-center gap-2 px-8 py-3.5 text-xs font-bold uppercase tracking-wider rounded cursor-pointer"
-          style={{
-            backgroundColor: '#0F1A41',
-            color: '#FFFFFF',
-            border: '1px solid #0F1A41',
-          }}
+          className="inline-flex items-center gap-3 px-8 py-3.5 text-xs font-bold uppercase tracking-[0.16em] rounded-full cursor-pointer transition-all duration-300 bg-[#0F1A41] hover:bg-[#162456] text-white border border-[#0F1A41] shadow-md hover:shadow-xl hover:-translate-y-0.5 font-sans"
         >
           <span>XEM TOÀN BỘ 35+ BẤT ĐỘNG SẢN VÀ BỘ LỌC CHI TIẾT</span>
           <ArrowUpRight size={15} className="text-[#B9887B]" />
@@ -153,7 +150,7 @@ export default function Projects({ onContactClick }) {
           aria-labelledby="case-study-modal-title"
         >
           <div
-            className="relative w-full max-w-3xl bg-[#FAF6EF] text-[#0F1A41] rounded-2xl shadow-[0_24px_70px_-15px_rgba(10,17,40,0.5)] border border-[#0F1A41]/15 max-h-[92vh] overflow-hidden flex flex-col"
+            className="relative w-full max-w-3xl bg-white text-[#0F1A41] rounded-2xl shadow-[0_24px_70px_-15px_rgba(10,17,40,0.5)] border border-[#0F1A41]/12 max-h-[92vh] overflow-hidden flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Sticky Editorial Header */}
