@@ -18,6 +18,47 @@ import CareersPage from './pages/CareersPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import { NavigationProvider, useNavigation } from './context/NavigationContext.jsx';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('CityHouse Router Error Boundary caught error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-[60vh] flex flex-col items-center justify-center p-8 text-center bg-[#0F1A41] text-white font-sans">
+          <div className="w-16 h-16 rounded-full bg-[#B9887B]/20 text-[#B9887B] flex items-center justify-center mb-4 border border-[#B9887B]/40">
+            <span className="text-2xl font-serif">!</span>
+          </div>
+          <h2 className="font-serif text-2xl font-bold mb-2">ĐÃ CÓ SỰ CỐ TẢI TRANG</h2>
+          <p className="text-xs text-white/70 max-w-md mb-6 leading-relaxed">
+            Hệ thống đang được làm mới dữ liệu. Quý khách vui lòng tải lại trang hoặc quay về trang chủ.
+          </p>
+          <button
+            onClick={() => {
+              this.setState({ hasError: false });
+              window.location.href = '/';
+            }}
+            className="px-6 py-2.5 bg-[#B9887B] text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#A37367] transition-all cursor-pointer"
+          >
+            Về Trang Chủ
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 function MainRouter() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -91,9 +132,11 @@ function MainRouter() {
         onOpenModal={openModal}
       />
 
-      {/* 2. Main Router Content */}
+      {/* 2. Main Router Content with Error Protection */}
       <main id="top">
-        {renderCurrentPage()}
+        <ErrorBoundary>
+          {renderCurrentPage()}
+        </ErrorBoundary>
       </main>
 
       {/* 3. Global Enterprise Footer */}

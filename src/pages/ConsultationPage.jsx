@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import LuxuryIcon, { LuxuryCheckBadge } from '../components/common/LuxuryIcon.jsx';
 import {
   ArrowUpRight,
   ChevronRight,
@@ -320,7 +321,7 @@ export default function ConsultationPage({ onOpenModal }) {
             {/* Metric 4: Bảo mật */}
             <div className="py-7 md:py-9 sm:px-6 lg:px-8 flex items-start gap-4 group hover:bg-white/[0.02] transition-colors">
               <div className="w-12 h-12 rounded-full border border-[#B9887B]/40 bg-[#B9887B]/10 flex items-center justify-center text-[#B9887B] shrink-0 group-hover:border-[#B9887B] group-hover:scale-105 transition-all shadow-[0_0_20px_rgba(185,136,123,0.15)] mt-0.5">
-                <ShieldCheck size={22} strokeWidth={1.5} />
+                <LuxuryIcon name="shieldCheck" size={22} strokeWidth={1.4} />
               </div>
               <div>
                 <div className="font-serif text-3xl lg:text-4xl font-normal text-white tracking-tight leading-none mb-2">
@@ -560,7 +561,7 @@ export default function ConsultationPage({ onOpenModal }) {
           <div className="mt-12 p-6 rounded-2xl bg-[#142358] border border-[#B9887B]/30 flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-[#B9887B]/20 border border-[#B9887B]/40 flex items-center justify-center text-[#B9887B] shrink-0">
-                <ShieldCheck size={26} />
+                <LuxuryIcon name="shieldCheck" size={24} strokeWidth={1.4} />
               </div>
               <div>
                 <h4 className="font-serif text-base font-bold text-white">Cam kết Thỏa thuận Bảo mật Thông tin (NDA)</h4>
@@ -598,15 +599,15 @@ export default function ConsultationPage({ onOpenModal }) {
 
               <div className="flex flex-col gap-3.5 mb-8 text-xs text-[#0F1A41]/85">
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-[#B9887B] shrink-0" />
+                  <LuxuryCheckBadge size="sm" />
                   <span>Đánh giá sơ bộ hiện trạng & tiềm năng dòng tiền</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-[#B9887B] shrink-0" />
+                  <LuxuryCheckBadge size="sm" />
                   <span>Gợi ý mô hình hợp tác và phương án tối ưu thuế / pháp lý</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-[#B9887B] shrink-0" />
+                  <LuxuryCheckBadge size="sm" />
                   <span>Hoàn toàn miễn phí bước thẩm định ban đầu</span>
                 </div>
               </div>

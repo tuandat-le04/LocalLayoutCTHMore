@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactForm from '../ContactForm.jsx';
-import { Phone, Mail, MapPin, ShieldCheck, Clock, Building } from 'lucide-react';
+import LuxuryIcon, { LuxuryIconBadge, LuxuryPrivilegeBadge } from '../common/LuxuryIcon.jsx';
 
 export default function Contact() {
   return (
@@ -22,27 +22,36 @@ export default function Contact() {
             Hãy chia sẻ thông tin về bất động sản của bạn. Đội ngũ chuyên gia giàu kinh nghiệm của CityHouse More sẽ trực tiếp khảo sát hiện trạng, phân tích tiềm năng và đề xuất phương án khai thác tối ưu nhất trong vòng <strong>24 giờ làm việc</strong>.
           </p>
 
-          <div className="contact-security-badge bg-white/5 border border-[#B9887B]/30 p-3.5 rounded-xl flex items-center gap-2.5 mb-6">
-            <ShieldCheck size={20} className="shrink-0 text-[#B9887B]" />
+          <div className="contact-security-badge bg-white/5 border border-[#B9887B]/30 p-3.5 rounded-xl flex items-center gap-3 mb-6">
+            <LuxuryPrivilegeBadge size={14} className="w-7 h-7 rounded-lg" />
             <span className="text-xs text-white/90 font-medium">Cam kết bảo mật 100% hồ sơ tài sản và thông tin khách hàng</span>
           </div>
 
           <div className="contact-detail-list grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans mb-6">
-            <div className="bg-white/[0.03] p-3.5 rounded-xl border border-white/10">
-              <span className="text-white/60 block text-[10px] uppercase font-bold tracking-wider">GỌI TRỰC TIẾP (HOTLINE 24/7)</span>
-              <strong className="text-sm text-[#B9887B] font-bold block mt-0.5">0878 253 545</strong>
+            <div className="bg-white/[0.04] p-3.5 rounded-xl border border-white/10 flex items-center gap-3">
+              <LuxuryIconBadge name="phone" size="sm" variant="white" />
+              <div>
+                <span className="text-white/60 block text-[10px] uppercase font-bold tracking-wider">GỌI TRỰC TIẾP (HOTLINE 24/7)</span>
+                <strong className="text-sm text-[#B9887B] font-bold block mt-0.5">0878 253 545</strong>
+              </div>
             </div>
 
-            <div className="bg-white/[0.03] p-3.5 rounded-xl border border-white/10">
-              <span className="text-white/60 block text-[10px] uppercase font-bold tracking-wider">EMAIL HỢP TÁC</span>
-              <strong className="text-sm text-white font-bold block mt-0.5">info@cityhousemore.com</strong>
+            <div className="bg-white/[0.04] p-3.5 rounded-xl border border-white/10 flex items-center gap-3">
+              <LuxuryIconBadge name="mail" size="sm" variant="white" />
+              <div>
+                <span className="text-white/60 block text-[10px] uppercase font-bold tracking-wider">EMAIL HỢP TÁC</span>
+                <strong className="text-sm text-white font-bold block mt-0.5">info@cityhousemore.com</strong>
+              </div>
             </div>
 
-            <div className="sm:col-span-2 bg-white/[0.03] p-3.5 rounded-xl border border-white/10">
-              <span className="text-white/60 block text-[10px] uppercase font-bold tracking-wider">TRỤ SỞ CHÍNH</span>
-              <strong className="text-xs text-white/90 font-sans block mt-0.5 font-medium">
-                485B Nguyễn Đình Chiểu, Phường Bàn Cờ, Quận 3, TP.HCM
-              </strong>
+            <div className="sm:col-span-2 bg-white/[0.04] p-3.5 rounded-xl border border-white/10 flex items-center gap-3">
+              <LuxuryIconBadge name="mapPin" size="sm" variant="white" />
+              <div>
+                <span className="text-white/60 block text-[10px] uppercase font-bold tracking-wider">TRỤ SỞ CHÍNH</span>
+                <strong className="text-xs text-white/90 font-sans block mt-0.5 font-medium">
+                  485B Nguyễn Đình Chiểu, Phường Bàn Cờ, Quận 3, TP.HCM
+                </strong>
+              </div>
             </div>
           </div>
 

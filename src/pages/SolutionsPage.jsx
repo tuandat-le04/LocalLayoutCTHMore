@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LuxuryIcon, { LuxuryCheckBadge } from '../components/common/LuxuryIcon.jsx';
 import {
   ArrowUpRight,
   ChevronRight,
@@ -415,7 +416,7 @@ export default function SolutionsPage({ onOpenModal }) {
                     <ul className="space-y-2 text-xs text-[#0F1A41]/85 font-sans">
                       {item.solutionPoints.map((sPt, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 size={14} className="text-[#B9887B] shrink-0 mt-0.5" />
+                          <LuxuryCheckBadge size="xs" className="mt-0.5" />
                           <span className="font-medium">{sPt}</span>
                         </li>
                       ))}

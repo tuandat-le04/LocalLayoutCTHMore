@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { projects } from '../../data/projects.js';
 import { ArrowUpRight, MapPin, Star, ChevronRight, X, Quote, Check } from 'lucide-react';
+import LuxuryIcon, { LuxuryCheckBadge } from '../common/LuxuryIcon.jsx';
 import { useNavigation } from '../../context/NavigationContext.jsx';
 
 export default function Projects({ onContactClick }) {
@@ -183,7 +184,7 @@ export default function Projects({ onContactClick }) {
                 className="w-9 h-9 rounded-full flex items-center justify-center text-[#0F1A41]/50 hover:text-[#0F1A41] hover:bg-[#0F1A41]/5 transition-colors cursor-pointer shrink-0"
                 aria-label="Đóng"
               >
-                <X size={20} />
+                <LuxuryIcon name="x" size={18} strokeWidth={1.5} />
               </button>
             </div>
 
@@ -311,13 +312,13 @@ export default function Projects({ onContactClick }) {
 
               {/* Owner Testimonial */}
               <div className="p-5 sm:p-6 bg-gradient-to-br from-[#0F1A41] to-[#162456] text-white rounded-xl shadow-md flex items-start gap-4 border border-white/10">
-                <Quote size={26} className="text-[#B9887B] shrink-0 opacity-85 mt-0.5" />
+                <LuxuryIcon name="quote" size={24} className="text-[#B9887B] shrink-0 opacity-90 mt-0.5" />
                 <div>
                   <p className="font-serif text-sm sm:text-[15px] text-white/95 italic leading-relaxed mb-2.5">
                     "{selectedCaseStudy.caseStudy.ownerFeedback}"
                   </p>
                   <div className="flex items-center gap-2">
-                    <Check size={12} strokeWidth={2.5} className="text-[#B9887B]" />
+                    <LuxuryCheckBadge size="xs" />
                     <span className="text-[10px] font-sans text-[#B9887B] font-bold uppercase tracking-[0.15em]">
                       Nhận xét từ Chủ sở hữu tòa nhà
                     </span>

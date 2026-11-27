@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowUp, Phone, Mail, MapPin, Download, Calendar, ShieldCheck, ArrowUpRight, Check } from 'lucide-react';
+import { ArrowUp, Download, Calendar } from 'lucide-react';
+import LuxuryIcon, { LuxuryCheckBadge } from './common/LuxuryIcon.jsx';
 import { useNavigation } from '../context/NavigationContext.jsx';
 
 export default function Footer({ onOpenModal }) {
@@ -69,7 +70,7 @@ export default function Footer({ onOpenModal }) {
             >
               {downloadSuccess ? (
                 <>
-                  <Check size={15} className="text-[#B9887B] shrink-0" />
+                  <LuxuryCheckBadge size="xs" variant="copper" />
                   <span>ĐÃ TẢI XUỐNG HỒ SƠ (PDF)</span>
                 </>
               ) : (
@@ -109,7 +110,7 @@ export default function Footer({ onOpenModal }) {
 
             <div className="flex flex-col gap-2.5 text-xs text-white/80 border-t border-white/10 pt-4 font-sans">
               <div className="flex items-start gap-2">
-                <MapPin size={14} className="text-[#B9887B] shrink-0 mt-0.5" />
+                <LuxuryIcon name="mapPin" size={14} className="text-[#B9887B] shrink-0 mt-0.5" strokeWidth={1.35} />
                 <span className="leading-snug">485B Nguyễn Đình Chiểu, Phường Bàn Cờ, TP.HCM</span>
               </div>
               <div className="flex items-center gap-2">
@@ -117,11 +118,11 @@ export default function Footer({ onOpenModal }) {
                 <span className="font-mono text-white/90">0316749902</span>
               </div>
               <div className="flex items-center gap-2 mt-1">
-                <Phone size={14} className="text-[#B9887B] shrink-0" />
+                <LuxuryIcon name="phone" size={14} className="text-[#B9887B] shrink-0" strokeWidth={1.35} />
                 <span>Tư vấn trực tiếp: <a href="tel:0878253545" className="font-bold text-white hover:text-[#B9887B]">0878 253 545</a></span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail size={14} className="text-[#B9887B] shrink-0" />
+                <LuxuryIcon name="mail" size={14} className="text-[#B9887B] shrink-0" strokeWidth={1.35} />
                 <span>Email: <a href="mailto:info@cityhousemore.com" className="hover:text-[#B9887B]">info@cityhousemore.com</a></span>
               </div>
             </div>

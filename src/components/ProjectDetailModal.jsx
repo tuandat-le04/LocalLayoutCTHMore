@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LuxuryIcon, { LuxuryCheckBadge } from './common/LuxuryIcon.jsx';
 import {
   X,
   MapPin,
@@ -95,7 +96,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
             className="p-2 text-[#0F1A41]/50 hover:text-[#0F1A41] hover:bg-[#0F1A41]/5 rounded-full transition-colors cursor-pointer shrink-0"
             aria-label="Đóng chi tiết dự án"
           >
-            <X size={22} />
+            <LuxuryIcon name="x" size={18} strokeWidth={1.5} />
           </button>
         </div>
 
@@ -324,7 +325,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                         Vai trò triển khai
                       </span>
                     </div>
-                    <Check size={13} className="text-[#0F1A41]/35" />
+                    <LuxuryCheckBadge size="xs" variant="light" />
                   </div>
                   <h4 className="font-serif text-base font-bold text-[#0F1A41] mb-1">
                     Trách nhiệm trọn gói
@@ -463,13 +464,13 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
               {/* Owner Testimonial */}
               {project.caseStudy.ownerFeedback && (
                 <div className="bg-gradient-to-br from-[#0F1A41] to-[#162456] text-white p-5 rounded-xl flex items-start gap-4 shadow-md border border-white/10">
-                  <Quote size={26} className="text-[#B9887B] shrink-0 opacity-85 mt-0.5" />
+                  <LuxuryIcon name="quote" size={24} className="text-[#B9887B] shrink-0 opacity-90 mt-0.5" />
                   <div>
                     <p className="text-xs sm:text-sm text-white/95 italic leading-relaxed mb-2 font-serif">
                       "{project.caseStudy.ownerFeedback}"
                     </p>
                     <div className="flex items-center gap-2">
-                      <Check size={12} strokeWidth={2.5} className="text-[#B9887B]" />
+                      <LuxuryCheckBadge size="xs" />
                       <span className="font-sans text-[10px] text-[#B9887B] font-bold uppercase tracking-[0.15em]">
                         Xác nhận từ Chủ sở hữu tòa nhà {project.name}
                       </span>

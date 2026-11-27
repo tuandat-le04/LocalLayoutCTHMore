@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { projects } from '../data/projects.js';
 import { useNavigation } from '../context/NavigationContext.jsx';
+import LuxuryIcon, { LuxuryCheckBadge } from '../components/common/LuxuryIcon.jsx';
 import {
   MapPin,
   Building2,
@@ -513,7 +514,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                       Vai trò triển khai
                     </span>
                   </div>
-                  <Check size={16} className="text-[#101C42]/35 shrink-0" />
+                  <LuxuryCheckBadge size="xs" variant="light" />
                 </div>
 
                 <div className="mb-4">
@@ -665,13 +666,13 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             {/* Owner Testimonial Quote */}
             {project.caseStudy.ownerFeedback && (
               <div className="bg-gradient-to-br from-[#0F1A41] to-[#162456] text-white p-6 md:p-8 rounded-xl flex items-start gap-4 shadow-md border border-white/10">
-                <Quote size={32} className="text-[#B9887B] shrink-0 opacity-80 mt-1" />
+                <LuxuryIcon name="quote" size={28} className="text-[#B9887B] shrink-0 opacity-80 mt-1" />
                 <div>
                   <p className="text-sm md:text-base font-serif italic text-white/95 leading-relaxed mb-3">
                     "{project.caseStudy.ownerFeedback}"
                   </p>
                   <div className="flex items-center gap-2">
-                    <Check size={14} strokeWidth={2.5} className="text-[#B9887B]" />
+                    <LuxuryCheckBadge size="xs" />
                     <span className="font-sans text-xs text-[#B9887B] font-bold uppercase tracking-wider">
                       Nhận xét xác thực từ Chủ sở hữu tòa nhà {project.name}
                     </span>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * LuxuryIcon — Dedicated Architectural và Bespoke Luxury Icon System for CityHouse More
+ * LuxuryIcon — Dedicated Architectural & Bespoke Luxury Icon System for CityHouse More
  * Crafted with ultra-fine 1.25px hairline geometry, sharp architectural proportions,
  * and high-contrast elegance. Replaces generic SaaS/tech bubbly icons.
  */
@@ -57,14 +57,15 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 4. Pháp lý Lưu trú và Tiêu chuẩn PCCC (Heritage Seal of Compliance và Legal Crest)
-    case 'legal':
+    // 4. Pháp lý Lưu trú và Tiêu chuẩn PCCC / Bảo chứng (Heritage Seal of Compliance & Crest)
+    case 'shieldCheck':
     case 'shield':
+    case 'legal':
     case 'compliance':
       return (
         <svg {...commonProps}>
-          <path d="M12 2.5L4 6V11.5C4 16.5 7.5 21 12 22C16.5 21 20 16.5 20 11.5V6L12 2.5Z" />
-          <path d="M9 12L11 14L15 9.5" />
+          <path d="M12 2.5L4 6V11.5C4 16.5 7.5 21 12 22C16.5 21 20 16.5 20 11.5V6L12 2.5Z" fill="currentColor" fillOpacity="0.1" />
+          <polyline points="9 12 11.2 14.2 15.5 9.8" strokeWidth={Math.max(strokeWidth, 1.4)} />
         </svg>
       );
 
@@ -115,7 +116,7 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
-    // 9. Ra mắt và Khai trương (Global Prestige Launch / Diamond Star)
+    // 9. Ra mắt và Khai trương / Ngôi sao lấp lánh (Global Prestige Launch / Diamond Star)
     case 'launch':
     case 'sparkles':
     case 'prestige':
@@ -157,7 +158,17 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
     case 'check':
       return (
         <svg {...commonProps}>
-          <polyline points="4 12 9.5 17.5 20 6.5" strokeWidth={Math.max(strokeWidth, 1.75)} />
+          <polyline points="4 12 9.5 17.5 20 6.5" strokeWidth={Math.max(strokeWidth, 1.6)} />
+        </svg>
+      );
+
+    // 12b. Enclosed Circular Check (CheckCircle2 luxury equivalent)
+    case 'checkCircle':
+    case 'checkCircle2':
+      return (
+        <svg {...commonProps}>
+          <circle cx="12" cy="12" r="9.5" />
+          <polyline points="8 12 10.8 14.8 16 9.2" strokeWidth={Math.max(strokeWidth, 1.5)} />
         </svg>
       );
 
@@ -337,6 +348,85 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
 
+    // 29. Đóng / Hủy bỏ (Hairline Luxury Cross)
+    case 'x':
+    case 'close':
+      return (
+        <svg {...commonProps}>
+          <line x1="18" y1="6" x2="6" y2="18" strokeWidth={Math.max(strokeWidth, 1.4)} />
+          <line x1="6" y1="6" x2="18" y2="18" strokeWidth={Math.max(strokeWidth, 1.4)} />
+        </svg>
+      );
+
+    // 30. Điều hướng chevrons
+    case 'chevronRight':
+      return (
+        <svg {...commonProps}>
+          <polyline points="9 18 15 12 9 6" strokeWidth={Math.max(strokeWidth, 1.4)} />
+        </svg>
+      );
+
+    case 'chevronLeft':
+      return (
+        <svg {...commonProps}>
+          <polyline points="15 18 9 12 15 6" strokeWidth={Math.max(strokeWidth, 1.4)} />
+        </svg>
+      );
+
+    case 'chevronDown':
+      return (
+        <svg {...commonProps}>
+          <polyline points="6 9 12 15 18 9" strokeWidth={Math.max(strokeWidth, 1.4)} />
+        </svg>
+      );
+
+    case 'chevronUp':
+      return (
+        <svg {...commonProps}>
+          <polyline points="18 15 12 9 6 15" strokeWidth={Math.max(strokeWidth, 1.4)} />
+        </svg>
+      );
+
+    // 31. Trích dẫn thượng lưu (Editorial Quotes)
+    case 'quote':
+      return (
+        <svg {...commonProps}>
+          <path d="M4 14C4 11 5.5 8 9 6.5L9.6 8C7.5 9 6.8 10.5 6.8 11.5H9.5V16H4V14Z" fill="currentColor" fillOpacity="0.2" />
+          <path d="M13.5 14C13.5 11 15 8 18.5 6.5L19.1 8C17 9 16.3 10.5 16.3 11.5H19V16H13.5V14Z" fill="currentColor" fillOpacity="0.2" />
+        </svg>
+      );
+
+    // 32. Tầm nhìn / Khảo sát trực quan (Aperture / Sightline Eye)
+    case 'eye':
+      return (
+        <svg {...commonProps}>
+          <path d="M2.5 12C2.5 12 6 5.5 12 5.5C18 5.5 21.5 12 21.5 12C21.5 12 18 18.5 12 18.5C6 18.5 2.5 12 2.5 12Z" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      );
+
+    // 33. Bảo mật tuyệt đối / Két sắt (Private Vault Lock)
+    case 'lock':
+    case 'security':
+      return (
+        <svg {...commonProps}>
+          <rect x="4.5" y="10.5" width="15" height="10" rx="1.5" />
+          <path d="M8 10.5V7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7V10.5" />
+          <circle cx="12" cy="15.5" r="1.5" fill="currentColor" />
+        </svg>
+      );
+
+    // 34. Đặc quyền hoàng gia / Vương miện (Privilege Crest Crown)
+    case 'crown':
+      return (
+        <svg {...commonProps}>
+          <path d="M3.5 18H20.5M4 18L3 8.5L8.5 12.5L12 5L15.5 12.5L21 8.5L20 18H4Z" fill="currentColor" fillOpacity="0.12" />
+          <circle cx="12" cy="5" r="1" fill="currentColor" />
+          <circle cx="3" cy="8.5" r="1" fill="currentColor" />
+          <circle cx="21" cy="8.5" r="1" fill="currentColor" />
+        </svg>
+      );
+
     // Default: Architectural Diamond Glyphs
     default:
       return (
@@ -345,4 +435,104 @@ export default function LuxuryIcon({ name, size = 16, className = '', strokeWidt
         </svg>
       );
   }
+}
+
+/**
+ * LuxuryCheckBadge — High-end circular or pill checkmark badge
+ * Replaces crude bare tick marks with an exquisite, jewelry-level metallic badge.
+ */
+export function LuxuryCheckBadge({ size = 'sm', variant = 'copper', className = '', ...props }) {
+  const sizeMap = {
+    xs: { badge: 'w-3.5 h-3.5', icon: 8, stroke: 2.2 },
+    sm: { badge: 'w-4 h-4', icon: 9, stroke: 2.2 },
+    md: { badge: 'w-5 h-5', icon: 11, stroke: 2.2 },
+    lg: { badge: 'w-6 h-6', icon: 13, stroke: 2.2 }
+  };
+  const current = sizeMap[size] || sizeMap.sm;
+
+  const variantMap = {
+    copper: 'bg-[#B9887B]/15 text-[#B9887B] border border-[#B9887B]/30',
+    gold: 'bg-[#C79A3B]/15 text-[#C79A3B] border border-[#C79A3B]/35',
+    navy: 'bg-[#101C42] text-white border border-[#101C42]',
+    light: 'bg-white/80 text-[#101C42] border border-[#101C42]/15 shadow-2xs'
+  };
+
+  return (
+    <span
+      className={`inline-flex items-center justify-center rounded-full shrink-0 shadow-2xs transition-transform duration-200 ${current.badge} ${variantMap[variant] || variantMap.copper} ${className}`}
+      {...props}
+    >
+      <LuxuryIcon name="check" size={current.icon} strokeWidth={current.stroke} />
+    </span>
+  );
+}
+
+/**
+ * LuxuryPrivilegeBadge — Prestigious heraldic crest container for exclusive privileges
+ */
+export function LuxuryPrivilegeBadge({ size = 13, className = '', variant = 'copper', ...props }) {
+  const variantMap = {
+    copper: 'bg-[#B9887B]/15 text-[#B9887B] border border-[#B9887B]/30 shadow-2xs',
+    gold: 'bg-[#C79A3B]/15 text-[#C79A3B] border border-[#C79A3B]/35 shadow-2xs',
+    navy: 'bg-[#101C42] text-[#C79A3B] border border-[#C79A3B]/30 shadow-sm'
+  };
+
+  return (
+    <div
+      className={`inline-flex items-center justify-center w-5 h-5 rounded-md shrink-0 ${variantMap[variant] || variantMap.copper} ${className}`}
+      {...props}
+    >
+      <LuxuryIcon name="shieldCheck" size={size} strokeWidth={1.5} />
+    </div>
+  );
+}
+
+/**
+ * LuxuryIconBadge — Elegant container for contact items, statistics, and highlights
+ */
+export function LuxuryIconBadge({
+  name,
+  size = 'md',
+  variant = 'copper',
+  className = '',
+  ...props
+}) {
+  const sizeMap = {
+    sm: { container: 'w-7 h-7 rounded-lg', icon: 14 },
+    md: { container: 'w-9 h-9 rounded-xl', icon: 17 },
+    lg: { container: 'w-11 h-11 rounded-2xl', icon: 20 },
+    xl: { container: 'w-14 h-14 rounded-2xl', icon: 26 }
+  };
+  const current = sizeMap[size] || sizeMap.md;
+
+  const variantMap = {
+    copper: 'bg-[#B9887B]/12 text-[#B9887B] border border-[#B9887B]/25',
+    gold: 'bg-[#C79A3B]/12 text-[#C79A3B] border border-[#C79A3B]/30',
+    navy: 'bg-[#101C42] text-[#C79A3B] border border-[#C79A3B]/30 shadow-md',
+    light: 'bg-[#F4EFEA] text-[#101C42] border border-[#101C42]/10',
+    white: 'bg-white/10 text-white border border-white/20 backdrop-blur-xs'
+  };
+
+  return (
+    <div
+      className={`inline-flex items-center justify-center shrink-0 ${current.container} ${variantMap[variant] || variantMap.copper} ${className}`}
+      {...props}
+    >
+      <LuxuryIcon name={name} size={current.icon} />
+    </div>
+  );
+}
+
+/**
+ * LuxurySuccessMedallion — Dual-ring gold medal for form and action success states
+ */
+export function LuxurySuccessMedallion({ className = '' }) {
+  return (
+    <div className={`relative flex items-center justify-center mx-auto mb-4 ${className}`}>
+      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#101C42] via-[#162559] to-[#0A122C] text-[#C79A3B] flex items-center justify-center border-2 border-[#C79A3B]/40 shadow-xl relative">
+        <div className="absolute inset-1 rounded-full border border-[#C79A3B]/25 pointer-events-none" />
+        <LuxuryIcon name="check" size={26} strokeWidth={2} className="text-[#C79A3B]" />
+      </div>
+    </div>
+  );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LuxuryIcon, { LuxuryCheckBadge, LuxurySuccessMedallion } from '../components/common/LuxuryIcon.jsx';
 import {
   Briefcase,
   Users,
@@ -650,7 +651,7 @@ export default function CareersPage({ onOpenModal }) {
             </div>
 
             <div className="text-xs font-sans font-semibold text-[#0F1A41]/75 bg-white border border-[#0F1A41]/10 px-4 py-2.5 rounded shadow-xs flex items-center gap-2 self-start md:self-auto">
-              <Check size={14} strokeWidth={2.5} className="text-[#0F1A41]/75" />
+              <LuxuryCheckBadge size="xs" variant="navy" />
               <span>Đang mở <strong>10</strong> vị trí tại TP. Hồ Chí Minh</span>
             </div>
           </div>
@@ -802,7 +803,7 @@ export default function CareersPage({ onOpenModal }) {
                           <ul className="flex flex-col gap-2.5 text-xs text-[#0F1A41]/75 leading-relaxed mb-6">
                             {job.benefits.map((b, i) => (
                               <li key={i} className="flex items-start gap-2">
-                                <Check size={13} className="text-[#B9887B] shrink-0 mt-0.5" />
+                                <LuxuryCheckBadge size="xs" className="mt-0.5" />
                                 <span>{b}</span>
                               </li>
                             ))}
@@ -834,81 +835,80 @@ export default function CareersPage({ onOpenModal }) {
       {/* ── 6. University Partnership Section ── */}
       <section id="university-partnership" className="py-20 md:py-28 bg-[#0F1A41] text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
             {/* Left Column: Partnership Info */}
-            <div className="lg:col-span-6">
-              <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3.5">
-                <School size={16} className="text-[#B9887B]" />
-                KẾT NỐI CÙNG NHÀ TRƯỜNG VÀ HỌC VIỆN
-              </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-white leading-[1.3] mb-6 tracking-tight">
-                Hợp tác thực tập, tuyển dụng<br />
-                và <em className="text-[#B9887B] italic inline-block mt-1">định hướng nghề nghiệp</em>
-              </h2>
-              <p className="text-sm sm:text-base text-white/80 leading-relaxed mb-8">
-                CityHouse More chủ động kết nối cùng các trường Đại học, Cao đẳng đào tạo ngành Quản trị Khách sạn, Du lịch, Quản trị Kinh doanh và Bất động sản để tạo môi trường trải nghiệm thực chiến cho sinh viên.
-              </p>
+            <div className="lg:col-span-6 flex flex-col justify-between">
+              <div>
+                <p className="eyebrow eyebrow-accent flex items-center gap-2 mb-3">
+                  <LuxuryIcon name="landmark" size={15} className="text-[#B9887B]" />
+                  <span>KẾT NỐI CÙNG NHÀ TRƯỜNG VÀ HỌC VIỆN</span>
+                </p>
+                <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white leading-[1.22] mb-4 tracking-tight">
+                  Hợp tác thực tập, tuyển dụng<br />
+                  và <span className="text-[#B9887B] font-serif italic">định hướng nghề nghiệp</span>
+                </h2>
+                <p className="text-xs sm:text-sm text-white/75 leading-relaxed mb-6 font-normal">
+                  CityHouse More chủ động kết nối cùng các trường Đại học, Cao đẳng đào tạo ngành Quản trị Khách sạn, Du lịch, Quản trị Kinh doanh và Bất động sản để tạo môi trường trải nghiệm thực chiến cho sinh viên.
+                </p>
+              </div>
 
-              <div className="flex flex-col gap-4 mb-8">
-                <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-sans font-bold text-[#B9887B] block mb-2">
-                    01 · KẾT NỐI THỰC TẬP DOANH NGHIỆP
-                  </span>
-                  <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
+              {/* 3 Partnership Pillars: Sleek & Balanced */}
+              <div className="flex flex-col gap-3 my-auto">
+                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-[#B9887B]/40 hover:bg-white/[0.05] transition-all">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="font-serif italic font-bold text-xs text-[#B9887B]">01</span>
+                    <span className="text-[#B9887B]/40 text-xs">/</span>
+                    <span className="text-[11px] font-sans font-bold uppercase tracking-[0.14em] text-white">
+                      KẾT NỐI THỰC TẬP DOANH NGHIỆP
+                    </span>
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed font-normal">
                     Trao đổi chương trình thực tập theo kỳ, bố trí thực tập sinh vào các bộ phận Lễ tân, Buồng phòng, OTA và CSKH với phụ cấp hỗ trợ.
                   </p>
                 </div>
 
-                <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-sans font-bold text-[#B9887B] block mb-2">
-                    02 · GIỚI THIỆU VIỆC LÀM CHO SINH VIÊN
-                  </span>
-                  <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
+                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-[#B9887B]/40 hover:bg-white/[0.05] transition-all">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="font-serif italic font-bold text-xs text-[#B9887B]">02</span>
+                    <span className="text-[#B9887B]/40 text-xs">/</span>
+                    <span className="text-[11px] font-sans font-bold uppercase tracking-[0.14em] text-white">
+                      GIỚI THIỆU VIỆC LÀM CHO SINH VIÊN
+                    </span>
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed font-normal">
                     Ưu tiên tuyển dụng sinh viên sắp tốt nghiệp và cựu sinh viên vào các vị trí chính thức của chuỗi tòa nhà.
                   </p>
                 </div>
 
-                <div className="p-4 rounded bg-white/[0.04] border border-white/10">
-                  <span className="text-xs font-sans font-bold text-[#B9887B] block mb-2">
-                    03 · ĐỒNG HÀNH CÙNG NHÀ TRƯỜNG
-                  </span>
-                  <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
+                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-[#B9887B]/40 hover:bg-white/[0.05] transition-all">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="font-serif italic font-bold text-xs text-[#B9887B]">03</span>
+                    <span className="text-[#B9887B]/40 text-xs">/</span>
+                    <span className="text-[11px] font-sans font-bold uppercase tracking-[0.14em] text-white">
+                      ĐỒNG HÀNH CÙNG NHÀ TRƯỜNG
+                    </span>
+                  </div>
+                  <p className="text-xs text-white/70 leading-relaxed font-normal">
                     Tham gia Ngày hội việc làm (Job Fair), workshop định hướng nghề nghiệp và tổ chức các chuyến Hotel Tour tham quan thực tế.
                   </p>
-                </div>
-              </div>
-
-              {/* Direct HR Contact */}
-              <div className="p-4 rounded bg-[#B9887B]/15 border border-[#B9887B]/30 flex flex-wrap items-center justify-between gap-4 text-xs font-sans">
-                <div>
-                  <span className="text-white/60 block text-[10px] uppercase font-sans">ĐẦU MỐI PHỤ TRÁCH NHÂN SỰ</span>
-                  <strong className="text-sm text-white font-sans font-bold">Phòng Nhân Sự CityHouse More</strong>
-                </div>
-                <div className="flex items-center gap-4">
-                  <a href="mailto:hr@cityhousemore.com" className="flex items-center gap-1.5 text-[#B9887B] hover:underline font-sans">
-                    <Mail size={13} /> hr@cityhousemore.com
-                  </a>
-                  <a href="tel:0966891218" className="flex items-center gap-1.5 text-white font-bold hover:underline font-sans">
-                    <Phone size={13} className="text-[#B9887B]" /> 0966 891 218
-                  </a>
                 </div>
               </div>
             </div>
 
             {/* Right Column: University Cooperation Form */}
-            <div className="lg:col-span-6 bg-white p-6 sm:p-8 rounded-2xl text-[#0F1A41] shadow-2xl border border-[#0F1A41]/10">
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-3 leading-snug">
-                ĐĂNG KÝ KẾT NỐI HỢP TÁC
-              </h3>
-              <p className="text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed mb-6">
-                Quý trường vui lòng để lại thông tin đầu mối và nhu cầu kết nối. Bộ phận Nhân sự CityHouse sẽ phản hồi trong vòng 24–48 giờ làm việc.
-              </p>
+            <div className="lg:col-span-6 bg-white p-7 sm:p-9 rounded-2xl text-[#0F1A41] shadow-xl border border-[#0F1A41]/10 flex flex-col justify-between">
+              <div>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F1A41] mb-2 leading-snug">
+                  ĐĂNG KÝ KẾT NỐI HỢP TÁC
+                </h3>
+                <p className="text-xs sm:text-[13px] text-[#0F1A41]/70 leading-relaxed mb-6 font-normal">
+                  Quý trường vui lòng để lại thông tin đầu mối và nhu cầu kết nối. Bộ phận Nhân sự CityHouse sẽ phản hồi trong vòng 24–48 giờ làm việc.
+                </p>
+              </div>
 
               {uniSuccess ? (
-                <div className="p-8 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-2xl shadow-xs">
-                  <div className="w-14 h-14 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] flex items-center justify-center mx-auto mb-3 border border-[#0F1A41]/15">
-                    <Check size={28} strokeWidth={2.5} />
-                  </div>
+                <div className="p-8 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-2xl shadow-xs my-auto">
+                  <LuxurySuccessMedallion />
                   <h4 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
                     GỬI ĐỀ NGHỊ HỢP TÁC THÀNH CÔNG
                   </h4>
@@ -917,72 +917,72 @@ export default function CareersPage({ onOpenModal }) {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleUniSubmit} className="flex flex-col gap-4.5 text-xs">
+                <form onSubmit={handleUniSubmit} className="flex flex-col gap-4 text-xs font-sans">
                   <div>
-                    <label className="block text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-2">
-                      Tên trường Đại học / Cao đẳng *
+                    <label className="block text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em] mb-1.5">
+                      Tên trường Đại học / Cao đẳng <span className="text-[#B9887B]">*</span>
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="Ví dụ: Đại học Kinh tế TP.HCM (UEH)..."
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                      className="w-full px-3.5 py-2.5 bg-[#FCFBF9] rounded-xl border border-[#0F1A41]/15 text-[#0F1A41] placeholder:text-[#0F1A41]/35 focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] transition-all"
                       value={uniForm.schoolName}
                       onChange={(e) => setUniForm({ ...uniForm, schoolName: e.target.value })}
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-2">
+                      <label className="block text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em] mb-1.5">
                         Khoa / Đơn vị phụ trách
                       </label>
                       <input
                         type="text"
                         placeholder="Khoa Du lịch - Khách sạn..."
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                        className="w-full px-3.5 py-2.5 bg-[#FCFBF9] rounded-xl border border-[#0F1A41]/15 text-[#0F1A41] placeholder:text-[#0F1A41]/35 focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] transition-all"
                         value={uniForm.department}
                         onChange={(e) => setUniForm({ ...uniForm, department: e.target.value })}
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-2">
-                        Người liên hệ *
+                      <label className="block text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em] mb-1.5">
+                        Người liên hệ <span className="text-[#B9887B]">*</span>
                       </label>
                       <input
                         type="text"
                         required
                         placeholder="Thầy/Cô phụ trách..."
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                        className="w-full px-3.5 py-2.5 bg-[#FCFBF9] rounded-xl border border-[#0F1A41]/15 text-[#0F1A41] placeholder:text-[#0F1A41]/35 focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] transition-all"
                         value={uniForm.contactPerson}
                         onChange={(e) => setUniForm({ ...uniForm, contactPerson: e.target.value })}
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-2">
-                        Số điện thoại *
+                      <label className="block text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em] mb-1.5">
+                        Số điện thoại <span className="text-[#B9887B]">*</span>
                       </label>
                       <input
                         type="tel"
                         required
                         placeholder="09xx xxx xxx"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                        className="w-full px-3.5 py-2.5 bg-[#FCFBF9] rounded-xl border border-[#0F1A41]/15 text-[#0F1A41] placeholder:text-[#0F1A41]/35 focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] transition-all"
                         value={uniForm.phone}
                         onChange={(e) => setUniForm({ ...uniForm, phone: e.target.value })}
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-2">
-                        Email liên hệ *
+                      <label className="block text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em] mb-1.5">
+                        Email liên hệ <span className="text-[#B9887B]">*</span>
                       </label>
                       <input
                         type="email"
                         required
                         placeholder="email@ueh.edu.vn"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none"
+                        className="w-full px-3.5 py-2.5 bg-[#FCFBF9] rounded-xl border border-[#0F1A41]/15 text-[#0F1A41] placeholder:text-[#0F1A41]/35 focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] transition-all"
                         value={uniForm.email}
                         onChange={(e) => setUniForm({ ...uniForm, email: e.target.value })}
                       />
@@ -990,13 +990,13 @@ export default function CareersPage({ onOpenModal }) {
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    <label className="block text-[11px] font-bold text-[#0F1A41] uppercase tracking-[0.14em] mb-1.5">
                       Nội dung trao đổi hoặc đề xuất hợp tác
                     </label>
                     <textarea
-                      rows={3}
+                      rows={2}
                       placeholder="Chia sẻ số lượng sinh viên thực tập dự kiến, thời gian hoặc chương trình Ngày hội việc làm..."
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#B9887B] focus:outline-none resize-none"
+                      className="w-full px-3.5 py-2 bg-[#FCFBF9] rounded-xl border border-[#0F1A41]/15 text-[#0F1A41] placeholder:text-[#0F1A41]/35 focus:outline-none focus:bg-white focus:border-[#101C42] focus:ring-1 focus:ring-[#101C42] resize-none transition-all"
                       value={uniForm.notes}
                       onChange={(e) => setUniForm({ ...uniForm, notes: e.target.value })}
                     />
@@ -1004,15 +1004,42 @@ export default function CareersPage({ onOpenModal }) {
 
                   <button
                     type="submit"
-                    className="solid-btn w-full py-3.5 text-center text-xs font-bold uppercase tracking-wider rounded-full transition-all cursor-pointer shadow-md text-white mt-2"
-                    style={{
-                      backgroundColor: '#B9887B',
-                    }}
+                    className="w-full py-4 text-center text-xs sm:text-[13px] font-bold uppercase tracking-[0.14em] rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-[#B9887B] hover:bg-[#A37367] text-white shadow-md hover:shadow-lg mt-1 font-sans group"
                   >
-                    GỬI ĐỀ NGHỊ HỢP TÁC NHÀ TRƯỜNG
+                    <span>GỬI ĐỀ NGHỊ HỢP TÁC NHÀ TRƯỜNG</span>
+                    <LuxuryIcon name="arrowUpRight" size={15} strokeWidth={1.5} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </button>
                 </form>
               )}
+            </div>
+          </div>
+
+          {/* ── Grounding Banner: HR Contact Strip across both columns ── */}
+          <div className="mt-8 lg:mt-12 p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-sans">
+            <div className="flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-[#B9887B]/15 border border-[#B9887B]/30 flex items-center justify-center text-[#B9887B] shrink-0">
+                <LuxuryIcon name="users" size={18} />
+              </div>
+              <div>
+                <span className="text-white/60 block text-[10px] uppercase font-bold tracking-wider">ĐẦU MỐI PHỤ TRÁCH HỢP TÁC HỌC THUẬT</span>
+                <strong className="text-sm text-white font-bold block mt-0.5">Phòng Nhân Sự & Đào Tạo — CityHouse More</strong>
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <a
+                href="mailto:hr@cityhousemore.com"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 text-white/90 hover:text-[#B9887B] hover:border-[#B9887B]/40 transition-colors"
+              >
+                <LuxuryIcon name="mail" size={13} className="text-[#B9887B]" />
+                <span>hr@cityhousemore.com</span>
+              </a>
+              <a
+                href="tel:0966891218"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#B9887B]/20 border border-[#B9887B]/40 text-[#B9887B] font-bold hover:bg-[#B9887B]/30 transition-colors"
+              >
+                <LuxuryIcon name="phone" size={13} />
+                <span>Hotline: 0966 891 218</span>
+              </a>
             </div>
           </div>
         </div>
@@ -1123,9 +1150,7 @@ export default function CareersPage({ onOpenModal }) {
 
             {applySuccess ? (
               <div className="p-6 text-center bg-[#FAF9F6] border border-[#0F1A41]/10 rounded-2xl shadow-xs">
-                <div className="w-14 h-14 rounded-full bg-[#0F1A41]/10 text-[#0F1A41] flex items-center justify-center mx-auto mb-3 border border-[#0F1A41]/15">
-                  <Check size={28} strokeWidth={2.5} />
-                </div>
+                <LuxurySuccessMedallion />
                 <h4 className="font-serif text-lg font-bold text-[#0F1A41] mb-2">
                   NỘP HỒ SƠ THÀNH CÔNG!
                 </h4>

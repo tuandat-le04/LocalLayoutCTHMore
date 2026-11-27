@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Check, ShieldCheck, Clock, ChevronDown } from 'lucide-react';
+import LuxuryIcon, { LuxuryCheckBadge, LuxuryPrivilegeBadge, LuxurySuccessMedallion } from './common/LuxuryIcon.jsx';
 
 export default function ContactForm({
   title = "ĐĂNG KÝ NHẬN ĐÁNH GIÁ TÀI SẢN",
@@ -30,9 +30,7 @@ export default function ContactForm({
   if (sent) {
     return (
       <div className="p-8 text-center bg-white rounded-2xl border border-[#0F1A41]/10 shadow-lg font-sans">
-        <div className="w-14 h-14 rounded-full bg-[#101C42] text-[#C79A3B] flex items-center justify-center mx-auto mb-4 border border-[#C79A3B]/30 shadow-md">
-          <Check size={28} strokeWidth={2.5} />
-        </div>
+        <LuxurySuccessMedallion />
         <h3 className="font-serif text-2xl font-bold text-[#101C42] mb-3 leading-snug">
           ĐÃ TIẾP NHẬN YÊU CẦU THÀNH CÔNG
         </h3>
@@ -70,18 +68,18 @@ export default function ContactForm({
   return (
     <form className="b2b-form flex flex-col gap-5 font-sans text-[#101C42]" onSubmit={handleSubmit}>
       {/* Motivating Benefit Box: What the user will receive */}
-      <div className="p-4 bg-[#F4EFEA]/75 rounded-xl border border-[#B9887B]/25 border-l-2 border-l-[#B9887B] text-xs text-[#101C42]/85 shadow-2xs">
-        <div className="font-sans text-[10px] font-bold uppercase tracking-[0.16em] text-[#101C42] mb-2 flex items-center gap-2">
-          <ShieldCheck size={14} className="text-[#B9887B]" />
+      <div className="p-4 bg-[#F4EFEA]/85 rounded-xl border border-[#B9887B]/30 border-l-[3px] border-l-[#B9887B] text-xs text-[#101C42]/90 shadow-2xs">
+        <div className="font-sans text-[10px] font-bold uppercase tracking-[0.16em] text-[#101C42] mb-2.5 flex items-center gap-2">
+          <LuxuryPrivilegeBadge size={13} />
           <span>QUYỀN LỢI ĐẶC QUYỀN CỦA CHỦ TÀI SẢN:</span>
         </div>
-        <ul className="flex flex-col gap-2 text-[11.5px] leading-relaxed text-[#101C42]/80">
-          <li className="flex items-start gap-2">
-            <Check size={13} strokeWidth={2.5} className="text-[#B9887B] shrink-0 mt-0.5" />
+        <ul className="flex flex-col gap-2.5 text-[11.5px] leading-relaxed text-[#101C42]/80">
+          <li className="flex items-start gap-2.5">
+            <LuxuryCheckBadge size="sm" className="mt-0.5" />
             <span>Khảo sát hiện trạng và Báo cáo đánh giá tiềm năng khai thác <strong>hoàn toàn miễn phí</strong>.</span>
           </li>
-          <li className="flex items-start gap-2">
-            <Check size={13} strokeWidth={2.5} className="text-[#B9887B] shrink-0 mt-0.5" />
+          <li className="flex items-start gap-2.5">
+            <LuxuryCheckBadge size="sm" className="mt-0.5" />
             <span>Dự phóng doanh thu phòng và phương án tối ưu dòng tiền may đo theo vị trí tài sản.</span>
           </li>
         </ul>
@@ -138,7 +136,7 @@ export default function ContactForm({
             <option value="Nhà phố mặt tiền / Hẻm xe hơi lớn">Nhà phố mặt tiền / Hẻm xe hơi lớn</option>
             <option value="Khác">Loại hình bất động sản khác</option>
           </select>
-          <ChevronDown size={15} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#101C42]/50 pointer-events-none" />
+          <LuxuryIcon name="chevronDown" size={14} strokeWidth={1.4} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#101C42]/50 pointer-events-none" />
         </div>
       </div>
 
@@ -190,7 +188,7 @@ export default function ContactForm({
           className="inline-flex items-center gap-1.5 text-[11px] font-sans font-semibold text-[#101C42]/70 hover:text-[#B9887B] transition-colors cursor-pointer py-1"
         >
           <span>{showOptional ? '− Thu gọn thông tin bổ sung' : '+ Thêm Email hoặc thông tin chi tiết (Tùy chọn)'}</span>
-          <ChevronDown size={13} className={`transform transition-transform ${showOptional ? 'rotate-180' : ''}`} />
+          <LuxuryIcon name="chevronDown" size={13} strokeWidth={1.4} className={`transform transition-transform ${showOptional ? 'rotate-180' : ''}`} />
         </button>
 
         {showOptional && (
@@ -229,11 +227,11 @@ export default function ContactForm({
       {/* Security & Response Guarantee */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] text-[#101C42]/70 pt-1 font-sans">
         <span className="inline-flex items-center gap-1.5">
-          <ShieldCheck size={14} className="text-[#B9887B] shrink-0" />
+          <LuxuryIcon name="shieldCheck" size={14} strokeWidth={1.5} className="text-[#B9887B] shrink-0" />
           <span>Bảo mật dữ liệu tài sản 100%</span>
         </span>
         <span className="inline-flex items-center gap-1.5">
-          <Clock size={13} className="text-[#C79A3B] shrink-0" />
+          <LuxuryIcon name="clock" size={13} strokeWidth={1.4} className="text-[#C79A3B] shrink-0" />
           <span>Phản hồi chuyên gia trong <strong>24 giờ</strong></span>
         </span>
       </div>
@@ -244,7 +242,7 @@ export default function ContactForm({
         className="w-full py-4 px-6 text-center text-xs sm:text-[13px] font-bold uppercase tracking-[0.14em] rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-[#101C42] hover:bg-[#1A2C6B] text-white shadow-[0_8px_25px_rgba(16,28,66,0.22)] hover:shadow-[0_12px_30px_rgba(16,28,66,0.32)] hover:-translate-y-0.5 mt-2 font-sans group"
       >
         <span>{submitLabel}</span>
-        <ArrowUpRight size={16} className="text-[#C79A3B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        <LuxuryIcon name="arrowUpRight" size={15} strokeWidth={1.5} className="text-[#C79A3B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
       </button>
     </form>
   );

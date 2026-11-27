@@ -1,4 +1,5 @@
 import React from 'react';
+import LuxuryIcon, { LuxuryCheckBadge } from '../components/common/LuxuryIcon.jsx';
 import {
   ArrowUpRight,
   ChevronRight,
@@ -205,21 +206,21 @@ export default function ConsultingModelPage({ onOpenModal }) {
 
               <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Mất thời gian quản lý lễ tân và buồng phòng:</strong>
                     Chủ sở hữu bận rộn với công việc kinh doanh chính, không thể trực 24/7 để giám sát nhân sự.
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Thiếu kênh phân phối quốc tế và công nghệ:</strong>
                     Chỉ đăng tin thủ công trên mạng xã hội, tỷ lệ phòng trống cao vào mùa thấp điểm du lịch.
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Tài sản bị xuống cấp do không bảo trì định kỳ:</strong>
                     Chỉ sửa chữa khi đã hư hỏng nặng, dẫn đến chi phí đột biến và mất uy tín với khách lưu trú.
@@ -292,7 +293,7 @@ export default function ConsultingModelPage({ onOpenModal }) {
                   <div className="space-y-2.5 pt-4 border-t border-[#0F1A41]/5 mb-6">
                     {scope.points.map((pt, pIdx) => (
                       <div key={pIdx} className="flex items-start gap-2.5 text-xs text-[#0F1A41]/85">
-                        <Check size={14} className="text-[#B9887B] shrink-0 mt-0.5" />
+                        <LuxuryCheckBadge size="sm" className="mt-0.5" />
                         <span className="leading-relaxed">{pt}</span>
                       </div>
                     ))}

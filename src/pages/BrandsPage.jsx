@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LuxuryIcon, { LuxuryCheckBadge } from '../components/common/LuxuryIcon.jsx';
 import { 
   ArrowUpRight, 
   Check, 
@@ -380,7 +381,7 @@ export default function BrandsPage({ onOpenModal }) {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-[13px] text-[#0F1A41]/80 font-medium">
                         {activeBrand.highlights.map((item, idx) => (
                           <div key={idx} className="flex items-center gap-2">
-                            <Check size={13} className="text-[#B9887B] shrink-0" strokeWidth={2.5} />
+                            <LuxuryCheckBadge size="xs" />
                             <span>{item}</span>
                           </div>
                         ))}

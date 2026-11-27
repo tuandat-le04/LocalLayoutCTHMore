@@ -1,4 +1,5 @@
 import React from 'react';
+import LuxuryIcon, { LuxuryCheckBadge } from '../components/common/LuxuryIcon.jsx';
 import {
   ArrowUpRight,
   ChevronRight,
@@ -206,21 +207,21 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
 
               <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Tỷ lệ phòng trống cao kéo dài (&gt; 35%):</strong>
                     Doanh thu sụt giảm, phụ thuộc vào khách thuê ngắn hạn qua môi giới với chi phí hoa hồng cao.
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Hạ tầng kỹ thuật (MEP) thường xuyên sự cố:</strong>
                     Máy lạnh rò rỉ, thấm dột nhà vệ sinh, hệ thống điện nước chập chờn gây khiếu nại liên tục.
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Muốn cải tạo nhưng ngại chi phí phát sinh:</strong>
                     Sợ bị đội vốn xây dựng, kéo dài thời gian thi công làm mất doanh thu tiền thuê nhà.
@@ -293,7 +294,7 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
                   <div className="space-y-2.5 pt-4 border-t border-[#0F1A41]/5 mb-6">
                     {scope.points.map((pt, pIdx) => (
                       <div key={pIdx} className="flex items-start gap-2.5 text-xs text-[#0F1A41]/85">
-                        <Check size={14} className="text-[#B9887B] shrink-0 mt-0.5" />
+                        <LuxuryCheckBadge size="sm" className="mt-0.5" />
                         <span className="leading-relaxed">{pt}</span>
                       </div>
                     ))}
@@ -413,7 +414,7 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
                   <span>Hotline Thẩm định: 0878 253 545</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <ShieldCheck size={15} className="text-[#B9887B]" />
+                  <LuxuryIcon name="shieldCheck" size={15} strokeWidth={1.5} className="text-[#B9887B]" />
                   <span>Miễn phí 100% khảo sát và lập phương án sơ bộ</span>
                 </div>
               </div>

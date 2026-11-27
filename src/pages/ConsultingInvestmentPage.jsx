@@ -1,4 +1,5 @@
 import React from 'react';
+import LuxuryIcon, { LuxuryCheckBadge } from '../components/common/LuxuryIcon.jsx';
 import {
   ArrowUpRight,
   ChevronRight,
@@ -202,21 +203,21 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
 
               <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Chủ sở hữu quỹ đất trống hoặc nhà phố mặt tiền:</strong>
                     Muốn chuyển đổi sang mô hình căn hộ dịch vụ cao cấp hoặc boutique hotel.
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Chủ đầu tư chuẩn bị nộp hồ sơ xin phép xây dựng:</strong>
                     Cần tối ưu hóa cơ cấu buồng phòng và tiêu chuẩn PCCC để tránh phải sửa chữa tốn kém sau này.
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
+                  <LuxuryCheckBadge size="md" className="mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Nhà đầu tư tìm kiếm dòng tiền an toàn:</strong>
                     Cần một báo cáo khả thi (FS) độc lập, minh bạch để đánh giá mức độ hấp thụ của thị trường.
@@ -235,7 +236,7 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/90 via-[#0F1A41]/30 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 text-[#0F1A41]">
                   <div className="flex items-center gap-2 mb-2 text-[#B9887B] text-xs font-bold uppercase tracking-wider">
-                    <ShieldCheck size={16} />
+                    <LuxuryIcon name="shieldCheck" size={16} strokeWidth={1.5} />
                     <span>Bảo chứng bởi 35+ tòa nhà thực tế</span>
                   </div>
                   <p className="text-xs text-[#0F1A41]/80 leading-relaxed">
@@ -289,7 +290,7 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
                   <div className="space-y-2.5 pt-4 border-t border-[#0F1A41]/5 mb-6">
                     {scope.points.map((pt, pIdx) => (
                       <div key={pIdx} className="flex items-start gap-2.5 text-xs text-[#0F1A41]/85">
-                        <Check size={14} className="text-[#B9887B] shrink-0 mt-0.5" />
+                        <LuxuryCheckBadge size="sm" className="mt-0.5" />
                         <span className="leading-relaxed">{pt}</span>
                       </div>
                     ))}

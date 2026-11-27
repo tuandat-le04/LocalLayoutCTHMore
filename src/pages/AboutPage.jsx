@@ -2,6 +2,7 @@ import React from 'react';
 import Story from '../components/sections/Story.jsx';
 import Awards from '../components/sections/Awards.jsx';
 import { useNavigation } from '../context/NavigationContext.jsx';
+import LuxuryIcon from '../components/common/LuxuryIcon.jsx';
 
 const CORE_VALUES = [
   {
@@ -172,12 +173,12 @@ export default function AboutPage() {
 
               {/* 2. Ba cam kết bảo tồn gia sản */}
               <div>
-                <span className="font-sans text-[11px] text-[#B9887B] uppercase tracking-[0.16em] block font-bold mb-2.5 flex items-center gap-2">
+                <span className="font-sans text-[11px] text-[#B9887B] uppercase tracking-[0.16em] block font-bold mb-2 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
                   3 NGUYÊN TẮC BẢO TOÀN GIA SẢN VỮNG BỀN:
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
+                  <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
                     <div className="font-serif text-2xl font-bold text-[#B9887B] mb-0.5">92%+</div>
                     <span className="text-xs font-bold text-[#0F1A41] block mb-1">Công suất ổn định</span>
                     <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed font-normal">
@@ -185,7 +186,7 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
+                  <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
                     <div className="font-serif text-2xl font-bold text-[#B9887B] mb-0.5">100%</div>
                     <span className="text-xs font-bold text-[#0F1A41] block mb-1">Minh bạch tài chính</span>
                     <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed font-normal">
@@ -193,7 +194,7 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <div className="p-4 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
+                  <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8">
                     <div className="font-serif text-2xl font-bold text-[#B9887B] mb-0.5">24/7</div>
                     <span className="text-xs font-bold text-[#0F1A41] block mb-1">Bảo dưỡng công trình</span>
                     <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed font-normal">
@@ -202,17 +203,80 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
+
+              {/* 3. Bốn trụ cột năng lực vận hành thực chiến */}
+              <div>
+                <span className="font-sans text-[11px] text-[#B9887B] uppercase tracking-[0.16em] block font-bold mb-2 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+                  4 TRỤ CỘT NĂNG LỰC VẬN HÀNH THỰC CHIẾN:
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5">
+                      <LuxuryIcon name="growth" size={15} strokeWidth={1.3} />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-[#0F1A41] mb-0.5">Quản trị Doanh thu Đa kênh</div>
+                      <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed">
+                        Dynamic pricing tối ưu theo mùa vụ, 8+ kênh OTA quốc tế và 120+ hợp đồng FDI.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5">
+                      <LuxuryIcon name="laptop" size={15} strokeWidth={1.3} />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-[#0F1A41] mb-0.5">Hệ thống Số hóa Cloud PMS</div>
+                      <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed">
+                        Kiểm soát công suất theo thời gian thực, chủ nhà theo dõi doanh thu minh bạch 24/7.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5">
+                      <LuxuryIcon name="concierge" size={15} strokeWidth={1.3} />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-[#0F1A41] mb-0.5">Chuẩn mực Dịch vụ SOP 5 Sao</div>
+                      <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed">
+                        Đội ngũ quản gia & buồng phòng chuyên nghiệp, duy trì điểm đánh giá 9.0+ từ du khách.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#0F1A41]/8 flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5">
+                      <LuxuryIcon name="wrench" size={15} strokeWidth={1.3} />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-[#0F1A41] mb-0.5">Bảo trì Kỹ thuật MEP Dự phòng</div>
+                      <p className="text-[11px] text-[#0F1A41]/70 leading-relaxed">
+                        Kiểm tra định kỳ hệ MEP và PCCC, bảo toàn giá trị công trình bền vững qua các năm.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Executive Pledge Signature Quote */}
-            <div className="pt-3 border-t border-[#0F1A41]/10 bg-[#FAF9F6] p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <div>
-                <p className="font-serif text-xs sm:text-[13.5px] italic text-[#0F1A41] leading-relaxed">
+            <div className="pt-3.5 border-t border-[#0F1A41]/10 bg-gradient-to-r from-[#FAF9F6] to-[#F4EFEA] p-4 rounded-xl flex items-start gap-3.5 border border-[#B9887B]/20 shadow-sm">
+              <div className="w-8 h-8 rounded-full bg-[#B9887B]/15 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5">
+                <LuxuryIcon name="quote" size={15} strokeWidth={1.3} />
+              </div>
+              <div className="flex-1">
+                <p className="font-serif text-xs sm:text-[13px] italic text-[#0F1A41] leading-relaxed">
                   "Xây dựng một tòa nhà đẹp là chưa đủ, biết cách thổi hồn và vận hành để tạo ra dòng tiền bền bỉ mới là chìa khóa giữ gìn gia sản truyền đời."
                 </p>
-                <span className="font-sans text-[10px] uppercase tracking-wider text-[#B9887B] font-bold block mt-1.5">
-                  — Ban Sáng Lập CityHouse More
-                </span>
+                <div className="flex items-center gap-2 mt-1.5">
+                  <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+                  <span className="font-sans text-[10.5px] uppercase tracking-wider text-[#B9887B] font-bold">
+                    Ban Sáng Lập CityHouse More
+                  </span>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LuxuryIcon, { LuxurySuccessMedallion } from '../components/common/LuxuryIcon.jsx';
 import { 
   ArrowRight, 
   ChevronRight, 
@@ -934,7 +935,7 @@ export default function HomePage({ onOpenModal }) {
                   Để lại thông tin, CityHouse sẽ liên hệ để đề xuất giải pháp giúp tối ưu hiệu quả khai thác và giá trị dài hạn của bất động sản.
                 </p>
                 <div className="flex items-center gap-2.5 text-[#B9887B] mb-8">
-                  <ShieldCheck size={20} className="shrink-0" />
+                  <LuxuryIcon name="shieldCheck" size={20} className="shrink-0" strokeWidth={1.4} />
                   <span className="font-sans text-xs font-light text-white/80">
                     Thông tin của quý khách được bảo mật tuyệt đối
                   </span>
@@ -971,7 +972,7 @@ export default function HomePage({ onOpenModal }) {
 
                 {formSubmitted ? (
                   <div className="bg-white border border-[#B9887B]/40 p-8 text-center rounded-none shadow-sm animate-fade-in">
-                    <CheckCircle2 size={44} className="text-[#B9887B] mx-auto mb-3" />
+                    <LuxurySuccessMedallion />
                     <h4 className="font-serif text-xl font-normal text-[#0F1A41] mb-2">
                       Gửi yêu cầu thành công!
                     </h4>
@@ -1069,7 +1070,7 @@ export default function HomePage({ onOpenModal }) {
                             className="flex items-center gap-2.5 cursor-pointer min-h-[40px] select-none p-1.5 hover:bg-white/60 transition-colors"
                           >
                             <div className={`w-4 h-4 flex items-center justify-center border transition-colors shrink-0 ${formData.interests.includes(item.val) ? 'bg-[#B9887B] border-[#B9887B] text-white' : 'bg-white border-[#0F1A41]/30'}`}>
-                              {formData.interests.includes(item.val) && <CheckCircle2 size={12} />}
+                              {formData.interests.includes(item.val) && <LuxuryIcon name="check" size={10} strokeWidth={2.4} />}
                             </div>
                             <span className="font-sans text-xs text-[#0F1A41]/85">{item.label}</span>
                           </label>
@@ -1104,7 +1105,7 @@ export default function HomePage({ onOpenModal }) {
                     {/* Trust Badges */}
                     <div className="pt-4 space-y-2 border-t border-[#0F1A41]/10">
                       <div className="flex items-start gap-2 text-[11px] text-[#0F1A41]/60">
-                        <ShieldCheck size={14} className="shrink-0 mt-0.5" />
+                        <LuxuryIcon name="shieldCheck" size={14} className="shrink-0 mt-0.5" strokeWidth={1.4} />
                         <span className="font-sans">Bằng việc gửi thông tin, quý khách đồng ý với Chính sách bảo mật của chúng tôi.</span>
                       </div>
                       <div className="flex items-start gap-2 text-[11px] text-[#0F1A41]/60">

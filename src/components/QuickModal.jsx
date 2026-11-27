@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Phone, ShieldCheck, Check, ChevronDown } from 'lucide-react';
+import LuxuryIcon, { LuxuryPrivilegeBadge, LuxurySuccessMedallion } from './common/LuxuryIcon.jsx';
 
 export default function QuickModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -87,7 +87,7 @@ export default function QuickModal({ isOpen, onClose }) {
             className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer shrink-0 ml-3 mt-0.5"
             aria-label="Đóng popup"
           >
-            <X size={15} />
+            <LuxuryIcon name="x" size={14} strokeWidth={1.5} />
           </button>
         </div>
 
@@ -96,9 +96,7 @@ export default function QuickModal({ isOpen, onClose }) {
           {sent ? (
             /* Success State */
             <div className="py-6 px-2 text-center space-y-3">
-              <div className="w-14 h-14 rounded-full bg-[#101C42] text-[#C79A3B] flex items-center justify-center mx-auto mb-2 border border-[#C79A3B]/30 shadow-md">
-                <Check size={28} strokeWidth={2.5} />
-              </div>
+              <LuxurySuccessMedallion />
               <h4 className="font-serif text-lg font-bold text-[#101C42]">
                 GỬI YÊU CẦU THÀNH CÔNG!
               </h4>
@@ -119,8 +117,8 @@ export default function QuickModal({ isOpen, onClose }) {
             /* Main Input Form */
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 font-sans">
               {/* Compact Benefit Badge */}
-              <div className="p-3 rounded-xl bg-[#F4EFEA]/80 border border-[#B9887B]/25 border-l-2 border-l-[#B9887B] flex items-center gap-2 text-[11px] text-[#101C42]/85 shadow-2xs">
-                <ShieldCheck size={14} className="text-[#B9887B] shrink-0" />
+              <div className="p-3 rounded-xl bg-[#F4EFEA]/85 border border-[#B9887B]/30 border-l-[3px] border-l-[#B9887B] flex items-center gap-2.5 text-[11px] text-[#101C42]/90 shadow-2xs">
+                <LuxuryPrivilegeBadge size={12} className="w-4.5 h-4.5" />
                 <span>Khảo sát hiện trạng và Báo cáo dòng tiền <strong>hoàn toàn miễn phí</strong></span>
               </div>
 
@@ -219,7 +217,7 @@ export default function QuickModal({ isOpen, onClose }) {
                   className="text-[11px] text-[#101C42]/70 hover:text-[#B9887B] flex items-center gap-1 font-sans cursor-pointer py-1 transition-colors"
                 >
                   <span>{showOptional ? '− Thu gọn thông tin thêm' : '+ Thêm Email hoặc ghi chú (Tùy chọn)'}</span>
-                  <ChevronDown size={12} className={`transform transition-transform ${showOptional ? 'rotate-180' : ''}`} />
+                  <LuxuryIcon name="chevronDown" size={12} strokeWidth={1.4} className={`transform transition-transform ${showOptional ? 'rotate-180' : ''}`} />
                 </button>
 
                 {showOptional && (
@@ -254,7 +252,7 @@ export default function QuickModal({ isOpen, onClose }) {
               {/* Micro Footer Notice */}
               <div className="pt-1 flex items-center justify-between text-[10.5px] text-[#101C42]/60 font-sans">
                 <span>Hotline 24/7: <a href="tel:0878253545" className="text-[#101C42] font-bold hover:underline">0878 253 545</a></span>
-                <span className="flex items-center gap-1"><ShieldCheck size={12} className="text-[#B9887B]" /> Bảo mật 100%</span>
+                <span className="flex items-center gap-1.5"><LuxuryIcon name="shieldCheck" size={13} strokeWidth={1.5} className="text-[#B9887B]" /> Bảo mật 100%</span>
               </div>
             </form>
           )}
