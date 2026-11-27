@@ -70,7 +70,7 @@ const ASSET_SOLUTIONS = [
       "Xác lập mô hình và định vị sản phẩm",
       "Định hướng phát triển và hiệu quả tài sản"
     ],
-    path: "/giai-phap"
+    path: "/giai-phap/dau-tu-phat-trien-du-an"
   },
   {
     id: "02",
@@ -81,7 +81,7 @@ const ASSET_SOLUTIONS = [
       "Định hướng cải tạo và nâng cấp sản phẩm",
       "Tái định vị và nâng cao năng lực khai thác"
     ],
-    path: "/giai-phap"
+    path: "/giai-phap/cai-tao-tai-dinh-vi"
   },
   {
     id: "03",
@@ -92,7 +92,7 @@ const ASSET_SOLUTIONS = [
       "Thiết lập kế hoạch MKT - Kinh doanh",
       "Quản lý & kiểm soát toàn diện"
     ],
-    path: "/giai-phap"
+    path: "/giai-phap/khai-thac-van-hanh"
   }
 ];
 
@@ -103,6 +103,7 @@ const TYPICAL_PROJECTS = [
     name: "CityHouse VIBE City Oasis",
     tag: "KHÁCH QUỐC TẾ & KHÁCH ĐÔ THỊ",
     service: "Tư vấn Đầu tư & Phát triển",
+    companionYear: "2019",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782189975616-358643.webp",
     slug: "city-oasis"
   },
@@ -111,6 +112,7 @@ const TYPICAL_PROJECTS = [
     name: "CityHouse TERA Kim Nguyen",
     tag: "KHÁCH CÔNG TÁC & LƯU TRÚ DÀI HẠN",
     service: "Tư vấn Đầu tư & Phát triển",
+    companionYear: "2017",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782195854527-583048.webp",
     slug: "kim-nguyen"
   },
@@ -119,6 +121,7 @@ const TYPICAL_PROJECTS = [
     name: "CityHouse VIBE Abora",
     tag: "KHÁCH QUỐC TẾ & KHÁCH ĐÔ THỊ",
     service: "Tư vấn Đầu tư & Phát triển",
+    companionYear: "2020",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782195171956-882833.webp",
     slug: "abora"
   },
@@ -127,6 +130,7 @@ const TYPICAL_PROJECTS = [
     name: "CityHouse TERA Villea",
     tag: "KHÁCH CÔNG TÁC & LƯU TRÚ DÀI HẠN",
     service: "Tư vấn Đầu tư & Phát triển",
+    companionYear: "2020",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782196352717-398720.webp",
     slug: "villea"
   },
@@ -135,6 +139,7 @@ const TYPICAL_PROJECTS = [
     name: "CityHouse NEST DC Urban Lumen",
     tag: "KHÁCH QUỐC TẾ & CHUYÊN GIA",
     service: "Tư vấn Phát triển & Quản lý Vòng đời Tài sản",
+    companionYear: "2015",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782197864346-660114.webp",
     slug: "nest-dc"
   },
@@ -143,6 +148,7 @@ const TYPICAL_PROJECTS = [
     name: "CityHouse NEST LightHouse Saigon",
     tag: "DU LỊCH · CÔNG TÁC",
     service: "Tư vấn Đầu tư & Phát triển",
+    companionYear: "2018",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782202629485-507494.webp",
     slug: "lighthouse-sg"
   },
@@ -151,6 +157,7 @@ const TYPICAL_PROJECTS = [
     name: "CityHouse NEST Metro Thao Dien",
     tag: "KHÁCH QUỐC TẾ & CHUYÊN GIA",
     service: "Tư vấn Mô hình & Quản lý Vận hành",
+    companionYear: "2025",
     image: "https://cityhousemore.com/uploads/gallery/gallery-1782203499079-253480.webp",
     slug: "nest-metro"
   }
@@ -735,11 +742,16 @@ export default function HomePage({ onOpenModal }) {
                       <h4 className="font-serif text-base font-normal text-[#0F1A41] uppercase tracking-wide group-hover:text-[#B9887B] transition-colors mb-1.5 line-clamp-1">
                         {item.name}
                       </h4>
-                      <div className="flex flex-col gap-1 text-[#0F1A41]/70 text-[11px] border-b border-[#0F1A41]/10 pb-2 mb-2 font-sans">
-                        <span className="font-medium">{item.service}</span>
+                      <div className="flex items-center justify-between gap-1 text-[#0F1A41]/70 text-[11px] border-b border-[#0F1A41]/10 pb-2 mb-2 font-sans">
+                        <span className="font-medium truncate">{item.service}</span>
+                        {item.companionYear && (
+                          <span className="text-[9.5px] font-bold text-[#B9887B] uppercase tracking-wider shrink-0 bg-[#B9887B]/10 px-1.5 py-0.5 rounded">
+                            ĐỒNG HÀNH TỪ {item.companionYear}
+                          </span>
+                        )}
                       </div>
                       <div className="font-sans flex justify-between items-center text-[10px] font-bold uppercase tracking-wider text-[#B9887B]">
-                        <span>Xem chi tiết</span>
+                        <span>Xem dự án</span>
                         <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
@@ -921,11 +933,28 @@ export default function HomePage({ onOpenModal }) {
                 <p className="font-sans text-xs md:text-sm leading-relaxed text-white/70 font-light mb-8 max-w-sm">
                   Để lại thông tin, CityHouse sẽ liên hệ để đề xuất giải pháp giúp tối ưu hiệu quả khai thác và giá trị dài hạn của bất động sản.
                 </p>
-                <div className="flex items-center gap-2.5 text-[#B9887B]">
+                <div className="flex items-center gap-2.5 text-[#B9887B] mb-8">
                   <ShieldCheck size={20} className="shrink-0" />
                   <span className="font-sans text-xs font-light text-white/80">
                     Thông tin của quý khách được bảo mật tuyệt đối
                   </span>
+                </div>
+
+                {/* Direct Contact Links */}
+                <div className="border-t border-white/10 pt-6 space-y-3 font-sans">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B9887B]">
+                    KẾT NỐI CÙNG CITYHOUSE
+                  </p>
+                  <div className="flex flex-col gap-2 text-xs text-white/80">
+                    <div className="flex items-center gap-2">
+                      <Phone size={14} className="text-[#B9887B] shrink-0" />
+                      <span>Tư vấn trực tiếp: <a href="tel:0878253545" className="font-bold text-white hover:text-[#B9887B]">0878 253 545</a></span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-3.5 h-3.5 flex items-center justify-center text-[#B9887B] font-bold text-xs">@</span>
+                      <span>Email: <a href="mailto:info@cityhousemore.com" className="text-white hover:text-[#B9887B]">info@cityhousemore.com</a></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

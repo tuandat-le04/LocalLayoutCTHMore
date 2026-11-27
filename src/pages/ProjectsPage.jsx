@@ -67,13 +67,13 @@ export default function ProjectsPage({ onOpenModal }) {
           <span className="text-[#B9887B] font-serif italic">đang vận hành hiệu quả</span>
         </h1>
         <p className="lead text-sm sm:text-base md:text-lg text-[#F4EFEA]/80 max-w-2xl leading-relaxed font-normal font-sans">
-          Thông tin chi tiết, chuẩn hóa và minh bạch về hơn 35 bất động sản lưu trú đang được CityHouse bảo trợ và quản lý dòng tiền tại các vị trí đắc địa nhất TP.HCM.
+          Thông tin chi tiết, chuẩn hóa và minh bạch về hơn 40 bất động sản lưu trú đang được CityHouse bảo trợ và quản lý dòng tiền tại các vị trí đắc địa nhất TP.HCM.
         </p>
 
         {/* Quick Stats Strip */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 max-w-2xl border-t border-white/10 pt-6 font-sans">
           <div>
-            <div className="font-serif text-3xl font-bold text-[#B9887B]">35+</div>
+            <div className="font-serif text-3xl font-bold text-[#B9887B]">40+</div>
             <div className="font-sans text-[11px] font-bold text-white/70 mt-1 uppercase tracking-wider">Tòa nhà đang vận hành</div>
           </div>
           <div>

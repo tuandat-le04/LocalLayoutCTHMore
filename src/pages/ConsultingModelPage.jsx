@@ -128,10 +128,13 @@ export default function ConsultingModelPage({ onOpenModal }) {
             DỊCH VỤ TƯ VẤN 03 — CITYHOUSE MORE
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] max-w-4xl mb-6">
-            Tư vấn Mô hình &amp;<br />
-            <span className="text-[#B9887B] font-serif italic">Quản lý Vận hành Toàn diện</span>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] max-w-4xl mb-4">
+            Vận hành tạo dòng tiền.<br />
+            <span className="text-[#B9887B] font-serif italic">Quản trị bồi đắp giá trị.</span>
           </h1>
+          <p className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-4">
+            TƯ VẤN MÔ HÌNH VÀ QUẢN LÝ VẬN HÀNH TOÀN DIỆN
+          </p>
 
           <p className="lead text-base md:text-lg text-[#F4EFEA]/80 max-w-3xl leading-relaxed mt-4 font-normal font-sans">
             Vận hành chuẩn mực quốc tế 24/7, ứng dụng công nghệ Cloud PMS &amp; Dynamic Pricing tối đa hóa công suất phòng và giải phóng 100% thời gian cho Chủ đầu tư với cam kết dòng tiền bền vững.

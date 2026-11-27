@@ -129,10 +129,13 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
             DỊCH VỤ TƯ VẤN 02 — CITYHOUSE MORE
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] max-w-4xl mb-6">
-            Tư vấn Cải tạo &amp;<br />
-            <span className="text-[#B9887B] font-serif italic">Tái định vị Tòa nhà Cũ</span>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] max-w-4xl mb-4">
+            Đánh thức giá trị.<br />
+            <span className="text-[#B9887B] font-serif italic">Mở ra một chu kỳ tăng trưởng mới.</span>
           </h1>
+          <p className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-4">
+            TƯ VẤN CẢI TẠO VÀ TÁI ĐỊNH VỊ TÒA NHÀ CŨ
+          </p>
 
           <p className="lead text-base md:text-lg text-[#F4EFEA]/80 max-w-3xl leading-relaxed mt-4 font-normal font-sans">
             Hồi sinh các tòa nhà xuống cấp hoặc kinh doanh sa sút thông qua thiết kế nội thất đương đại và chiến lược tái định vị thương hiệu. Tận dụng tối đa khung kết cấu có sẵn để nhân đôi doanh thu khai thác thương mại.

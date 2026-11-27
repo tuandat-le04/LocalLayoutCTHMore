@@ -24,7 +24,7 @@ export default function Footer({ onOpenModal }) {
 
   return (
     <footer className="footer bg-[#080E24] text-[#F4EFEA] border-t border-[#B9887B]/20 pt-0 font-sans">
-      {/* ── 1. End-of-Page High-Converting CTA Banner (Part 14 Request) ── */}
+      {/* ── 1. End-of-Page CTA Banner ── */}
       <div className="bg-gradient-to-r from-[#0F1A41] via-[#162456] to-[#0F1A41] border-b border-[#B9887B]/30 py-12 px-6 font-sans">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
@@ -35,12 +35,12 @@ export default function Footer({ onOpenModal }) {
               Bạn đang tìm cách nâng cao hiệu quả khai thác tài sản?
             </h3>
             <p className="text-xs md:text-sm text-white/75 mt-1.5 max-w-xl font-normal">
-              Trao đổi với CityHouseMore ngay hôm nay để nhận báo cáo phân tích tiềm năng và lộ trình tối ưu dòng tiền hoàn toàn miễn phí.
+              Trao đổi với CityHouse ngay hôm nay để nhận báo cáo phân tích tiềm năng và lộ trình tối ưu dòng tiền hoàn toàn miễn phí.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3 font-sans">
-            {/* Action 1: Đặt lịch tư vấn (Solid Terracotta #B9887B - Never Transparent) */}
+            {/* Action 1: Đặt lịch tư vấn */}
             <button
               onClick={() => {
                 if (onOpenModal) onOpenModal();
@@ -83,176 +83,187 @@ export default function Footer({ onOpenModal }) {
         </div>
       </div>
 
-      {/* ── 2. Footer Main Information ── */}
+      {/* ── 2. Footer Main Information (Chuẩn theo cityhousemore.com) ── */}
       <div className="max-w-7xl mx-auto px-6 py-14 font-sans">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
-          {/* Brand và Prominent Contact Info (lg:col-span-4) */}
+          
+          {/* Brand & Công ty (lg:col-span-4) */}
           <div className="lg:col-span-4">
             <a
               href="/"
-              className="wordmark flex flex-col mb-4"
+              className="wordmark flex flex-col mb-4 select-none group"
               onClick={(e) => handleLink('/', e)}
             >
               <span className="font-serif tracking-wider font-semibold text-2xl text-white">
                 <span className="font-light">CITY</span>HOUSE<small className="text-[#B9887B] text-xs tracking-[0.25em] font-sans font-bold block ml-1">MORE</small>
               </span>
             </a>
-
-            <p className="text-xs text-white/70 leading-relaxed mb-6 max-w-sm font-normal">
-              Hệ thống giải pháp may đo về tư vấn đầu tư, phát triển, cải tạo tái định vị và quản lý vận hành bất động sản lưu trú dòng tiền hàng đầu TP.HCM.
+            
+            <h4 className="font-sans font-bold text-sm uppercase tracking-wider text-white mb-2">
+              CÔNG TY TNHH CITYHOUSE MORE
+            </h4>
+            
+            <p className="text-xs text-white/70 leading-relaxed mb-5 max-w-sm font-normal">
+              Giải pháp toàn diện giúp bất động sản tạo dòng tiền hôm nay và bồi đắp giá trị bền vững qua nhiều thế hệ.
             </p>
 
-            {/* Prominent Contact Details (Part 14 Request) */}
             <div className="flex flex-col gap-2.5 text-xs text-white/80 border-t border-white/10 pt-4 font-sans">
+              <div className="flex items-start gap-2">
+                <MapPin size={14} className="text-[#B9887B] shrink-0 mt-0.5" />
+                <span className="leading-snug">485B Nguyễn Đình Chiểu, Phường Bàn Cờ, TP.HCM</span>
+              </div>
               <div className="flex items-center gap-2">
+                <span className="text-[#B9887B] font-bold text-[11px] uppercase tracking-wider">MÃ SỐ THUẾ:</span>
+                <span className="font-mono text-white/90">0316749902</span>
+              </div>
+              <div className="flex items-center gap-2 mt-1">
                 <Phone size={14} className="text-[#B9887B] shrink-0" />
-                <span>Hotline 24/7: <a href="tel:0878253545" className="font-bold text-white hover:text-[#B9887B]">0878 253 545</a></span>
+                <span>Tư vấn trực tiếp: <a href="tel:0878253545" className="font-bold text-white hover:text-[#B9887B]">0878 253 545</a></span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-[#B9887B] shrink-0" />
                 <span>Email: <a href="mailto:info@cityhousemore.com" className="hover:text-[#B9887B]">info@cityhousemore.com</a></span>
               </div>
-              <div className="flex items-start gap-2">
-                <MapPin size={14} className="text-[#B9887B] shrink-0 mt-0.5" />
-                <span className="leading-snug">Trụ sở: 485B Nguyễn Đình Chiểu, Phường Bàn Cờ, Quận 3, TP.HCM</span>
-              </div>
             </div>
           </div>
 
-          {/* Column 2: Solutions & Advisory (lg:col-span-3) */}
-          <div className="lg:col-span-3">
-            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.15em] text-[#B9887B] mb-4">
-              GIẢI PHÁP & TƯ VẤN
+          {/* Column 2: Giải pháp (lg:col-span-2) */}
+          <div className="lg:col-span-2">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#B9887B] mb-4">
+              GIẢI PHÁP
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs text-white/75 font-sans">
               <li>
-                <a href="/giai-phap" onClick={(e) => handleLink('/giai-phap', e)} className="hover:text-white transition-colors">
-                  Hệ thống Giải pháp Tài sản
+                <a href="/giai-phap/dau-tu-phat-trien-du-an" onClick={(e) => handleLink('/giai-phap/dau-tu-phat-trien-du-an', e)} className="hover:text-white transition-colors">
+                  Tư vấn Đầu tư
                 </a>
               </li>
               <li>
-                <a href="/giai-phap#partnership-models" onClick={(e) => handleLink('/giai-phap', e)} className="hover:text-white transition-colors">
-                  3 Mô hình Hợp tác Chiến lược
+                <a href="/giai-phap/cai-tao-tai-dinh-vi" onClick={(e) => handleLink('/giai-phap/cai-tao-tai-dinh-vi', e)} className="hover:text-white transition-colors">
+                  Tư vấn Cải tạo
                 </a>
               </li>
               <li>
-                <a href="/tu-van/dau-tu" onClick={(e) => handleLink('/tu-van/dau-tu', e)} className="hover:text-white transition-colors">
-                  Tư vấn Đầu tư và Phát triển
+                <a href="/giai-phap/khai-thac-van-hanh" onClick={(e) => handleLink('/giai-phap/khai-thac-van-hanh', e)} className="hover:text-white transition-colors">
+                  Tư vấn Mô hình
                 </a>
               </li>
               <li>
-                <a href="/tu-van/cai-tao" onClick={(e) => handleLink('/tu-van/cai-tao', e)} className="hover:text-white transition-colors">
-                  Tư vấn Cải tạo và Tái định vị
-                </a>
-              </li>
-              <li>
-                <a href="/tu-van/mo-hinh" onClick={(e) => handleLink('/tu-van/mo-hinh', e)} className="hover:text-white transition-colors">
-                  Tư vấn Mô hình & Vận hành 24/7
-                </a>
-              </li>
-              <li>
-                <a href="/tu-van" onClick={(e) => handleLink('/tu-van', e)} className="hover:text-white transition-colors">
-                  Đặt lịch Đánh giá Sơ bộ Tài sản
+                <a href="/contact" onClick={(e) => handleLink('/contact', e)} className="hover:text-white transition-colors">
+                  Đặt lịch tư vấn
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Case Studies và Brands (lg:col-span-3) */}
-          <div className="lg:col-span-3">
-            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.15em] text-[#B9887B] mb-4">
-              CASE STUDY VÀ DỰ ÁN
+          {/* Column 3: CityHouse (lg:col-span-2) */}
+          <div className="lg:col-span-2">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#B9887B] mb-4">
+              CITYHOUSE
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs text-white/75 font-sans">
               <li>
-                <a href="/danh-muc-tai-san" onClick={(e) => handleLink('/danh-muc-tai-san', e)} className="hover:text-white transition-colors flex items-center justify-between">
-                  <span>Case Study VIBE City Oasis</span>
-                  <span className="text-[10px] text-[#B9887B] font-bold">Q.3</span>
+                <a href="/ve-he-thong" onClick={(e) => handleLink('/ve-he-thong', e)} className="hover:text-white transition-colors">
+                  Về CityHouse
                 </a>
               </li>
               <li>
-                <a href="/danh-muc-tai-san" onClick={(e) => handleLink('/danh-muc-tai-san', e)} className="hover:text-white transition-colors flex items-center justify-between">
-                  <span>Case Study TERA Kim Nguyen</span>
-                  <span className="text-[10px] text-[#B9887B] font-bold">Bình Thạnh</span>
+                <a href="/dang-hoat-dong" onClick={(e) => handleLink('/dang-hoat-dong', e)} className="hover:text-white transition-colors">
+                  Dự án đang hoạt động
                 </a>
               </li>
               <li>
-                <a href="/danh-muc-tai-san" onClick={(e) => handleLink('/danh-muc-tai-san', e)} className="hover:text-white transition-colors flex items-center justify-between">
-                  <span>Case Study VIBE Abora Tái Định Vị</span>
-                  <span className="text-[10px] text-[#B9887B] font-bold">Q.3</span>
+                <a href="/careers" onClick={(e) => handleLink('/careers', e)} className="hover:text-white transition-colors">
+                  Tuyển dụng
                 </a>
               </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Góc nhìn (lg:col-span-2) */}
+          <div className="lg:col-span-2">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#B9887B] mb-4">
+              GÓC NHÌN
+            </h4>
+            <ul className="flex flex-col gap-2.5 text-xs text-white/75 font-sans">
               <li>
-                <a href="/thuong-hieu" onClick={(e) => handleLink('/thuong-hieu', e)} className="hover:text-white transition-colors">
-                  Hệ sinh thái 5 dòng thương hiệu
-                </a>
-              </li>
-              <li>
-                <a href="/careers" onClick={(e) => handleLink('/careers', e)} className="hover:text-white text-[#B9887B] font-semibold transition-colors flex items-center justify-between">
-                  <span>Tuyển dụng và Cơ hội nghề nghiệp</span>
-                  <span className="text-[10px] bg-[#B9887B]/20 text-[#B9887B] px-2 py-0.5 rounded-full font-bold">10 vị trí</span>
+                <a href="/goc-nhin" onClick={(e) => handleLink('/goc-nhin', e)} className="hover:text-white transition-colors">
+                  Kiến thức và Cập nhật
                 </a>
               </li>
               <li>
                 <a href="/goc-nhin" onClick={(e) => handleLink('/goc-nhin', e)} className="hover:text-white transition-colors">
-                  Báo cáo phân tích thị trường 2026
+                  Thị trường
+                </a>
+              </li>
+              <li>
+                <a href="/ve-he-thong" onClick={(e) => handleLink('/ve-he-thong', e)} className="hover:text-white transition-colors">
+                  CityHouse More
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Quick Actions và Trust (lg:col-span-2) */}
+          {/* Column 5: Hỗ trợ (lg:col-span-2) */}
           <div className="lg:col-span-2">
-            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.15em] text-[#B9887B] mb-4">
-              BẢO CHỨNG B2B
+            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#B9887B] mb-4">
+              HỖ TRỢ
             </h4>
-            <div className="flex flex-col gap-3 text-xs text-white/70 font-sans">
-              <div className="flex items-center gap-1.5 text-[11px] text-white/80">
-                <ShieldCheck size={14} className="text-[#B9887B] shrink-0" />
-                <span>Bảo mật hồ sơ tài sản 100%</span>
-              </div>
-              <div className="flex items-center gap-1.5 text-[11px] text-white/80">
-                <Check size={14} strokeWidth={2.5} className="text-[#B9887B] shrink-0" />
-                <span>Phản hồi sau 24h làm việc</span>
-              </div>
-              <div className="mt-2">
-                <a
-                  href="https://linkedin.com/company/cityhouse-apartment"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-white bg-white/10 hover:bg-[#B9887B] px-3.5 py-1.5 rounded-full transition-colors font-bold"
-                >
-                  <span>LinkedIn Doanh Nghiệp</span>
-                  <ArrowUpRight size={13} />
+            <ul className="flex flex-col gap-2.5 text-xs text-white/75 font-sans">
+              <li>
+                <a href="/dieu-khoan-dieu-kien" onClick={(e) => handleLink('/dieu-khoan-dieu-kien', e)} className="hover:text-white transition-colors">
+                  Điều khoản và Điều kiện
                 </a>
-              </div>
-            </div>
+              </li>
+              <li>
+                <a href="/chinh-sach-bao-mat" onClick={(e) => handleLink('/chinh-sach-bao-mat', e)} className="hover:text-white transition-colors">
+                  Chính sách bảo mật
+                </a>
+              </li>
+              <li>
+                <a href="/khieu-nai" onClick={(e) => handleLink('/khieu-nai', e)} className="hover:text-white transition-colors">
+                  Gửi khiếu nại
+                </a>
+              </li>
+            </ul>
           </div>
+
         </div>
       </div>
 
-      {/* ── 3. Footer Bottom Bar ── */}
+      {/* ── 3. Footer Bottom Bar (Chuẩn theo cityhousemore.com) ── */}
       <div className="border-t border-white/10 py-6 px-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50 font-sans">
         <div>
-          © 2009–2026 CityHouse More. Tất cả quyền được bảo lưu.
+          © 2009–2026 CityHouse More, Inc. All rights reserved.
         </div>
 
         <div className="flex items-center gap-6">
           <a
-            href="/contact"
-            onClick={(e) => handleLink('/contact', e)}
+            href="/chinh-sach-bao-mat"
+            onClick={(e) => handleLink('/chinh-sach-bao-mat', e)}
             className="hover:text-[#B9887B] transition-colors"
           >
-            Chính Sách Bảo Mật Tài Sản
+            Quyền riêng tư
+          </a>
+
+          <a
+            href="/dieu-khoan-dieu-kien"
+            onClick={(e) => handleLink('/dieu-khoan-dieu-kien', e)}
+            className="hover:text-[#B9887B] transition-colors"
+          >
+            Điều khoản sử dụng
           </a>
 
           <button
             onClick={scrollToTop}
-            className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#B9887B] text-white flex items-center justify-center transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 hover:text-[#B9887B] text-white/70 transition-colors cursor-pointer"
             title="Lên đầu trang"
             aria-label="Lên đầu trang"
           >
-            <ArrowUp size={15} />
+            <span>Lên đầu trang</span>
+            <div className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#B9887B] text-white flex items-center justify-center transition-colors">
+              <ArrowUp size={12} />
+            </div>
           </button>
         </div>
       </div>

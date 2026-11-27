@@ -59,7 +59,7 @@ export default function AboutPage() {
             đến nền tảng <em>quản lý gia sản</em>
           </h2>
           <p className="text-sm sm:text-base text-[#0F1A41]/80 leading-relaxed font-normal">
-            Bắt đầu từ dự án biểu tượng Saigon Pavillon năm 2009, CityHouse More hiện quản lý danh mục hơn 35 tòa nhà với trên 1.000 đơn vị lưu trú, bảo toàn giá trị tài sản hơn 3.800 tỷ đồng tại TP.HCM.
+            Bắt đầu từ dự án biểu tượng Saigon Pavillon năm 2009, CityHouse More hiện quản lý danh mục hơn 40 tòa nhà với trên 1.000 đơn vị lưu trú, bảo toàn giá trị tài sản hơn 5.000 tỷ đồng tại TP.HCM.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
               <div className="bg-white p-4.5 rounded-2xl border border-[#0F1A41]/10 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-baseline justify-between mb-1.5">
-                  <span className="font-serif text-2xl font-bold text-[#0F1A41]">35+</span>
+                  <span className="font-serif text-2xl font-bold text-[#0F1A41]">40+</span>
                   <span className="font-sans text-[10px] uppercase tracking-wider text-[#B9887B] font-bold px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full">
                     Quy mô vận hành
                   </span>
@@ -116,7 +116,7 @@ export default function AboutPage() {
 
               <div className="bg-white p-4.5 rounded-2xl border border-[#0F1A41]/10 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-baseline justify-between mb-1.5">
-                  <span className="font-serif text-2xl font-bold text-[#0F1A41]">3.800+ Tỷ</span>
+                  <span className="font-serif text-2xl font-bold text-[#0F1A41]">5.000+ Tỷ</span>
                   <span className="font-sans text-[10px] uppercase tracking-wider text-[#B9887B] font-bold px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full">
                     Bảo toàn gia sản
                   </span>

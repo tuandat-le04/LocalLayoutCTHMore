@@ -125,10 +125,13 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
             DỊCH VỤ TƯ VẤN 01 — CITYHOUSE MORE
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] max-w-4xl mb-6">
-            Tư vấn Đầu tư &amp;<br />
-            <span className="text-[#B9887B] font-serif italic">Phát triển Dự án Mới</span>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal leading-[1.18] max-w-4xl mb-4">
+            Xây dựng đúng mô hình.<br />
+            <span className="text-[#B9887B] font-serif italic">Ngay từ điểm khởi đầu.</span>
           </h1>
+          <p className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-4">
+            TƯ VẤN ĐẦU TƯ VÀ PHÁT TRIỂN DỰ ÁN MỚI
+          </p>
 
           <p className="lead text-base md:text-lg text-[#F4EFEA]/80 max-w-3xl leading-relaxed mt-4 font-normal font-sans">
             Xác lập nền móng vững chắc ngay từ quyết định đầu tư ban đầu. Chúng tôi đồng hành cùng Chủ đầu tư khảo sát thực địa, tối ưu hóa cơ cấu buồng phòng và thiết lập bài toán tài chính hoàn vốn nhanh nhất trước khi đặt viên gạch đầu tiên.

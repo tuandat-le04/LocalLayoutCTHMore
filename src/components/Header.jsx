@@ -3,14 +3,14 @@ import { ChevronDown, ChevronUp, Menu, X, Phone, Calendar, ChevronRight } from '
 import { useNavigation } from '../context/NavigationContext.jsx';
 
 const CONSULTATION_SUB_LINKS = [
-  { href: '/tu-van/dau-tu', label: 'TƯ VẤN ĐẦU TƯ', id: 'tu-van-dau-tu' },
-  { href: '/tu-van/cai-tao', label: 'TƯ VẤN CẢI TẠO', id: 'tu-van-cai-tao' },
-  { href: '/tu-van/mo-hinh', label: 'TƯ VẤN MÔ HÌNH', id: 'tu-van-mo-hinh' },
+  { href: '/giai-phap/dau-tu-phat-trien-du-an', label: 'TƯ VẤN ĐẦU TƯ', id: 'tu-van-dau-tu' },
+  { href: '/giai-phap/cai-tao-tai-dinh-vi', label: 'TƯ VẤN CẢI TẠO', id: 'tu-van-cai-tao' },
+  { href: '/giai-phap/khai-thac-van-hanh', label: 'TƯ VẤN MÔ HÌNH', id: 'tu-van-mo-hinh' },
 ];
 
 const DESKTOP_NAV_LINKS = [
   { href: '/giai-phap', label: 'GIẢI PHÁP' },
-  { href: '/danh-muc-tai-san', label: 'DANH MỤC TÀI SẢN' },
+  { href: '/dang-hoat-dong', label: 'DANH MỤC TÀI SẢN' },
   { 
     href: '/tu-van', 
     label: 'TƯ VẤN', 
@@ -19,12 +19,12 @@ const DESKTOP_NAV_LINKS = [
   },
   { href: '/ve-he-thong', label: 'VỀ HỆ THỐNG' },
   { href: '/goc-nhin', label: 'GÓC NHÌN' },
-  { href: '/tuyen-dung', label: 'TUYỂN DỤNG' },
+  { href: '/careers', label: 'TUYỂN DỤNG' },
 ];
 
 const MOBILE_NAV_LINKS = [
   { href: '/giai-phap', label: 'GIẢI PHÁP', desc: 'Đầu tư · Cải tạo · Vận hành' },
-  { href: '/danh-muc-tai-san', label: 'DANH MỤC TÀI SẢN', desc: 'Danh mục tài sản thực chiến' },
+  { href: '/dang-hoat-dong', label: 'DANH MỤC TÀI SẢN', desc: 'Danh mục tài sản thực chiến' },
   { 
     href: '/tu-van', 
     label: 'TƯ VẤN', 
@@ -34,7 +34,7 @@ const MOBILE_NAV_LINKS = [
   },
   { href: '/ve-he-thong', label: 'VỀ HỆ THỐNG', desc: 'Quản lý gia sản vững bền' },
   { href: '/goc-nhin', label: 'GÓC NHÌN', desc: 'Phân tích thị trường và Case study' },
-  { href: '/tuyen-dung', label: 'TUYỂN DỤNG', desc: 'Cơ hội nghề nghiệp và Lộ trình' },
+  { href: '/careers', label: 'TUYỂN DỤNG', desc: 'Cơ hội nghề nghiệp và Lộ trình' },
 ];
 
 export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
@@ -101,14 +101,14 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
     if (link.href === '/giai-phap') {
       return currentPath === '/giai-phap';
     }
-    if (link.href === '/danh-muc-tai-san') {
-      return currentPath.startsWith('/danh-muc-tai-san') || currentPath.startsWith('/dang-hoat-dong');
+    if (link.href === '/dang-hoat-dong') {
+      return currentPath.startsWith('/dang-hoat-dong') || currentPath.startsWith('/danh-muc-tai-san');
     }
     if (link.href === '/ve-he-thong') {
       return currentPath === '/ve-he-thong' || currentPath === '/about';
     }
-    if (link.href === '/tuyen-dung') {
-      return currentPath === '/tuyen-dung' || currentPath === '/careers';
+    if (link.href === '/careers') {
+      return currentPath === '/careers' || currentPath === '/tuyen-dung';
     }
     if (link.href !== '/' && currentPath.startsWith(link.href)) return true;
     return false;
@@ -166,7 +166,7 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
                       )}
                     </button>
 
-                    {/* Dropdown Menu Card (Matching Screenshot) */}
+                    {/* Dropdown Menu Card */}
                     {dropdownOpen && (
                       <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
                         <div className="w-56 bg-[#0B1536] border border-white/15 rounded-2xl shadow-2xl p-2 backdrop-blur-xl flex flex-col gap-1 animate-fadeIn">
@@ -377,4 +377,3 @@ export default function Header({ menuOpen, setMenuOpen, onOpenModal }) {
     </>
   );
 }
-
