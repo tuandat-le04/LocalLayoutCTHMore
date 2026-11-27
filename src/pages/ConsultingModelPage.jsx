@@ -190,61 +190,155 @@ export default function ConsultingModelPage({ onOpenModal }) {
       {/* ── 2. Owner's Pain Points ── */}
       <section className="py-16 md:py-24 bg-white text-[#0F1A41] border-b border-[#0F1A41]/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5">
-              <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3 text-[#B9887B]">
-                <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-                NỖI LO CỦA CHỦ TÀI SẢN
-              </p>
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#0F1A41] leading-snug mb-4">
-                Sở hữu tài sản lớn<br />
-                <em>nhưng bị ràng buộc thời gian?</em>
-              </h2>
-              <p className="text-sm text-[#0F1A41]/75 leading-relaxed font-normal mb-6">
-                Tự quản lý một tòa nhà đòi hỏi giải quyết hàng trăm sự cố mỗi ngày: khách khiếu nại lúc nửa đêm, nhân viên buồng phòng nghỉ đột xuất, giá phòng bị môi giới ép giảm mùa ế...
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            {/* Cột Trái: Tháo gỡ Gánh nặng Quản trị Tòa nhà (6 cols) */}
+            <div className="lg:col-span-6 flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.2em] text-[#B9887B] font-bold mb-3">
+                  <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+                  GIẢI TỎA ÁP LỰC QUẢN TRỊ GIA SẢN
+                </div>
+                <h2 className="font-serif text-3xl sm:text-4xl text-[#0F1A41] leading-tight mb-4 font-normal">
+                  Sở hữu tài sản lớn<br />
+                  <span className="italic text-[#B9887B]">nhưng bị ràng buộc thời gian?</span>
+                </h2>
+                <p className="text-sm text-[#0F1A41]/75 leading-relaxed font-normal mb-6">
+                  Tự quản lý một tòa nhà đòi hỏi giải quyết hàng trăm sự cố mỗi ngày: khách khiếu nại lúc nửa đêm, nhân viên buồng phòng nghỉ đột xuất, giá phòng bị môi giới ép giảm vào mùa ế...
+                </p>
 
-              <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Mất thời gian quản lý lễ tân và buồng phòng:</strong>
-                    Chủ sở hữu bận rộn với công việc kinh doanh chính, không thể trực 24/7 để giám sát nhân sự.
+                <div className="space-y-3.5">
+                  {/* Pain Point 01 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="concierge" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Gánh nặng điều hành nhân sự & dịch vụ trực tiếp
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Áp lực nhân sự
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Chủ sở hữu bận rộn với công việc kinh doanh chính, không thể túc trực 24/7 để giám sát quy trình buồng phòng, lễ tân và xử lý sự cố phát sinh.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Thiếu kênh phân phối quốc tế và công nghệ:</strong>
-                    Chỉ đăng tin thủ công trên mạng xã hội, tỷ lệ phòng trống cao vào mùa thấp điểm du lịch.
+
+                  {/* Pain Point 02 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="globe" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Thiếu kênh phân phối quốc tế và công nghệ bán phòng
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Khai thác cục bộ
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Chỉ đăng tin thủ công hoặc phụ thuộc môi giới lẻ, thiếu kết nối mạng lưới khách FDI dài hạn dẫn đến tỷ lệ phòng trống cao vào mùa thấp điểm.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Tài sản bị xuống cấp do không bảo trì định kỳ:</strong>
-                    Chỉ sửa chữa khi đã hư hỏng nặng, dẫn đến chi phí đột biến và mất uy tín với khách lưu trú.
+
+                  {/* Pain Point 03 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="wrench" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Hạ tầng kỹ thuật MEP không được bảo dưỡng dự phòng
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Khấu hao nhanh
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Chỉ sửa chữa khi máy móc hư hỏng nặng, dẫn đến chi phí phát sinh đột biến, công trình nhanh xuống cấp và làm giảm giá trị chuyển nhượng.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-7">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-[#0F1A41]">
+            {/* Cột Phải: Giải pháp Vận hành An nhàn & Minh chứng (6 cols) */}
+            <div className="lg:col-span-6 flex flex-col justify-between gap-4">
+              {/* Ảnh dự án vận hành với Badge sang trọng */}
+              <div className="relative rounded-2xl overflow-hidden border border-[#0F1A41]/10 shadow-lg bg-[#0F1A41] group aspect-[16/10] sm:aspect-[16/10] min-h-[260px]">
                 <img
                   src="https://cityhousemore.com/uploads/gallery/gallery-1782195854527-583048.webp"
-                  alt="Tư vấn vận hành tòa nhà CityHouse"
-                  className="w-full h-[450px] object-cover"
+                  alt="Tư vấn vận hành tòa nhà CityHouse More"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/90 via-[#0F1A41]/30 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 text-[#0F1A41]">
-                  <div className="flex items-center gap-2 mb-2 text-[#B9887B] text-xs font-bold uppercase tracking-wider">
-                    <Settings size={16} />
-                    <span>Giải pháp vận hành an nhàn</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/85 via-[#0F1A41]/20 to-transparent"></div>
+
+                {/* Badge nhận diện dự án góc trên */}
+                <div className="absolute top-4 left-4 bg-[#0F1A41]/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 text-white flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B] animate-pulse"></span>
+                  <span className="font-sans text-[10.5px] uppercase tracking-wider font-bold">
+                    Chuỗi vận hành tiêu biểu: CityHouse Suites
+                  </span>
+                </div>
+
+                {/* 3 Metric Pills kết quả thực tế ở chân ảnh */}
+                <div className="absolute bottom-3 left-3 right-3 grid grid-cols-3 gap-2">
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">92%+</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Công suất bình quân</div>
                   </div>
-                  <p className="text-xs text-[#0F1A41]/80 leading-relaxed">
-                    "Chúng tôi thiết lập bộ máy chuyên nghiệp thay bạn quản lý 365 ngày/năm. Bạn chỉ việc theo dõi doanh thu minh bạch trên ứng dụng và nhận đối soát vào ngày 5 hàng tháng."
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">Ngày 5</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Đối soát dòng tiền</div>
+                  </div>
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">24/7</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Giám sát Cloud PMS</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Khối Giải pháp Vận hành An nhàn */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#0F1A41] text-white border border-[#B9887B]/25 shadow-md flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-white/10">
+                    <div className="flex items-center gap-2 text-[#B9887B] text-xs font-bold uppercase tracking-wider">
+                      <LuxuryIcon name="concierge" size={15} strokeWidth={1.3} />
+                      <span>Giải pháp vận hành an nhàn</span>
+                    </div>
+                    <span className="text-[10.5px] text-[#B9887B] uppercase tracking-wider font-semibold">
+                      Chuyên nghiệp & Minh bạch
+                    </span>
+                  </div>
+
+                  <p className="font-serif text-xs sm:text-[13px] text-white/90 italic leading-relaxed mb-3.5">
+                    "Chúng tôi thiết lập bộ máy chuyên nghiệp thay bạn quản lý 365 ngày/năm. Bạn chỉ việc theo dõi doanh thu minh bạch trên ứng dụng và nhận đối soát chuẩn xác vào ngày 5 hàng tháng."
                   </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-white/10 text-[11px] text-white/75">
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
+                    <span>Minh bạch 100% dòng tiền qua Cloud PMS</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
+                    <span>Kỹ thuật MEP xử lý sự cố trong 15 phút</span>
+                  </div>
                 </div>
               </div>
             </div>

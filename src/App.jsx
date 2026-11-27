@@ -16,6 +16,10 @@ import AboutPage from './pages/AboutPage.jsx';
 import InsightsPage from './pages/InsightsPage.jsx';
 import CareersPage from './pages/CareersPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
+import SupportPage from './pages/SupportPage.jsx';
+import TermsPage from './pages/TermsPage.jsx';
+import PrivacyPage from './pages/PrivacyPage.jsx';
+import ComplaintsPage from './pages/ComplaintsPage.jsx';
 import { NavigationProvider, useNavigation } from './context/NavigationContext.jsx';
 
 class ErrorBoundary extends React.Component {
@@ -116,6 +120,27 @@ function MainRouter() {
       case '/contact':
       case '/lien-he':
         return <ContactPage />;
+
+      case '/ho-tro':
+      case '/support':
+      case '/faq':
+      case '/tro-giup':
+        return <SupportPage onOpenModal={openModal} />;
+
+      case '/dieu-khoan-dieu-kien':
+      case '/dieu-khoan-su-dung':
+      case '/terms':
+        return <TermsPage onOpenModal={openModal} />;
+
+      case '/chinh-sach-bao-mat':
+      case '/quyen-rieng-tu':
+      case '/privacy':
+        return <PrivacyPage onOpenModal={openModal} />;
+
+      case '/khieu-nai':
+      case '/gui-khieu-nai':
+      case '/complaints':
+        return <ComplaintsPage onOpenModal={openModal} />;
 
       case '/':
       default:

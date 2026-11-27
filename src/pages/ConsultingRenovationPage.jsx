@@ -191,61 +191,155 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
       {/* ── 2. Challenges & Renovation Assessment ── */}
       <section className="py-16 md:py-24 bg-white text-[#0F1A41] border-b border-[#0F1A41]/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5">
-              <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3 text-[#B9887B]">
-                <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-                HIỆN TRẠNG PHỔ BIẾN
-              </p>
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#0F1A41] leading-snug mb-4">
-                Tài sản của bạn có đang<br />
-                <em>rơi vào những tình trạng này?</em>
-              </h2>
-              <p className="text-sm text-[#0F1A41]/75 leading-relaxed font-normal mb-6">
-                Nhiều tòa nhà tại TP.HCM có vị trí rất đắc địa nhưng doanh thu chỉ bằng 50% tiềm năng thực tế do nội thất cũ kỹ, dịch vụ thiếu chuyên nghiệp và không biết cách bán phòng đa kênh.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            {/* Cột Trái: Chẩn đoán Hiện trạng Thất thoát (6 cols) */}
+            <div className="lg:col-span-6 flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.2em] text-[#B9887B] font-bold mb-3">
+                  <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+                  HIỆN TRẠNG PHỔ BIẾN TẠI ĐÔ THỊ
+                </div>
+                <h2 className="font-serif text-3xl sm:text-4xl text-[#0F1A41] leading-tight mb-4 font-normal">
+                  Tài sản của bạn có đang<br />
+                  <span className="italic text-[#B9887B]">rơi vào những tình trạng này?</span>
+                </h2>
+                <p className="text-sm text-[#0F1A41]/75 leading-relaxed font-normal mb-6">
+                  Nhiều tòa nhà tại TP.HCM sở hữu vị trí rất đắc địa nhưng doanh thu chỉ bằng 40–50% tiềm năng thực tế do nội thất cũ kỹ, hạ tầng suy hao và thiếu năng lực bán phòng đa kênh.
+                </p>
 
-              <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Tỷ lệ phòng trống cao kéo dài (&gt; 35%):</strong>
-                    Doanh thu sụt giảm, phụ thuộc vào khách thuê ngắn hạn qua môi giới với chi phí hoa hồng cao.
+                <div className="space-y-3.5">
+                  {/* Problem 01 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="chart" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Tỷ lệ phòng trống cao kéo dài (&gt; 35%)
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Hiệu suất thấp
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Doanh thu sụt giảm, phụ thuộc hoàn toàn vào khách thuê ngắn hạn qua môi giới với chi phí hoa hồng cao từ 1–2 tháng tiền thuê.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Hạ tầng kỹ thuật (MEP) thường xuyên sự cố:</strong>
-                    Máy lạnh rò rỉ, thấm dột nhà vệ sinh, hệ thống điện nước chập chờn gây khiếu nại liên tục.
+
+                  {/* Problem 02 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="wrench" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Hạ tầng kỹ thuật (MEP) thường xuyên sự cố
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Xuống cấp ngầm
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Máy lạnh rò rỉ, thấm dột nhà vệ sinh, hệ thống điện nước chập chờn gây khiếu nại liên tục, kéo sụt giảm điểm đánh giá dưới 7.5.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Muốn cải tạo nhưng ngại chi phí phát sinh:</strong>
-                    Sợ bị đội vốn xây dựng, kéo dài thời gian thi công làm mất doanh thu tiền thuê nhà.
+
+                  {/* Problem 03 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="finance" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Muốn cải tạo nhưng ngại chi phí phát sinh
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Rủi ro đội vốn
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Sợ bị đội vốn xây dựng, kéo dài thời gian thi công làm mất doanh thu tiền thuê nhà và lỡ nhịp cơ hội thị trường.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-7">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-[#0F1A41]">
+            {/* Cột Phải: Minh chứng Chuyển hóa Thực tế (6 cols) */}
+            <div className="lg:col-span-6 flex flex-col justify-between gap-4">
+              {/* Ảnh công trình Lighthouse Saigon với Badge sang trọng */}
+              <div className="relative rounded-2xl overflow-hidden border border-[#0F1A41]/10 shadow-lg bg-[#0F1A41] group aspect-[16/10] sm:aspect-[16/10] min-h-[260px]">
                 <img
                   src="https://cityhousemore.com/uploads/gallery/gallery-1782202629642-67015.webp"
-                  alt="Tư vấn cải tạo tòa nhà cũ CityHouse"
-                  className="w-full h-[450px] object-cover"
+                  alt="Dự án cải tạo thực tế Lighthouse Saigon - CityHouse More"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/90 via-[#0F1A41]/30 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 text-[#0F1A41]">
-                  <div className="flex items-center gap-2 mb-2 text-[#B9887B] text-xs font-bold uppercase tracking-wider">
-                    <Paintbrush size={16} />
-                    <span>Phương châm cải tạo CityHouse</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/85 via-[#0F1A41]/20 to-transparent"></div>
+
+                {/* Badge nhận diện dự án góc trên */}
+                <div className="absolute top-4 left-4 bg-[#0F1A41]/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 text-white flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B] animate-pulse"></span>
+                  <span className="font-sans text-[10.5px] uppercase tracking-wider font-bold">
+                    Dự án tiêu biểu: Lighthouse Saigon (Quận 1)
+                  </span>
+                </div>
+
+                {/* 3 Metric Pills kết quả thực tế ở chân ảnh */}
+                <div className="absolute bottom-3 left-3 right-3 grid grid-cols-3 gap-2">
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">+55%</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Giá thuê phòng</div>
                   </div>
-                  <p className="text-xs text-[#0F1A41]/80 leading-relaxed">
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">92%+</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Công suất lấp đầy</div>
+                  </div>
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">35 Ngày</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Hoàn tất bàn giao</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Khối Phương châm Cải tạo & Cam kết thi công */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#0F1A41] text-white border border-[#B9887B]/25 shadow-md flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-white/10">
+                    <div className="flex items-center gap-2 text-[#B9887B] text-xs font-bold uppercase tracking-wider">
+                      <LuxuryIcon name="palette" size={15} strokeWidth={1.3} />
+                      <span>Phương châm cải tạo CityHouse</span>
+                    </div>
+                    <span className="text-[10.5px] text-[#B9887B] uppercase tracking-wider font-semibold">
+                      Kiến trúc & Vận hành
+                    </span>
+                  </div>
+
+                  <p className="font-serif text-xs sm:text-[13px] text-white/90 italic leading-relaxed mb-3.5">
                     "Tối đa hóa giá trị thẩm mỹ trên từng đồng vốn đầu tư — giữ lại tối đa những gì còn tốt, làm mới tinh tế những điểm chạm khách hàng đánh giá cao nhất."
                   </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-white/10 text-[11px] text-white/75">
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
+                    <span>Thi công cuốn chiếu theo từng tầng</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
+                    <span>Bảo toàn dòng tiền khai thác liên tục</span>
+                  </div>
                 </div>
               </div>
             </div>

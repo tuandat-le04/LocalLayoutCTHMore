@@ -6,7 +6,11 @@
 .about-page,
 .insights-page,
 .careers-page,
-.contact-page {
+.contact-page,
+.support-page,
+.terms-page,
+.privacy-page,
+.complaints-page {
   background: var(--ink);
   min-height: 100vh;
 }

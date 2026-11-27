@@ -208,9 +208,16 @@ export default function Footer({ onOpenModal }) {
           {/* Column 5: Hỗ trợ (lg:col-span-2) */}
           <div className="lg:col-span-2">
             <h4 className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#B9887B] mb-4">
-              HỖ TRỢ
+              <a href="/ho-tro" onClick={(e) => handleLink('/ho-tro', e)} className="hover:text-white transition-colors">
+                HỖ TRỢ
+              </a>
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs text-white/75 font-sans">
+              <li>
+                <a href="/ho-tro" onClick={(e) => handleLink('/ho-tro', e)} className="hover:text-white transition-colors">
+                  Trung tâm trợ giúp (FAQ)
+                </a>
+              </li>
               <li>
                 <a href="/dieu-khoan-dieu-kien" onClick={(e) => handleLink('/dieu-khoan-dieu-kien', e)} className="hover:text-white transition-colors">
                   Điều khoản và Điều kiện

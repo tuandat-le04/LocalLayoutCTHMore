@@ -187,61 +187,155 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
       {/* ── 2. Target Audience & Problems We Solve ── */}
       <section className="py-16 md:py-24 bg-white text-[#0F1A41] border-b border-[#0F1A41]/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5">
-              <p className="eyebrow eyebrow-accent flex items-center gap-1.5 mb-3 text-[#B9887B]">
-                <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
-                ĐỐI TƯỢNG PHÙ HỢP
-              </p>
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#0F1A41] leading-snug mb-4">
-                Dành cho ai đang chuẩn bị<br />
-                <em>xuống vốn xây dựng</em>
-              </h2>
-              <p className="text-sm text-[#0F1A41]/75 leading-relaxed font-normal mb-6">
-                Quyết định sai lầm lớn nhất của các Chủ đầu tư là bắt tay vẽ phối cảnh trước khi xác định bài toán tài chính và tệp khách mục tiêu, dẫn đến chi phí vượt dự toán hoặc xây xong không bán được phòng giá cao.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            {/* Cột Trái: Nhận diện Nhu cầu & Khắc phục Rủi ro Đầu tư (6 cols) */}
+            <div className="lg:col-span-6 flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.2em] text-[#B9887B] font-bold mb-3">
+                  <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B]"></span>
+                  ĐỊNH HƯỚNG ĐẦU TƯ TÀI SẢN MỚI
+                </div>
+                <h2 className="font-serif text-3xl sm:text-4xl text-[#0F1A41] leading-tight mb-4 font-normal">
+                  Dành cho ai đang chuẩn bị<br />
+                  <span className="italic text-[#B9887B]">xuống vốn xây dựng</span>
+                </h2>
+                <p className="text-sm text-[#0F1A41]/75 leading-relaxed font-normal mb-6">
+                  Quyết định sai lầm lớn nhất của các Chủ đầu tư là bắt tay vẽ phối cảnh trước khi xác định bài toán tài chính và tệp khách mục tiêu, dẫn đến chi phí vượt dự toán hoặc xây xong không bán được phòng giá cao.
+                </p>
 
-              <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Chủ sở hữu quỹ đất trống hoặc nhà phố mặt tiền:</strong>
-                    Muốn chuyển đổi sang mô hình căn hộ dịch vụ cao cấp hoặc boutique hotel.
+                <div className="space-y-3.5">
+                  {/* Target 01 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="building" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Chủ sở hữu quỹ đất trống hoặc nhà phố mặt tiền
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Chuyển đổi công năng
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Muốn phát triển mô hình căn hộ dịch vụ cao cấp hoặc boutique hotel, cần định vị chuẩn xác ngay từ khâu ý tưởng để đón đúng tệp khách quốc tế.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Chủ đầu tư chuẩn bị nộp hồ sơ xin phép xây dựng:</strong>
-                    Cần tối ưu hóa cơ cấu buồng phòng và tiêu chuẩn PCCC để tránh phải sửa chữa tốn kém sau này.
+
+                  {/* Target 02 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="compass" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Chủ đầu tư chuẩn bị nộp hồ sơ xin phép xây dựng
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Chuẩn hóa kỹ thuật
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Cần tối ưu hóa cơ cấu buồng phòng và tiêu chuẩn PCCC theo thực tế vận hành lưu trú, tránh phải sửa chữa hay đập phá tốn kém sau này.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
-                  <LuxuryCheckBadge size="md" className="mt-0.5" />
-                  <div>
-                    <strong className="block text-[#0F1A41] mb-0.5">Nhà đầu tư tìm kiếm dòng tiền an toàn:</strong>
-                    Cần một báo cáo khả thi (FS) độc lập, minh bạch để đánh giá mức độ hấp thụ của thị trường.
+
+                  {/* Target 03 */}
+                  <div className="group p-4 rounded-xl bg-[#FAF9F6] border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-9 h-9 rounded-lg bg-[#B9887B]/10 text-[#B9887B] flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#B9887B] group-hover:text-white transition-colors duration-300">
+                        <LuxuryIcon name="finance" size={17} strokeWidth={1.3} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <strong className="text-xs sm:text-[13px] font-bold text-[#0F1A41]">
+                            Nhà đầu tư tìm kiếm dòng tiền an toàn & bền vững
+                          </strong>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] px-2.5 py-0.5 bg-[#B9887B]/10 rounded-full shrink-0">
+                            Báo cáo FS chuẩn
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#0F1A41]/70 leading-relaxed">
+                          Cần một báo cáo khả thi (Feasibility Study) độc lập, minh bạch để đánh giá mức độ hấp thụ thị trường, điểm hòa vốn và chu kỳ hoàn vốn.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-7">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-[#0F1A41]">
+            {/* Cột Phải: Minh chứng Năng lực & Cam kết Vận hành (6 cols) */}
+            <div className="lg:col-span-6 flex flex-col justify-between gap-4">
+              {/* Ảnh dự án tiêu biểu với Badge sang trọng */}
+              <div className="relative rounded-2xl overflow-hidden border border-[#0F1A41]/10 shadow-lg bg-[#0F1A41] group aspect-[16/10] sm:aspect-[16/10] min-h-[260px]">
                 <img
                   src="https://cityhousemore.com/uploads/gallery/gallery-1782203499266-983125.webp"
-                  alt="Tư vấn đầu tư dự án CityHouse"
-                  className="w-full h-[450px] object-cover"
+                  alt="Tư vấn đầu tư dự án CityHouse More"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/90 via-[#0F1A41]/30 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 text-[#0F1A41]">
-                  <div className="flex items-center gap-2 mb-2 text-[#B9887B] text-xs font-bold uppercase tracking-wider">
-                    <LuxuryIcon name="shieldCheck" size={16} strokeWidth={1.5} />
-                    <span>Bảo chứng bởi 35+ tòa nhà thực tế</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A41]/85 via-[#0F1A41]/20 to-transparent"></div>
+
+                {/* Badge nhận diện dự án góc trên */}
+                <div className="absolute top-4 left-4 bg-[#0F1A41]/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 text-white flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B9887B] animate-pulse"></span>
+                  <span className="font-sans text-[10.5px] uppercase tracking-wider font-bold">
+                    Dự án tiêu biểu: CityHouse Signature (Quận 3)
+                  </span>
+                </div>
+
+                {/* 3 Metric Pills kết quả thực tế ở chân ảnh */}
+                <div className="absolute bottom-3 left-3 right-3 grid grid-cols-3 gap-2">
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">98%</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Lấp đầy tháng đầu</div>
                   </div>
-                  <p className="text-xs text-[#0F1A41]/80 leading-relaxed">
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">12–15%</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Tỷ suất ROI / Năm</div>
+                  </div>
+                  <div className="bg-[#0F1A41]/85 backdrop-blur-md border border-white/10 rounded-lg p-2 text-center text-white">
+                    <div className="font-serif text-base sm:text-lg font-bold text-[#B9887B] leading-none mb-0.5">35+</div>
+                    <div className="text-[10px] text-white/70 uppercase tracking-tight">Tòa nhà bảo chứng</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Khối Cam kết Đồng hành & Chịu trách nhiệm dòng tiền */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#0F1A41] text-white border border-[#B9887B]/25 shadow-md flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-white/10">
+                    <div className="flex items-center gap-2 text-[#B9887B] text-xs font-bold uppercase tracking-wider">
+                      <LuxuryIcon name="shieldCheck" size={15} strokeWidth={1.3} />
+                      <span>Cam kết đồng hành khai thác</span>
+                    </div>
+                    <span className="text-[10.5px] text-[#B9887B] uppercase tracking-wider font-semibold">
+                      Trách nhiệm thực chứng
+                    </span>
+                  </div>
+
+                  <p className="font-serif text-xs sm:text-[13px] text-white/90 italic leading-relaxed mb-3.5">
                     "Chúng tôi không chỉ là đơn vị tư vấn trên giấy tờ, mà là đơn vị trực tiếp đứng ra vận hành và chịu trách nhiệm với hiệu quả dòng tiền cam kết."
                   </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-white/10 text-[11px] text-white/75">
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
+                    <span>Đồng hành từ bản vẽ đến ngày khai trương</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-[#B9887B] shrink-0"></span>
+                    <span>Cam kết bao tiêu hoặc chia sẻ doanh thu</span>
+                  </div>
                 </div>
               </div>
             </div>
