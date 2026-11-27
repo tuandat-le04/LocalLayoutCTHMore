@@ -83,7 +83,7 @@ export default function Solutions({ onOpenModal }) {
   ];
 
   return (
-    <section id="solutions" className="solutions section-pad bg-[#FAF6EF] text-[#0F1A41] font-sans relative overflow-hidden">
+    <section id="solutions" className="solutions section-pad bg-[#F4EFEA] text-[#0F1A41] font-sans relative overflow-hidden">
       {/* Subtle architectural background ambiance */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#B9887B]/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0F1A41]/5 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>

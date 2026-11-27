@@ -201,7 +201,7 @@ export default function ConsultationPage({ onOpenModal }) {
   };
 
   return (
-    <div className="consultation-page font-sans bg-[#FAF6EF]">
+    <div className="consultation-page font-sans bg-[#F4EFEA]">
       {/* ── 1. Page Hero Banner ── */}
       <section className="inner-hero section-pad relative overflow-hidden bg-[#0F1A41] text-white font-sans">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#B9887B]/10 rounded-full blur-3xl pointer-events-none -mr-40 -mt-40"></div>
@@ -215,7 +215,7 @@ export default function ConsultationPage({ onOpenModal }) {
             cho <span className="text-[#B9887B] font-serif italic">chủ sở hữu bất động sản lưu trú</span>
           </h1>
           <p className="lead text-base md:text-lg text-[#F4EFEA]/80 max-w-3xl leading-relaxed mt-4 font-normal font-sans">
-            Đội ngũ chuyên gia CityHouseMore cung cấp dịch vụ tư vấn đo ni đóng giày dựa trên dữ liệu vận hành thực tế tại 35+ tòa nhà khắp TP.HCM. Chúng tôi đồng hành giúp Quý vị tối ưu hóa suất đầu tư, giải cứu tài sản sa sút và thiết lập bộ máy khai thác dòng tiền an nhàn.
+            Đội ngũ chuyên gia CityHouseMore cung cấp dịch vụ tư vấn đo ni đóng giày dựa trên dữ liệu vận hành thực tế tại 40+ tòa nhà khắp TP.HCM. Chúng tôi đồng hành giúp Quý vị tối ưu hóa suất đầu tư, giải cứu tài sản sa sút và thiết lập bộ máy khai thác dòng tiền an nhàn.
           </p>
 
           {/* Quick Pillar Direct Links */}
@@ -257,49 +257,85 @@ export default function ConsultationPage({ onOpenModal }) {
         </div>
       </section>
 
-      {/* ── 2. Why Choose CityHouse Advisory ── */}
-      <section className="py-12 bg-white border-b border-[#0F1A41]/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-[#0F1A41]">
-            <div className="flex items-center gap-3.5 p-3">
-              <div className="w-11 h-11 rounded-xl bg-[#FAF6EF] border border-[#B9887B]/30 flex items-center justify-center text-[#B9887B] shrink-0">
-                <Building2 size={22} />
+      {/* ── 2. Why Choose CityHouse Advisory (Prestige Credibility Strip) ── */}
+      <section className="relative w-full bg-[#080E24] text-white border-y border-[#B9887B]/30 font-sans shadow-2xl z-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            
+            {/* Metric 1: Quy mô */}
+            <div className="py-7 md:py-9 sm:px-6 lg:px-8 flex items-start gap-4 group hover:bg-white/[0.02] transition-colors">
+              <div className="w-12 h-12 rounded-full border border-[#B9887B]/40 bg-[#B9887B]/10 flex items-center justify-center text-[#B9887B] shrink-0 group-hover:border-[#B9887B] group-hover:scale-105 transition-all shadow-[0_0_20px_rgba(185,136,123,0.15)] mt-0.5">
+                <Building2 size={22} strokeWidth={1.5} />
               </div>
               <div>
-                <div className="font-serif text-2xl font-bold text-[#0F1A41]">35+ Tòa nhà</div>
-                <div className="text-xs text-[#0F1A41]/70">Đang vận hành thực chiến</div>
+                <div className="font-serif text-3xl lg:text-4xl font-normal text-white tracking-tight leading-none mb-2">
+                  40<sup className="font-sans text-base text-[#B9887B] ml-0.5">+</sup>
+                  <span className="font-serif text-lg text-white/90 ml-1.5 font-light">Tòa nhà</span>
+                </div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-1">
+                  QUY MÔ VẬN HÀNH THỰC CHIẾN
+                </div>
+                <p className="text-xs text-white/60 font-light leading-relaxed">
+                  Hiện diện tại các trục lõi trung tâm và cộng đồng chuyên gia quốc tế TP.HCM.
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 p-3">
-              <div className="w-11 h-11 rounded-xl bg-[#FAF6EF] border border-[#B9887B]/30 flex items-center justify-center text-[#B9887B] shrink-0">
-                <TrendingUp size={22} />
+            {/* Metric 2: ROI */}
+            <div className="py-7 md:py-9 sm:px-6 lg:px-8 flex items-start gap-4 group hover:bg-white/[0.02] transition-colors">
+              <div className="w-12 h-12 rounded-full border border-[#B9887B]/40 bg-[#B9887B]/10 flex items-center justify-center text-[#B9887B] shrink-0 group-hover:border-[#B9887B] group-hover:scale-105 transition-all shadow-[0_0_20px_rgba(185,136,123,0.15)] mt-0.5">
+                <TrendingUp size={22} strokeWidth={1.5} />
               </div>
               <div>
-                <div className="font-serif text-2xl font-bold text-[#0F1A41]">12 – 15%</div>
-                <div className="text-xs text-[#0F1A41]/70">ROI hoàn vốn trung bình</div>
+                <div className="font-serif text-3xl lg:text-4xl font-normal text-white tracking-tight leading-none mb-2">
+                  12 – 15<span className="font-sans text-xl text-[#B9887B] ml-0.5">%</span>
+                </div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-1">
+                  TỶ SUẤT HOÀN VỐN (ROI / NĂM)
+                </div>
+                <p className="text-xs text-white/60 font-light leading-relaxed">
+                  Tối ưu hóa dòng tiền thực thu và rút ngắn chu kỳ thu hồi vốn đầu tư.
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 p-3">
-              <div className="w-11 h-11 rounded-xl bg-[#FAF6EF] border border-[#B9887B]/30 flex items-center justify-center text-[#B9887B] shrink-0">
-                <Clock size={22} />
+            {/* Metric 3: Thời gian khảo sát */}
+            <div className="py-7 md:py-9 sm:px-6 lg:px-8 flex items-start gap-4 group hover:bg-white/[0.02] transition-colors">
+              <div className="w-12 h-12 rounded-full border border-[#B9887B]/40 bg-[#B9887B]/10 flex items-center justify-center text-[#B9887B] shrink-0 group-hover:border-[#B9887B] group-hover:scale-105 transition-all shadow-[0_0_20px_rgba(185,136,123,0.15)] mt-0.5">
+                <Clock size={22} strokeWidth={1.5} />
               </div>
               <div>
-                <div className="font-serif text-2xl font-bold text-[#0F1A41]">48 Giờ</div>
-                <div className="text-xs text-[#0F1A41]/70">Thẩm định thực địa nhanh</div>
+                <div className="font-serif text-3xl lg:text-4xl font-normal text-white tracking-tight leading-none mb-2">
+                  48 <span className="font-serif text-xl text-white/90 font-light">Giờ</span>
+                </div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-1">
+                  THẨM ĐỊNH THỰC ĐỊA TẬN NƠI
+                </div>
+                <p className="text-xs text-white/60 font-light leading-relaxed">
+                  Khảo sát kết cấu hạ tầng kỹ thuật và cung - cầu trong bán kính 3km.
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 p-3">
-              <div className="w-11 h-11 rounded-xl bg-[#FAF6EF] border border-[#B9887B]/30 flex items-center justify-center text-[#B9887B] shrink-0">
-                <ShieldCheck size={22} />
+            {/* Metric 4: Bảo mật */}
+            <div className="py-7 md:py-9 sm:px-6 lg:px-8 flex items-start gap-4 group hover:bg-white/[0.02] transition-colors">
+              <div className="w-12 h-12 rounded-full border border-[#B9887B]/40 bg-[#B9887B]/10 flex items-center justify-center text-[#B9887B] shrink-0 group-hover:border-[#B9887B] group-hover:scale-105 transition-all shadow-[0_0_20px_rgba(185,136,123,0.15)] mt-0.5">
+                <ShieldCheck size={22} strokeWidth={1.5} />
               </div>
               <div>
-                <div className="font-serif text-2xl font-bold text-[#0F1A41]">100% NDA</div>
-                <div className="text-xs text-[#0F1A41]/70">Bảo mật thông tin tài sản</div>
+                <div className="font-serif text-3xl lg:text-4xl font-normal text-white tracking-tight leading-none mb-2">
+                  100<span className="font-sans text-xl text-[#B9887B] ml-0.5">%</span>
+                  <span className="font-serif text-xl text-white/90 ml-1.5 font-light">NDA</span>
+                </div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-1">
+                  CAM KẾT BẢO MẬT GIA SẢN
+                </div>
+                <p className="text-xs text-white/60 font-light leading-relaxed">
+                  Bảo mật tuyệt đối hồ sơ pháp lý, thiết kế và số liệu tài chính tài sản.
+                </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -415,7 +451,7 @@ export default function ConsultationPage({ onOpenModal }) {
                             {sol.items.map((item, idx) => (
                               <div
                                 key={idx}
-                                className="p-4 rounded-xl bg-[#FAF6EF]/70 border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white transition-all duration-300"
+                                className="p-4 rounded-xl bg-[#F4EFEA]/70 border border-[#0F1A41]/8 hover:border-[#B9887B]/40 hover:bg-white transition-all duration-300"
                               >
                                 <div className="flex items-center gap-2 mb-1.5">
                                   <span className="text-[11px] font-sans font-bold text-[#B9887B]">
@@ -543,7 +579,7 @@ export default function ConsultationPage({ onOpenModal }) {
       </section>
 
       {/* ── 5. Dedicated Interactive Consultation Booking Form ── */}
-      <section id="consultation-booking" className="py-20 md:py-28 bg-[#FAF6EF] text-[#0F1A41]">
+      <section id="consultation-booking" className="py-20 md:py-28 bg-[#F4EFEA] text-[#0F1A41]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Left Column: Context & Guarantees */}

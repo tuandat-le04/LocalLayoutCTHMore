@@ -37,8 +37,10 @@ function MainRouter() {
 
     switch (currentPath) {
       case '/giai-phap':
-      case '/tu-van':
         return <SolutionsPage onOpenModal={openModal} />;
+
+      case '/tu-van':
+        return <ConsultationPage onOpenModal={openModal} />;
 
       case '/tu-van/dau-tu':
       case '/giai-phap/dau-tu-phat-trien-du-an':

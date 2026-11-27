@@ -33,7 +33,7 @@ export default function Story() {
   };
 
   return (
-    <section id="about" className="section-pad bg-[#0B1330] text-[#FAF6EF] relative overflow-hidden border-t border-[#B9887B]/20">
+    <section id="about" className="section-pad bg-[#0B1330] text-[#F4EFEA] relative overflow-hidden border-t border-[#B9887B]/20">
       {/* Background Decorative Glow */}
       <div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#B9887B]/10 rounded-full blur-[140px] pointer-events-none"

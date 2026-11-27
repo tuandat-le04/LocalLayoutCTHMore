@@ -53,7 +53,7 @@ const FEATURED_PARTNERS = [
 
 export default function Partners() {
   return (
-    <section id="partners" className="partners-section py-16 md:py-20 bg-[#FAF6EF] text-[#0F1A41] border-t border-[#0F1A41]/8 font-sans">
+    <section id="partners" className="partners-section py-16 md:py-20 bg-[#F4EFEA] text-[#0F1A41] border-t border-[#0F1A41]/8 font-sans">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>

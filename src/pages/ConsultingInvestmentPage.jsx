@@ -99,7 +99,7 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
   };
 
   return (
-    <div className="consulting-investment-page font-sans bg-[#FAF6EF]">
+    <div className="consulting-investment-page font-sans bg-[#F4EFEA]">
       {/* ── Breadcrumb ── */}
       <div className="bg-[#0B1536] border-b border-white/10 py-3 px-6 text-xs text-white/60 font-sans">
         <div className="max-w-7xl mx-auto flex items-center gap-2">
@@ -201,21 +201,21 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
               </p>
 
               <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Chủ sở hữu quỹ đất trống hoặc nhà phố mặt tiền:</strong>
                     Muốn chuyển đổi sang mô hình căn hộ dịch vụ cao cấp hoặc boutique hotel.
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Chủ đầu tư chuẩn bị nộp hồ sơ xin phép xây dựng:</strong>
                     Cần tối ưu hóa cơ cấu buồng phòng và tiêu chuẩn PCCC để tránh phải sửa chữa tốn kém sau này.
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Nhà đầu tư tìm kiếm dòng tiền an toàn:</strong>
@@ -273,7 +273,7 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
                     <span className="font-serif text-3xl font-bold text-[#B9887B]">
                       {scope.stepNum}
                     </span>
-                    <span className="text-[11px] font-sans px-3 py-1 rounded-full bg-[#FAF6EF] text-[#0F1A41]/70 font-semibold border border-[#0F1A41]/5">
+                    <span className="text-[11px] font-sans px-3 py-1 rounded-full bg-[#F4EFEA] text-[#0F1A41]/70 font-semibold border border-[#0F1A41]/5">
                       {scope.subtitle}
                     </span>
                   </div>
@@ -362,7 +362,7 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-2xl border border-[#0F1A41]/10 overflow-hidden bg-[#FAF6EF]/50 hover:shadow-xl transition-all">
+            <div className="rounded-2xl border border-[#0F1A41]/10 overflow-hidden bg-[#F4EFEA]/50 hover:shadow-xl transition-all">
               <div className="aspect-[16/10] overflow-hidden relative">
                 <img
                   src="https://cityhousemore.com/uploads/gallery/gallery-1782189975616-358643.webp"
@@ -386,7 +386,7 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-[#0F1A41]/10 overflow-hidden bg-[#FAF6EF]/50 hover:shadow-xl transition-all">
+            <div className="rounded-2xl border border-[#0F1A41]/10 overflow-hidden bg-[#F4EFEA]/50 hover:shadow-xl transition-all">
               <div className="aspect-[16/10] overflow-hidden relative">
                 <img
                   src="https://cityhousemore.com/uploads/gallery/gallery-1782195854527-583048.webp"
@@ -414,7 +414,7 @@ export default function ConsultingInvestmentPage({ onOpenModal }) {
       </section>
 
       {/* ── 6. Dedicated Booking Form ── */}
-      <section id="tu-van-form" className="py-20 md:py-28 bg-[#FAF6EF] text-[#0F1A41]">
+      <section id="tu-van-form" className="py-20 md:py-28 bg-[#F4EFEA] text-[#0F1A41]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5">

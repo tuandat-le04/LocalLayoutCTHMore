@@ -58,7 +58,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
       aria-labelledby="modal-project-title"
     >
       <div
-        className="relative w-full max-w-4xl bg-[#FAF6EF] text-[#0F1A41] rounded-2xl shadow-2xl border border-[#0F1A41]/15 my-auto overflow-hidden flex flex-col max-h-[92vh]"
+        className="relative w-full max-w-4xl bg-[#F4EFEA] text-[#0F1A41] rounded-2xl shadow-2xl border border-[#0F1A41]/15 my-auto overflow-hidden flex flex-col max-h-[92vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Sticky Modal Top Bar */}
@@ -227,7 +227,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                 <Building2 size={14} className="text-[#B9887B]" />
                 Hồ sơ kỹ thuật và Vận hành tài sản
               </h3>
-              <span className="font-sans text-[10px] text-[#0F1A41]/60 bg-[#FAF6EF] px-2 py-0.5 rounded border border-[#0F1A41]/10">
+              <span className="font-sans text-[10px] text-[#0F1A41]/60 bg-[#F4EFEA] px-2 py-0.5 rounded border border-[#0F1A41]/10">
                 4 Trụ cột chuẩn hóa
               </span>
             </div>
@@ -333,7 +333,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                 <div className="pt-2 border-t border-[#0F1A41]/8">
                   <div className="flex flex-wrap gap-1">
                     {(project.role || '').split(',').map((r, i) => (
-                      <span key={i} className="inline-flex items-center gap-1 text-[10.5px] font-sans bg-[#FAF6EF] px-2 py-0.5 rounded-full border border-[#0F1A41]/10 text-[#0F1A41]/80 font-medium">
+                      <span key={i} className="inline-flex items-center gap-1 text-[10.5px] font-sans bg-[#F4EFEA] px-2 py-0.5 rounded-full border border-[#0F1A41]/10 text-[#0F1A41]/80 font-medium">
                         <span className="w-1 h-1 rounded-full bg-[#B9887B]"></span>
                         <span>{r.trim()}</span>
                       </span>
@@ -507,7 +507,7 @@ export default function ProjectDetailModal({ project, onClose, onConsult }) {
                 href={project.agodaUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto px-5 py-2.5 bg-[#FAF6EF] hover:bg-[#F4EFEA] border border-[#0F1A41]/15 text-[#0F1A41] hover:text-[#B9887B] font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-colors flex items-center justify-center gap-1.5 shrink-0"
+                className="w-full sm:w-auto px-5 py-2.5 bg-[#F4EFEA] hover:bg-[#F4EFEA] border border-[#0F1A41]/15 text-[#0F1A41] hover:text-[#B9887B] font-sans text-xs font-bold uppercase tracking-wider rounded-full transition-colors flex items-center justify-center gap-1.5 shrink-0"
               >
                 <span>Xem trên Agoda</span>
                 <ArrowUpRight size={14} />

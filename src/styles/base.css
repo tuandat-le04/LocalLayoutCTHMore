@@ -18,7 +18,7 @@
   --color-brand-terracotta-light: #DFC4BC;
   --color-brand-terracotta-soft: #EAB2A2;
 
-  --color-brand-cream: #FAF6EF;
+  --color-brand-cream: #F4EFEA;
   --color-brand-linen: #F4EFEA;
   --color-brand-sand: #E9E1D2;
   --color-brand-sand-dark: #E5DFD5;
@@ -56,7 +56,7 @@
   --gold-tint: rgba(199, 154, 59, 0.15);
   
   --paper: #F4EFEA;           /* Warm Luxury Linen */
-  --paper-light: #FAF6EF;     /* Soft Linen Cream */
+  --paper-light: #F4EFEA;     /* Soft Linen Cream */
   --paper-card: #FFFEFB;      /* Pure Card Warm White */
   
   --sand: #E9E1D2;            /* Warm Sand Border & Divider */

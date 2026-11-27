@@ -69,7 +69,7 @@ export default function ContactPage() {
             </div>
 
             {/* Privacy Promise */}
-            <div className="bg-[#FAF6EF] p-6 border border-[#0F1A41]/10 flex items-start gap-4 rounded-2xl">
+            <div className="bg-[#F4EFEA] p-6 border border-[#0F1A41]/10 flex items-start gap-4 rounded-2xl">
               <ShieldCheck size={28} className="text-[#B9887B] shrink-0" />
               <div>
                 <h4 className="font-serif text-base font-semibold mb-2">Cam kết bảo mật tuyệt đối</h4>

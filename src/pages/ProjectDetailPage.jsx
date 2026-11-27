@@ -107,7 +107,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
   return (
     <div className="project-detail-page bg-[#FBFBFD] text-[#0F1A41] min-h-screen">
       {/* 1. Breadcrumb Bar */}
-      <div className="w-full bg-[#FAF6EF] border-b border-[#0F1A41]/10">
+      <div className="w-full bg-[#F4EFEA] border-b border-[#0F1A41]/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-sans text-[#0F1A41]/70 overflow-x-auto whitespace-nowrap">
             <button
@@ -221,11 +221,11 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
           <div className="max-w-3xl">
             {/* Status & Editorial Metadata */}
             <div className="flex flex-wrap items-center gap-2.5 mb-3.5 font-sans">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0F1A41] text-[#FAF6EF] text-[10.5px] font-bold uppercase tracking-[0.14em] shadow-2xs">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0F1A41] text-[#F4EFEA] text-[10.5px] font-bold uppercase tracking-[0.14em] shadow-2xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C79A3B]"></span>
                 Đang vận hành
               </span>
-              <span className="px-3 py-1 rounded-full bg-[#FAF6EF] text-[#0F1A41] border border-[#B9887B]/35 text-[10.5px] font-semibold uppercase tracking-[0.12em]">
+              <span className="px-3 py-1 rounded-full bg-[#F4EFEA] text-[#0F1A41] border border-[#B9887B]/35 text-[10.5px] font-semibold uppercase tracking-[0.12em]">
                 {project.brand} · {project.tag}
               </span>
               <span className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.12em] text-[#0F1A41]/60 pl-0.5">
@@ -381,7 +381,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                 Hồ sơ kỹ thuật và Mô hình vận hành
               </h2>
             </div>
-            <span className="font-sans text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3.5 py-1.5 rounded-full border border-[#0F1A41]/15 self-start sm:self-auto">
+            <span className="font-sans text-xs text-[#0F1A41]/60 bg-[#F4EFEA] px-3.5 py-1.5 rounded-full border border-[#0F1A41]/15 self-start sm:self-auto">
               Chuẩn hóa 4 trụ cột vận hành
             </span>
           </div>
@@ -389,7 +389,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
           {/* 4 Standardized Operational Pillars (2x2 Balanced Minimalist Grid) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {/* Pillar 1: Quy mô và Kiến trúc */}
-            <div className="p-5 sm:p-6 bg-[#FAF6EF]/50 hover:bg-[#FAF6EF]/80 rounded-xl border border-[#101C42]/10 transition-all flex flex-col justify-between">
+            <div className="p-5 sm:p-6 bg-[#F4EFEA]/50 hover:bg-[#F4EFEA]/80 rounded-xl border border-[#101C42]/10 transition-all flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">
@@ -426,7 +426,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             </div>
 
             {/* Pillar 2: Gói giải pháp CityHouse */}
-            <div className="p-5 sm:p-6 bg-[#FAF6EF]/50 hover:bg-[#FAF6EF]/80 rounded-xl border border-[#101C42]/10 transition-all flex flex-col justify-between">
+            <div className="p-5 sm:p-6 bg-[#F4EFEA]/50 hover:bg-[#F4EFEA]/80 rounded-xl border border-[#101C42]/10 transition-all flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">
@@ -463,7 +463,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             </div>
 
             {/* Pillar 3: Mô hình hợp tác */}
-            <div className="p-5 sm:p-6 bg-[#FAF6EF]/50 hover:bg-[#FAF6EF]/80 rounded-xl border border-[#101C42]/10 transition-all flex flex-col justify-between">
+            <div className="p-5 sm:p-6 bg-[#F4EFEA]/50 hover:bg-[#F4EFEA]/80 rounded-xl border border-[#101C42]/10 transition-all flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">
@@ -501,7 +501,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             </div>
 
             {/* Pillar 4: Vai trò triển khai */}
-            <div className="p-5 sm:p-6 bg-[#FAF6EF]/50 hover:bg-[#FAF6EF]/80 rounded-xl border border-[#101C42]/10 transition-all flex flex-col justify-between">
+            <div className="p-5 sm:p-6 bg-[#F4EFEA]/50 hover:bg-[#F4EFEA]/80 rounded-xl border border-[#101C42]/10 transition-all flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">
@@ -570,14 +570,14 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
                   Phân tích bài toán đầu tư và Chiến lược triển khai
                 </h2>
               </div>
-              <span className="font-sans text-xs text-[#0F1A41]/60 bg-[#FAF6EF] px-3 py-1.5 rounded-full border border-[#0F1A41]/15 self-start">
+              <span className="font-sans text-xs text-[#0F1A41]/60 bg-[#F4EFEA] px-3 py-1.5 rounded-full border border-[#0F1A41]/15 self-start">
                 Tài sản đang vận hành hiệu quả
               </span>
             </div>
 
             {/* Executive KPI Strip */}
             {project.caseStudy.resultMetrics && project.caseStudy.resultMetrics.length > 0 && (
-              <div className="p-5 md:p-6 bg-[#FAF6EF] rounded-xl border border-[#0F1A41]/10 mb-6 shadow-2xs">
+              <div className="p-5 md:p-6 bg-[#F4EFEA] rounded-xl border border-[#0F1A41]/10 mb-6 shadow-2xs">
                 <div className="flex items-center gap-2 pb-3 mb-4 border-b border-[#0F1A41]/10">
                   <span className="w-1.5 h-1.5 rotate-45 bg-[#C79A3B]"></span>
                   <strong className="font-sans text-xs text-[#0F1A41] uppercase tracking-[0.14em] font-bold">
@@ -602,7 +602,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
             {/* 4 Strategic Pillars */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               {/* Pillar 1 */}
-              <div className="p-5 bg-[#FAF6EF]/60 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
+              <div className="p-5 bg-[#F4EFEA]/60 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
                 <div className="flex items-baseline gap-2.5 mb-2">
                   <span className="font-serif italic text-base font-bold text-[#B9887B] leading-none">
                     01
@@ -617,7 +617,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               </div>
 
               {/* Pillar 2 */}
-              <div className="p-5 bg-[#FAF6EF]/60 rounded-xl border border-[#0F1A41]/10 border-l-2 border-l-[#B9887B] shadow-2xs">
+              <div className="p-5 bg-[#F4EFEA]/60 rounded-xl border border-[#0F1A41]/10 border-l-2 border-l-[#B9887B] shadow-2xs">
                 <div className="flex items-baseline gap-2.5 mb-2">
                   <span className="font-serif italic text-base font-bold text-[#B9887B] leading-none">
                     02
@@ -632,7 +632,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               </div>
 
               {/* Pillar 3 */}
-              <div className="p-5 bg-[#FAF6EF]/60 rounded-xl border border-[#0F1A41]/10 border-l-2 border-l-[#0F1A41] shadow-2xs">
+              <div className="p-5 bg-[#F4EFEA]/60 rounded-xl border border-[#0F1A41]/10 border-l-2 border-l-[#0F1A41] shadow-2xs">
                 <div className="flex items-baseline gap-2.5 mb-2">
                   <span className="font-serif italic text-base font-bold text-[#0F1A41] leading-none">
                     03
@@ -647,7 +647,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               </div>
 
               {/* Pillar 4 */}
-              <div className="p-5 bg-[#FAF6EF]/60 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
+              <div className="p-5 bg-[#F4EFEA]/60 rounded-xl border border-[#0F1A41]/10 shadow-2xs">
                 <div className="flex items-baseline gap-2.5 mb-2">
                   <span className="font-serif italic text-base font-bold text-[#B9887B] leading-none">
                     04
@@ -696,7 +696,7 @@ export default function ProjectDetailPage({ slug, onOpenModal }) {
               </h2>
             </div>
 
-            <div className="inline-flex p-1 bg-[#FAF6EF] rounded-lg border border-[#0F1A41]/10 text-xs font-sans">
+            <div className="inline-flex p-1 bg-[#F4EFEA] rounded-lg border border-[#0F1A41]/10 text-xs font-sans">
               <button
                 type="button"
                 onClick={() => setActiveGalleryTab('all')}

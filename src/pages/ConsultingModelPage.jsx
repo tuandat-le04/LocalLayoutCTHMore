@@ -102,7 +102,7 @@ export default function ConsultingModelPage({ onOpenModal }) {
   };
 
   return (
-    <div className="consulting-model-page font-sans bg-[#FAF6EF]">
+    <div className="consulting-model-page font-sans bg-[#F4EFEA]">
       {/* ── Breadcrumb ── */}
       <div className="bg-[#0B1536] border-b border-white/10 py-3 px-6 text-xs text-white/60 font-sans">
         <div className="max-w-7xl mx-auto flex items-center gap-2">
@@ -204,21 +204,21 @@ export default function ConsultingModelPage({ onOpenModal }) {
               </p>
 
               <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Mất thời gian quản lý lễ tân và buồng phòng:</strong>
                     Chủ sở hữu bận rộn với công việc kinh doanh chính, không thể trực 24/7 để giám sát nhân sự.
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Thiếu kênh phân phối quốc tế và công nghệ:</strong>
                     Chỉ đăng tin thủ công trên mạng xã hội, tỷ lệ phòng trống cao vào mùa thấp điểm du lịch.
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Tài sản bị xuống cấp do không bảo trì định kỳ:</strong>
@@ -276,7 +276,7 @@ export default function ConsultingModelPage({ onOpenModal }) {
                     <span className="font-serif text-3xl font-bold text-[#B9887B]">
                       {scope.stepNum}
                     </span>
-                    <span className="text-[11px] font-sans px-3 py-1 rounded-full bg-[#FAF6EF] text-[#0F1A41]/70 font-semibold border border-[#0F1A41]/5">
+                    <span className="text-[11px] font-sans px-3 py-1 rounded-full bg-[#F4EFEA] text-[#0F1A41]/70 font-semibold border border-[#0F1A41]/5">
                       {scope.subtitle}
                     </span>
                   </div>
@@ -342,7 +342,7 @@ export default function ConsultingModelPage({ onOpenModal }) {
       </section>
 
       {/* ── 5. Dedicated Booking Form ── */}
-      <section id="mo-hinh-form" className="py-20 md:py-28 bg-[#FAF6EF] text-[#0F1A41]">
+      <section id="mo-hinh-form" className="py-20 md:py-28 bg-[#F4EFEA] text-[#0F1A41]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5">

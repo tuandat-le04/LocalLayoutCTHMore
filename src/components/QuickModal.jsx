@@ -119,7 +119,7 @@ export default function QuickModal({ isOpen, onClose }) {
             /* Main Input Form */
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 font-sans">
               {/* Compact Benefit Badge */}
-              <div className="p-3 rounded-xl bg-[#FAF6EF]/80 border border-[#B9887B]/25 border-l-2 border-l-[#B9887B] flex items-center gap-2 text-[11px] text-[#101C42]/85 shadow-2xs">
+              <div className="p-3 rounded-xl bg-[#F4EFEA]/80 border border-[#B9887B]/25 border-l-2 border-l-[#B9887B] flex items-center gap-2 text-[11px] text-[#101C42]/85 shadow-2xs">
                 <ShieldCheck size={14} className="text-[#B9887B] shrink-0" />
                 <span>Khảo sát hiện trạng và Báo cáo dòng tiền <strong>hoàn toàn miễn phí</strong></span>
               </div>
@@ -194,7 +194,7 @@ export default function QuickModal({ isOpen, onClose }) {
                         className={`flex items-center gap-1.5 p-2.5 rounded-xl border text-[11px] cursor-pointer transition-all ${
                           isSelected
                             ? 'bg-[#101C42] border-[#101C42] text-white font-semibold shadow-xs'
-                            : 'bg-[#FAF6EF]/60 border-[#101C42]/12 text-[#101C42]/75 hover:bg-white'
+                            : 'bg-[#F4EFEA]/60 border-[#101C42]/12 text-[#101C42]/75 hover:bg-white'
                         }`}
                       >
                         <span
@@ -223,7 +223,7 @@ export default function QuickModal({ isOpen, onClose }) {
                 </button>
 
                 {showOptional && (
-                  <div className="mt-2 flex flex-col gap-2 p-3 bg-[#FAF6EF]/50 border border-[#101C42]/10 rounded-xl animate-fadeIn">
+                  <div className="mt-2 flex flex-col gap-2 p-3 bg-[#F4EFEA]/50 border border-[#101C42]/10 rounded-xl animate-fadeIn">
                     <input
                       type="email"
                       placeholder="Email nhận báo cáo (Tùy chọn)"

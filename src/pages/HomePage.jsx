@@ -293,7 +293,7 @@ export default function HomePage({ onOpenModal }) {
   };
 
   return (
-    <div className="homepage-cityhouse text-[#0F1A41] bg-[#FAF6EF] overflow-hidden selection:bg-[#B9887B] selection:text-white font-sans">
+    <div className="homepage-cityhouse text-[#0F1A41] bg-[#F4EFEA] overflow-hidden selection:bg-[#B9887B] selection:text-white font-sans">
       
       {/* ══════════════════════════════════════════════════════════
           SECTION 0: HERO (TƯƠNG THÍCH CHUẨN XÁC VỚI CITYHOUSEMORE.COM)
@@ -612,7 +612,7 @@ export default function HomePage({ onOpenModal }) {
       {/* ══════════════════════════════════════════════════════════
           SECTION 2: GIẢI PHÁP TÀI SẢN CITYHOUSE & DỰ ÁN TIÊU BIỂU
       ══════════════════════════════════════════════════════════ */}
-      <section id="giai-phap" className="w-full bg-[#FAF6EF] py-16 md:py-24 border-t border-[#0F1A41]/10 font-sans">
+      <section id="giai-phap" className="w-full bg-[#F4EFEA] py-16 md:py-24 border-t border-[#0F1A41]/10 font-sans">
         <div className="max-w-[1300px] mx-auto px-6 md:px-8">
           
           {/* Section Header */}
@@ -768,7 +768,7 @@ export default function HomePage({ onOpenModal }) {
       {/* ══════════════════════════════════════════════════════════
           SECTION 3: DẤU ẤN ĐƯỢC GHI NHẬN (AGODA AWARDS & REVIEWS)
       ══════════════════════════════════════════════════════════ */}
-      <section className="overflow-hidden bg-[#FAF6EF] py-14 sm:py-16 lg:py-24 border-t border-[#0F1A41]/10 font-sans">
+      <section className="overflow-hidden bg-[#F4EFEA] py-14 sm:py-16 lg:py-24 border-t border-[#0F1A41]/10 font-sans">
         <div className="max-w-[1300px] mx-auto px-6 md:px-8">
           
           <div className="max-w-2xl mb-12">

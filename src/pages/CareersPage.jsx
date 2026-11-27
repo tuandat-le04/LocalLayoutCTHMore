@@ -445,7 +445,7 @@ export default function CareersPage({ onOpenModal }) {
   };
 
   return (
-    <div className="careers-page text-[#0F1A41] bg-[#FAF6EF] font-sans">
+    <div className="careers-page text-[#0F1A41] bg-[#F4EFEA] font-sans">
       {/* ── 1. Page Hero Banner ── */}
       <section className="inner-hero section-pad relative overflow-hidden bg-[#0F1A41] text-white font-sans">
         <div className="max-w-7xl mx-auto relative z-10">
@@ -537,7 +537,7 @@ export default function CareersPage({ onOpenModal }) {
             {ECOSYSTEM_ROLES.map((role) => (
               <div
                 key={role.step}
-                className="p-6 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 hover:border-[#B9887B]/50 hover:bg-white hover:shadow-md transition-all duration-300"
+                className="p-6 rounded-lg bg-[#F4EFEA]/60 border border-[#0F1A41]/10 hover:border-[#B9887B]/50 hover:bg-white hover:shadow-md transition-all duration-300"
               >
                 <span className="text-xs font-sans font-bold text-[#B9887B] tracking-wider block mb-2">
                   {role.step} // VAI TRÒ
@@ -555,7 +555,7 @@ export default function CareersPage({ onOpenModal }) {
       </section>
 
       {/* ── 3. Career Roadmap: 5 Progression Steps ── */}
-      <section className="py-16 md:py-24 bg-[#FAF6EF] text-[#0F1A41] border-b border-[#0F1A41]/10">
+      <section className="py-16 md:py-24 bg-[#F4EFEA] text-[#0F1A41] border-b border-[#0F1A41]/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div>
@@ -615,7 +615,7 @@ export default function CareersPage({ onOpenModal }) {
             {CULTURE_VALUES.map((val) => (
               <div
                 key={val.step}
-                className="p-6 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 hover:bg-white hover:border-[#B9887B]/50 hover:shadow-md transition-all duration-300"
+                className="p-6 rounded-lg bg-[#F4EFEA]/60 border border-[#0F1A41]/10 hover:bg-white hover:border-[#B9887B]/50 hover:shadow-md transition-all duration-300"
               >
                 <div className="text-xs font-sans font-bold text-[#B9887B] tracking-wider mb-3">
                   0{val.step} // NGUYÊN TẮC
@@ -633,7 +633,7 @@ export default function CareersPage({ onOpenModal }) {
       </section>
 
       {/* ── 5. Main Open Positions Section ── */}
-      <section id="openings" className="py-20 md:py-28 bg-[#FAF6EF] text-[#0F1A41]">
+      <section id="openings" className="py-20 md:py-28 bg-[#F4EFEA] text-[#0F1A41]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
@@ -759,7 +759,7 @@ export default function CareersPage({ onOpenModal }) {
 
                   {/* Expanded Detailed Sections: Duties, Requirements, Benefits */}
                   {isExpanded && (
-                    <div className="px-6 md:px-8 pb-8 pt-2 border-t border-gray-100 bg-[#FAF6EF]/30 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
+                    <div className="px-6 md:px-8 pb-8 pt-2 border-t border-gray-100 bg-[#F4EFEA]/30 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
                       {/* Duties */}
                       <div className="p-5 rounded bg-white border border-gray-100">
                         <h4 className="text-xs font-sans font-bold uppercase tracking-wider text-[#0F1A41] mb-3 flex items-center gap-2">
@@ -1045,7 +1045,7 @@ export default function CareersPage({ onOpenModal }) {
             ].map((p) => (
               <div
                 key={p.step}
-                className="p-4 rounded-lg bg-[#FAF6EF]/60 border border-[#0F1A41]/10 flex flex-col justify-between"
+                className="p-4 rounded-lg bg-[#F4EFEA]/60 border border-[#0F1A41]/10 flex flex-col justify-between"
               >
                 <div>
                   <span className="font-sans font-bold text-sm text-[#B9887B] block mb-2">
@@ -1065,7 +1065,7 @@ export default function CareersPage({ onOpenModal }) {
       </section>
 
       {/* ── 8. Bottom Talent Pool / General Application ── */}
-      <section className="py-16 md:py-20 bg-[#FAF6EF] text-[#0F1A41]">
+      <section className="py-16 md:py-20 bg-[#F4EFEA] text-[#0F1A41]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="text-xs font-sans font-bold text-[#B9887B] uppercase tracking-wider block mb-3">
             MẠNG LƯỚI TÀI NĂNG LƯU TRÚ

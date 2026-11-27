@@ -40,7 +40,7 @@ export default function ContactForm({
           Cảm ơn Quý khách <strong>{formData.fullName}</strong>. Chuyên gia quản lý tài sản CityHouseMore đã nhận được thông tin và sẽ trực tiếp liên hệ qua số điện thoại <strong>{formData.phone}</strong> trong vòng <strong>24 giờ làm việc</strong> để gửi báo cáo phân tích sơ bộ.
         </p>
 
-        <div className="p-4 bg-[#FAF6EF] rounded-xl border border-[#B9887B]/25 text-xs text-[#101C42]/85 max-w-sm mx-auto mb-6">
+        <div className="p-4 bg-[#F4EFEA] rounded-xl border border-[#B9887B]/25 text-xs text-[#101C42]/85 max-w-sm mx-auto mb-6">
           <div className="font-sans text-[11px] font-bold text-[#101C42] uppercase tracking-[0.14em] mb-1">
             CAM KẾT DỊCH VỤ
           </div>
@@ -70,7 +70,7 @@ export default function ContactForm({
   return (
     <form className="b2b-form flex flex-col gap-5 font-sans text-[#101C42]" onSubmit={handleSubmit}>
       {/* Motivating Benefit Box: What the user will receive */}
-      <div className="p-4 bg-[#FAF6EF]/75 rounded-xl border border-[#B9887B]/25 border-l-2 border-l-[#B9887B] text-xs text-[#101C42]/85 shadow-2xs">
+      <div className="p-4 bg-[#F4EFEA]/75 rounded-xl border border-[#B9887B]/25 border-l-2 border-l-[#B9887B] text-xs text-[#101C42]/85 shadow-2xs">
         <div className="font-sans text-[10px] font-bold uppercase tracking-[0.16em] text-[#101C42] mb-2 flex items-center gap-2">
           <ShieldCheck size={14} className="text-[#B9887B]" />
           <span>QUYỀN LỢI ĐẶC QUYỀN CỦA CHỦ TÀI SẢN:</span>
@@ -163,7 +163,7 @@ export default function ContactForm({
                 className={`flex items-center gap-2.5 p-3 rounded-xl border text-xs text-left cursor-pointer transition-all duration-200 ${
                   isSelected
                     ? 'bg-[#101C42] border-[#101C42] text-white shadow-sm font-semibold'
-                    : 'bg-[#FAF6EF]/50 border-[#101C42]/12 text-[#101C42]/80 hover:bg-white hover:border-[#101C42]/30 font-medium'
+                    : 'bg-[#F4EFEA]/50 border-[#101C42]/12 text-[#101C42]/80 hover:bg-white hover:border-[#101C42]/30 font-medium'
                 }`}
               >
                 <span
@@ -194,7 +194,7 @@ export default function ContactForm({
         </button>
 
         {showOptional && (
-          <div className="mt-2.5 flex flex-col gap-3 p-4 bg-[#FAF6EF]/50 border border-[#101C42]/10 rounded-xl animate-fadeIn">
+          <div className="mt-2.5 flex flex-col gap-3 p-4 bg-[#F4EFEA]/50 border border-[#101C42]/10 rounded-xl animate-fadeIn">
             <div className="flex flex-col gap-1.5">
               <label htmlFor="formEmail" className="text-[10.5px] font-sans font-bold uppercase tracking-wider text-[#101C42]/70">
                 Email nhận báo cáo (Tùy chọn)

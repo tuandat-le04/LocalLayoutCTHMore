@@ -172,7 +172,7 @@ export default function BrandsPage({ onOpenModal }) {
       </section>
 
       {/* ── Brand Navigation Bar và Mode Switcher: Synchronized Sans ── */}
-      <section className="bg-[#FAF6EF] border-b border-[#0F1A41]/10 sticky top-[72px] z-30 shadow-xs backdrop-blur-md bg-opacity-95 font-sans">
+      <section className="bg-[#F4EFEA] border-b border-[#0F1A41]/10 sticky top-[72px] z-30 shadow-xs backdrop-blur-md bg-opacity-95 font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col md:flex-row items-center justify-between gap-3">
           {/* Brand Tabs */}
           <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar w-full md:w-auto pb-1 md:pb-0 scroll-smooth">
@@ -400,7 +400,7 @@ export default function BrandsPage({ onOpenModal }) {
 
                     <button
                       onClick={() => navigate('/danh-muc-tai-san')}
-                      className="w-full sm:w-auto px-5 py-3.5 bg-white hover:bg-[#FAF6EF] text-[#0F1A41] border border-[#0F1A41]/20 hover:border-[#B9887B] hover:text-[#B9887B] rounded-full text-xs font-bold uppercase tracking-[0.14em] transition-all cursor-pointer text-center font-sans"
+                      className="w-full sm:w-auto px-5 py-3.5 bg-white hover:bg-[#F4EFEA] text-[#0F1A41] border border-[#0F1A41]/20 hover:border-[#B9887B] hover:text-[#B9887B] rounded-full text-xs font-bold uppercase tracking-[0.14em] transition-all cursor-pointer text-center font-sans"
                     >
                       <span>XEM DỰ ÁN {activeBrand.code}</span>
                     </button>

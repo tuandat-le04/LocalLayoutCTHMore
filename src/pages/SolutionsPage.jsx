@@ -124,47 +124,42 @@ const THREE_CORE_SOLUTIONS = [
 const TRANSFORMATION_PROJECTS = [
   {
     id: "01",
+    tabLabel: "[01] KIM NGUYÊN",
     name: "Cityhouse - Kim Nguyên",
-    location: "Phú Nhuận, TP. HCM",
+    location: "Phú Nhuận, TP.HCM",
     quote: "Dự án xây mới hướng đến nhóm khách hàng business cấp trung",
-    area: "2.500 m2",
+    area: "2.500 m²",
     rooms: "54 phòng",
+    highlightBadge: "CÔNG SUẤT ĐẠT 95% SAU 3 THÁNG KHAI THÁC",
     beforeImg: "https://cityhousemore.com/images/kimnguyen-truoc.jpg",
     afterImg: "https://cityhousemore.com/images/kimnguyen-sau.webp",
     slug: "kim-nguyen"
   },
   {
     id: "02",
+    tabLabel: "[02] CITYOASIS",
     name: "CityHouse - CityOasis",
-    location: "Quận 1, TP. HCM",
-    quote: "Cải tạo toàn diện tòa nhà cũ thành không gian sống xanh",
-    area: "3.200 m2",
+    location: "Quận 1, TP.HCM",
+    quote: "Cải tạo toàn diện tòa nhà cũ thành không gian sống xanh với hồ bơi và ốc đảo nhiệt đới giữa lòng Sài Gòn",
+    area: "3.200 m²",
     rooms: "32 phòng",
+    highlightBadge: "TỶ LỆ LẤP ĐẦY 98% NGAY SAU KHI CẢI TẠO",
     beforeImg: "https://cityhousemore.com/uploads/gallery/gallery-1782189975616-358643.webp",
     afterImg: "https://cityhousemore.com/uploads/gallery/gallery-1782189975616-358643.webp",
     slug: "city-oasis"
   },
   {
     id: "03",
+    tabLabel: "[03] ATELIER",
     name: "CityHouse - Atelier",
-    location: "Quận 2, TP. HCM",
-    quote: "Dự án nâng cấp tiêu chuẩn dịch vụ và nội thất",
-    area: "1.800 m2",
+    location: "Quận 2, TP.HCM",
+    quote: "Dự án nâng cấp toàn diện nội thất boutique cao cấp và tái định vị phục vụ chuyên gia quốc tế Thảo Điền",
+    area: "1.800 m²",
     rooms: "45 phòng",
+    highlightBadge: "TĂNG TRƯỞNG GIÁ THUÊ +45% SAU TÁI ĐỊNH VỊ",
     beforeImg: "https://cityhousemore.com/uploads/gallery/gallery-1782195171956-882833.webp",
     afterImg: "https://cityhousemore.com/uploads/gallery/gallery-1782195171956-882833.webp",
     slug: "atelier"
-  },
-  {
-    id: "04",
-    name: "CityHouse - Elpino",
-    location: "Quận 1, TP. HCM",
-    quote: "Chuyển đổi công năng thành căn hộ dịch vụ cao cấp",
-    area: "4.100 m2",
-    rooms: "80 phòng",
-    beforeImg: "https://cityhousemore.com/uploads/gallery/gallery-1782196352717-398720.webp",
-    afterImg: "https://cityhousemore.com/uploads/gallery/gallery-1782196352717-398720.webp",
-    slug: "elpino"
   }
 ];
 
@@ -262,7 +257,6 @@ export default function SolutionsPage({ onOpenModal }) {
   const { navigate } = useNavigation();
   const [activeProjectTab, setActiveProjectTab] = useState('after'); // 'before' or 'after'
   const [selectedCaseIndex, setSelectedCaseIndex] = useState(0);
-  const [sliderPos, setSliderPos] = useState(50);
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -289,8 +283,8 @@ export default function SolutionsPage({ onOpenModal }) {
   const currentCase = TRANSFORMATION_PROJECTS[selectedCaseIndex];
 
   return (
-    <div className="solutions-page font-sans bg-[#FAF6EF] text-[#0F1A41]">
-
+    <div className="solutions-page font-sans bg-[#F4EFEA] text-[#0F1A41]">
+      
       {/* ══════════════════════════════════════════════════════════
           1. HERO BANNER — QUẢN LÝ GIA SẢN VỮNG BỀN GIA TỘC
       ══════════════════════════════════════════════════════════ */}
@@ -365,7 +359,7 @@ export default function SolutionsPage({ onOpenModal }) {
       ══════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 bg-[#F4EFEA] border-b border-[#0F1A41]/10">
         <div className="max-w-[1300px] mx-auto px-6 md:px-8">
-
+          
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-2">
               THỰC TRẠNG & THÁCH THỨC
@@ -378,7 +372,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {CHALLENGES_AND_SOLUTIONS.map((item) => (
-              <div
+              <div 
                 key={item.num}
                 className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group"
               >
@@ -394,7 +388,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
                   {/* Challenge Block */}
                   <div className="mb-6">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-red-700 bg-red-50 px-2.5 py-1 mb-2 inline-block">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#8A5A3D] bg-[#B9887B]/10 border border-[#B9887B]/20 px-2.5 py-1 mb-2 inline-block">
                       VẤN ĐỀ THƯỜNG GẶP
                     </span>
                     <h3 className="font-serif text-lg font-bold text-[#0F1A41] mb-3">
@@ -403,7 +397,7 @@ export default function SolutionsPage({ onOpenModal }) {
                     <ul className="space-y-2 text-xs text-[#0F1A41]/75 font-sans">
                       {item.challengePoints.map((pt, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <span className="text-red-500 font-bold shrink-0">•</span>
+                          <span className="text-[#B9887B] font-bold shrink-0">•</span>
                           <span>{pt}</span>
                         </li>
                       ))}
@@ -450,7 +444,7 @@ export default function SolutionsPage({ onOpenModal }) {
       ══════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 bg-[#0F1A41] text-white">
         <div className="max-w-[1300px] mx-auto px-6 md:px-8">
-
+          
           <div className="max-w-2xl mb-14">
             <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-2">
               CAM KẾT HIỆU QUẢ
@@ -465,7 +459,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {PERFORMANCE_METRICS.map((metric, i) => (
-              <div
+              <div 
                 key={i}
                 className="bg-white/5 border border-white/10 p-6 flex flex-col justify-between hover:border-[#B9887B] transition-colors"
               >
@@ -490,9 +484,9 @@ export default function SolutionsPage({ onOpenModal }) {
       {/* ══════════════════════════════════════════════════════════
           4. 3 TRỤ CỘT GIẢI PHÁP TÀI SẢN CHI TIẾT
       ══════════════════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-[#FAF6EF] border-b border-[#0F1A41]/10">
+      <section className="py-16 md:py-24 bg-[#F4EFEA] border-b border-[#0F1A41]/10">
         <div className="max-w-[1300px] mx-auto px-6 md:px-8">
-
+          
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-[#0F1A41]/10 gap-6">
             <div>
               <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-2">
@@ -516,7 +510,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {THREE_CORE_SOLUTIONS.map((sol, index) => (
-              <div
+              <div 
                 key={index}
                 className="bg-white border border-[#0F1A41]/10 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300 group"
               >
@@ -573,30 +567,22 @@ export default function SolutionsPage({ onOpenModal }) {
       {/* ══════════════════════════════════════════════════════════
           5. SỰ CHUYỂN HÓA GIÁ TRỊ (Chuẩn theo cityhousemore.com)
       ══════════════════════════════════════════════════════════ */}
-      <section className="relative w-full bg-white text-[#0F1A41] py-16 md:py-24 px-6 md:px-12 overflow-hidden border-t border-slate-200 font-sans">
+      <section className="relative w-full bg-[#F4EFEA] text-[#0F1A41] py-16 md:py-24 px-6 md:px-12 font-sans border-t border-[#0F1A41]/10">
+        <div className="max-w-[1300px] mx-auto">
 
-        {/* Section Header */}
-        <div className="max-w-[1300px] mx-auto mb-10 md:mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-12 items-end gap-8">
-            <div className="md:col-span-8">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-none text-[#0F1A41]">
-                Sự chuyển hóa <br />
-                <span className="font-light italic text-[#B9887B]/70">Giá trị.</span>
+          {/* Section Header with Left Title and Right Tabs */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 md:mb-10">
+            <div>
+              <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-2">
+                DỰ ÁN TIÊU BIỂU
+              </p>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#0F1A41] uppercase tracking-wide">
+                SỰ CHUYỂN HÓA GIÁ TRỊ.
               </h2>
             </div>
-          </div>
-        </div>
 
-        {/* 3-Column Layout Matching Live Website */}
-        <div className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 border-t border-slate-200 pt-10 md:pt-12 items-start">
-
-          {/* Column 1: Left Vertical Tabs List (lg:col-span-3) */}
-          <div className="lg:col-span-3 order-1">
-            <p className="text-[10px] tracking-widest uppercase opacity-75 mb-4 md:mb-6 font-bold text-[#B9887B]">
-              Dự án tiêu biểu ({TRANSFORMATION_PROJECTS.length})
-            </p>
-
-            <div className="no-scrollbar overflow-x-auto lg:overflow-visible flex lg:flex-col gap-3 pb-3 lg:pb-0">
+            {/* Horizontal Tabs Matching Live Website */}
+            <div className="flex items-center gap-2 flex-wrap">
               {TRANSFORMATION_PROJECTS.map((proj, idx) => {
                 const isActive = selectedCaseIndex === idx;
                 return (
@@ -604,149 +590,118 @@ export default function SolutionsPage({ onOpenModal }) {
                     key={proj.id}
                     onClick={() => {
                       setSelectedCaseIndex(idx);
-                      setSliderPos(50);
+                      setActiveProjectTab('after');
                     }}
-                    className={`min-w-[210px] lg:min-w-full text-left p-4 md:p-5 rounded-xl border transition-all duration-300 block group relative cursor-pointer ${isActive
-                        ? 'bg-[#B9887B]/10 border-[#B9887B] shadow-sm'
-                        : 'bg-transparent border-black/5 hover:border-slate-300'
-                      }`}
+                    className={`px-4 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? 'bg-[#0F1A41] text-white shadow-sm'
+                        : 'bg-white text-[#0F1A41] hover:bg-white/80'
+                    }`}
                   >
-                    <span className={`text-[10px] font-mono block mb-1 font-bold transition-colors ${isActive ? 'text-[#B9887B]' : 'text-slate-400'}`}>
-                      [{proj.id}]
-                    </span>
-                    <h4 className={`text-xs md:text-sm uppercase font-bold tracking-wider transition-colors ${isActive ? 'text-[#0F1A41]' : 'text-slate-400 group-hover:text-slate-700'}`}>
-                      {proj.name}
-                    </h4>
-                    {isActive && (
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#B9887B] rounded-l-xl hidden lg:block" />
-                    )}
+                    {proj.tabLabel}
                   </button>
                 );
               })}
             </div>
           </div>
 
-          {/* Column 2 & 3: Interactive Visual & Project Details (lg:col-span-9) */}
-          <div className="lg:col-span-9 order-2 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:sticky lg:top-10 h-fit">
+          {/* 2-Column Showcase Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 shadow-sm border border-[#0F1A41]/10 bg-white items-stretch overflow-hidden">
 
-            {/* Center: Image Comparison Slider (md:col-span-8) */}
-            <div className="md:col-span-8 group relative h-fit">
-              <div className="border border-slate-200 rounded-2xl p-2.5 bg-slate-50 shadow-xl">
-                <div
-                  className="relative h-[320px] sm:h-[420px] md:h-[500px] rounded-xl overflow-hidden select-none cursor-ew-resize bg-slate-900"
-                  onMouseMove={(e) => {
-                    const rect = e.currentTarget.getBoundingClientRect();
-                    const pct = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
-                    setSliderPos(pct);
-                  }}
-                  onTouchMove={(e) => {
-                    if (e.touches[0]) {
-                      const rect = e.currentTarget.getBoundingClientRect();
-                      const pct = Math.max(0, Math.min(100, ((e.touches[0].clientX - rect.left) / rect.width) * 100));
-                      setSliderPos(pct);
-                    }
-                  }}
+            {/* Left Column: Visual Area with Before/After Switcher and Ribbon (lg:col-span-7) */}
+            <div className="lg:col-span-7 relative min-h-[380px] sm:min-h-[440px] md:min-h-[500px] bg-[#0F1A41] overflow-hidden flex flex-col justify-end">
+              <img
+                src={activeProjectTab === 'before' ? currentCase.beforeImg : currentCase.afterImg}
+                alt={`${currentCase.name} - ${activeProjectTab === 'before' ? 'Hiện trạng' : 'Sau cải tạo'}`}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
+              />
+
+              {/* Floating Top-Left Switcher Pills */}
+              <div className="absolute top-4 left-4 z-20 flex items-center p-1 rounded-full bg-black/60 backdrop-blur-md">
+                <button
+                  type="button"
+                  onClick={() => setActiveProjectTab('before')}
+                  className={`px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                    activeProjectTab === 'before'
+                      ? 'bg-[#8A5A3D] text-white shadow-sm'
+                      : 'text-white/70 hover:text-white'
+                  }`}
                 >
-                  {/* Sau cải tạo (After - Full color view) */}
-                  <img
-                    src={currentCase.afterImg}
-                    alt={`${currentCase.name} - Sau cải tạo`}
-                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                  />
+                  HIỆN TRẠNG
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveProjectTab('after')}
+                  className={`px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                    activeProjectTab === 'after'
+                      ? 'bg-[#8A5A3D] text-white shadow-sm'
+                      : 'text-white/70 hover:text-white'
+                  }`}
+                >
+                  SAU CẢI TẠO
+                </button>
+              </div>
 
-                  {/* Hiện trạng (Before - Clipped overlay with grayscale) */}
-                  <div
-                    className="absolute inset-0 overflow-hidden pointer-events-none"
-                    style={{ width: `${sliderPos}%` }}
-                  >
-                    <img
-                      src={currentCase.beforeImg}
-                      alt={`${currentCase.name} - Hiện trạng`}
-                      className="absolute inset-0 w-full h-full object-cover max-w-none grayscale brightness-95"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                  </div>
-
-                  {/* Draggable Divider Handle */}
-                  <div
-                    className="absolute top-0 bottom-0 pointer-events-none flex flex-col items-center z-20"
-                    style={{ left: `${sliderPos}%`, transform: 'translateX(-50%)' }}
-                  >
-                    <div className="w-[2px] h-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.6)]" />
-                    <div className="absolute top-1/2 -translate-y-1/2 w-9 h-9 rounded-full border-2 border-white bg-black/40 backdrop-blur-md flex items-center justify-center text-white shadow-2xl">
-                      <div className="flex items-center gap-0.5 text-[8px] font-bold">
-                        <span>◀</span>
-                        <span>▶</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Bottom Badges */}
-                  <div className="absolute bottom-4 left-4 flex items-center gap-2 z-30">
-                    <button
-                      type="button"
-                      onClick={(e) => { e.stopPropagation(); setSliderPos(100); }}
-                      className={`px-3 py-1 text-[8.5px] uppercase tracking-widest backdrop-blur-sm border transition-all font-bold cursor-pointer ${sliderPos > 70 ? 'bg-[#0F1A41] text-white border-[#0F1A41] shadow-md' : 'bg-white/90 text-slate-700 border-slate-200 hover:bg-white'
-                        }`}
-                    >
-                      Hiện trạng
-                    </button>
-                    <button
-                      type="button"
-                      onClick={(e) => { e.stopPropagation(); setSliderPos(0); }}
-                      className={`px-3 py-1 text-[8.5px] uppercase tracking-widest transition-all font-bold cursor-pointer shadow-sm ${sliderPos < 30 ? 'bg-[#B9887B] text-white' : 'bg-white/90 text-[#B9887B] border border-slate-200 hover:bg-white'
-                        }`}
-                    >
-                      Sau cải tạo
-                    </button>
-                  </div>
-                </div>
+              {/* Bottom Solid Dark Navy Ribbon */}
+              <div className="relative z-20 bg-[#0F1A41]/95 text-white px-5 py-3 flex items-center justify-between text-xs font-sans tracking-wide border-t border-white/10">
+                <span className="font-bold uppercase tracking-wider text-white">
+                  {currentCase.highlightBadge}
+                </span>
+                <span className="text-white/70 hidden sm:inline text-xs">
+                  {currentCase.location}
+                </span>
               </div>
             </div>
 
-            {/* Right: Project Meta Details (md:col-span-4) */}
-            <div className="md:col-span-4 flex flex-col justify-between py-2">
-              <div className="space-y-6">
-                <div>
-                  <p className="text-[#B9887B] text-[10px] uppercase tracking-[0.2em] font-bold mb-2">
-                    {currentCase.location}
-                  </p>
-                  <h3 className="text-2xl font-bold text-[#0F1A41] uppercase tracking-tight mb-4 leading-tight">
-                    {currentCase.name}
-                  </h3>
-                  <p className="text-sm text-slate-500 font-light leading-relaxed italic border-l-2 border-[#B9887B]/40 pl-4">
-                    {currentCase.quote}
-                  </p>
-                </div>
+            {/* Right Column: Clean Luxury Detail Card (lg:col-span-5) */}
+            <div className="lg:col-span-5 p-8 md:p-10 flex flex-col justify-between bg-white">
+              <div>
+                <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-2">
+                  DỰ ÁN [{currentCase.id}]
+                </p>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#0F1A41] mb-2 leading-tight">
+                  {currentCase.name}
+                </h3>
+                <p className="font-sans text-xs text-[#0F1A41]/60 flex items-center gap-1.5 mb-6">
+                  <MapPin size={13} className="text-[#B9887B]" />
+                  <span>{currentCase.location}</span>
+                </p>
 
-                <div className="grid grid-cols-2 gap-4 pt-6 border-t border-slate-100">
+                <p className="font-sans text-xs md:text-sm text-[#0F1A41]/75 leading-relaxed font-light mb-8">
+                  {currentCase.quote}
+                </p>
+
+                {/* Technical Specifications */}
+                <div className="pt-6 border-t border-[#0F1A41]/10 grid grid-cols-2 gap-6">
                   <div>
-                    <p className="text-[9px] uppercase tracking-widest text-slate-400 mb-1 font-semibold">
-                      Diện tích sàn
+                    <p className="font-sans text-[10px] font-bold uppercase tracking-wider text-[#0F1A41]/50 mb-1">
+                      DIỆN TÍCH SÀN
                     </p>
-                    <p className="text-2xl font-light text-[#0F1A41] tracking-tight">
+                    <p className="font-serif text-2xl font-bold text-[#0F1A41]">
                       {currentCase.area}
                     </p>
                   </div>
                   <div>
-                    <p className="text-[9px] uppercase tracking-widest text-slate-400 mb-1 font-semibold">
-                      Số phòng
+                    <p className="font-sans text-[10px] font-bold uppercase tracking-wider text-[#0F1A41]/50 mb-1">
+                      SỐ PHÒNG
                     </p>
-                    <p className="text-2xl font-light text-[#0F1A41] tracking-tight">
+                    <p className="font-serif text-2xl font-bold text-[#0F1A41]">
                       {currentCase.rooms}
                     </p>
                   </div>
                 </div>
               </div>
 
-              <button
-                onClick={() => navigate(`/dang-hoat-dong/${currentCase.slug}`)}
-                className="mt-8 flex items-center gap-3 group text-[#0F1A41] hover:text-[#B9887B] transition-colors cursor-pointer w-fit"
-              >
-                <span className="text-xs uppercase font-bold tracking-wider">Xem dự án</span>
-                <div className="h-[1px] w-8 bg-[#B9887B] group-hover:w-14 transition-all duration-300"></div>
-                <ArrowRight size={14} className="text-[#B9887B] group-hover:translate-x-1 transition-transform" />
-              </button>
+              {/* Action Button */}
+              <div className="pt-8 mt-6 border-t border-[#0F1A41]/10">
+                <button
+                  onClick={() => navigate(`/dang-hoat-dong/${currentCase.slug}`)}
+                  className="w-full bg-[#0F1A41] hover:bg-[#B9887B] text-white py-4 px-6 text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 text-center flex items-center justify-center gap-2 cursor-pointer shadow-sm group"
+                >
+                  <span>XEM CHI TIẾT DỰ ÁN</span>
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
             </div>
 
           </div>
@@ -759,7 +714,7 @@ export default function SolutionsPage({ onOpenModal }) {
       ══════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 bg-[#0F1A41] text-white">
         <div className="max-w-[1300px] mx-auto px-6 md:px-8">
-
+          
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-2">
               CHIẾN LƯỢC ĐỊNH VỊ
@@ -772,7 +727,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {BRAND_ECOSYSTEM.map((brand) => (
-              <div
+              <div 
                 key={brand.code}
                 className="bg-white/5 border border-white/10 p-6 flex flex-col justify-between hover:border-[#B9887B] transition-colors group"
               >
@@ -800,9 +755,9 @@ export default function SolutionsPage({ onOpenModal }) {
       {/* ══════════════════════════════════════════════════════════
           7. QUI TRÌNH KIẾN TẠO GIÁ TRỊ (3 Bước Thực Hiện)
       ══════════════════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-[#FAF6EF] border-b border-[#0F1A41]/10">
+      <section className="py-16 md:py-24 bg-[#F4EFEA] border-b border-[#0F1A41]/10">
         <div className="max-w-[1300px] mx-auto px-6 md:px-8">
-
+          
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-2">
               LỘ TRÌNH ĐỒNG HÀNH
@@ -817,7 +772,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {CREATION_PROCESS.map((proc) => (
-              <div
+              <div 
                 key={proc.step}
                 className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between hover:shadow-lg transition-all"
               >
@@ -849,7 +804,7 @@ export default function SolutionsPage({ onOpenModal }) {
       ══════════════════════════════════════════════════════════ */}
       <section id="partnership" className="py-16 md:py-24 bg-[#F4EFEA] border-b border-[#0F1A41]/10">
         <div className="max-w-[1300px] mx-auto px-6 md:px-8">
-
+          
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] mb-2">
               HỢP TÁC BỀN VỮNG
@@ -862,7 +817,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {PARTNERSHIP_MODELS.map((model) => (
-              <div
+              <div 
                 key={model.num}
                 className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group"
               >

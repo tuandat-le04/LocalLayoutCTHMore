@@ -103,7 +103,7 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
   };
 
   return (
-    <div className="consulting-renovation-page font-sans bg-[#FAF6EF]">
+    <div className="consulting-renovation-page font-sans bg-[#F4EFEA]">
       {/* ── Breadcrumb ── */}
       <div className="bg-[#0B1536] border-b border-white/10 py-3 px-6 text-xs text-white/60 font-sans">
         <div className="max-w-7xl mx-auto flex items-center gap-2">
@@ -205,21 +205,21 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
               </p>
 
               <div className="space-y-3.5 text-xs text-[#0F1A41]/85">
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Tỷ lệ phòng trống cao kéo dài (&gt; 35%):</strong>
                     Doanh thu sụt giảm, phụ thuộc vào khách thuê ngắn hạn qua môi giới với chi phí hoa hồng cao.
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Hạ tầng kỹ thuật (MEP) thường xuyên sự cố:</strong>
                     Máy lạnh rò rỉ, thấm dột nhà vệ sinh, hệ thống điện nước chập chờn gây khiếu nại liên tục.
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4EFEA] border border-[#0F1A41]/5">
                   <CheckCircle2 size={18} className="text-[#B9887B] shrink-0 mt-0.5" />
                   <div>
                     <strong className="block text-[#0F1A41] mb-0.5">Muốn cải tạo nhưng ngại chi phí phát sinh:</strong>
@@ -277,7 +277,7 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
                     <span className="font-serif text-3xl font-bold text-[#B9887B]">
                       {scope.stepNum}
                     </span>
-                    <span className="text-[11px] font-sans px-3 py-1 rounded-full bg-[#FAF6EF] text-[#0F1A41]/70 font-semibold border border-[#0F1A41]/5">
+                    <span className="text-[11px] font-sans px-3 py-1 rounded-full bg-[#F4EFEA] text-[#0F1A41]/70 font-semibold border border-[#0F1A41]/5">
                       {scope.subtitle}
                     </span>
                   </div>
@@ -371,17 +371,17 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="p-6 rounded-2xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+            <div className="p-6 rounded-2xl bg-[#F4EFEA] border border-[#0F1A41]/5">
               <div className="font-serif text-4xl font-bold text-[#B9887B] mb-2">50 Ngày</div>
               <div className="text-xs font-bold text-[#0F1A41] uppercase">Thời Gian Hoàn Thiện</div>
               <p className="text-[11px] text-[#0F1A41]/60 mt-1">Thi công trọn gói bóc tách BOQ không phát sinh chi phí</p>
             </div>
-            <div className="p-6 rounded-2xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+            <div className="p-6 rounded-2xl bg-[#F4EFEA] border border-[#0F1A41]/5">
               <div className="font-serif text-4xl font-bold text-[#B9887B] mb-2">+62%</div>
               <div className="text-xs font-bold text-[#0F1A41] uppercase">Tăng Trưởng Giá Thuê</div>
               <p className="text-[11px] text-[#0F1A41]/60 mt-1">Từ 8 triệu/tháng lên 13 triệu/tháng cho tệp khách FDI</p>
             </div>
-            <div className="p-6 rounded-2xl bg-[#FAF6EF] border border-[#0F1A41]/5">
+            <div className="p-6 rounded-2xl bg-[#F4EFEA] border border-[#0F1A41]/5">
               <div className="font-serif text-4xl font-bold text-[#B9887B] mb-2">97%</div>
               <div className="text-xs font-bold text-[#0F1A41] uppercase">Công Suất Phòng Quanh Năm</div>
               <p className="text-[11px] text-[#0F1A41]/60 mt-1">Lấp đầy liên tục qua 8 kênh OTA và khách chuyên gia</p>
@@ -391,7 +391,7 @@ export default function ConsultingRenovationPage({ onOpenModal }) {
       </section>
 
       {/* ── 6. Dedicated Booking Form ── */}
-      <section id="cai-tao-form" className="py-20 md:py-28 bg-[#FAF6EF] text-[#0F1A41]">
+      <section id="cai-tao-form" className="py-20 md:py-28 bg-[#F4EFEA] text-[#0F1A41]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5">
