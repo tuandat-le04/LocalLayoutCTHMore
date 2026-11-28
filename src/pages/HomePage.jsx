@@ -370,7 +370,7 @@ export default function HomePage({ onOpenModal }) {
                     if (el) el.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="font-sans inline-flex items-center justify-center px-8 py-4 sm:py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] bg-[#B9887B] text-white transition-all duration-300 hover:bg-[#8A5A3D] shadow-md active:scale-[0.98] cursor-pointer"
+                className="font-sans inline-flex items-center justify-center px-8 py-4 sm:py-3.5 text-[11px] font-bold uppercase tracking-[0.15em] bg-[#B9887B] text-white rounded-full transition-all duration-300 hover:bg-[#8A5A3D] shadow-md active:scale-[0.98] cursor-pointer"
               >
                 ĐẶT LỊCH TƯ VẤN
               </button>
@@ -597,7 +597,7 @@ export default function HomePage({ onOpenModal }) {
           <div className="mt-12 text-center">
             <button
               onClick={() => navigate('/dang-hoat-dong')}
-              className="font-sans inline-flex items-center gap-3 bg-[#B9887B] px-8 py-3 text-sm font-semibold uppercase tracking-widest text-white transition-colors hover:bg-[#8A4A2B] active:scale-[0.98] cursor-pointer shadow-md"
+              className="font-sans inline-flex items-center gap-3 bg-[#B9887B] px-8 py-3 text-sm font-semibold uppercase tracking-widest text-white rounded-full transition-colors hover:bg-[#8A4A2B] active:scale-[0.98] cursor-pointer shadow-md"
             >
               Xem dự án
               <ArrowRight size={18} />
@@ -971,7 +971,7 @@ export default function HomePage({ onOpenModal }) {
                 </p>
 
                 {formSubmitted ? (
-                  <div className="bg-white border border-[#B9887B]/40 p-8 text-center rounded-none shadow-sm animate-fade-in">
+                  <div className="bg-white border border-[#B9887B]/40 p-8 text-center rounded-2xl shadow-sm animate-fade-in">
                     <LuxurySuccessMedallion />
                     <h4 className="font-serif text-xl font-normal text-[#0F1A41] mb-2">
                       Gửi yêu cầu thành công!
@@ -981,7 +981,7 @@ export default function HomePage({ onOpenModal }) {
                     </p>
                     <button
                       onClick={() => setFormSubmitted(false)}
-                      className="font-sans px-6 py-2.5 bg-[#0F1A41] text-white text-xs font-bold uppercase tracking-wider"
+                      className="font-sans px-7 py-3 bg-[#0F1A41] hover:bg-[#1A2C6B] text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all cursor-pointer shadow-md"
                     >
                       Gửi yêu cầu khác
                     </button>
@@ -1000,7 +1000,7 @@ export default function HomePage({ onOpenModal }) {
                         placeholder="Họ và tên"
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className="font-sans w-full bg-white border border-[#0F1A41]/25 px-3.5 py-3 text-sm text-[#0F1A41] rounded-none outline-none transition-all placeholder:text-[#0F1A41]/35 focus:border-[#B9887B] min-h-[44px]"
+                        className="font-sans w-full bg-white border border-[#0F1A41]/20 px-4 py-3 text-sm text-[#0F1A41] rounded-xl outline-none transition-all placeholder:text-[#0F1A41]/35 focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B] min-h-[44px]"
                       />
                     </div>
 
@@ -1016,7 +1016,7 @@ export default function HomePage({ onOpenModal }) {
                           placeholder="Số điện thoại liên hệ"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="font-sans w-full bg-white border border-[#0F1A41]/25 px-3.5 py-2.5 text-xs md:text-sm text-[#0F1A41] rounded-none outline-none transition-all placeholder:text-[#0F1A41]/35 focus:border-[#B9887B] min-h-[44px]"
+                          className="font-sans w-full bg-white border border-[#0F1A41]/20 px-4 py-3 text-sm text-[#0F1A41] rounded-xl outline-none transition-all placeholder:text-[#0F1A41]/35 focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B] min-h-[44px]"
                         />
                       </div>
                       <div className="space-y-1.5">
@@ -1029,7 +1029,7 @@ export default function HomePage({ onOpenModal }) {
                           placeholder="Email liên hệ"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="font-sans w-full bg-white border border-[#0F1A41]/25 px-3.5 py-2.5 text-xs md:text-sm text-[#0F1A41] rounded-none outline-none transition-all placeholder:text-[#0F1A41]/35 focus:border-[#B9887B] min-h-[44px]"
+                          className="font-sans w-full bg-white border border-[#0F1A41]/20 px-4 py-3 text-sm text-[#0F1A41] rounded-xl outline-none transition-all placeholder:text-[#0F1A41]/35 focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B] min-h-[44px]"
                         />
                       </div>
                     </div>
@@ -1042,7 +1042,7 @@ export default function HomePage({ onOpenModal }) {
                       <select
                         value={formData.propertyType}
                         onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
-                        className="font-sans w-full bg-white border border-[#0F1A41]/25 px-3.5 py-3 text-sm text-[#0F1A41] rounded-none outline-none transition-all focus:border-[#B9887B] min-h-[44px]"
+                        className="font-sans w-full bg-white border border-[#0F1A41]/20 px-4 py-3 text-sm text-[#0F1A41] rounded-xl outline-none transition-all focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B] min-h-[44px] cursor-pointer"
                       >
                         <option value="" disabled>Chọn loại tài sản</option>
                         <option value="building">Tòa nhà / Chung cư mini</option>
@@ -1067,10 +1067,10 @@ export default function HomePage({ onOpenModal }) {
                           <label 
                             key={item.val} 
                             onClick={() => handleCheckboxChange(item.val)}
-                            className="flex items-center gap-2.5 cursor-pointer min-h-[40px] select-none p-1.5 hover:bg-white/60 transition-colors"
+                            className="flex items-center gap-2.5 cursor-pointer min-h-[42px] select-none px-3 py-2 rounded-xl bg-white/80 hover:bg-white border border-[#0F1A41]/10 hover:border-[#B9887B]/40 transition-all shadow-2xs"
                           >
-                            <div className={`w-4 h-4 flex items-center justify-center border transition-colors shrink-0 ${formData.interests.includes(item.val) ? 'bg-[#B9887B] border-[#B9887B] text-white' : 'bg-white border-[#0F1A41]/30'}`}>
-                              {formData.interests.includes(item.val) && <LuxuryIcon name="check" size={10} strokeWidth={2.4} />}
+                            <div className={`w-4.5 h-4.5 rounded-[5px] flex items-center justify-center border transition-colors shrink-0 ${formData.interests.includes(item.val) ? 'bg-[#B9887B] border-[#B9887B] text-white' : 'bg-white border-[#0F1A41]/25'}`}>
+                              {formData.interests.includes(item.val) && <LuxuryIcon name="check" size={11} strokeWidth={2.4} />}
                             </div>
                             <span className="font-sans text-xs text-[#0F1A41]/85">{item.label}</span>
                           </label>
@@ -1085,18 +1085,18 @@ export default function HomePage({ onOpenModal }) {
                       </label>
                       <textarea
                         required
-                        rows={2}
+                        rows={3}
                         placeholder="Chi tiết yêu cầu của Anh/Chị..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="font-sans w-full resize-none bg-white border border-[#0F1A41]/25 px-3.5 py-3 text-sm text-[#0F1A41] rounded-none outline-none transition-all placeholder:text-[#0F1A41]/35 focus:border-[#B9887B]"
+                        className="font-sans w-full resize-none bg-white border border-[#0F1A41]/20 px-4 py-3 text-sm text-[#0F1A41] rounded-xl outline-none transition-all placeholder:text-[#0F1A41]/35 focus:border-[#B9887B] focus:ring-1 focus:ring-[#B9887B]"
                       ></textarea>
                     </div>
 
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      className="font-sans group flex items-center justify-between gap-4 w-full sm:w-auto bg-[#B9887B] text-white px-8 py-3.5 text-xs font-bold uppercase tracking-widest transition-all hover:bg-[#A37367] min-h-[48px] active:scale-[0.98] cursor-pointer shadow-md"
+                      className="font-sans group flex items-center justify-between gap-4 w-full sm:w-auto bg-[#B9887B] text-white px-8 py-3.5 text-xs font-bold uppercase tracking-widest rounded-full transition-all hover:bg-[#A37367] min-h-[48px] active:scale-[0.98] cursor-pointer shadow-md hover:shadow-lg"
                     >
                       <span>GỬI YÊU CẦU TƯ VẤN</span>
                       <ArrowRight size={15} className="transition-transform group-hover:translate-x-1 shrink-0" />

@@ -21,6 +21,7 @@ import {
   Award
 } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext.jsx';
+import ContactForm from '../components/ContactForm.jsx';
 
 // ── 1. Thách thức & Giải pháp tương ứng (Khó khăn của Chủ tòa nhà) ──
 const CHALLENGES_AND_SOLUTIONS = [
@@ -259,19 +260,6 @@ export default function SolutionsPage({ onOpenModal }) {
   const [activeProjectTab, setActiveProjectTab] = useState('after'); // 'before' or 'after'
   const [selectedCaseIndex, setSelectedCaseIndex] = useState(0);
 
-  const [formData, setFormData] = useState({
-    fullName: '',
-    phone: '',
-    email: '',
-    message: ''
-  });
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormSubmitted(true);
-  };
-
   const handleCtaClick = () => {
     if (onOpenModal) {
       onOpenModal();
@@ -311,7 +299,7 @@ export default function SolutionsPage({ onOpenModal }) {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={handleCtaClick}
-                className="font-sans inline-flex items-center justify-center px-8 py-3.5 text-xs font-bold uppercase tracking-[0.15em] bg-[#B9887B] text-white hover:bg-[#8A5A3D] transition-colors shadow-lg cursor-pointer"
+                className="font-sans inline-flex items-center justify-center px-8 py-3.5 text-xs font-bold uppercase tracking-[0.15em] bg-[#B9887B] text-white hover:bg-[#8A5A3D] rounded-full transition-all shadow-lg cursor-pointer"
               >
                 KHÁM PHÁ GIẢI PHÁP
               </button>
@@ -320,7 +308,7 @@ export default function SolutionsPage({ onOpenModal }) {
                   const el = document.getElementById('partnership');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="font-sans inline-flex items-center justify-center px-8 py-3.5 text-xs font-bold uppercase tracking-[0.15em] border border-white/40 text-white hover:border-[#B9887B] hover:text-[#B9887B] transition-colors cursor-pointer"
+                className="font-sans inline-flex items-center justify-center px-8 py-3.5 text-xs font-bold uppercase tracking-[0.15em] border border-white/40 text-white hover:border-[#B9887B] hover:text-[#B9887B] rounded-full transition-all cursor-pointer"
               >
                 PHƯƠNG THỨC HỢP TÁC
               </button>
@@ -375,7 +363,7 @@ export default function SolutionsPage({ onOpenModal }) {
             {CHALLENGES_AND_SOLUTIONS.map((item) => (
               <div 
                 key={item.num}
-                className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group"
+                className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group rounded-2xl"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#0F1A41]/10">
@@ -389,7 +377,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
                   {/* Challenge Block */}
                   <div className="mb-6">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#8A5A3D] bg-[#B9887B]/10 border border-[#B9887B]/20 px-2.5 py-1 mb-2 inline-block">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#8A5A3D] bg-[#B9887B]/10 border border-[#B9887B]/20 px-3 py-1 mb-2 inline-block rounded-full">
                       VẤN ĐỀ THƯỜNG GẶP
                     </span>
                     <h3 className="font-serif text-lg font-bold text-[#0F1A41] mb-3">
@@ -407,7 +395,7 @@ export default function SolutionsPage({ onOpenModal }) {
 
                   {/* Solution Block */}
                   <div className="pt-6 border-t border-[#0F1A41]/10">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] bg-[#B9887B]/10 px-2.5 py-1 mb-2 inline-block">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#B9887B] bg-[#B9887B]/10 px-3 py-1 mb-2 inline-block rounded-full">
                       GIẢI PHÁP CITYHOUSE
                     </span>
                     <h4 className="font-serif text-lg font-bold text-[#0F1A41] mb-3">
@@ -462,7 +450,7 @@ export default function SolutionsPage({ onOpenModal }) {
             {PERFORMANCE_METRICS.map((metric, i) => (
               <div 
                 key={i}
-                className="bg-white/5 border border-white/10 p-6 flex flex-col justify-between hover:border-[#B9887B] transition-colors"
+                className="bg-white/5 border border-white/10 p-6 flex flex-col justify-between hover:border-[#B9887B] transition-colors rounded-2xl"
               >
                 <div>
                   <div className="font-serif text-4xl sm:text-5xl font-bold text-[#B9887B] mb-3">
@@ -502,7 +490,7 @@ export default function SolutionsPage({ onOpenModal }) {
             </div>
             <button
               onClick={() => navigate('/dang-hoat-dong')}
-              className="font-sans inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#0F1A41] hover:text-[#B9887B] transition-colors cursor-pointer"
+              className="font-sans inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-[#0F1A41] hover:text-[#B9887B] transition-colors cursor-pointer px-4 py-2 rounded-full border border-[#0F1A41]/15 hover:border-[#B9887B] bg-white shadow-2xs"
             >
               <span>XEM TẤT CẢ DỰ ÁN</span>
               <ArrowRight size={14} />
@@ -513,7 +501,7 @@ export default function SolutionsPage({ onOpenModal }) {
             {THREE_CORE_SOLUTIONS.map((sol, index) => (
               <div 
                 key={index}
-                className="bg-white border border-[#0F1A41]/10 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300 group"
+                className="bg-white border border-[#0F1A41]/10 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300 group rounded-2xl"
               >
                 <div>
                   <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
@@ -522,7 +510,7 @@ export default function SolutionsPage({ onOpenModal }) {
                       alt={sol.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute top-3 left-3 bg-[#0F1A41] text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1">
+                    <div className="absolute top-3 left-3 bg-[#0F1A41] text-white text-[9px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                       {sol.code}
                     </div>
                   </div>
@@ -552,7 +540,7 @@ export default function SolutionsPage({ onOpenModal }) {
                 <div className="p-6 pt-0 mt-auto">
                   <button
                     onClick={() => navigate(sol.path)}
-                    className="w-full py-3 px-4 text-center font-sans text-xs font-bold uppercase tracking-wider text-[#0F1A41] border border-[#0F1A41]/20 hover:border-[#B9887B] hover:bg-[#B9887B] hover:text-white transition-all cursor-pointer flex items-center justify-center gap-2"
+                    className="w-full py-3.5 px-4 text-center font-sans text-xs font-bold uppercase tracking-wider text-[#0F1A41] border border-[#0F1A41]/20 hover:border-[#B9887B] hover:bg-[#B9887B] hover:text-white rounded-full transition-all cursor-pointer flex items-center justify-center gap-2"
                   >
                     <span>KHÁM PHÁ GIẢI PHÁP</span>
                     <ArrowRight size={13} />
@@ -593,10 +581,10 @@ export default function SolutionsPage({ onOpenModal }) {
                       setSelectedCaseIndex(idx);
                       setActiveProjectTab('after');
                     }}
-                    className={`px-4 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                    className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? 'bg-[#0F1A41] text-white shadow-sm'
-                        : 'bg-white text-[#0F1A41] hover:bg-white/80'
+                        ? 'bg-[#0F1A41] text-white shadow-md'
+                        : 'bg-white text-[#0F1A41] hover:bg-white/80 border border-[#0F1A41]/10'
                     }`}
                   >
                     {proj.tabLabel}
@@ -607,7 +595,7 @@ export default function SolutionsPage({ onOpenModal }) {
           </div>
 
           {/* 2-Column Showcase Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 shadow-sm border border-[#0F1A41]/10 bg-white items-stretch overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 shadow-md border border-[#0F1A41]/10 bg-white items-stretch overflow-hidden rounded-2xl">
 
             {/* Left Column: Visual Area with Before/After Switcher and Ribbon (lg:col-span-7) */}
             <div className="lg:col-span-7 relative min-h-[380px] sm:min-h-[440px] md:min-h-[500px] bg-[#0F1A41] overflow-hidden flex flex-col justify-end">
@@ -697,7 +685,7 @@ export default function SolutionsPage({ onOpenModal }) {
               <div className="pt-8 mt-6 border-t border-[#0F1A41]/10">
                 <button
                   onClick={() => navigate(`/dang-hoat-dong/${currentCase.slug}`)}
-                  className="w-full bg-[#0F1A41] hover:bg-[#B9887B] text-white py-4 px-6 text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 text-center flex items-center justify-center gap-2 cursor-pointer shadow-sm group"
+                  className="w-full bg-[#0F1A41] hover:bg-[#B9887B] text-white py-4 px-6 text-xs font-bold uppercase tracking-[0.15em] rounded-full transition-all duration-300 text-center flex items-center justify-center gap-2 cursor-pointer shadow-md group"
                 >
                   <span>XEM CHI TIẾT DỰ ÁN</span>
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -730,7 +718,7 @@ export default function SolutionsPage({ onOpenModal }) {
             {BRAND_ECOSYSTEM.map((brand) => (
               <div 
                 key={brand.code}
-                className="bg-white/5 border border-white/10 p-6 flex flex-col justify-between hover:border-[#B9887B] transition-colors group"
+                className="bg-white/5 border border-white/10 p-6 flex flex-col justify-between hover:border-[#B9887B] transition-colors group rounded-2xl"
               >
                 <div>
                   <span className="font-serif text-xl font-light text-[#B9887B]/60 group-hover:text-[#B9887B] transition-colors block mb-4">
@@ -775,7 +763,7 @@ export default function SolutionsPage({ onOpenModal }) {
             {CREATION_PROCESS.map((proc) => (
               <div 
                 key={proc.step}
-                className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between hover:shadow-lg transition-all"
+                className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between hover:shadow-lg transition-all rounded-2xl"
               >
                 <div>
                   <div className="font-serif text-4xl font-light text-[#B9887B] mb-4">
@@ -820,14 +808,14 @@ export default function SolutionsPage({ onOpenModal }) {
             {PARTNERSHIP_MODELS.map((model) => (
               <div 
                 key={model.num}
-                className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group"
+                className="bg-white border border-[#0F1A41]/10 p-6 sm:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group rounded-2xl"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="font-serif text-2xl font-light text-[#B9887B]">
                       {model.num}
                     </span>
-                    <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-[#B9887B] bg-[#B9887B]/10 px-2 py-0.5">
+                    <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-[#B9887B] bg-[#B9887B]/10 px-3 py-1 rounded-full">
                       {model.badge}
                     </span>
                   </div>
@@ -847,7 +835,7 @@ export default function SolutionsPage({ onOpenModal }) {
                   </div>
                   <button
                     onClick={handleCtaClick}
-                    className="w-full py-2.5 px-4 text-center font-sans text-xs font-bold uppercase tracking-wider text-[#0F1A41] border border-[#0F1A41]/20 hover:border-[#B9887B] hover:bg-[#B9887B] hover:text-white transition-all cursor-pointer"
+                    className="w-full py-3 px-4 text-center font-sans text-xs font-bold uppercase tracking-wider text-[#0F1A41] border border-[#0F1A41]/20 hover:border-[#B9887B] hover:bg-[#B9887B] hover:text-white rounded-full transition-all cursor-pointer shadow-xs"
                   >
                     ĐĂNG KÝ HỢP TÁC
                   </button>
@@ -856,6 +844,69 @@ export default function SolutionsPage({ onOpenModal }) {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          9. ĐĂNG KÝ TƯ VẤN GIẢI PHÁP TÀI SẢN (Dedicated Contact Section)
+      ══════════════════════════════════════════════════════════ */}
+      <section id="contact-form" className="py-20 md:py-28 bg-[#F4EFEA] text-[#0F1A41] border-t border-[#0F1A41]/10">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            {/* Left Column: Context & Guarantees */}
+            <div className="lg:col-span-5">
+              <p className="font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-[#B9887B] flex items-center gap-1.5 mb-3">
+                <span className="w-2 h-2 rounded-full bg-[#B9887B]"></span>
+                ĐỒNG HÀNH CHIẾN LƯỢC
+              </p>
+              <h2 className="font-serif text-3xl sm:text-4xl text-[#0F1A41] leading-tight mb-4">
+                Đăng ký Tư vấn<br />
+                <span className="text-[#B9887B] italic">Giải pháp Tài sản</span>
+              </h2>
+              <p className="font-sans text-xs sm:text-sm text-[#0F1A41]/75 leading-relaxed mb-6 font-light">
+                Chuyên gia của CityHouse More sẽ trực tiếp liên hệ trong vòng 24 giờ làm việc để phân tích hiện trạng và đề xuất giải pháp tối ưu dòng tiền phù hợp nhất với tài sản của bạn.
+              </p>
+
+              <div className="flex flex-col gap-3.5 mb-8 text-xs text-[#0F1A41]/85 font-sans">
+                <div className="flex items-center gap-3">
+                  <LuxuryCheckBadge size="sm" />
+                  <span>Khảo sát thực địa và báo cáo đánh giá tiềm năng miễn phí</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <LuxuryCheckBadge size="sm" />
+                  <span>Dự phóng doanh thu và phương án tối ưu dòng tiền</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <LuxuryCheckBadge size="sm" />
+                  <span>Bảo mật 100% hồ sơ tài sản và thông tin khách hàng</span>
+                </div>
+              </div>
+
+              {/* Direct Support Card */}
+              <div className="p-5 rounded-2xl bg-white border border-[#0F1A41]/10 shadow-sm">
+                <div className="text-[11px] font-bold uppercase text-[#B9887B] tracking-wider mb-1">
+                  CẦN TRAO ĐỔI TRỰC TIẾP VỚI CHUYÊN GIA?
+                </div>
+                <p className="text-xs text-[#0F1A41]/70 mb-3 leading-relaxed">
+                  Gọi ngay Hotline tư vấn chiến lược 24/7 của CityHouse More.
+                </p>
+                <a
+                  href="tel:0878253545"
+                  className="text-xs font-bold uppercase tracking-wider text-[#0F1A41] hover:text-[#B9887B] transition-colors inline-flex items-center gap-2"
+                >
+                  <Phone size={14} className="text-[#B9887B]" />
+                  <span>Hotline: 0878 253 545</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Column: Contact Form */}
+            <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-[#0F1A41]/10">
+              <ContactForm
+                submitLabel="GỬI YÊU CẦU TƯ VẤN GIẢI PHÁP"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>

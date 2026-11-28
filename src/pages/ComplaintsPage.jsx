@@ -481,16 +481,16 @@ export default function ComplaintsPage({ onOpenModal }) {
                   </div>
 
                   {/* Consent check */}
-                  <div className="flex items-start gap-2 pt-1 text-xs text-[#0F1A41]/70">
+                  <div className="flex items-start gap-2.5 pt-1 text-xs text-[#0F1A41]/75 select-none">
                     <input
                       type="checkbox"
                       id="consent"
                       required
                       checked={formData.consent}
                       onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
-                      className="mt-0.5 accent-[#B9887B]"
+                      className="mt-0.5 accent-[#B9887B] rounded cursor-pointer w-4 h-4"
                     />
-                    <label htmlFor="consent" className="cursor-pointer">
+                    <label htmlFor="consent" className="cursor-pointer leading-relaxed">
                       Tôi xác nhận các thông tin phản ánh trên là đúng sự thật và đồng ý để CityHouse More liên hệ xác minh.
                     </label>
                   </div>
